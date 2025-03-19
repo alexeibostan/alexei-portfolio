@@ -7,7 +7,7 @@ A personal portfolio website built with Next.js, showcasing my experience as a S
 First, run the development server:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -17,6 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **Framework**: Next.js
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
+- **Package Manager**: Bun
 - **Deployment**: GitHub Pages
 
 ## Deployment
@@ -27,7 +28,7 @@ This portfolio is configured for GitHub Pages deployment:
 
 1. Build the application:
    ```bash
-   npm run deploy
+   bun run deploy
    ```
 
 2. Push to GitHub:
@@ -42,8 +43,8 @@ This portfolio is configured for GitHub Pages deployment:
 The repository uses GitHub Actions for automatic deployment:
 
 1. When you push to the `main` branch, the site will automatically build and deploy
-2. GitHub Actions workflow is defined in `.github/workflows/deploy.yml`
-3. The site will be available at `https://[your-username].github.io/alexei-portfolio/`
+2. GitHub Actions workflow is defined in `.github/workflows/deploy.yml` and configured to use Bun
+3. The site will be available at `https://alexeibostan.github.io/alexei-portfolio/`
 
 ## Configuration
 

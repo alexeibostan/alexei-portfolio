@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'export',
   distDir: 'build',
   trailingSlash: true,
+  reactStrictMode: true,
   images: {
     unoptimized: true,
     remotePatterns: [
