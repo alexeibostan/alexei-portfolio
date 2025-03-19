@@ -31,16 +31,22 @@ export default function Header() {
               Home
             </Link>
             <Link
-              href="/about"
-              className="text-gray-600 hover:text-[#325080] hover:underline px-3 py-2 text-sm font-medium"
-            >
-              About
-            </Link>
-            <Link
               href="/projects"
               className="text-gray-600 hover:text-[#325080] hover:underline px-3 py-2 text-sm font-medium"
             >
               Projects
+            </Link>
+            <Link
+              href="/skills"
+              className="text-gray-600 hover:text-[#325080] hover:underline px-3 py-2 text-sm font-medium"
+            >
+              Skills
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-600 hover:text-[#325080] hover:underline px-3 py-2 text-sm font-medium"
+            >
+              About
             </Link>
           </nav>
 
@@ -101,18 +107,25 @@ export default function Header() {
               Home
             </Link>
             <Link
-              href="/about"
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#325080] hover:bg-gray-50"
-              onClick={toggleMobileMenu}
-            >
-              About
-            </Link>
-            <Link
               href="/projects"
               className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#325080] hover:bg-gray-50"
               onClick={toggleMobileMenu}
             >
               Projects
+            </Link>
+            <Link
+              href="/skills"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#325080] hover:bg-gray-50"
+              onClick={toggleMobileMenu}
+            >
+              Skills
+            </Link>
+            <Link
+              href="/about"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#325080] hover:bg-gray-50"
+              onClick={toggleMobileMenu}
+            >
+              About
             </Link>
           </div>
           <div className="px-5 py-3 border-t border-gray-200 flex justify-center space-x-6">

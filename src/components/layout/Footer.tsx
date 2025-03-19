@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Alexei Bostan</h3>
-            <p className="mb-4">Results-driven Frontend Developer with 8+ years of experience specializing in modern JavaScript frameworks. Technical leader with expertise in enterprise design systems and software consultancy for specialized industry solutions.</p>
+            <p className="mb-4">Senior Software Engineer with 8+ years of experience specializing in modern JavaScript frameworks. Technical leader with expertise in enterprise design systems and software consultancy for specialized industry solutions.</p>
           </div>
 
           <div>

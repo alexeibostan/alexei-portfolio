@@ -13,7 +13,7 @@ export default function Home() {
       period: "2023 - Present",
       description: "As Senior Software Engineer, I help develop this analytics dashboard providing real-time insights into restaurant performance. Working on both frontend (Next.js/React) and backend (Python/FastAPI) components with data stored across PostgreSQL, MongoDB, and BigQuery.",
       skills: ["Next.js", "React", "Python", "FastAPI", "PostgreSQL", "MongoDB", "BigQuery"],
-      role: "FE/BE",
+      role: "SE",
     },
     {
       company: "Deliverect",
@@ -28,7 +28,7 @@ export default function Home() {
       company: "Bostan Software Developments",
       name: "P&ID Digitalization Solution",
       type: "Web App",
-      period: "2023 - Present",
+      period: "2024 - Present",
       description: "Innovative digital solution for chemical engineering processes, specifically in P&ID digitalization. University collaboration project using modern Vue.js stack.",
       skills: ["Vue.js", "Tailwind CSS", "shadcn-vue", "vue-query", "KonvaJS"],
       role: "FE",
@@ -88,7 +88,11 @@ export default function Home() {
             {projects.slice(0, 2).map((project, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md p-6">
                 <div className="flex items-center mb-4">
-                  <div className={`w-12 h-12 rounded-md flex items-center justify-center text-white ${project.role === 'FE' ? 'bg-[#e16642]' : 'bg-[#c18f68]'}`}>
+                  <div className={`w-12 h-12 rounded-md flex items-center justify-center text-white 
+                    ${project.role === 'SE' ? 'bg-[#325080]' : 
+                      project.role === 'FE' ? 'bg-[#e16642]' : 
+                      project.role === 'WD' ? 'bg-[#c18f68]' : 
+                      'bg-[#7494be]'}`}>
                     {project.role}
                   </div>
                   <div className="ml-4">
@@ -154,59 +158,59 @@ export default function Home() {
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>HTML5 / CSS3</span>
+                  <span>CSS / Tailwind / Radix UI</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Libraries & Tools</h3>
+              <h3 className="text-xl font-semibold mb-4">Backend & Data</h3>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Radix UI / Tailwind CSS</span>
+                  <span>Python / FastAPI / Celery</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>vanilla-extract-css / styled-components</span>
+                  <span>PostgreSQL / MongoDB</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>react-query / TanStack Query</span>
+                  <span>BigQuery</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Recharts / Data Visualization</span>
+                  <span>REST APIs / Data Pipelines</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>RxJS / Redux</span>
+                  <span>Node.js</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Development & Testing</h3>
+              <h3 className="text-xl font-semibold mb-4">Professional Skills</h3>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Git / Docker</span>
+                  <span>Technical Leadership</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Jest / Vitest / Testing Library</span>
+                  <span>System Architecture</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Storybook</span>
+                  <span>Code Reviews & Mentoring</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Agile / Scrum</span>
+                  <span>Agile / Scrum Practices</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Node.js / REST APIs</span>
+                  <span>Testing & CI/CD</span>
                 </li>
               </ul>
             </div>
@@ -238,7 +242,7 @@ export default function Home() {
             </a>
             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
               <h3 className="text-xl font-semibold mb-2">Bostan Software</h3>
-              <p className="text-gray-600">2023 - Present</p>
+              <p className="text-gray-600">2024 - Present</p>
             </div>
             <a href="https://www.kireygroup.com" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-6 shadow-sm text-center hover:shadow-md transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Kirey Group</h3>

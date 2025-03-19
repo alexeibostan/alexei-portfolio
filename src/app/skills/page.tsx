@@ -5,90 +5,38 @@ import Link from "next/link";
 import Layout from "@/components/layout/Layout";
 
 export default function Skills() {
-  const skillCategories = [
-    {
-      name: "Frontend Development",
-      skills: [
-        { name: "Next.js", level: 90 },
-        { name: "React", level: 85 },
-        { name: "Angular 2-8", level: 90 },
-        { name: "Vue.js", level: 80 },
-        { name: "TypeScript", level: 90 },
-        { name: "JavaScript (ES5/ES6)", level: 95 },
-        { name: "HTML5", level: 95 },
-        { name: "CSS3 / SCSS", level: 85 },
-        { name: "Radix UI", level: 85 },
-        { name: "vanilla-extract-css", level: 85 },
-        { name: "styled-components", level: 85 },
-        { name: "Angular Material", level: 85 },
-        { name: "Storybook", level: 80 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "Bootstrap", level: 85 },
-        { name: "Responsive Design", level: 90 },
-      ]
-    },
-    {
-      name: "State Management & Data Fetching",
-      skills: [
-        { name: "Redux", level: 85 },
-        { name: "redux-saga", level: 80 },
-        { name: "react-query", level: 90 },
-        { name: "TanStack Query", level: 85 },
-        { name: "TanStack Table", level: 80 },
-        { name: "RxJS", level: 85 },
-        { name: "vue-query", level: 75 },
-      ]
-    },
-    {
-      name: "Backend Development",
-      skills: [
-        { name: "Python", level: 85 },
-        { name: "FastAPI", level: 80 },
-        { name: "PostgreSQL", level: 80 },
-        { name: "MongoDB", level: 75 },
-        { name: "BigQuery", level: 75 },
-        { name: "Celery", level: 70 },
-        { name: "Node.js", level: 75 },
-        { name: "RESTful APIs", level: 85 },
-        { name: "Java", level: 70 },
-        { name: "SQL / DB2", level: 70 },
-      ]
-    },
-    {
-      name: "Mobile Development",
-      skills: [
-        { name: "React Native", level: 75 },
-        { name: "Ionic Framework", level: 75 },
-        { name: "Appcelerator Titanium", level: 70 },
-        { name: "Mobile UI/UX", level: 80 },
-      ]
-    },
-    {
-      name: "Testing & Quality",
-      skills: [
-        { name: "Jest", level: 80 },
-        { name: "Vitest", level: 85 },
-        { name: "React Testing Library", level: 85 },
-        { name: "Unit Testing", level: 80 },
-        { name: "Integration Testing", level: 75 },
-      ]
-    },
-    {
-      name: "Tools & Methods",
-      skills: [
-        { name: "Git", level: 90 },
-        { name: "Docker", level: 85 },
-        { name: "Vite", level: 85 },
-        { name: "Webpack", level: 80 },
-        { name: "npm/yarn", level: 90 },
-        { name: "Agile / Scrum", level: 85 },
-        { name: "JIRA", level: 80 },
-        { name: "Zeplin", level: 75 },
-        { name: "KonvaJS", level: 70 },
-        { name: "shadcn-vue", level: 75 },
-      ]
-    }
+  // Flatten all skills into a single array with their categories
+  const allSkills = [
+    { name: "Next.js", category: "Frontend", years: "3+" },
+    { name: "React", category: "Frontend", years: "4+" },
+    { name: "Angular", category: "Frontend", years: "5+" },
+    { name: "Vue.js", category: "Frontend", years: "2+" },
+    { name: "TypeScript", category: "Frontend", years: "4+" },
+    { name: "Python", category: "Backend", years: "1+" },
+    { name: "FastAPI", category: "Backend", years: "1+" },
+    { name: "Node.js", category: "Backend", years: "3+" },
+    { name: "PostgreSQL", category: "Backend", years: "2+" },
+    { name: "MongoDB", category: "Backend", years: "2+" },
+    { name: "BigQuery", category: "Backend", years: "1+" },
+    { name: "Radix UI", category: "Libraries", years: "2+" },
+    { name: "Tailwind CSS", category: "Libraries", years: "3+" },
+    { name: "styled-components", category: "Libraries", years: "3+" },
+    { name: "vanilla-extract", category: "Libraries", years: "2+" },
+    { name: "Recharts", category: "Libraries", years: "2+" },
+    { name: "react-query", category: "Libraries", years: "2+" },
+    { name: "RxJS", category: "Libraries", years: "4+" },
+    { name: "Redux", category: "Libraries", years: "4+" },
+    { name: "Docker", category: "Tools", years: "2+" },
+    { name: "Git", category: "Tools", years: "6+" },
+    { name: "Jest", category: "Testing", years: "3+" },
+    { name: "Vitest", category: "Testing", years: "1+" },
+    { name: "Testing Library", category: "Testing", years: "3+" },
+    { name: "Storybook", category: "Tools", years: "2+" },
+    { name: "Celery", category: "Backend", years: "1+" },
   ];
+
+  // Get unique categories for filtering
+  const categories = [...new Set(allSkills.map(skill => skill.category))];
 
   return (
     <Layout>
@@ -97,34 +45,48 @@ export default function Skills() {
           <div className="mb-12">
             <h1 className="text-4xl font-bold mb-6">Skills & Expertise</h1>
             <p className="text-lg text-gray-600 max-w-3xl">
-              I've developed a diverse set of technical skills throughout my career, with particular expertise in frontend development using Angular and React frameworks. Below is an overview of my technical competencies.
+              As a Senior Software Engineer with 8+ years of experience, I've developed a comprehensive technical skill set spanning both frontend and backend technologies. My expertise in React, Next.js, and Angular is complemented by growing proficiency in Python, FastAPI, and database systems, allowing me to architect and implement end-to-end solutions while mentoring junior team members.
             </p>
           </div>
 
-          <div className="space-y-16">
-            {skillCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white p-8 rounded-lg shadow-sm">
-                <h2 className="text-2xl font-bold mb-8 pb-2 border-b border-gray-200">
-                  {category.name}
-                </h2>
-                <div className="space-y-6">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex}>
-                      <div className="flex justify-between mb-1">
-                        <span className="font-medium">{skill.name}</span>
-                        <span className="text-gray-500">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2.5">
-                        <div
-                          className="bg-[#325080] h-2.5 rounded-full"
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
+          {/* Hexagonal Skills Grid */}
+          <div className="py-12">
+            <div className="mb-8 flex flex-wrap gap-4 justify-center">
+              {categories.map(category => (
+                <button 
+                  key={category}
+                  className="px-4 py-2 rounded-full border border-[#325080] text-[#325080] hover:bg-[#325080] hover:text-white transition-colors"
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+            
+            <div className="flex flex-wrap justify-center max-w-6xl mx-auto">
+              {allSkills.map((skill, index) => (
+                <div 
+                  key={skill.name}
+                  className="w-32 h-32 m-2 flex items-center justify-center text-center transform hover:scale-110 transition-transform duration-300 cursor-pointer relative group"
+                  style={{
+                    clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+                    backgroundColor: [
+                      '#DBEAFE', // stronger light blue
+                      '#C7D2FE', // stronger indigo
+                      '#D1FAE5', // stronger teal
+                      '#E0E7FF', // stronger purple
+                      '#EFF6FF', // stronger sky blue
+                    ][index % 5],
+                    border: '1px solid #E5E7EB'
+                  }}
+                >
+                  <div className="p-2">
+                    <div className="font-semibold text-sm mb-1 text-gray-800 group-hover:text-[#325080]">{skill.name}</div>
+                    <div className="text-xs text-gray-600">{skill.years} years</div>
+                    <div className="text-xs text-[#325080] mt-1 font-medium">{skill.category}</div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Additional Skills Section */}
@@ -135,35 +97,59 @@ export default function Skills() {
                 <h3 className="text-xl font-semibold mb-4">Languages</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center">
-                    <span className="inline-block w-4 h-4 rounded-full bg-[#325080] mr-2"></span>
-                    <span>English (Professional Working)</span>
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
+                    <span>English (Fluent)</span>
                   </li>
                   <li className="flex items-center">
-                    <span className="inline-block w-4 h-4 rounded-full bg-[#325080] mr-2"></span>
-                    <span>Italian (Native)</span>
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
+                    <span>Italian (Fluent)</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
+                    <span>Romanian (Native)</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
+                    <span>Dutch (Basic)</span>
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4">Soft Skills</h3>
+                <h3 className="text-xl font-semibold mb-4">Professional</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center">
-                    <span className="inline-block w-4 h-4 rounded-full bg-[#325080] mr-2"></span>
-                    <span>Problem-solving</span>
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
+                    <span>Agile/Scrum Methodologies</span>
                   </li>
                   <li className="flex items-center">
-                    <span className="inline-block w-4 h-4 rounded-full bg-[#325080] mr-2"></span>
-                    <span>Team collaboration</span>
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
+                    <span>Team Mentoring</span>
                   </li>
                   <li className="flex items-center">
-                    <span className="inline-block w-4 h-4 rounded-full bg-[#325080] mr-2"></span>
-                    <span>Attention to detail</span>
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
+                    <span>Code Review</span>
                   </li>
                   <li className="flex items-center">
-                    <span className="inline-block w-4 h-4 rounded-full bg-[#325080] mr-2"></span>
-                    <span>Time management</span>
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
+                    <span>Technical Documentation</span>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Awards/Recognition */}
+          <div className="mt-16 mb-16 bg-white p-8 rounded-lg shadow-sm border-l-4 border-[#325080]">
+            <h2 className="text-2xl font-bold mb-6">Recognition</h2>
+            <div className="flex items-center">
+              <div className="mr-6 bg-[#325080] text-white p-3 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-1">Deliverect Hackathon - 2nd Place</h3>
+                <p className="text-gray-600">Sentiment Analysis Project</p>
               </div>
             </div>
           </div>
@@ -176,7 +162,7 @@ export default function Skills() {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4">Skills in Action</h2>
             <p className="text-lg max-w-2xl mx-auto">
-              See how I've applied these skills in real-world projects
+              Explore my projects to see how I've applied these technical skills to architect and implement robust, scalable solutions
             </p>
           </div>
           <div className="flex justify-center">

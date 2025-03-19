@@ -13,7 +13,7 @@ export default function Projects() {
         period: "2023 - Present",
         description: "As Senior Software Engineer, I help develop this comprehensive analytics dashboard that provides real-time insights into restaurant performance. Working on both frontend and backend components, implementing robust data processing pipelines and visualization systems. Built with Next.js for the frontend and Python/FastAPI for the backend, with data stored across PostgreSQL, MongoDB, and BigQuery.",
         skills: ["Next.js", "React.js", "TypeScript", "vanilla-extract-css", "CSS", "Docker", "Git", "Recharts", "Python", "FastAPI", "Celery", "PostgreSQL", "MongoDB", "BigQuery", "Data Visualization"],
-        role: "FE/BE",
+        role: "SE",
       },
       {
         name: "Deliverect Design System",
@@ -36,7 +36,7 @@ export default function Projects() {
       {
         name: "P&ID Digitalization Solution",
         type: "Web App",
-        period: "2023 - Present",
+        period: "2024 - Present",
         description: "Developing innovative digital solutions for chemical engineering processes, specifically in P&ID digitalization. Collaborating with a University customer to transform traditional engineering workflows into efficient digital processes.",
         skills: ["Vue.js", "Tailwind CSS", "shadcn-vue", "vue-query", "KonvaJS"],
         role: "FE",
@@ -124,6 +124,7 @@ export default function Projects() {
 
   // Role color mapping
   const roleColors: Record<string, string> = {
+    "SE": "bg-[#325080]",
     "FE": "bg-[#e16642]",
     "WD": "bg-[#c18f68]",
     "MD": "bg-[#7494be]"
@@ -217,6 +218,12 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-xl font-bold mb-4">Role Legend</h2>
           <div className="flex flex-wrap gap-6">
+            <div className="flex items-center">
+              <div className="w-8 h-8 rounded-md flex items-center justify-center text-white bg-[#325080] text-sm">
+                SE
+              </div>
+              <span className="ml-2">Software Engineer (Full Stack)</span>
+            </div>
             <div className="flex items-center">
               <div className="w-8 h-8 rounded-md flex items-center justify-center text-white bg-[#e16642] text-sm">
                 FE
