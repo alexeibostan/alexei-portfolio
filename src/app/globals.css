@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 100% 97%;  /* light cream/beige */
+    --foreground: 36 16% 18%;   /* dark brown/gray */
+    --card: 0 0% 100%;
+    --card-foreground: 36 16% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 36 16% 18%;
+    --primary: 36 16% 18%;      /* dark brown/gray */
+    --primary-foreground: 60 100% 97%;
+    --secondary: 110 55% 92%;   /* light green */
+    --secondary-foreground: 36 16% 18%;
+    --muted: 36 16% 87%;        /* muted brown */
+    --muted-foreground: 36 16% 45%;
+    --accent: 110 55% 92%;      /* light green */
+    --accent-foreground: 36 16% 18%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 36 16% 85%;
+    --input: 36 16% 85%;
+    --ring: 36 16% 18%;
+    --radius: 0.5rem;
+
+    /* Website colors */
+    --green-light: 110 55% 92%;  /* #f1f6e0 - light green background */
+    --green-dark: 81 24% 43%;    /* #81865a - darker green */
+    --dark-bg: 36 16% 18%;       /* #312e2b - dark background */
+    --brown-accent: 30 24% 40%;  /* #7d664e - brown accent */
+    --text-dark: 36 16% 18%;     /* #312e2b - text dark */
+    --text-light: 60 100% 97%;   /* #f1f6e0 - text light */
+  }
+
+  .dark {
+    --background: 36 16% 18%;       /* dark brown/gray */
+    --foreground: 60 100% 97%;      /* light cream/beige */
+    --card: 36 16% 18%;
+    --card-foreground: 60 100% 97%;
+    --popover: 36 16% 18%;
+    --popover-foreground: 60 100% 97%;
+    --primary: 60 100% 97%;
+    --primary-foreground: 36 16% 18%;
+    --secondary: 110 55% 92%;
+    --secondary-foreground: 36 16% 18%;
+    --muted: 36 16% 30%;
+    --muted-foreground: 36 16% 70%;
+    --accent: 110 55% 92%;
+    --accent-foreground: 36 16% 18%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 100% 97%;
+    --border: 36 16% 30%;
+    --input: 36 16% 30%;
+    --ring: 60 100% 97%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom components and styles */
+.shall-we {
+  @apply bg-[#f1f6e0] text-[#312e2b] py-16 px-8;
+}
+
+.green {
+  @apply bg-[#f1f6e0];
+}
+
+.black {
+  @apply bg-[#312e2b] text-white;
+}
+
+.skip-to-content {
+  @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-white text-black p-2 rounded;
+}
+
+.nav-bar {
+  @apply py-4 px-8 flex justify-between items-center;
+}
+
+.nav-menu {
+  @apply flex gap-6;
+}
+
+.social-icon {
+  @apply text-white hover:text-[#f1f6e0] transition-colors;
+}
