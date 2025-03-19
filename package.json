@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build"
+    "export": "next export",
+    "deploy": "next build && touch build/.nojekyll"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

@@ -14,6 +14,8 @@ const nextConfig = {
       },
     ],
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/alexei-portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/alexei-portfolio' : '',
 };
 
 module.exports = nextConfig;
