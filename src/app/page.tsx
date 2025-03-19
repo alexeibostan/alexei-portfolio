@@ -1,58 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
+import { projects } from "@/data/projects";
+import { companies } from "@/data/companies";
 
 export default function Home() {
-  const projects = [
-    {
-      company: "Deliverect",
-      name: "Pulse by Deliverect",
-      type: "Analytics Dashboard",
-      period: "2023 - Present",
-      description: "As Senior Software Engineer, I help develop this analytics dashboard providing real-time insights into restaurant performance. Working on both frontend (Next.js/React) and backend (Python/FastAPI) components with data stored across PostgreSQL, MongoDB, and BigQuery.",
-      skills: ["Next.js", "React", "Python", "FastAPI", "PostgreSQL", "MongoDB", "BigQuery"],
-      role: "SE",
-    },
-    {
-      company: "Deliverect",
-      name: "Deliverect Design System",
-      type: "Component Library",
-      period: "2022 - 2023",
-      description: "Started the first iteration of Deliverect's design system with components based on Radix UI, vanilla-extract-css and storybook for improved development workflow and UI consistency.",
-      skills: ["React.js", "TypeScript", "Radix UI", "vanilla-extract-css", "Storybook"],
-      role: "FE",
-    },
-    {
-      company: "Bostan Software Developments",
-      name: "P&ID Digitalization Solution",
-      type: "Web App",
-      period: "2024 - Present",
-      description: "Innovative digital solution for chemical engineering processes, specifically in P&ID digitalization. University collaboration project using modern Vue.js stack.",
-      skills: ["Vue.js", "Tailwind CSS", "shadcn-vue", "vue-query", "KonvaJS"],
-      role: "FE",
-    },
-    {
-      company: "Kirey Group",
-      name: "Consumer Finance Application",
-      type: "Web App",
-      period: "May 2020 - Oct 2021",
-      description: "Upgraded a consumer finance application from Angular 7 to Angular 8. Refactored pages to use more RxJS and reduce bugs.",
-      skills: ["Angular 8", "TypeScript", "RxJS", "Angular Material"],
-      role: "FE",
-    },
-    {
-      company: "Mobilesoft",
-      name: "Igea Banca Digital Platform",
-      type: "Web App",
-      period: "2017-2019",
-      description: "Started an application with Angular 2-7 and grew it to the main digital platform of Igea Banca. Used techniques as code splitting to reduce the bundle size.",
-      skills: ["Angular 2-7", "TypeScript", "RxJS", "Reactive Forms"],
-      role: "FE",
-    }
-  ];
-
   return (
     <Layout>
       {/* Hero Section */}
@@ -235,30 +187,18 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-5 gap-4">
-            <a href="https://www.deliverect.com" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-6 shadow-sm text-center hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-semibold mb-2">Deliverect</h3>
-              <p className="text-gray-600">Nov 2021 - Present</p>
-              <span className="mt-2 inline-block text-sm text-blue-600">Visit Website</span>
-            </a>
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <h3 className="text-xl font-semibold mb-2">Bostan Software</h3>
-              <p className="text-gray-600">2024 - Present</p>
-            </div>
-            <a href="https://www.kireygroup.com" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-6 shadow-sm text-center hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-semibold mb-2">Kirey Group</h3>
-              <p className="text-gray-600">May 2020 - Oct 2021</p>
-              <span className="mt-2 inline-block text-sm text-blue-600">Visit Website</span>
-            </a>
-            <a href="https://www.dedagroup.it" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-6 shadow-sm text-center hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-semibold mb-2">Dedagroup</h3>
-              <p className="text-gray-600">2019 - 2020</p>
-              <span className="mt-2 inline-block text-sm text-blue-600">Visit Website</span>
-            </a>
-            <a href="https://www.mobilesoft.it" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-6 shadow-sm text-center hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-semibold mb-2">Mobilesoft</h3>
-              <p className="text-gray-600">Jul 2016 - Nov 2019</p>
-              <span className="mt-2 inline-block text-sm text-blue-600">Visit Website</span>
-            </a>
+            {companies.map((company, index) => company.url ? (
+              <a key={index} href={company.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-6 shadow-sm text-center hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-semibold mb-2">{company.name}</h3>
+                <p className="text-gray-600">{company.period}</p>
+                <span className="mt-2 inline-block text-sm text-blue-600">Visit Website</span>
+              </a>
+            ) : (
+              <div key={index} className="bg-white rounded-lg p-6 shadow-sm text-center">
+                <h3 className="text-xl font-semibold mb-2">{company.name}</h3>
+                <p className="text-gray-600">{company.period}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import ClientBody from "./ClientBody";
+import Body from "./Body";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -10,8 +10,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Alexei Bostan - Front End Developer",
-  description: "Front End Developer specializing in Angular and React frameworks, with experience in various business domains including banking and finance.",
+  title: "Alexei Bostan - Senior Software Engineer",
+  description: "Senior Software Engineer with 8+ years of experience specializing in frontend and backend technologies including React, Next.js, Python, and FastAPI.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -24,9 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable}`}>
-      <ClientBody>
+      <Body>
         {children}
-      </ClientBody>
+      </Body>
     </html>
   );
 }

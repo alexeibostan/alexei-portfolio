@@ -1,126 +1,10 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
+import { getProjectsByCompany, companyWebsites, companyColors } from "@/data/projectsByCompany";
 
 export default function Projects() {
-  const projectsByCompany = {
-    "Deliverect": [
-      {
-        name: "Pulse by Deliverect",
-        type: "Analytics Dashboard",
-        period: "2023 - Present",
-        description: "As Senior Software Engineer, I help develop this comprehensive analytics dashboard that provides real-time insights into restaurant performance. Working on both frontend and backend components, implementing robust data processing pipelines and visualization systems. Built with Next.js for the frontend and Python/FastAPI for the backend, with data stored across PostgreSQL, MongoDB, and BigQuery.",
-        skills: ["Next.js", "React.js", "TypeScript", "vanilla-extract-css", "CSS", "Docker", "Git", "Recharts", "Python", "FastAPI", "Celery", "PostgreSQL", "MongoDB", "BigQuery", "Data Visualization"],
-        role: "SE",
-      },
-      {
-        name: "Deliverect Design System",
-        type: "Component Library",
-        period: "2022 - 2023",
-        description: "Started the first iteration of the Deliverect's design system as a collection of components based on Radix UI, vanilla-extract-css and storybook. Created reusable UI components that improved development speed and ensured consistency across applications.",
-        skills: ["Next.js", "React.js", "TypeScript", "Radix UI", "vanilla-extract-css", "Storybook"],
-        role: "FE",
-      },
-      {
-        name: "Deliverect Main Platform",
-        type: "Web App",
-        period: "Nov 2021 - 2022",
-        description: "Worked on the main Deliverect platform with a large code base and helped with transition from JavaScript to TypeScript, migration from redux-saga to react-query. Created features for third-party integrations and developer-friendly interfaces.",
-        skills: ["Next.js", "React.js", "TypeScript", "styled-components", "CSS", "Docker", "Git", "REST APIs", "redux-saga", "react-query"],
-        role: "FE",
-      }
-    ],
-    "Bostan Software Developments": [
-      {
-        name: "P&ID Digitalization Solution",
-        type: "Web App",
-        period: "2024 - Present",
-        description: "Developing innovative digital solutions for chemical engineering processes, specifically in P&ID digitalization. Collaborating with a University customer to transform traditional engineering workflows into efficient digital processes.",
-        skills: ["Vue.js", "Tailwind CSS", "shadcn-vue", "vue-query", "KonvaJS"],
-        role: "FE",
-      }
-    ],
-    "Kirey Group": [
-      {
-        name: "Consumer Finance Application",
-        type: "Web App",
-        period: "May 2020 - Oct 2021",
-        description: "Upgraded a consumer finance application from Angular 7 to Angular 8. Became the go-to person for the frontend on the consumer finance application. Refactored several pages to use more RxJS and reduce bugs.",
-        skills: ["Angular 7", "Angular 8", "Angular Material", "TypeScript", "RxJS", "JavaScript ES6"],
-        role: "FE",
-      }
-    ],
-    "Dedagroup - MC Engineering": [
-      {
-        name: "Cruscotto Polizze",
-        type: "Web App",
-        period: "2019",
-        description: "The application shows some policies stipulated by the bank's clients and allows some verification of the details.",
-        skills: ["Angular 7", "Custom Framework (Angular 7)", "TypeScript", "JavaScript ES6", "HTML5"],
-        role: "FE",
-      },
-      {
-        name: "AFM",
-        type: "Web App",
-        period: "2020",
-        description: "The application allows you to perform some queries on transactional movements previously loaded.",
-        skills: ["Custom Framework (GWT 2.8)", "Custom Framework (JAVA EE)", "MyBatis 3", "DB2", "JAVA 8"],
-        role: "WD",
-      }
-    ],
-    "Mobilesoft": [
-      {
-        name: "SMILE - Piattaforma Digitale",
-        type: "Web App",
-        period: "2017-2019",
-        description: "The application allows the management of banking products, it includes the configuration of products, customer management, and more.",
-        skills: ["Angular 2-7", "Spring Framework 5", "Hibernate 5", "Bootstrap 3.7 / 4", "TypeScript"],
-        role: "WD",
-      },
-      {
-        name: "Talco Stocks",
-        type: "Mobile iPad App",
-        period: "2017",
-        description: "The application is used to view the status of orders made by Talco stores.",
-        skills: ["Appcelerator Titanium", "JavaScript ES5", "REST", "Git", "Zeplin"],
-        role: "MD",
-      },
-      {
-        name: "Igea Banca Survery",
-        type: "Mobile App",
-        period: "2017",
-        description: "The application was used to collect a survey during an event for Igea Banca.",
-        skills: ["Appcelerator Titanium", "JavaScript ES5", "REST", "Git", "Zeplin"],
-        role: "MD",
-      },
-      {
-        name: "GAPA",
-        type: "Mobile iPad App",
-        period: "2016",
-        description: "An old web application of BNL has been rewritten with a hybrid mobile technology, it allows...",
-        skills: ["Framework Ionic 2", "TypeScript", "JavaScript", "HTML5", "CSS"],
-        role: "MD",
-      },
-      {
-        name: "IGEA BIT - Private Bank Accounts",
-        type: "Web App",
-        period: "2018",
-        description: "The application guides you in applying for an online bank account, integrates a digital signature system.",
-        skills: ["Angular 2-7", "Bootstrap 3.7 / 4", "TypeScript", "JavaScript ES6", "HTML5"],
-        role: "FE",
-      },
-      {
-        name: "IGEA BIZ - Business Bank Accounts",
-        type: "Web App",
-        period: "2017",
-        description: "The application guides you in applying for an online business bank account, it has a digital...",
-        skills: ["Angular 2-7", "Bootstrap 3.7 / 4", "TypeScript", "JavaScript ES6", "HTML5"],
-        role: "FE",
-      }
-    ]
-  };
+  const projectsByCompany = getProjectsByCompany();
 
   // Role color mapping
   const roleColors: Record<string, string> = {
@@ -128,22 +12,6 @@ export default function Projects() {
     "FE": "bg-[#e16642]",
     "WD": "bg-[#c18f68]",
     "MD": "bg-[#7494be]"
-  };
-
-  // Company website URLs
-  const companyWebsites: Record<string, string> = {
-    "Deliverect": "https://www.deliverect.com",
-    "Kirey Group": "https://www.kireygroup.com",
-    "Dedagroup - MC Engineering": "https://www.dedagroup.it",
-    "Mobilesoft": "https://www.mobilesoft.it"  // Assuming this is the Italian Mobilesoft
-  };
-
-  const companyColors: Record<string, string> = {
-    "Deliverect": "border-l-[#325080]",
-    "Bostan Software Developments": "border-l-[#4CAF50]",
-    "Kirey Group": "border-l-[#e16642]",
-    "Dedagroup - MC Engineering": "border-l-[#c18f68]",
-    "Mobilesoft": "border-l-[#7494be]",
   };
 
   return (

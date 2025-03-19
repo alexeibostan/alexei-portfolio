@@ -44,7 +44,7 @@ The repository uses GitHub Actions for automatic deployment:
 
 1. When you push to the `main` branch, the site will automatically build and deploy
 2. GitHub Actions workflow is defined in `.github/workflows/deploy.yml` and configured to use Bun
-3. The site will be available at `https://alexeibostan.github.io/alexei-portfolio/`
+3. The site will be available at [https://alexeibostan.github.io/alexei-portfolio/](https://alexeibostan.github.io/alexei-portfolio/)
 
 ## Configuration
 
