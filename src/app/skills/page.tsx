@@ -9,48 +9,83 @@ export default function Skills() {
     {
       name: "Frontend Development",
       skills: [
-        { name: "Angular 2-7", level: 90 },
+        { name: "Next.js", level: 90 },
         { name: "React", level: 85 },
-        { name: "React Native", level: 80 },
+        { name: "Angular 2-8", level: 90 },
+        { name: "Vue.js", level: 80 },
         { name: "TypeScript", level: 90 },
         { name: "JavaScript (ES5/ES6)", level: 95 },
         { name: "HTML5", level: 95 },
         { name: "CSS3 / SCSS", level: 85 },
-        { name: "Bootstrap 3/4", level: 90 },
+        { name: "Radix UI", level: 85 },
+        { name: "vanilla-extract-css", level: 85 },
+        { name: "styled-components", level: 85 },
         { name: "Angular Material", level: 85 },
+        { name: "Storybook", level: 80 },
+        { name: "Tailwind CSS", level: 90 },
+        { name: "Bootstrap", level: 85 },
         { name: "Responsive Design", level: 90 },
+      ]
+    },
+    {
+      name: "State Management & Data Fetching",
+      skills: [
+        { name: "Redux", level: 85 },
+        { name: "redux-saga", level: 80 },
+        { name: "react-query", level: 90 },
+        { name: "TanStack Query", level: 85 },
+        { name: "TanStack Table", level: 80 },
+        { name: "RxJS", level: 85 },
+        { name: "vue-query", level: 75 },
       ]
     },
     {
       name: "Backend Development",
       skills: [
-        { name: "Java", level: 75 },
-        { name: "Spring Framework", level: 70 },
-        { name: "Hibernate", level: 65 },
+        { name: "Python", level: 85 },
+        { name: "FastAPI", level: 80 },
+        { name: "PostgreSQL", level: 80 },
+        { name: "MongoDB", level: 75 },
+        { name: "BigQuery", level: 75 },
+        { name: "Celery", level: 70 },
+        { name: "Node.js", level: 75 },
         { name: "RESTful APIs", level: 85 },
-        { name: "SQL / DB2", level: 75 },
-        { name: "MyBatis", level: 60 },
+        { name: "Java", level: 70 },
+        { name: "SQL / DB2", level: 70 },
       ]
     },
     {
       name: "Mobile Development",
       skills: [
-        { name: "React Native", level: 80 },
-        { name: "Appcelerator Titanium", level: 75 },
-        { name: "Ionic Framework", level: 70 },
+        { name: "React Native", level: 75 },
+        { name: "Ionic Framework", level: 75 },
+        { name: "Appcelerator Titanium", level: 70 },
         { name: "Mobile UI/UX", level: 80 },
+      ]
+    },
+    {
+      name: "Testing & Quality",
+      skills: [
+        { name: "Jest", level: 80 },
+        { name: "Vitest", level: 85 },
+        { name: "React Testing Library", level: 85 },
+        { name: "Unit Testing", level: 80 },
+        { name: "Integration Testing", level: 75 },
       ]
     },
     {
       name: "Tools & Methods",
       skills: [
         { name: "Git", level: 90 },
+        { name: "Docker", level: 85 },
+        { name: "Vite", level: 85 },
+        { name: "Webpack", level: 80 },
+        { name: "npm/yarn", level: 90 },
         { name: "Agile / Scrum", level: 85 },
         { name: "JIRA", level: 80 },
         { name: "Zeplin", level: 75 },
-        { name: "VS Code", level: 95 },
-        { name: "Webpack", level: 80 },
-        { name: "npm/yarn", level: 90 },
+        { name: "KonvaJS", level: 70 },
+        { name: "shadcn-vue", level: 75 },
       ]
     }
   ];

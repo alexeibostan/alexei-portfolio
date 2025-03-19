@@ -6,13 +6,49 @@ import Layout from "@/components/layout/Layout";
 
 export default function Projects() {
   const projectsByCompany = {
+    "Deliverect": [
+      {
+        name: "Pulse by Deliverect",
+        type: "Analytics Dashboard",
+        period: "2023 - Present",
+        description: "As Senior Software Engineer, I help develop this comprehensive analytics dashboard that provides real-time insights into restaurant performance. Working on both frontend and backend components, implementing robust data processing pipelines and visualization systems. Built with Next.js for the frontend and Python/FastAPI for the backend, with data stored across PostgreSQL, MongoDB, and BigQuery.",
+        skills: ["Next.js", "React.js", "TypeScript", "vanilla-extract-css", "CSS", "Docker", "Git", "Recharts", "Python", "FastAPI", "Celery", "PostgreSQL", "MongoDB", "BigQuery", "Data Visualization"],
+        role: "FE/BE",
+      },
+      {
+        name: "Deliverect Design System",
+        type: "Component Library",
+        period: "2022 - 2023",
+        description: "Started the first iteration of the Deliverect's design system as a collection of components based on Radix UI, vanilla-extract-css and storybook. Created reusable UI components that improved development speed and ensured consistency across applications.",
+        skills: ["Next.js", "React.js", "TypeScript", "Radix UI", "vanilla-extract-css", "Storybook"],
+        role: "FE",
+      },
+      {
+        name: "Deliverect Main Platform",
+        type: "Web App",
+        period: "Nov 2021 - 2022",
+        description: "Worked on the main Deliverect platform with a large code base and helped with transition from JavaScript to TypeScript, migration from redux-saga to react-query. Created features for third-party integrations and developer-friendly interfaces.",
+        skills: ["Next.js", "React.js", "TypeScript", "styled-components", "CSS", "Docker", "Git", "REST APIs", "redux-saga", "react-query"],
+        role: "FE",
+      }
+    ],
+    "Bostan Software Developments": [
+      {
+        name: "P&ID Digitalization Solution",
+        type: "Web App",
+        period: "2023 - Present",
+        description: "Developing innovative digital solutions for chemical engineering processes, specifically in P&ID digitalization. Collaborating with a University customer to transform traditional engineering workflows into efficient digital processes.",
+        skills: ["Vue.js", "Tailwind CSS", "shadcn-vue", "vue-query", "KonvaJS"],
+        role: "FE",
+      }
+    ],
     "Kirey Group": [
       {
-        name: "Consumer Finance",
+        name: "Consumer Finance Application",
         type: "Web App",
-        period: "2020-2021",
-        description: "The application is a workflow used in the bank branches to sell small loans to private clients.",
-        skills: ["Angular 7", "Angular Material 7", "Bootstrap 4", "TypeScript", "JavaScript ES6"],
+        period: "May 2020 - Oct 2021",
+        description: "Upgraded a consumer finance application from Angular 7 to Angular 8. Became the go-to person for the frontend on the consumer finance application. Refactored several pages to use more RxJS and reduce bugs.",
+        skills: ["Angular 7", "Angular 8", "Angular Material", "TypeScript", "RxJS", "JavaScript ES6"],
         role: "FE",
       }
     ],
@@ -83,16 +119,6 @@ export default function Projects() {
         skills: ["Angular 2-7", "Bootstrap 3.7 / 4", "TypeScript", "JavaScript ES6", "HTML5"],
         role: "FE",
       }
-    ],
-    "Altro": [
-      {
-        name: "Lightdrop",
-        type: "Mobile App",
-        period: "2020",
-        description: "The application purpose is to organize events of various kinds and aims to bring people in the real world.",
-        skills: ["React Native", "React Hooks", "React", "JavaScript ES6", "REST"],
-        role: "MD",
-      }
     ]
   };
 
@@ -103,11 +129,20 @@ export default function Projects() {
     "MD": "bg-[#7494be]"
   };
 
+  // Company website URLs
+  const companyWebsites: Record<string, string> = {
+    "Deliverect": "https://www.deliverect.com",
+    "Kirey Group": "https://www.kireygroup.com",
+    "Dedagroup - MC Engineering": "https://www.dedagroup.it",
+    "Mobilesoft": "https://www.mobilesoft.it"  // Assuming this is the Italian Mobilesoft
+  };
+
   const companyColors: Record<string, string> = {
+    "Deliverect": "border-l-[#325080]",
+    "Bostan Software Developments": "border-l-[#4CAF50]",
     "Kirey Group": "border-l-[#e16642]",
     "Dedagroup - MC Engineering": "border-l-[#c18f68]",
     "Mobilesoft": "border-l-[#7494be]",
-    "Altro": "border-l-[#325080]"
   };
 
   return (
@@ -117,16 +152,31 @@ export default function Projects() {
           <div className="mb-12">
             <h1 className="text-4xl font-bold mb-6">Projects</h1>
             <p className="text-lg text-gray-600 max-w-3xl">
-              Below are the projects I have worked on over the years divided by company. Each project showcases my skills in different technologies and frameworks across web and mobile development.
+              As a Senior Software Engineer with 8+ years of experience, I've worked across multiple industries and technologies. My expertise spans frontend frameworks (React, Next.js, Vue, Angular) and backend systems (Python, FastAPI, Node.js). I've developed enterprise-scale platforms, data visualization tools, and complex web applications while contributing to technical decision-making and mentoring junior engineers.
             </p>
           </div>
 
           <div className="space-y-16">
             {Object.entries(projectsByCompany).map(([company, projects]) => (
               <div key={company}>
-                <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">
-                  {company}
-                </h2>
+                <div className="flex justify-between items-center mb-6 pb-2 border-b border-gray-200">
+                  <h2 className="text-2xl font-bold">
+                    {company}
+                  </h2>
+                  {company !== "Bostan Software Developments" && companyWebsites[company] && (
+                    <a 
+                      href={companyWebsites[company]} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800"
+                    >
+                      Visit Company Website
+                      <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  )}
+                </div>
                 <div className="grid md:grid-cols-2 gap-6">
                   {projects.map((project, index) => (
                     <div

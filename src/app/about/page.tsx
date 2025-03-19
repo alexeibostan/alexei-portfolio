@@ -7,34 +7,28 @@ import Layout from "@/components/layout/Layout";
 export default function About() {
   const professionalJourney = [
     {
-      period: "Current",
+      period: "Nov 2021 - Present",
       company: "Deliverect",
-      role: "Frontend Developer",
-      description: "Working on creating seamless user experiences and interfaces for food delivery management systems. Specializing in React and Next.js development.",
+      role: "Senior Software Engineer",
+      description: "Recently promoted to Senior Software Engineer. Initially worked on marketing products in Next.js and built the first iteration of Deliverect's design system. Now contributing to both frontend and backend development for Pulse analytics dashboard, using Python, FastAPI, Celery, and various databases (PostgreSQL, MongoDB, BigQuery). Leading technical initiatives and mentoring team members.",
     },
     {
       period: "2023-Present",
-      company: "Software Consultancy",
-      role: "Founder & Technical Lead",
-      description: "Founded a software consultancy company focused on innovating digital solutions for chemical engineering processes, specifically in P&ID digitalization.",
+      company: "Bostan Software Developments",
+      role: "Founder & Owner",
+      description: "Founded a software consultancy company collaborating with a University customer on innovating digital solutions for chemical engineering processes, specifically in P&ID digitalization. Using VueJS, Tailwind CSS, shadcn-vue, vue-query, KonvaJS.",
     },
     {
-      period: "2020-2021",
-      company: "Kirey Group",
-      role: "Front End Developer",
-      description: "Worked on developing banking applications with Angular, focusing on user experience and accessibility.",
+      period: "May 2020 - Oct 2021",
+      company: "Kirey Group (Unicredit)",
+      role: "Frontend Developer",
+      description: "Upgraded a consumer finance application from Angular 7 to Angular 8. Became the go-to person for the frontend on the consumer finance application. Refactored several pages to use more RxJS and reduce bugs.",
     },
     {
-      period: "2019-2020",
-      company: "Dedagroup - MC Engineering",
-      role: "Web Developer",
-      description: "Developed and maintained web applications for financial institutions, working with both front-end and back-end technologies.",
-    },
-    {
-      period: "2016-2019",
+      period: "Jul 2016 - Nov 2019",
       company: "Mobilesoft",
-      role: "Frontend & Mobile Developer",
-      description: "Created web and mobile applications for various clients, specializing in responsive designs and cross-platform mobile development.",
+      role: "Frontend Developer",
+      description: "Started an application with Angular 2-7 and grew it to the main digital platform of Igea Banca. Used techniques as code splitting to reduce the bundle size, RxJs, and Reactive forms. Worked on small projects with NodeJS and MongoDB, and several hybrid mobile apps with Ionic and Appcelerator Titanium.",
     }
   ];
 
@@ -51,14 +45,15 @@ export default function About() {
             <div>
               <h2 className="text-2xl font-bold mb-6">Professional Profile</h2>
               <p className="text-lg mb-4">
-                Results-driven Frontend Developer with 8+ years of experience specializing in modern JavaScript
-                frameworks (Angular, React, Vue). Proven track record in technical leadership, having successfully
-                led a team of 5 developers and mentored multiple junior developers throughout my career.
+                Senior Software Engineer with 8+ years of experience specializing in modern JavaScript
+                frameworks and Python-based backend systems. Recently promoted in recognition of technical excellence, having successfully
+                contributed to complex projects and mentored junior developers throughout my career.
               </p>
               <p className="text-lg mb-6">
-                Key contributor to enterprise-level design systems, with significant experience in standardizing UI components
-                and improving development workflows. Recently founded a software consultancy company focused on innovating
-                digital solutions for chemical engineering processes, specifically in P&ID digitalization, combining technical
+                Key contributor to enterprise-level design systems and data-driven applications, with expertise in both frontend and backend technologies.
+                Skilled in architecting scalable solutions and implementing best practices across the development stack. 
+                Recently founded a software consultancy company focused on innovating
+                digital solutions for chemical engineering processes, combining technical
                 expertise with business acumen to deliver transformative results for clients.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
@@ -79,33 +74,33 @@ export default function About() {
             <div className="bg-[#f5f5f5] p-8 rounded-lg">
               <h2 className="text-2xl font-bold mb-6">At a Glance</h2>
               <ul className="space-y-4">
-                <li className="flex">
-                  <span className="font-semibold w-32">Location:</span>
-                  <span>Amersfoort, Utrecht, Netherlands</span>
+                <li className="flex flex-col sm:flex-row">
+                  <span className="font-semibold sm:w-32 mb-1 sm:mb-0">Location:</span>
+                  <span>Amersfoort, Netherlands</span>
                 </li>
-                <li className="flex">
-                  <span className="font-semibold w-32">Experience:</span>
+                <li className="flex flex-col sm:flex-row">
+                  <span className="font-semibold sm:w-32 mb-1 sm:mb-0">Experience:</span>
                   <span>8+ years</span>
                 </li>
-                <li className="flex">
-                  <span className="font-semibold w-32">Current Role:</span>
-                  <span>Frontend Developer at Deliverect</span>
+                <li className="flex flex-col sm:flex-row">
+                  <span className="font-semibold sm:w-32 mb-1 sm:mb-0">Current Role:</span>
+                  <span>Senior Software Engineer at Deliverect</span>
                 </li>
-                <li className="flex">
-                  <span className="font-semibold w-32">Specialization:</span>
-                  <span>Angular, React, Vue, Next.js, Node.js</span>
+                <li className="flex flex-col sm:flex-row">
+                  <span className="font-semibold sm:w-32 mb-1 sm:mb-0">Specialization:</span>
+                  <span>NextJS, React, Python, FastAPI, Vue, Angular, TypeScript</span>
                 </li>
-                <li className="flex">
-                  <span className="font-semibold w-32">Industry Focus:</span>
+                <li className="flex flex-col sm:flex-row">
+                  <span className="font-semibold sm:w-32 mb-1 sm:mb-0">Industry Focus:</span>
                   <span>Food Tech, Chemical Engineering, Banking & Finance</span>
                 </li>
-                <li className="flex">
-                  <span className="font-semibold w-32">Languages:</span>
-                  <span>English, Italian</span>
+                <li className="flex flex-col sm:flex-row">
+                  <span className="font-semibold sm:w-32 mb-1 sm:mb-0">Languages:</span>
+                  <span>English, Italian, Romanian, Dutch (A2)</span>
                 </li>
-                <li className="flex">
-                  <span className="font-semibold w-32">Education:</span>
-                  <span>Università Telematica Internazionale UNINETTUNO</span>
+                <li className="flex flex-col sm:flex-row">
+                  <span className="font-semibold sm:w-32 mb-1 sm:mb-0">Education:</span>
+                  <span>BSc in Computer Engineering, UNINETTUNO</span>
                 </li>
               </ul>
             </div>
@@ -114,20 +109,29 @@ export default function About() {
           {/* Professional Journey */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Professional Journey</h2>
-            <div className="relative border-l-2 border-gray-200 pl-8 ml-6">
-              {professionalJourney.map((job, index) => (
-                <div key={index} className="mb-10 relative">
-                  <div className="absolute -left-14 w-6 h-6 bg-[#325080] rounded-full"></div>
-                  <div className="bg-white p-6 rounded-lg shadow-sm">
-                    <div className="flex justify-between mb-2">
-                      <h3 className="text-xl font-semibold">{job.company}</h3>
-                      <span className="text-gray-500">{job.period}</span>
+            <div className="relative">
+              {/* Vertical timeline line */}
+              <div className="absolute left-6 top-0 h-full w-0.5 bg-gray-200"></div>
+              
+              {/* Timeline items */}
+              <div className="space-y-10">
+                {professionalJourney.map((job, index) => (
+                  <div key={index} className="relative pl-20">
+                    {/* Circle marker */}
+                    <div className="absolute left-2 top-6 w-8 h-8 rounded-full bg-[#325080]"></div>
+                    
+                    {/* Content card */}
+                    <div className="bg-white p-6 rounded-lg shadow-sm">
+                      <div className="flex justify-between mb-2">
+                        <h3 className="text-xl font-semibold">{job.company}</h3>
+                        <span className="text-gray-500">{job.period}</span>
+                      </div>
+                      <p className="text-[#325080] font-medium mb-2">{job.role}</p>
+                      <p>{job.description}</p>
                     </div>
-                    <p className="text-[#325080] font-medium mb-2">{job.role}</p>
-                    <p>{job.description}</p>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 

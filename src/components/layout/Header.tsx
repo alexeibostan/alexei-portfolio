@@ -42,24 +42,6 @@ export default function Header() {
             >
               Projects
             </Link>
-            <Link
-              href="/skills"
-              className="text-gray-600 hover:text-[#325080] hover:underline px-3 py-2 text-sm font-medium"
-            >
-              Skills
-            </Link>
-            <Link
-              href="/speaking"
-              className="text-gray-600 hover:text-[#325080] hover:underline px-3 py-2 text-sm font-medium"
-            >
-              Speaking
-            </Link>
-            <Link
-              href="/blog"
-              className="text-gray-600 hover:text-[#325080] hover:underline px-3 py-2 text-sm font-medium"
-            >
-              Blog
-            </Link>
           </nav>
 
           {/* Social Media Links - Desktop */}
@@ -131,27 +113,6 @@ export default function Header() {
               onClick={toggleMobileMenu}
             >
               Projects
-            </Link>
-            <Link
-              href="/skills"
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#325080] hover:bg-gray-50"
-              onClick={toggleMobileMenu}
-            >
-              Skills
-            </Link>
-            <Link
-              href="/speaking"
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#325080] hover:bg-gray-50"
-              onClick={toggleMobileMenu}
-            >
-              Speaking
-            </Link>
-            <Link
-              href="/blog"
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#325080] hover:bg-gray-50"
-              onClick={toggleMobileMenu}
-            >
-              Blog
             </Link>
           </div>
           <div className="px-5 py-3 border-t border-gray-200 flex justify-center space-x-6">

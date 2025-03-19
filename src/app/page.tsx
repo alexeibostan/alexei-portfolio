@@ -7,40 +7,49 @@ import Layout from "@/components/layout/Layout";
 export default function Home() {
   const projects = [
     {
-      company: "Kirey Group",
-      name: "Consumer Finance",
+      company: "Deliverect",
+      name: "Pulse by Deliverect",
+      type: "Analytics Dashboard",
+      period: "2023 - Present",
+      description: "As Senior Software Engineer, I help develop this analytics dashboard providing real-time insights into restaurant performance. Working on both frontend (Next.js/React) and backend (Python/FastAPI) components with data stored across PostgreSQL, MongoDB, and BigQuery.",
+      skills: ["Next.js", "React", "Python", "FastAPI", "PostgreSQL", "MongoDB", "BigQuery"],
+      role: "FE/BE",
+    },
+    {
+      company: "Deliverect",
+      name: "Deliverect Design System",
+      type: "Component Library",
+      period: "2022 - 2023",
+      description: "Started the first iteration of Deliverect's design system with components based on Radix UI, vanilla-extract-css and storybook for improved development workflow and UI consistency.",
+      skills: ["React.js", "TypeScript", "Radix UI", "vanilla-extract-css", "Storybook"],
+      role: "FE",
+    },
+    {
+      company: "Bostan Software Developments",
+      name: "P&ID Digitalization Solution",
       type: "Web App",
-      period: "2020-2021",
-      description: "The application is a workflow used in the bank branches to sell small loans to private clients.",
-      skills: ["Angular 7", "Angular Material 7", "Bootstrap 4", "TypeScript", "JavaScript ES6"],
+      period: "2023 - Present",
+      description: "Innovative digital solution for chemical engineering processes, specifically in P&ID digitalization. University collaboration project using modern Vue.js stack.",
+      skills: ["Vue.js", "Tailwind CSS", "shadcn-vue", "vue-query", "KonvaJS"],
+      role: "FE",
+    },
+    {
+      company: "Kirey Group",
+      name: "Consumer Finance Application",
+      type: "Web App",
+      period: "May 2020 - Oct 2021",
+      description: "Upgraded a consumer finance application from Angular 7 to Angular 8. Refactored pages to use more RxJS and reduce bugs.",
+      skills: ["Angular 8", "TypeScript", "RxJS", "Angular Material"],
       role: "FE",
     },
     {
       company: "Mobilesoft",
-      name: "SMILE - Piattaforma Digitale",
+      name: "Igea Banca Digital Platform",
       type: "Web App",
       period: "2017-2019",
-      description: "The application allows the management of banking products, it includes the configuration of products, customer management, and more.",
-      skills: ["Angular 2-7", "Spring Framework 5", "Hibernate 5", "Bootstrap 3.7 / 4", "TypeScript"],
-      role: "WD",
-    },
-    {
-      company: "Dedagroup - MC Engineering",
-      name: "Cruscotto Polizze",
-      type: "Web App",
-      period: "2019",
-      description: "The application shows some policies stipulated by the bank's clients and allows some verification of the details.",
-      skills: ["Angular 7", "Custom Framework (Angular 7)", "TypeScript", "JavaScript ES6", "HTML5"],
+      description: "Started an application with Angular 2-7 and grew it to the main digital platform of Igea Banca. Used techniques as code splitting to reduce the bundle size.",
+      skills: ["Angular 2-7", "TypeScript", "RxJS", "Reactive Forms"],
       role: "FE",
-    },
-    {
-      company: "Dedagroup - MC Engineering",
-      name: "AFM",
-      type: "Web App",
-      period: "2020",
-      description: "The application allows you to perform some queries on transactional movements previously loaded.",
-      skills: ["Custom Framework (GWT 2.8)", "Custom Framework (JAVA EE)", "MyBatis 3", "DB2", "JAVA 8"],
-      role: "WD",
     }
   ];
 
@@ -50,12 +59,12 @@ export default function Home() {
       <div className="py-16 px-8 bg-[#325080] text-white">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Front End Developer
+            Senior Software Engineer
           </h1>
           <p className="text-lg max-w-2xl mb-8">
-            Below are the projects I have worked on over the years divided by company.
-            The most important are SMILE - Digital Platform and Consumer Finance,
-            they were also the longest projects where I gained a lot of experience with the Angular framework.
+            Results-driven developer with 8+ years of experience mastering both frontend and backend technologies. 
+            Recently promoted to Senior Developer at Deliverect, where I build sophisticated analytics platforms using 
+            React/Next.js and Python/FastAPI while mentoring team members and architecting scalable solutions.
           </p>
           <div>
             <Link
@@ -129,59 +138,67 @@ export default function Home() {
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Angular (2-7)</span>
+                  <span>Next.js & React</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>React & React Native</span>
+                  <span>TypeScript</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>TypeScript / JavaScript</span>
+                  <span>Vue.js</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
+                  <span>Angular (2-8)</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
                   <span>HTML5 / CSS3</span>
                 </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <h3 className="text-xl font-semibold mb-4">Libraries & Tools</h3>
+              <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Bootstrap</span>
+                  <span>Radix UI / Tailwind CSS</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
+                  <span>vanilla-extract-css / styled-components</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
+                  <span>react-query / TanStack Query</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
+                  <span>Recharts / Data Visualization</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
+                  <span>RxJS / Redux</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Backend</h3>
+              <h3 className="text-xl font-semibold mb-4">Development & Testing</h3>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Java</span>
+                  <span>Git / Docker</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Spring Framework</span>
+                  <span>Jest / Vitest / Testing Library</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>REST APIs</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>SQL / DB2</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Hibernate</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Tools & Methods</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Git</span>
+                  <span>Storybook</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
@@ -189,15 +206,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>JIRA</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Zeplin</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
-                  <span>Responsive Design</span>
+                  <span>Node.js / REST APIs</span>
                 </li>
               </ul>
             </div>
@@ -221,23 +230,31 @@ export default function Home() {
             <h2 className="text-3xl font-bold">Companies I've Worked With</h2>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-5 gap-4">
+            <a href="https://www.deliverect.com" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-6 shadow-sm text-center hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-semibold mb-2">Deliverect</h3>
+              <p className="text-gray-600">Nov 2021 - Present</p>
+              <span className="mt-2 inline-block text-sm text-blue-600">Visit Website</span>
+            </a>
             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
+              <h3 className="text-xl font-semibold mb-2">Bostan Software</h3>
+              <p className="text-gray-600">2023 - Present</p>
+            </div>
+            <a href="https://www.kireygroup.com" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-6 shadow-sm text-center hover:shadow-md transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Kirey Group</h3>
-              <p className="text-gray-600">2020-2021</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
+              <p className="text-gray-600">May 2020 - Oct 2021</p>
+              <span className="mt-2 inline-block text-sm text-blue-600">Visit Website</span>
+            </a>
+            <a href="https://www.dedagroup.it" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-6 shadow-sm text-center hover:shadow-md transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Dedagroup</h3>
-              <p className="text-gray-600">2019-2020</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
+              <p className="text-gray-600">2019 - 2020</p>
+              <span className="mt-2 inline-block text-sm text-blue-600">Visit Website</span>
+            </a>
+            <a href="https://www.mobilesoft.it" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-6 shadow-sm text-center hover:shadow-md transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Mobilesoft</h3>
-              <p className="text-gray-600">2016-2019</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <h3 className="text-xl font-semibold mb-2">Altro</h3>
-              <p className="text-gray-600">2020</p>
-            </div>
+              <p className="text-gray-600">Jul 2016 - Nov 2019</p>
+              <span className="mt-2 inline-block text-sm text-blue-600">Visit Website</span>
+            </a>
           </div>
         </div>
       </div>
