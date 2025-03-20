@@ -6,17 +6,8 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'ext.same-assets.com',
-        port: '',
-        pathname: '/**',
-      },
-    ],
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/alexei-portfolio' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/alexei-portfolio' : '',
+  basePath: process.env.BASE_PATH, // Set basePath from environment variable
 };
 
 module.exports = nextConfig;
