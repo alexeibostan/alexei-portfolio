@@ -10,21 +10,37 @@ export default function Home() {
       {/* Hero Section */}
       <div className="py-16 px-8 bg-[#325080] text-white">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Senior Software Engineer
-          </h1>
-          <p className="text-lg max-w-2xl mb-8">
-            Results-driven developer with 8+ years of experience mastering both frontend and backend technologies. 
-            Recently promoted to Senior Developer at Deliverect, where I build sophisticated analytics platforms using 
-            React/Next.js and Python/FastAPI while mentoring team members and architecting scalable solutions.
-          </p>
-          <div>
-            <Link
-              href="/projects"
-              className="inline-flex items-center bg-white text-[#325080] px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors"
-            >
-              View All Projects →
-            </Link>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+            <div className="md:max-w-2xl">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                Senior Software Engineer
+              </h1>
+              <p className="text-lg mb-8">
+                Results-driven developer with 8+ years of experience mastering both frontend and backend technologies. 
+                Recently promoted to Senior Developer at Deliverect, where I build sophisticated analytics platforms using 
+                React/Next.js and Python/FastAPI while mentoring team members and architecting scalable solutions.
+              </p>
+              <div>
+                <Link
+                  href="/projects"
+                  className="inline-flex items-center bg-white text-[#325080] px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors"
+                >
+                  View All Projects →
+                </Link>
+              </div>
+            </div>
+            <div className="flex justify-center md:justify-end">
+              <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <Image 
+                  src="/profile.webp" 
+                  alt="Alexei Bostan" 
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  priority
+                  className="rounded-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

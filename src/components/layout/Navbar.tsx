@@ -71,7 +71,7 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="/resume.pdf"
+                href="/Alexei-Bostan-Professional-Resume.pdf"
                 className="bg-white text-[#325080] px-3 py-1 rounded hover:bg-opacity-90 transition-colors"
               >
                 RESUME

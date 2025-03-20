@@ -93,7 +93,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/resume.pdf"
+                  href="/Alexei-Bostan-Professional-Resume.pdf"
                   className="hover:underline flex items-center"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="mr-2">
