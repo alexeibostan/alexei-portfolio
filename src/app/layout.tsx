@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
     ],
   },
-  manifest: "/site.webmanifest",
+  manifest: `${process.env.BASE_PATH}/site.webmanifest`,
 };
 
 export default function RootLayout({

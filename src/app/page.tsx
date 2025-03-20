@@ -32,7 +32,7 @@ export default function Home() {
             <div className="flex justify-center md:justify-end">
               <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-lg">
                 <Image 
-                  src="/profile.webp" 
+                  src={`${process.env.BASE_PATH}/profile.webp`}
                   alt="Alexei Bostan" 
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
