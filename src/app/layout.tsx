@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Body from "./Body";
-import Head from "next/head";
+import Script from "next/script";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -35,11 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable}`}>
-      <Head>
-        <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-      </Head>
       <Body>
         {children}
+        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       </Body>
     </html>
   );
