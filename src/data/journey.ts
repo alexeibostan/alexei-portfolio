@@ -15,7 +15,7 @@ export const professionalJourney: JobEntry[] = [
   {
     period: "2024-Present",
     company: "Bostan Software Developments",
-    role: "Founder & Owner",
+    role: "Part-time Owner & Consultant",
     description: "Started a software consultancy company collaborating with a University customer on innovating digital solutions for chemical engineering processes, specifically in P&ID digitalization. Using VueJS, Tailwind CSS, shadcn-vue, vue-query, KonvaJS.",
   },
   {
