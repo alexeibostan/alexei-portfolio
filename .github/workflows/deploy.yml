@@ -12,7 +12,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      BASE_PATH: '/alexei-portfolio'
+      BASE_PATH: ''
 
     steps:
       - name: Checkout 🛎️
