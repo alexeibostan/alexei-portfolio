@@ -1,17 +1,22 @@
 import React from "react";
-import Link from "next/link";
 import Layout from "@/components/layout/Layout";
 import { getProjectsByCompany, companyWebsites, companyColors } from "@/data/projectsByCompany";
 import { getTranslations } from 'next-intl/server';
+import { locales } from '@/i18n';
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
+// Generate static params for all locales
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export default async function Projects({ params }: Props) {
   const { locale } = await params;
   const projectsByCompany = getProjectsByCompany();
-  const t = await getTranslations();
+  const t = await getTranslations({ locale });
 
   // Role color mapping
   const roleColors: Record<string, string> = {

@@ -1,10 +1,16 @@
 import { getTranslations } from 'next-intl/server';
+import { locales } from '@/i18n';
 import Body from './Body';
 
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
+
+// Generate static params for all locales
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params

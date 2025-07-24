@@ -5,6 +5,12 @@
     "skills": "Vaardigheden",
     "about": "Over Mij"
   },
+  "languages": {
+    "english": "Engels",
+    "dutch": "Nederlands",
+    "italian": "Italiaans",
+    "romanian": "Roemeens"
+  },
   "common": {
     "viewAllProjects": "Bekijk Alle Projecten",
     "viewAllSkills": "Bekijk alle vaardigheden",

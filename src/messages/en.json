@@ -5,6 +5,12 @@
     "skills": "Skills",
     "about": "About"
   },
+  "languages": {
+    "english": "English",
+    "dutch": "Dutch",
+    "italian": "Italian",
+    "romanian": "Romanian"
+  },
   "common": {
     "viewAllProjects": "View All Projects",
     "viewAllSkills": "View all skills",

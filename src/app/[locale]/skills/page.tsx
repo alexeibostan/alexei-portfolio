@@ -3,16 +3,22 @@ import Link from "next/link";
 import Layout from "@/components/layout/Layout";
 import { skills } from "@/data/skills";
 import { getTranslations } from 'next-intl/server';
+import { locales } from '@/i18n';
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
+// Generate static params for all locales
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export default async function Skills({ params }: Props) {
   const { locale } = await params;
   // Get unique categories for filtering
   const categories = [...new Set(skills.map(skill => skill.category))];
-  const t = await getTranslations();
+  const t = await getTranslations({ locale });
 
   return (
     <Layout>

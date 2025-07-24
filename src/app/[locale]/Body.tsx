@@ -1,11 +1,14 @@
+import BrowserLanguageDetector from '@/components/BrowserLanguageDetector';
+
 export default function Body({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <body className="antialiased bg-background text-foreground font-sans" suppressHydrationWarning>
+    <>
+      <BrowserLanguageDetector />
       {children}
-    </body>
+    </>
   );
 }
