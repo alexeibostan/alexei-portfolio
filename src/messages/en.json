@@ -1,0 +1,83 @@
+{
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Skills",
+    "about": "About"
+  },
+  "common": {
+    "viewAllProjects": "View All Projects",
+    "viewAllSkills": "View all skills",
+    "contactMe": "Contact Me",
+    "visitWebsite": "Visit Website",
+    "viewMyProjects": "View My Projects",
+    "mySkills": "My Skills",
+    "getInTouch": "Get in Touch"
+  },
+  "home": {
+    "title": "Senior Software Engineer",
+    "description": "Results-driven developer with 8+ years of experience mastering both frontend and backend technologies. Recently promoted to Senior Developer at Deliverect, where I build sophisticated analytics platforms using React/Next.js and Python/FastAPI while mentoring team members and architecting scalable solutions.",
+    "featuredProjects": "Featured Projects",
+    "technicalSkills": "Technical Skills",
+    "frontend": "Frontend",
+    "backendData": "Backend & Data",
+    "professionalSkills": "Professional Skills",
+    "companiesWorkedWith": "Companies I've Worked With",
+    "ctaTitle": "Interested in working together?",
+    "ctaDescription": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
+    "company": "Company"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Senior Software Engineer with expertise in full-stack development",
+    "professionalProfile": "Professional Profile",
+    "professionalDescription1": "Senior Software Engineer with 8+ years of experience specializing in modern JavaScript frameworks and full-stack development. My expertise spans frontend technologies like React, Next.js, and Angular, complemented by backend work with Python, FastAPI, and various database systems.",
+    "professionalDescription2": "Recently promoted at Deliverect, I contribute to both frontend and backend development of the analytics platform, implement technical best practices, and mentor junior developers. My approach combines technical excellence with pragmatic problem-solving to deliver scalable, maintainable solutions.",
+    "professionalDescription3": "In 2024, I started my own software consultancy, working on specialized solutions for university clients in the chemical engineering sector.",
+    "atAGlance": "At a Glance",
+    "location": "Location",
+    "experience": "Experience",
+    "currentRole": "Current Role",
+    "specialization": "Specialization",
+    "industryFocus": "Industry Focus",
+    "languages": "Languages",
+    "education": "Education",
+    "professionalJourney": "Professional Journey",
+    "leadershipTitle": "Leadership & Technical Excellence",
+    "technicalLeadership": "Technical Leadership",
+    "technicalLeadershipDesc": "Provide technical guidance to team members, conduct thorough code reviews, and help set architectural direction for complex projects while driving quality standards.",
+    "enterpriseDesignSystems": "Enterprise Design Systems",
+    "enterpriseDesignSystemsDesc": "Spearheaded development of company-wide design systems, standardizing components and improving development workflows.",
+    "mentorship": "Junior Developer Mentorship",
+    "mentorshipDesc": "Mentored multiple junior developers, helping them grow their technical skills through hands-on guidance and structured learning paths.",
+    "entrepreneurship": "Entrepreneurship",
+    "entrepreneurshipDesc": "Applied technical expertise to start a small software consultancy focused on specialized industry solutions.",
+    "technicalExpertise": "Technical Expertise",
+    "getInTouchDescription": "I'm always interested in hearing about new opportunities and projects. Feel free to reach out if you'd like to discuss potential collaboration."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A collection of projects I've worked on",
+    "allProjects": "All Projects",
+    "projectsByCompany": "Projects by Company"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technical skills and expertise"
+  },
+  "metadata": {
+    "title": "Alexei Bostan - Senior Software Engineer",
+    "description": "Senior Software Engineer with 8+ years of experience specializing in frontend and backend technologies including React, Next.js, Python, and FastAPI."
+  },
+  "footer": {
+    "copyright": "© 2024 Alexei Bostan. All rights reserved.",
+    "footerDescription": "Senior Software Engineer with 8+ years of experience specializing in modern JavaScript frameworks. Technical leader with expertise in enterprise design systems and software consultancy for specialized industry solutions.",
+    "navigationTitle": "Navigation",
+    "connectTitle": "Connect",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "email": "Email",
+    "resume": "Resume"
+  }
+}

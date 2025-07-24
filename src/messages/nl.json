@@ -1,0 +1,83 @@
+{
+  "navigation": {
+    "home": "Home",
+    "projects": "Projecten",
+    "skills": "Vaardigheden",
+    "about": "Over Mij"
+  },
+  "common": {
+    "viewAllProjects": "Bekijk Alle Projecten",
+    "viewAllSkills": "Bekijk alle vaardigheden",
+    "contactMe": "Neem Contact Op",
+    "visitWebsite": "Bezoek Website",
+    "viewMyProjects": "Bekijk Mijn Projecten",
+    "mySkills": "Mijn Vaardigheden",
+    "getInTouch": "Neem Contact Op"
+  },
+  "home": {
+    "title": "Senior Software Engineer",
+    "description": "Resultaatgerichte ontwikkelaar met 8+ jaar ervaring in frontend en backend technologieën. Onlangs gepromoveerd tot Senior Developer bij Deliverect, waar ik geavanceerde analytics platforms bouw met React/Next.js en Python/FastAPI en teamleden begeleid en schaalbare oplossingen architect.",
+    "featuredProjects": "Uitgelichte Projecten",
+    "technicalSkills": "Technische Vaardigheden",
+    "frontend": "Frontend",
+    "backendData": "Backend & Data",
+    "professionalSkills": "Professionele Vaardigheden",
+    "companiesWorkedWith": "Bedrijven Waarmee Ik Heb Gewerkt",
+    "ctaTitle": "Geïnteresseerd in samenwerking?",
+    "ctaDescription": "Ik sta altijd open voor het bespreken van nieuwe projecten, creatieve ideeën, of kansen om deel uit te maken van jouw visies.",
+    "company": "Bedrijf"
+  },
+  "about": {
+    "title": "Over Mij",
+    "subtitle": "Senior Software Engineer met expertise in full-stack ontwikkeling",
+    "professionalProfile": "Professioneel Profiel",
+    "professionalDescription1": "Senior Software Engineer met 8+ jaar ervaring gespecialiseerd in moderne JavaScript frameworks en full-stack ontwikkeling. Mijn expertise omvat frontend technologieën zoals React, Next.js en Angular, aangevuld met backend werk met Python, FastAPI en verschillende databasesystemen.",
+    "professionalDescription2": "Onlangs gepromoveerd bij Deliverect, draag ik bij aan zowel frontend als backend ontwikkeling van het analytics platform, implementeer ik technische best practices en begeleid ik junior ontwikkelaars. Mijn aanpak combineert technische excellentie met pragmatisch probleemoplossen om schaalbare, onderhoudbare oplossingen te leveren.",
+    "professionalDescription3": "In 2024 ben ik mijn eigen software consultancy begonnen, werkend aan gespecialiseerde oplossingen voor universitaire klanten in de chemische techniek sector.",
+    "atAGlance": "In Één Oogopslag",
+    "location": "Locatie",
+    "experience": "Ervaring",
+    "currentRole": "Huidige Rol",
+    "specialization": "Specialisatie",
+    "industryFocus": "Branche Focus",
+    "languages": "Talen",
+    "education": "Opleiding",
+    "professionalJourney": "Professionele Reis",
+    "leadershipTitle": "Leiderschap & Technische Excellentie",
+    "technicalLeadership": "Technisch Leiderschap",
+    "technicalLeadershipDesc": "Bied technische begeleiding aan teamleden, voer grondige code reviews uit en help bij het bepalen van architecturale richting voor complexe projecten terwijl ik kwaliteitsstandaarden stimuleer.",
+    "enterpriseDesignSystems": "Enterprise Design Systemen",
+    "enterpriseDesignSystemsDesc": "Leidde de ontwikkeling van bedrijfsbrede design systemen, standaardiseerde componenten en verbeterde ontwikkelworkflows.",
+    "mentorship": "Junior Developer Begeleiding",
+    "mentorshipDesc": "Begeleidde meerdere junior ontwikkelaars, hielp hen hun technische vaardigheden te ontwikkelen door hands-on begeleiding en gestructureerde leerpaden.",
+    "entrepreneurship": "Ondernemerschap",
+    "entrepreneurshipDesc": "Paste technische expertise toe om een kleine software consultancy te starten gericht op gespecialiseerde branche-oplossingen.",
+    "technicalExpertise": "Technische Expertise",
+    "getInTouchDescription": "Ik ben altijd geïnteresseerd in nieuwe kansen en projecten. Aarzel niet om contact op te nemen als je mogelijke samenwerking wilt bespreken."
+  },
+  "projects": {
+    "title": "Projecten",
+    "subtitle": "Een verzameling projecten waar ik aan heb gewerkt",
+    "allProjects": "Alle Projecten",
+    "projectsByCompany": "Projecten per Bedrijf"
+  },
+  "skills": {
+    "title": "Vaardigheden",
+    "subtitle": "Technische vaardigheden en expertise"
+  },
+  "metadata": {
+    "title": "Alexei Bostan - Senior Software Engineer",
+    "description": "Senior Software Engineer met 8+ jaar ervaring gespecialiseerd in frontend en backend technologieën waaronder React, Next.js, Python en FastAPI."
+  },
+  "footer": {
+    "copyright": "© 2024 Alexei Bostan. Alle rechten voorbehouden.",
+    "footerDescription": "Senior Software Engineer met 8+ jaar ervaring gespecialiseerd in moderne JavaScript frameworks. Technisch leider met expertise in enterprise design systemen en software consultancy voor gespecialiseerde branche-oplossingen.",
+    "navigationTitle": "Navigatie",
+    "connectTitle": "Verbinden",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "email": "E-mail",
+    "resume": "CV"
+  }
+}
