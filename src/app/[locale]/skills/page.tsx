@@ -2,19 +2,26 @@ import React from "react";
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
 import { skills } from "@/data/skills";
+import { getTranslations } from 'next-intl/server';
 
-export default function Skills() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Skills({ params }: Props) {
+  const { locale } = await params;
   // Get unique categories for filtering
   const categories = [...new Set(skills.map(skill => skill.category))];
+  const t = await getTranslations();
 
   return (
     <Layout>
       <div className="py-12 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
-            <h1 className="text-4xl font-bold mb-6">Skills & Expertise</h1>
+            <h1 className="text-4xl font-bold mb-6">{t('skills.mainTitle')}</h1>
             <p className="text-lg text-gray-600 max-w-3xl">
-              As a Senior Software Engineer with 8+ years of experience, I've developed a comprehensive technical skill set spanning both frontend and backend technologies. My expertise in React, Next.js, and Angular is complemented by growing proficiency in Python, FastAPI, and database systems, allowing me to architect and implement end-to-end solutions while mentoring junior team members.
+              {t('skills.description')}
             </p>
           </div>
 
@@ -50,7 +57,7 @@ export default function Skills() {
                 >
                   <div className="p-2">
                     <div className="font-semibold text-sm mb-1 text-gray-800 group-hover:text-[#325080]">{skill.name}</div>
-                    <div className="text-xs text-gray-600">{skill.years} years</div>
+                    <div className="text-xs text-gray-600">{skill.years} {t('skills.years')}</div>
                     <div className="text-xs text-[#325080] mt-1 font-medium">{skill.category}</div>
                   </div>
                 </div>
@@ -60,47 +67,47 @@ export default function Skills() {
 
           {/* Additional Skills Section */}
           <div className="mt-16 bg-gray-100 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold mb-6">Other Skills & Knowledge</h2>
+            <h2 className="text-2xl font-bold mb-6">{t('skills.otherSkillsKnowledge')}</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold mb-4">Languages</h3>
+                <h3 className="text-xl font-semibold mb-4">{t('skills.languages')}</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
-                    <span>English (Fluent)</span>
+                    <span>{t('skills.english')}</span>
                   </li>
                   <li className="flex items-center">
                     <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
-                    <span>Italian (Fluent)</span>
+                    <span>{t('skills.italian')}</span>
                   </li>
                   <li className="flex items-center">
                     <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
-                    <span>Romanian (Native)</span>
+                    <span>{t('skills.romanian')}</span>
                   </li>
                   <li className="flex items-center">
                     <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
-                    <span>Dutch (Basic)</span>
+                    <span>{t('skills.dutch')}</span>
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4">Professional</h3>
+                <h3 className="text-xl font-semibold mb-4">{t('skills.professional')}</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
-                    <span>Agile/Scrum Methodologies</span>
+                    <span>{t('skills.agileScrum')}</span>
                   </li>
                   <li className="flex items-center">
                     <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
-                    <span>Team Mentoring</span>
+                    <span>{t('skills.teamMentoring')}</span>
                   </li>
                   <li className="flex items-center">
                     <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
-                    <span>Code Review</span>
+                    <span>{t('skills.codeReview')}</span>
                   </li>
                   <li className="flex items-center">
                     <span className="inline-block w-3 h-3 rounded-full bg-[#325080] mr-2"></span>
-                    <span>Technical Documentation</span>
+                    <span>{t('skills.technicalDocumentation')}</span>
                   </li>
                 </ul>
               </div>
@@ -109,7 +116,7 @@ export default function Skills() {
 
           {/* Awards/Recognition */}
           <div className="mt-16 mb-16 bg-white p-8 rounded-lg shadow-sm border-l-4 border-[#325080]">
-            <h2 className="text-2xl font-bold mb-6">Recognition</h2>
+            <h2 className="text-2xl font-bold mb-6">{t('skills.recognition')}</h2>
             <div className="flex items-center">
               <div className="mr-6 bg-[#325080] text-white p-3 rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -117,8 +124,8 @@ export default function Skills() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-1">Deliverect Hackathon - 2nd Place</h3>
-                <p className="text-gray-600">Sentiment Analysis Project</p>
+                <h3 className="text-xl font-semibold mb-1">{t('skills.hackathonAward')}</h3>
+                <p className="text-gray-600">{t('skills.sentimentAnalysis')}</p>
               </div>
             </div>
           </div>
@@ -129,17 +136,17 @@ export default function Skills() {
       <div className="py-12 px-8 bg-[#325080] text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">Skills in Action</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('skills.skillsInAction')}</h2>
             <p className="text-lg max-w-2xl mx-auto">
-              Explore my projects to see how I've applied these technical skills to architect and implement robust, scalable solutions
+              {t('skills.skillsInActionDescription')}
             </p>
           </div>
           <div className="flex justify-center">
             <Link
-              href="/projects"
+              href={`/${locale}/projects`}
               className="inline-flex items-center bg-white text-[#325080] px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors"
             >
-              View Projects
+              {t('skills.viewProjects')}
             </Link>
           </div>
         </div>

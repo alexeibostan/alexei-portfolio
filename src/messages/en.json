@@ -58,12 +58,41 @@
   "projects": {
     "title": "Projects",
     "subtitle": "A collection of projects I've worked on",
+    "description": "As a Senior Software Engineer with 8+ years of experience, I've worked across multiple industries and technologies. My expertise spans frontend frameworks (React, Next.js, Vue, Angular) and backend systems (Python, FastAPI, Node.js). I've developed enterprise-scale platforms, data visualization tools, and complex web applications while contributing to technical decision-making and mentoring junior engineers.",
     "allProjects": "All Projects",
-    "projectsByCompany": "Projects by Company"
+    "projectsByCompany": "Projects by Company",
+    "visitCompanyWebsite": "Visit Company Website",
+    "roleLegend": "Role Legend",
+    "softwareEngineerFullStack": "Software Engineer (Full Stack)",
+    "frontendDeveloper": "Frontend Developer",
+    "webDeveloper": "Web Developer (Frontend & Backend)",
+    "mobileDeveloper": "Mobile Developer",
+    "ctaTitle": "Need a skilled developer for your next project?",
+    "ctaDescription": "I'm available for new opportunities and would love to discuss how I can contribute to your team."
   },
   "skills": {
     "title": "Skills",
-    "subtitle": "Technical skills and expertise"
+    "subtitle": "Technical skills and expertise",
+    "mainTitle": "Skills & Expertise",
+    "description": "As a Senior Software Engineer with 8+ years of experience, I've developed a comprehensive technical skill set spanning both frontend and backend technologies. My expertise in React, Next.js, and Angular is complemented by growing proficiency in Python, FastAPI, and database systems, allowing me to architect and implement end-to-end solutions while mentoring junior team members.",
+    "years": "years",
+    "otherSkillsKnowledge": "Other Skills & Knowledge",
+    "languages": "Languages",
+    "professional": "Professional",
+    "english": "English (Fluent)",
+    "italian": "Italian (Fluent)",
+    "romanian": "Romanian (Native)",
+    "dutch": "Dutch (Basic)",
+    "agileScrum": "Agile/Scrum Methodologies",
+    "teamMentoring": "Team Mentoring",
+    "codeReview": "Code Review",
+    "technicalDocumentation": "Technical Documentation",
+    "recognition": "Recognition",
+    "hackathonAward": "Deliverect Hackathon - 2nd Place",
+    "sentimentAnalysis": "Sentiment Analysis Project",
+    "skillsInAction": "Skills in Action",
+    "skillsInActionDescription": "Explore my projects to see how I've applied these technical skills to architect and implement robust, scalable solutions",
+    "viewProjects": "View Projects"
   },
   "metadata": {
     "title": "Alexei Bostan - Senior Software Engineer",

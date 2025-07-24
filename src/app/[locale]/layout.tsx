@@ -3,12 +3,13 @@ import Body from './Body';
 
 type Props = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata({
-  params: { locale }
+  params
 }: Omit<Props, 'children'>) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return {
@@ -17,6 +18,6 @@ export async function generateMetadata({
   };
 }
 
-export default function LocaleLayout({ children, params }: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
   return <Body>{children}</Body>;
 }

@@ -3,8 +3,16 @@ import Link from "next/link";
 import Layout from "@/components/layout/Layout";
 import { projects } from "@/data/projects";
 import { companies } from "@/data/companies";
+import { getTranslations } from 'next-intl/server';
 
-export default function Home() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations();
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -13,19 +21,17 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <div className="md:max-w-2xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Senior Software Engineer
+                {t('home.title')}
               </h1>
               <p className="text-lg mb-8">
-                Results-driven developer with 8+ years of experience mastering both frontend and backend technologies. 
-                Recently promoted to Senior Developer at Deliverect, where I build sophisticated analytics platforms using 
-                React/Next.js and Python/FastAPI while mentoring team members and architecting scalable solutions.
+                {t('home.description')}
               </p>
               <div>
                 <Link
-                  href="/projects"
+                  href={`/${locale}/projects`}
                   className="inline-flex items-center bg-white text-[#325080] px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors"
                 >
-                  View All Projects →
+                  {t('common.viewAllProjects')} →
                 </Link>
               </div>
             </div>
@@ -50,7 +56,7 @@ export default function Home() {
       <div className="py-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
-            <h2 className="text-3xl font-bold">Featured Projects</h2>
+            <h2 className="text-3xl font-bold">{t('home.featuredProjects')}</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -81,7 +87,7 @@ export default function Home() {
                   ))}
                 </div>
                 <div className="text-[#325080] font-medium">
-                  Company: {project.company}
+                  {t('home.company')}: {project.company}
                 </div>
               </div>
             ))}
@@ -89,10 +95,10 @@ export default function Home() {
 
           <div className="mt-8 text-center">
             <Link
-              href="/projects"
+              href={`/${locale}/projects`}
               className="inline-flex items-center text-[#325080] hover:underline"
             >
-              View all projects →
+              {t('common.viewAllProjects')} →
             </Link>
           </div>
         </div>
@@ -102,12 +108,12 @@ export default function Home() {
       <div className="py-16 px-8 bg-gray-100">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
-            <h2 className="text-3xl font-bold">Technical Skills</h2>
+            <h2 className="text-3xl font-bold">{t('home.technicalSkills')}</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Frontend</h3>
+              <h3 className="text-xl font-semibold mb-4">{t('home.frontend')}</h3>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
@@ -133,7 +139,7 @@ export default function Home() {
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Backend & Data</h3>
+              <h3 className="text-xl font-semibold mb-4">{t('home.backendData')}</h3>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
@@ -159,7 +165,7 @@ export default function Home() {
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Professional Skills</h3>
+              <h3 className="text-xl font-semibold mb-4">{t('home.professionalSkills')}</h3>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-[#325080] text-white flex-shrink-0 flex items-center justify-center mr-2">✓</span>
@@ -187,10 +193,10 @@ export default function Home() {
 
           <div className="mt-8 text-center">
             <Link
-              href="/skills"
+              href={`/${locale}/skills`}
               className="inline-flex items-center text-[#325080] hover:underline"
             >
-              View all skills →
+              {t('common.viewAllSkills')} →
             </Link>
           </div>
         </div>
@@ -200,7 +206,7 @@ export default function Home() {
       <div className="py-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">Companies I've Worked With</h2>
+            <h2 className="text-3xl font-bold">{t('home.companiesWorkedWith')}</h2>
           </div>
 
           <div className="grid md:grid-cols-5 gap-4">
@@ -208,7 +214,7 @@ export default function Home() {
               <a key={index} href={company.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-6 shadow-sm text-center hover:shadow-md transition-shadow">
                 <h3 className="text-xl font-semibold mb-2">{company.name}</h3>
                 <p className="text-gray-600">{company.period}</p>
-                <span className="mt-2 inline-block text-sm text-blue-600">Visit Website</span>
+                <span className="mt-2 inline-block text-sm text-blue-600">{t('common.visitWebsite')}</span>
               </a>
             ) : (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm text-center">
@@ -223,15 +229,15 @@ export default function Home() {
       {/* CTA Section */}
       <div className="py-16 px-8 bg-[#325080] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Interested in working together?</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('home.ctaTitle')}</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+            {t('home.ctaDescription')}
           </p>
           <a
             href="mailto:alexei.bostan@example.com"
             className="inline-flex items-center bg-white text-[#325080] px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors"
           >
-            Contact Me →
+            {t('common.contactMe')} →
           </a>
         </div>
       </div>
