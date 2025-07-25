@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
-import { projects } from "@/data/projects";
-import { companies } from "@/data/companies";
 import { getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { locales } from '@/i18n';
 
 type Props = {
@@ -17,7 +16,32 @@ export function generateStaticParams() {
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;
+  
+  // Enable static rendering
+  setRequestLocale(locale);
+  
   const t = await getTranslations({ locale });
+
+  // Statically import the localized data based on locale
+  let projects, companies;
+  switch (locale) {
+    case 'nl':
+      projects = (await import('@/data/nl/projects')).projects;
+      companies = (await import('@/data/nl/companies')).companies;
+      break;
+    case 'it':
+      projects = (await import('@/data/it/projects')).projects;
+      companies = (await import('@/data/it/companies')).companies;
+      break;
+    case 'ro':
+      projects = (await import('@/data/ro/projects')).projects;
+      companies = (await import('@/data/ro/companies')).companies;
+      break;
+    default:
+      projects = (await import('@/data/en/projects')).projects;
+      companies = (await import('@/data/en/companies')).companies;
+      break;
+  }
 
   return (
     <Layout>

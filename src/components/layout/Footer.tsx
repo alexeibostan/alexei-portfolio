@@ -1,11 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
+import { locales, defaultLocale } from '@/i18n';
 
 export default function Footer() {
   const t = useTranslations();
-  const locale = useLocale();
+  const pathname = usePathname();
+  
+  // Extract locale from pathname
+  const localePattern = new RegExp(`^/(${locales.join('|')})`);
+  const locale = pathname.match(localePattern)?.[1] || defaultLocale;
 
   return (
     <footer className="bg-[#325080] text-white py-8">

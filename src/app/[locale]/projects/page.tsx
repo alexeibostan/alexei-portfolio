@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@/components/layout/Layout";
 import { getProjectsByCompany, companyWebsites, companyColors } from "@/data/projectsByCompany";
 import { getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { locales } from '@/i18n';
 
 type Props = {
@@ -15,8 +16,14 @@ export function generateStaticParams() {
 
 export default async function Projects({ params }: Props) {
   const { locale } = await params;
-  const projectsByCompany = getProjectsByCompany();
+  
+  // Enable static rendering
+  setRequestLocale(locale);
+  
   const t = await getTranslations({ locale });
+  
+  // Get localized projects data
+  const projectsByCompany = await getProjectsByCompany(locale);
 
   // Role color mapping
   const roleColors: Record<string, string> = {

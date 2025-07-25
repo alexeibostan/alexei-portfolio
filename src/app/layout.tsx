@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { locales } from '@/i18n';
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -30,32 +26,11 @@ export const metadata: Metadata = {
   manifest: `${process.env.BASE_PATH}/site.webmanifest`,
 };
 
-// Generate static params for all locales
-export async function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
-
-export default async function RootLayout({
+// Root layout for static export - just passes children through
+export default function RootLayout({
   children,
-  params
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  
-  // Providing all messages to the client
-  // side is the easiest way to get started
-  const messages = await getMessages();
-
-  return (
-    <html lang={locale} className={`${montserrat.variable}`}>
-      <body className="antialiased bg-background text-foreground font-sans" suppressHydrationWarning>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-          <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  );
+  return children;
 }

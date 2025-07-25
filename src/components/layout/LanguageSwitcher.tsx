@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Globe } from "lucide-react";
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { locales, defaultLocale } from '@/i18n';
 import { getPathWithoutLocale, constructLocalizedPath } from '@/lib/pathUtils';
@@ -13,7 +13,6 @@ interface LanguageSwitcherProps {
 }
 
 export default function LanguageSwitcher({ variant = 'desktop', onLanguageChange }: LanguageSwitcherProps) {
-  const hookLocale = useLocale();
   const pathname = usePathname();
   const t = useTranslations('languages');
 

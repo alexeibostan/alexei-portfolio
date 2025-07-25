@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
-import { professionalJourney } from "@/data/journey";
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n';
 
@@ -16,6 +15,23 @@ export function generateStaticParams() {
 export default async function About({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale });
+
+  // Statically import the localized data based on locale
+  let professionalJourney;
+  switch (locale) {
+    case 'nl':
+      professionalJourney = (await import('@/data/nl/journey')).professionalJourney;
+      break;
+    case 'it':
+      professionalJourney = (await import('@/data/it/journey')).professionalJourney;
+      break;
+    case 'ro':
+      professionalJourney = (await import('@/data/ro/journey')).professionalJourney;
+      break;
+    default:
+      professionalJourney = (await import('@/data/en/journey')).professionalJourney;
+      break;
+  }
 
   return (
     <Layout>

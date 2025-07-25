@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
-import { skills } from "@/data/skills";
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n';
 
@@ -16,9 +15,27 @@ export function generateStaticParams() {
 
 export default async function Skills({ params }: Props) {
   const { locale } = await params;
+  const t = await getTranslations({ locale });
+  
+  // Statically import the localized data based on locale
+  let skills;
+  switch (locale) {
+    case 'nl':
+      skills = (await import('@/data/nl/skills')).skills;
+      break;
+    case 'it':
+      skills = (await import('@/data/it/skills')).skills;
+      break;
+    case 'ro':
+      skills = (await import('@/data/ro/skills')).skills;
+      break;
+    default:
+      skills = (await import('@/data/en/skills')).skills;
+      break;
+  }
+  
   // Get unique categories for filtering
   const categories = [...new Set(skills.map(skill => skill.category))];
-  const t = await getTranslations({ locale });
 
   return (
     <Layout>

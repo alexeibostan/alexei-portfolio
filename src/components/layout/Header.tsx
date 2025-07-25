@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Instagram, Linkedin, Menu, X, Github } from "lucide-react";
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { locales, defaultLocale } from '@/i18n';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -11,15 +11,11 @@ import LanguageSwitcher from './LanguageSwitcher';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = useTranslations('navigation');
-  const hookLocale = useLocale();
   const pathname = usePathname();
   
-  // Extract locale from pathname as fallback
+  // Extract locale from pathname
   const localePattern = new RegExp(`^/(${locales.join('|')})`);
-  const pathnameLocale = pathname.match(localePattern)?.[1] || defaultLocale;
-  
-  // Use pathname locale if it differs from hook locale (more reliable for client-side navigation)
-  const locale = pathnameLocale;
+  const locale = pathname.match(localePattern)?.[1] || defaultLocale;
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
