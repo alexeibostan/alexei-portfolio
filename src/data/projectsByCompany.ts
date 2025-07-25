@@ -1,10 +1,27 @@
-import { Project, projects } from './projects';
+import type { Project } from './en/projects';
 
 // Group projects by company
-export function getProjectsByCompany(): Record<string, Project[]> {
+export async function getProjectsByCompany(locale: string = 'en'): Promise<Record<string, Project[]>> {
+  // Statically import the localized data based on locale
+  let projects;
+  switch (locale) {
+    case 'nl':
+      projects = (await import('./nl/projects')).projects;
+      break;
+    case 'it':
+      projects = (await import('./it/projects')).projects;
+      break;
+    case 'ro':
+      projects = (await import('./ro/projects')).projects;
+      break;
+    default:
+      projects = (await import('./en/projects')).projects;
+      break;
+  }
+  
   const projectsByCompany: Record<string, Project[]> = {};
   
-  projects.forEach(project => {
+  projects.forEach((project: Project) => {
     if (!projectsByCompany[project.company]) {
       projectsByCompany[project.company] = [];
     }

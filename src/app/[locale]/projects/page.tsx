@@ -1,10 +1,29 @@
 import React from "react";
-import Link from "next/link";
 import Layout from "@/components/layout/Layout";
 import { getProjectsByCompany, companyWebsites, companyColors } from "@/data/projectsByCompany";
+import { getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
+import { locales } from '@/i18n';
 
-export default function Projects() {
-  const projectsByCompany = getProjectsByCompany();
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+// Generate static params for all locales
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default async function Projects({ params }: Props) {
+  const { locale } = await params;
+  
+  // Enable static rendering
+  setRequestLocale(locale);
+  
+  const t = await getTranslations({ locale });
+  
+  // Get localized projects data
+  const projectsByCompany = await getProjectsByCompany(locale);
 
   // Role color mapping
   const roleColors: Record<string, string> = {
@@ -19,9 +38,9 @@ export default function Projects() {
       <div className="py-12 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
-            <h1 className="text-4xl font-bold mb-6">Projects</h1>
+            <h1 className="text-4xl font-bold mb-6">{t('projects.title')}</h1>
             <p className="text-lg text-gray-600 max-w-3xl">
-              As a Senior Software Engineer with 8+ years of experience, I've worked across multiple industries and technologies. My expertise spans frontend frameworks (React, Next.js, Vue, Angular) and backend systems (Python, FastAPI, Node.js). I've developed enterprise-scale platforms, data visualization tools, and complex web applications while contributing to technical decision-making and mentoring junior engineers.
+              {t('projects.description')}
             </p>
           </div>
 
@@ -39,7 +58,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800"
                     >
-                      Visit Company Website
+                      {t('projects.visitCompanyWebsite')}
                       <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
@@ -84,31 +103,31 @@ export default function Projects() {
       {/* Role Legend */}
       <div className="py-8 px-8 bg-gray-100">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-xl font-bold mb-4">Role Legend</h2>
+          <h2 className="text-xl font-bold mb-4">{t('projects.roleLegend')}</h2>
           <div className="flex flex-wrap gap-6">
             <div className="flex items-center">
               <div className="w-8 h-8 rounded-md flex items-center justify-center text-white bg-[#325080] text-sm">
                 SE
               </div>
-              <span className="ml-2">Software Engineer (Full Stack)</span>
+              <span className="ml-2">{t('projects.softwareEngineerFullStack')}</span>
             </div>
             <div className="flex items-center">
               <div className="w-8 h-8 rounded-md flex items-center justify-center text-white bg-[#e16642] text-sm">
                 FE
               </div>
-              <span className="ml-2">Frontend Developer</span>
+              <span className="ml-2">{t('projects.frontendDeveloper')}</span>
             </div>
             <div className="flex items-center">
               <div className="w-8 h-8 rounded-md flex items-center justify-center text-white bg-[#c18f68] text-sm">
                 WD
               </div>
-              <span className="ml-2">Web Developer (Frontend & Backend)</span>
+              <span className="ml-2">{t('projects.webDeveloper')}</span>
             </div>
             <div className="flex items-center">
               <div className="w-8 h-8 rounded-md flex items-center justify-center text-white bg-[#7494be] text-sm">
                 MD
               </div>
-              <span className="ml-2">Mobile Developer</span>
+              <span className="ml-2">{t('projects.mobileDeveloper')}</span>
             </div>
           </div>
         </div>
@@ -117,15 +136,15 @@ export default function Projects() {
       {/* CTA Section */}
       <div className="py-12 px-8 bg-[#325080] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4">Need a skilled developer for your next project?</h2>
+          <h2 className="text-2xl font-bold mb-4">{t('projects.ctaTitle')}</h2>
           <p className="text-lg mb-6">
-            I'm available for new opportunities and would love to discuss how I can contribute to your team.
+            {t('projects.ctaDescription')}
           </p>
           <a
             href="mailto:alexei.bostan@example.com"
             className="inline-flex items-center bg-white text-[#325080] px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors"
           >
-            Contact Me
+            {t('common.contactMe')}
           </a>
         </div>
       </div>

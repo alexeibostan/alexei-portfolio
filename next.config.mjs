@@ -1,3 +1,7 @@
+import createNextIntlPlugin from 'next-intl/plugin';
+ 
+const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
@@ -10,4 +14,4 @@ const nextConfig = {
   basePath: process.env.BASE_PATH, // Set basePath from environment variable
 };
 
-module.exports = nextConfig;
+export default withNextIntl(nextConfig);

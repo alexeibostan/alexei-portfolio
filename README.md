@@ -14,11 +14,42 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Technologies Used
 
-- **Framework**: Next.js
+- **Framework**: Next.js 15
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
+- **Internationalization**: next-intl (English & Dutch)
 - **Package Manager**: Bun
 - **Deployment**: GitHub Pages
+
+## Features
+
+- 🌍 **Multilingual Support**: Available in English and Dutch
+- 📱 **Responsive Design**: Mobile-first approach
+- 🎨 **Modern UI**: Clean design with Tailwind CSS
+- 🚀 **Static Export**: Optimized for GitHub Pages deployment
+- 🔗 **Dynamic Navigation**: Language-aware routing
+
+## Internationalization
+
+The portfolio supports two languages:
+- **English (en)**: Default language
+- **Dutch (nl)**: Secondary language
+
+### Language Switching
+- Globe icon in the header with dropdown menu
+- Preserves current page when switching languages
+- Available on both desktop and mobile layouts
+
+### URL Structure
+- `/en/` for English content
+- `/nl/` for Dutch content
+- Automatic redirection from root to default language
+
+### Translation Coverage
+- Complete navigation menu translation
+- All page content and headings
+- Buttons, links, and call-to-action text
+- Meta data (page titles and descriptions)
 
 ## Deployment
 

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import Body from "./Body";
-import Script from "next/script";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -28,17 +26,11 @@ export const metadata: Metadata = {
   manifest: `${process.env.BASE_PATH}/site.webmanifest`,
 };
 
+// Root layout for static export - just passes children through
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className={`${montserrat.variable}`}>
-      <Body>
-        {children}
-        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
-      </Body>
-    </html>
-  );
+}) {
+  return children;
 }
