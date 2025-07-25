@@ -101,8 +101,30 @@
     "viewProjects": "Vezi Proiectele"
   },
   "metadata": {
-    "title": "Alexei Bostan - Senior Software Engineer",
-    "description": "Senior Software Engineer cu peste 8 ani de experiență specializat în tehnologii frontend și backend incluzând React, Next.js, Python și FastAPI."
+    "title": "Alexei Bostan – Senior Software Engineer",
+    "description": "Senior Software Engineer cu peste 8 ani de experiență în construirea aplicațiilor web scalabile cu React, Next.js, Python & FastAPI. Specializat în soluții enterprise și dezvoltare web modernă.",
+    "keywords": "Senior Software Engineer, Dezvoltator React, Expert Next.js, Dezvoltator Python, FastAPI, Full Stack Developer, JavaScript, TypeScript, Dezvoltare Web",
+    "siteName": "Portofoliul Alexei Bostan",
+    "authorName": "Alexei Bostan",
+    "authorJobTitle": "Senior Software Engineer",
+    "pages": {
+      "home": {
+        "title": "Alexei Bostan – Senior Software Engineer",
+        "description": "Senior Software Engineer cu peste 8 ani de experiență în construirea aplicațiilor web scalabile cu React, Next.js, Python & FastAPI. Specializat în soluții enterprise și dezvoltare web modernă."
+      },
+      "about": {
+        "title": "Despre Alexei Bostan – Senior Software Engineer",
+        "description": "Descoperă călătoria mea de 8+ ani ca Senior Software Engineer, de la specialist frontend la dezvoltator full-stack care construiește soluții enterprise."
+      },
+      "projects": {
+        "title": "Proiecte de Alexei Bostan – Dezvoltare React, Next.js & Python",
+        "description": "Explorează portofoliul meu de aplicații web construite cu React, Next.js, Python și FastAPI. Soluții enterprise și proiecte inovatoare."
+      },
+      "skills": {
+        "title": "Competențe Tehnice – React, Next.js, Python & Mai Mult",
+        "description": "Prezentare completă a expertizei mele tehnice: React, Next.js, TypeScript, Python, FastAPI, tehnologii cloud și arhitectură enterprise."
+      }
+    }
   },
   "footer": {
     "copyright": "© 2025 Alexei Bostan. Toate drepturile rezervate.",

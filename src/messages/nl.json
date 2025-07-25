@@ -101,8 +101,30 @@
     "viewProjects": "Bekijk Projecten"
   },
   "metadata": {
-    "title": "Alexei Bostan - Senior Software Engineer",
-    "description": "Senior Software Engineer met 8+ jaar ervaring gespecialiseerd in frontend en backend technologieën waaronder React, Next.js, Python en FastAPI."
+    "title": "Alexei Bostan – Senior Software Engineer",
+    "description": "Senior Software Engineer met 8+ jaar ervaring in het bouwen van schaalbare webapplicaties met React, Next.js, Python & FastAPI. Gespecialiseerd in enterprise oplossingen en moderne webontwikkeling.",
+    "keywords": "Senior Software Engineer, React Developer, Next.js Expert, Python Developer, FastAPI, Full Stack Developer, JavaScript, TypeScript, Webontwikkeling",
+    "siteName": "Alexei Bostan Portfolio",
+    "authorName": "Alexei Bostan",
+    "authorJobTitle": "Senior Software Engineer",
+    "pages": {
+      "home": {
+        "title": "Alexei Bostan – Senior Software Engineer",
+        "description": "Senior Software Engineer met 8+ jaar ervaring in het bouwen van schaalbare webapplicaties met React, Next.js, Python & FastAPI. Gespecialiseerd in enterprise oplossingen en moderne webontwikkeling."
+      },
+      "about": {
+        "title": "Over Alexei Bostan – Senior Software Engineer",
+        "description": "Leer over mijn 8+ jaar reis als Senior Software Engineer, van frontend specialist tot full-stack developer die enterprise oplossingen bouwt."
+      },
+      "projects": {
+        "title": "Projecten van Alexei Bostan – React, Next.js & Python Ontwikkeling",
+        "description": "Verken mijn portfolio van webapplicaties gebouwd met React, Next.js, Python en FastAPI. Enterprise oplossingen en innovatieve projecten."
+      },
+      "skills": {
+        "title": "Technische Vaardigheden – React, Next.js, Python & Meer",
+        "description": "Uitgebreid overzicht van mijn technische expertise: React, Next.js, TypeScript, Python, FastAPI, cloud technologieën en enterprise architectuur."
+      }
+    }
   },
   "footer": {
     "copyright": "© 2025 Alexei Bostan. Alle rechten voorbehouden.",
