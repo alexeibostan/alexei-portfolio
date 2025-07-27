@@ -100,9 +100,6 @@ export function generateSEOMetadata(config: SEOConfig): Metadata {
       ],
     },
     manifest: '/site.webmanifest',
-    verification: {
-      google: process.env.GOOGLE_SITE_VERIFICATION,
-    },
   }
 }
 

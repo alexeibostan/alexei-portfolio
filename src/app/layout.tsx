@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://alexeibostan.com'),
   title: {
     template: '%s | Alexei Bostan',
-    default: 'Alexei Bostan – Senior Software Engineer & Tech Lead',
+    default: 'Alexei Bostan – Senior Software Engineer',
   },
-  description: "Senior Software Engineer with 8+ years building scalable web applications with React, Next.js, Python & FastAPI. Technical leader specializing in enterprise solutions.",
-  keywords: "Senior Software Engineer, React Developer, Next.js Expert, Python Developer, FastAPI, Technical Lead, Full Stack Developer, JavaScript, TypeScript, Web Development",
+  description: "Senior Software Engineer with 8+ years building scalable web applications with React, Next.js, Python & FastAPI. Specializing in enterprise solutions and modern web development.",
+  keywords: "Senior Software Engineer, React Developer, Next.js Expert, Python Developer, FastAPI, Full Stack Developer, JavaScript, TypeScript, Web Development",
   authors: [{ name: "Alexei Bostan" }],
   creator: "Alexei Bostan",
   publisher: "Alexei Bostan",
@@ -43,9 +43,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
-  verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION,
-  },
 };
 
 // Root layout for static export - just passes children through
