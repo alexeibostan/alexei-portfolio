@@ -82,9 +82,6 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={`${montserrat.variable}`}>
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index, follow" />
         <StructuredData data={[personSchema, websiteSchema]} />
       </head>
       <body className="antialiased bg-background text-foreground font-sans" suppressHydrationWarning>
