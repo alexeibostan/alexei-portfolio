@@ -2,6 +2,8 @@ import Link from "next/link";
 import Layout from "@/components/layout/Layout";
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n';
+import { generateSEOMetadata } from '@/lib/metadata';
+import { Metadata } from 'next';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -10,6 +12,28 @@ type Props = {
 // Generate static params for all locales
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://alexeibostan.com';
+  const currentUrl = `${baseUrl}/${locale}/about`;
+
+  return generateSEOMetadata({
+    title: t('pages.about.title'),
+    description: t('pages.about.description'),
+    url: currentUrl,
+    locale: locale === 'en' ? 'en_US' : locale === 'nl' ? 'nl_NL' : locale === 'it' ? 'it_IT' : 'ro_RO',
+    siteName: t('siteName'),
+    authorName: t('authorName'),
+    authorJobTitle: t('authorJobTitle'),
+    twitterHandle: '@alexeibostan12',
+    keywords: t('keywords').split(', '),
+    ogImage: '/profile.webp',
+    twitterImage: '/profile.webp',
+  });
 }
 
 export default async function About({ params }: Props) {

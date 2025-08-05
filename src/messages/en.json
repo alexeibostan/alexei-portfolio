@@ -101,8 +101,30 @@
     "viewProjects": "View Projects"
   },
   "metadata": {
-    "title": "Alexei Bostan - Senior Software Engineer",
-    "description": "Senior Software Engineer with 8+ years of experience specializing in frontend and backend technologies including React, Next.js, Python, and FastAPI."
+    "title": "Alexei Bostan – Senior Software Engineer",
+    "description": "Senior Software Engineer with 8+ years building scalable web applications with React, Next.js, Python & FastAPI. Enterprise solutions expert.",
+    "keywords": "Senior Software Engineer, React Developer, Next.js Expert, Python Developer, FastAPI, Full Stack Developer, JavaScript, TypeScript, Web Development",
+    "siteName": "Alexei Bostan Portfolio",
+    "authorName": "Alexei Bostan",
+    "authorJobTitle": "Senior Software Engineer",
+    "pages": {
+      "home": {
+        "title": "Alexei Bostan – Senior Software Engineer",
+        "description": "Senior Software Engineer with 8+ years building scalable web applications with React, Next.js, Python & FastAPI. Enterprise solutions expert."
+      },
+      "about": {
+        "title": "About Alexei Bostan – Senior Software Engineer",
+        "description": "Learn about my 8+ years journey as a Senior Software Engineer, from frontend specialist to full-stack developer building enterprise solutions."
+      },
+      "projects": {
+        "title": "Projects by Alexei Bostan – React, Next.js & Python Development",
+        "description": "Explore my portfolio of web applications built with React, Next.js, Python, and FastAPI. Enterprise solutions and innovative projects."
+      },
+      "skills": {
+        "title": "Technical Skills – React, Next.js, Python & More",
+        "description": "Comprehensive overview of my technical expertise: React, Next.js, TypeScript, Python, FastAPI, cloud technologies, and enterprise architecture."
+      }
+    }
   },
   "footer": {
     "copyright": "© 2025 Alexei Bostan. All rights reserved.",
