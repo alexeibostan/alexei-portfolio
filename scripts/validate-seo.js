@@ -18,17 +18,37 @@
 
 import https from 'https';
 import http from 'http';
+import { URL } from 'url';
 import { parse } from 'node-html-parser';
 
 const url = process.argv[2] || 'http://localhost:3000';
 
 console.log(`🔍 Validating SEO for: ${url}\n`);
 
-const getHTML = (url) => {
+const getHTML = (url, maxRedirects = 5) => {
   return new Promise((resolve, reject) => {
+    if (maxRedirects <= 0) {
+      reject(new Error('Too many redirects'));
+      return;
+    }
+
     const client = url.startsWith('https:') ? https : http;
     
     client.get(url, (res) => {
+      // Handle redirects
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        const redirectUrl = new URL(res.headers.location, url).toString();
+        console.log(`Following redirect: ${url} -> ${redirectUrl}`);
+        getHTML(redirectUrl, maxRedirects - 1).then(resolve).catch(reject);
+        return;
+      }
+
+      // Handle non-200 status codes
+      if (res.statusCode !== 200) {
+        reject(new Error(`HTTP ${res.statusCode}: ${res.statusMessage}`));
+        return;
+      }
+
       let data = '';
       res.on('data', (chunk) => data += chunk);
       res.on('end', () => resolve(data));
@@ -204,14 +224,14 @@ const validateSEO = async () => {
 
     // Display results
     console.log('📊 SEO Validation Results\n');
-    console.log('=' * 50);
+    console.log('='.repeat(50));
     
     checks.forEach(check => {
       console.log(`${check.status} ${check.name} (${check.points} pts)`);
       console.log(`   ${check.message}\n`);
     });
 
-    console.log('=' * 50);
+    console.log('='.repeat(50));
     console.log(`🎯 Overall SEO Score: ${score}/100`);
     
     if (score >= 90) {
