@@ -1,9 +1,4 @@
-export type JobEntry = {
-  period: string;
-  company: string;
-  role: string;
-  description: string;
-};
+import type { JobEntry } from '@/types';
 
 export const professionalJourney: JobEntry[] = [
   {

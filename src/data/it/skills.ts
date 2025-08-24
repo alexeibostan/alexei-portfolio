@@ -1,8 +1,4 @@
-export type Skill = {
-  name: string;
-  category: string;
-  years: string;
-};
+import type { Skill } from '@/types';
 
 export const skills: Skill[] = [
   { name: "Next.js", category: "Frontend", years: "3+" },

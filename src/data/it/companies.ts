@@ -1,8 +1,4 @@
-export type Company = {
-  name: string;
-  period: string;
-  url?: string;
-};
+import type { Company } from '@/types';
 
 export const companies: Company[] = [
   {
