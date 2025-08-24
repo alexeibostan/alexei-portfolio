@@ -1,4 +1,4 @@
-import type { Project } from './en/projects';
+import type { Project } from '@/types';
 
 // Group projects by company
 export async function getProjectsByCompany(locale: string = 'en'): Promise<Record<string, Project[]>> {
