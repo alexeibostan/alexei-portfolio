@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: '%s | Alexei Bostan',
     default: 'Alexei Bostan – Senior Software Engineer',
   },
-  description: "Senior Software Engineer with 8+ years building scalable web applications with React, Next.js, Python & FastAPI. Specializing in enterprise solutions and modern web development.",
+  description: "Senior Software Engineer with 9+ years building scalable web applications with React, Next.js, Python & FastAPI. Specializing in enterprise solutions and modern web development.",
   keywords: "Senior Software Engineer, React Developer, Next.js Expert, Python Developer, FastAPI, Full Stack Developer, JavaScript, TypeScript, Web Development",
   authors: [{ name: "Alexei Bostan" }],
   creator: "Alexei Bostan",

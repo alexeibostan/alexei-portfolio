@@ -4,8 +4,8 @@ export const professionalJourney: JobEntry[] = [
   {
     period: "Nov 2025 - Presente",
     company: "Tenpu",
-    role: "Senior Fullstack Engineer",
-    description: "Creo esperienze di prodotto con Next.js, Tailwind CSS, Prisma e PostgreSQL, distribuite su Azure con Kubernetes e ArgoCD.",
+    role: "Senior Software Engineer",
+    description: "Costruisco una piattaforma di procurement enterprise che aiuta gli acquirenti pubblici a gestire i processi RFI e RFP in modo efficiente. Lavoro sull'intero stack con Next.js, TypeScript, tRPC, Zod, Tailwind UI, Remirror, Prisma e PostgreSQL su Azure. Influenzo le decisioni tecniche, assumo la responsabilità delle funzionalità e mi concentro sulla creazione di prodotti che soddisfano i clienti.",
   },
   {
     period: "Nov 2021 - Set 2025",

@@ -97,26 +97,26 @@ export default async function About({ params }: Props) {
             </div>
             <div className="bg-[#f5f5f5] p-8 rounded-lg">
               <h2 className="text-2xl font-bold mb-6">{t('about.atAGlance')}</h2>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 <li className="flex flex-col sm:flex-row">
                   <span className="font-semibold sm:w-32 mb-1 sm:mb-0">{t('about.location')}:</span>
                   <span>Amersfoort, Netherlands</span>
                 </li>
                 <li className="flex flex-col sm:flex-row">
                   <span className="font-semibold sm:w-32 mb-1 sm:mb-0">{t('about.experience')}:</span>
-                  <span>8+ years</span>
+                  <span>9+ years</span>
                 </li>
                 <li className="flex flex-col sm:flex-row">
                   <span className="font-semibold sm:w-32 mb-1 sm:mb-0">{t('about.currentRole')}:</span>
-                  <span>Senior Fullstack Engineer at Tenpu</span>
+                  <span>Senior Software Engineer at Tenpu</span>
                 </li>
                 <li className="flex flex-col sm:flex-row">
                   <span className="font-semibold sm:w-32 mb-1 sm:mb-0">{t('about.specialization')}:</span>
-                  <span>NextJS, React, Python, FastAPI, Vue, Angular, TypeScript</span>
+                  <span>Next.js, React, TypeScript, Node.js</span>
                 </li>
                 <li className="flex flex-col sm:flex-row">
                   <span className="font-semibold sm:w-32 mb-1 sm:mb-0">{t('about.industryFocus')}:</span>
-                  <span>Food Tech, Chemical Engineering, Banking & Finance</span>
+                  <span>Public Procurement, Food Tech, Banking & Finance</span>
                 </li>
                 <li className="flex flex-col sm:flex-row">
                   <span className="font-semibold sm:w-32 mb-1 sm:mb-0">{t('about.languages')}:</span>
@@ -196,11 +196,11 @@ export default async function About({ params }: Props) {
             <div className="grid md:grid-cols-3 gap-6">
               <div>
                 <h3 className="text-xl font-semibold mb-4">{t('home.frontend')}</h3>
-                <p className="mb-2">Next.js, React, Vue.js, Angular, TypeScript, Tailwind CSS, Radix UI, vanilla-extract, styled-components, React Query, RxJS, Redux</p>
+                <p className="mb-2">Next.js, React, Vue.js, Angular, TypeScript, Tailwind CSS, Radix UI, vanilla-extract, styled-components, React Query, RxJS, Redux, Zod, Remirror</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-4">{t('home.backendData')}</h3>
-                <p className="mb-2">Python, FastAPI, Celery, PostgreSQL, MongoDB, BigQuery, Node.js, RESTful APIs, Git, Docker</p>
+                <p className="mb-2">Node.js, tRPC, Prisma, PostgreSQL, MongoDB, BigQuery, Python, FastAPI, Celery, RESTful APIs, Git, Docker, Kubernetes, Azure, ArgoCD</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-4">{t('home.professionalSkills')}</h3>

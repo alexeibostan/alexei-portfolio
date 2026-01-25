@@ -22,7 +22,7 @@
   },
   "home": {
     "title": "Senior Software Engineer",
-    "description": "Sviluppatore orientato ai risultati con oltre 8 anni di esperienza nella padronanza delle tecnologie frontend e backend. Senior Fullstack Engineer presso Tenpu, costruisco prodotti cloud-native con Next.js, Prisma e PostgreSQL mentre mentoro i membri del team e architetto soluzioni scalabili.",
+    "description": "Sviluppatore orientato ai risultati con oltre 9 anni di esperienza nella padronanza delle tecnologie frontend e backend. Senior Software Engineer presso Tenpu, costruisco una piattaforma di procurement enterprise con Next.js, TypeScript, tRPC, Zod, Prisma e PostgreSQL su Azure mentre influenzo le decisioni tecniche e architetto soluzioni scalabili.",
     "featuredProjects": "Progetti in Evidenza",
     "technicalSkills": "Competenze Tecniche",
     "frontend": "Frontend",
@@ -37,8 +37,8 @@
     "title": "Chi Sono",
     "subtitle": "Senior Software Engineer con esperienza nello sviluppo full-stack",
     "professionalProfile": "Profilo Professionale",
-    "professionalDescription1": "Senior Software Engineer con oltre 8 anni di esperienza specializzato in framework JavaScript moderni e sviluppo full-stack. La mia esperienza spazia dalle tecnologie frontend come React, Next.js e Angular, completate dal lavoro backend con Python, FastAPI e vari sistemi di database.",
-    "professionalDescription2": "Presso Tenpu, contribuisco sia allo sviluppo frontend che backend, implemento le migliori pratiche tecniche e mentoro sviluppatori junior. Il mio approccio combina eccellenza tecnica con risoluzione pragmatica dei problemi per fornire soluzioni scalabili e manutenibili.",
+    "professionalDescription1": "Senior Software Engineer con oltre 9 anni di esperienza specializzato in framework JavaScript moderni e sviluppo full-stack. La mia esperienza spazia dalle tecnologie frontend come React, Next.js e Angular, completate dal lavoro backend con Node.js, TypeScript e vari sistemi di database, inclusa esperienza con Python e FastAPI.",
+    "professionalDescription2": "Presso Tenpu, contribuisco sia allo sviluppo frontend che backend, implemento le migliori pratiche tecniche e aiuto i miei colleghi. Il mio approccio combina eccellenza tecnica con risoluzione pragmatica dei problemi per fornire soluzioni scalabili e manutenibili.",
     "professionalDescription3": "Nel 2024, ho avviato la mia consultenza software, lavorando su soluzioni specializzate per clienti universitari nel settore dell'ingegneria chimica.",
     "atAGlance": "A Colpo d'Occhio",
     "location": "Posizione",
@@ -64,7 +64,7 @@
   "projects": {
     "title": "Progetti",
     "subtitle": "Una collezione di progetti su cui ho lavorato",
-    "description": "Come Senior Software Engineer con oltre 8 anni di esperienza, ho lavorato in diverse industrie e tecnologie. La mia esperienza spazia dai framework frontend (React, Next.js, Vue, Angular) ai sistemi backend (Python, FastAPI, Node.js). Ho sviluppato piattaforme di scala enterprise, strumenti di visualizzazione dati e applicazioni web complesse contribuendo al processo decisionale tecnico e mentorando ingegneri junior.",
+    "description": "Come Senior Software Engineer con oltre 9 anni di esperienza, ho lavorato in diverse industrie e tecnologie. La mia esperienza spazia dai framework frontend (React, Next.js, Vue, Angular) ai sistemi backend (Node.js, TypeScript, tRPC, Python, FastAPI). Ho sviluppato piattaforme di scala enterprise, strumenti di visualizzazione dati e applicazioni web complesse contribuendo al processo decisionale tecnico e supportando il mio team.",
     "allProjects": "Tutti i Progetti",
     "projectsByCompany": "Progetti per Azienda",
     "visitCompanyWebsite": "Visita il Sito Web dell'Azienda",
@@ -80,7 +80,7 @@
     "title": "Competenze",
     "subtitle": "Competenze tecniche ed esperienza",
     "mainTitle": "Competenze ed Esperienza",
-    "description": "Come Senior Software Engineer con oltre 8 anni di esperienza, ho sviluppato un set completo di competenze tecniche che spazia dalle tecnologie frontend a quelle backend. La mia esperienza in React, Next.js e Angular è completata da una crescente competenza in Python, FastAPI e sistemi di database, permettendomi di architettare e implementare soluzioni end-to-end mentre mentoro membri junior del team.",
+    "description": "Come Senior Software Engineer con oltre 9 anni di esperienza, ho sviluppato un set completo di competenze tecniche che spazia dalle tecnologie frontend a quelle backend. La mia esperienza in React, Next.js e Angular è completata da una forte competenza in Node.js, TypeScript e sistemi di database, insieme all'esperienza in Python e FastAPI, permettendomi di architettare e implementare soluzioni end-to-end mentre supporto i miei colleghi.",
     "years": "anni",
     "otherSkillsKnowledge": "Altre Competenze e Conoscenze",
     "languages": "Lingue",
@@ -102,7 +102,7 @@
   },
   "metadata": {
     "title": "Alexei Bostan – Senior Software Engineer",
-    "description": "Senior Software Engineer con 8+ anni di esperienza nello sviluppo di applicazioni web scalabili con React, Next.js, Python e FastAPI. Specializzato in soluzioni enterprise e sviluppo web moderno.",
+    "description": "Senior Software Engineer con 9+ anni di esperienza nello sviluppo di applicazioni web scalabili con React, Next.js, Python e FastAPI. Specializzato in soluzioni enterprise e sviluppo web moderno.",
     "keywords": "Senior Software Engineer, Sviluppatore React, Esperto Next.js, Sviluppatore Python, FastAPI, Full Stack Developer, JavaScript, TypeScript, Sviluppo Web",
     "siteName": "Portfolio Alexei Bostan",
     "authorName": "Alexei Bostan",
@@ -110,11 +110,11 @@
     "pages": {
       "home": {
         "title": "Alexei Bostan – Senior Software Engineer",
-        "description": "Senior Software Engineer con 8+ anni di esperienza nello sviluppo di applicazioni web scalabili con React, Next.js, Python e FastAPI. Specializzato in soluzioni enterprise e sviluppo web moderno."
+        "description": "Senior Software Engineer con 9+ anni di esperienza nello sviluppo di applicazioni web scalabili con React, Next.js, Python e FastAPI. Specializzato in soluzioni enterprise e sviluppo web moderno."
       },
       "about": {
         "title": "Chi è Alexei Bostan – Senior Software Engineer",
-        "description": "Scopri il mio percorso di 8+ anni come Senior Software Engineer, da specialista frontend a sviluppatore full-stack nella creazione di soluzioni enterprise."
+        "description": "Scopri il mio percorso di 9+ anni come Senior Software Engineer, da specialista frontend a sviluppatore full-stack nella creazione di soluzioni enterprise."
       },
       "projects": {
         "title": "Progetti di Alexei Bostan – Sviluppo React, Next.js e Python",
@@ -122,13 +122,13 @@
       },
       "skills": {
         "title": "Competenze Tecniche – React, Next.js, Python e Altro",
-        "description": "Panoramica completa delle mie competenze tecniche: React, Next.js, TypeScript, Python, FastAPI, tecnologie cloud e architettura enterprise."
+        "description": "Panoramica completa delle mie competenze tecniche: React, Next.js, TypeScript, Node.js, tRPC, tecnologie cloud e architettura enterprise."
       }
     }
   },
   "footer": {
     "copyright": "© 2025 Alexei Bostan. Tutti i diritti riservati.",
-    "footerDescription": "Senior Software Engineer con oltre 8 anni di esperienza specializzato in framework JavaScript moderni. Leader tecnico con esperienza in sistemi di design enterprise e consultenza software per soluzioni specializzate dell'industria.",
+    "footerDescription": "Senior Software Engineer con oltre 9 anni di esperienza specializzato in framework JavaScript moderni. Leader tecnico con esperienza in sistemi di design enterprise e consultenza software per soluzioni specializzate dell'industria.",
     "navigationTitle": "Navigazione",
     "connectTitle": "Connettiti",
     "github": "GitHub",

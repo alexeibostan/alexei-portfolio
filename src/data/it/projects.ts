@@ -2,10 +2,19 @@ import type { Project } from '@/types';
 
 export const projects: Project[] = [
   {
+    company: "Tenpu",
+    name: "Piattaforma di Procurement Tenpu",
+    type: "Applicazione Web Enterprise",
+    period: "Nov 2025 - Presente",
+    description: "Piattaforma di procurement enterprise per acquirenti pubblici per gestire i processi RFI e RFP. Costruisco funzionalità sull'intero stack per semplificare i flussi di lavoro di procurement sia per acquirenti che per fornitori.",
+    skills: ["Next.js", "TypeScript", "tRPC", "Zod", "Tailwind UI", "Remirror", "Prisma", "PostgreSQL", "Azure"],
+    role: "SE",
+  },
+  {
     company: "Deliverect",
     name: "Pulse by Deliverect",
     type: "Dashboard di Analisi",
-    period: "2023 - Presente",
+    period: "2023 - 2025",
     description: "Come Senior Software Engineer, aiuto a sviluppare questa dashboard di analisi che fornisce approfondimenti in tempo reale sulle prestazioni dei ristoranti. Lavoro sia sui componenti frontend (Next.js/React) che backend (Python/FastAPI) con dati memorizzati su PostgreSQL, MongoDB e BigQuery.",
     skills: ["Next.js", "React", "Python", "FastAPI", "PostgreSQL", "MongoDB", "BigQuery"],
     role: "SE",
