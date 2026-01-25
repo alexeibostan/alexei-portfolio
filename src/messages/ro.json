@@ -22,7 +22,7 @@
   },
   "home": {
     "title": "Senior Software Engineer",
-    "description": "Dezvoltator orientat pe rezultate cu peste 8 ani de experiență în stăpânirea tehnologiilor frontend și backend. Recent promovat la Senior Developer la Deliverect, unde construiesc platforme sofisticate de analiză folosind React/Next.js și Python/FastAPI în timp ce mentorez membrii echipei și arhitectez soluții scalabile.",
+    "description": "Dezvoltator orientat pe rezultate cu peste 9 ani de experiență în stăpânirea tehnologiilor frontend și backend. Senior Software Engineer la Tenpu, construiesc o platformă de achiziții enterprise cu Next.js, TypeScript, tRPC, Zod, Prisma și PostgreSQL pe Azure în timp ce influențez deciziile tehnice și arhitectez soluții scalabile.",
     "featuredProjects": "Proiecte Recomandate",
     "technicalSkills": "Competențe Tehnice",
     "frontend": "Frontend",
@@ -37,8 +37,8 @@
     "title": "Despre Mine",
     "subtitle": "Senior Software Engineer cu expertiză în dezvoltare full-stack",
     "professionalProfile": "Profil Profesional",
-    "professionalDescription1": "Senior Software Engineer cu peste 8 ani de experiență specializat în framework-uri JavaScript moderne și dezvoltare full-stack. Expertiza mea cuprinde tehnologii frontend precum React, Next.js și Angular, completate de lucrul backend cu Python, FastAPI și diverse sisteme de baze de date.",
-    "professionalDescription2": "Recent promovat la Deliverect, contribui atât la dezvoltarea frontend cât și backend a platformei de analiză, implementez cele mai bune practici tehnice și mentorez dezvoltatori juniori. Abordarea mea combină excelența tehnică cu rezolvarea pragmatică a problemelor pentru a livra soluții scalabile și ușor de întreținut.",
+    "professionalDescription1": "Senior Software Engineer cu peste 9 ani de experiență specializat în framework-uri JavaScript moderne și dezvoltare full-stack. Expertiza mea cuprinde tehnologii frontend precum React, Next.js și Angular, completate de lucrul backend cu Node.js, TypeScript și diverse sisteme de baze de date, incluzând experiență cu Python și FastAPI.",
+    "professionalDescription2": "La Tenpu, contribui atât la dezvoltarea frontend cât și backend, implementez cele mai bune practici tehnice și îi ajut pe colegii mei. Abordarea mea combină excelența tehnică cu rezolvarea pragmatică a problemelor pentru a livra soluții scalabile și ușor de întreținut.",
     "professionalDescription3": "În 2024, mi-am început propria consultanță software, lucrând la soluții specializate pentru clienți universitari din sectorul ingineriei chimice.",
     "atAGlance": "Într-o Privire",
     "location": "Locație",
@@ -64,7 +64,7 @@
   "projects": {
     "title": "Proiecte",
     "subtitle": "O colecție de proiecte la care am lucrat",
-    "description": "Ca Senior Software Engineer cu peste 8 ani de experiență, am lucrat în multiple industrii și tehnologii. Expertiza mea cuprinde framework-uri frontend (React, Next.js, Vue, Angular) și sisteme backend (Python, FastAPI, Node.js). Am dezvoltat platforme la scară enterprise, instrumente de vizualizare a datelor și aplicații web complexe contribuind la luarea deciziilor tehnice și mentorând ingineri juniori.",
+    "description": "Ca Senior Software Engineer cu peste 9 ani de experiență, am lucrat în multiple industrii și tehnologii. Expertiza mea cuprinde framework-uri frontend (React, Next.js, Vue, Angular) și sisteme backend (Node.js, TypeScript, tRPC, Python, FastAPI). Am dezvoltat platforme la scară enterprise, instrumente de vizualizare a datelor și aplicații web complexe contribuind la luarea deciziilor tehnice și sprijinind echipa mea.",
     "allProjects": "Toate Proiectele",
     "projectsByCompany": "Proiecte după Companie",
     "visitCompanyWebsite": "Vizitează Site-ul Companiei",
@@ -80,7 +80,7 @@
     "title": "Competențe",
     "subtitle": "Competențe tehnice și expertiză",
     "mainTitle": "Competențe și Expertiză",
-    "description": "Ca Senior Software Engineer cu peste 8 ani de experiență, am dezvoltat un set cuprinzător de competențe tehnice care cuprinde atât tehnologii frontend cât și backend. Expertiza mea în React, Next.js și Angular este completată de competența în creștere în Python, FastAPI și sisteme de baze de date, permițându-mi să arhitectez și să implementez soluții end-to-end în timp ce mentorez membrii juniori ai echipei.",
+    "description": "Ca Senior Software Engineer cu peste 9 ani de experiență, am dezvoltat un set cuprinzător de competențe tehnice care cuprinde atât tehnologii frontend cât și backend. Expertiza mea în React, Next.js și Angular este completată de competența puternică în Node.js, TypeScript și sisteme de baze de date, împreună cu experiență în Python și FastAPI, permițându-mi să arhitectez și să implementez soluții end-to-end în timp ce îmi sprijin colegii.",
     "years": "ani",
     "otherSkillsKnowledge": "Alte Competențe și Cunoștințe",
     "languages": "Limbi",
@@ -102,7 +102,7 @@
   },
   "metadata": {
     "title": "Alexei Bostan – Senior Software Engineer",
-    "description": "Senior Software Engineer cu peste 8 ani de experiență în construirea aplicațiilor web scalabile cu React, Next.js, Python & FastAPI. Specializat în soluții enterprise și dezvoltare web modernă.",
+    "description": "Senior Software Engineer cu peste 9 ani de experiență în construirea aplicațiilor web scalabile cu React, Next.js, Python & FastAPI. Specializat în soluții enterprise și dezvoltare web modernă.",
     "keywords": "Senior Software Engineer, Dezvoltator React, Expert Next.js, Dezvoltator Python, FastAPI, Full Stack Developer, JavaScript, TypeScript, Dezvoltare Web",
     "siteName": "Portofoliul Alexei Bostan",
     "authorName": "Alexei Bostan",
@@ -110,11 +110,11 @@
     "pages": {
       "home": {
         "title": "Alexei Bostan – Senior Software Engineer",
-        "description": "Senior Software Engineer cu peste 8 ani de experiență în construirea aplicațiilor web scalabile cu React, Next.js, Python & FastAPI. Specializat în soluții enterprise și dezvoltare web modernă."
+        "description": "Senior Software Engineer cu peste 9 ani de experiență în construirea aplicațiilor web scalabile cu React, Next.js, Python & FastAPI. Specializat în soluții enterprise și dezvoltare web modernă."
       },
       "about": {
         "title": "Despre Alexei Bostan – Senior Software Engineer",
-        "description": "Descoperă călătoria mea de 8+ ani ca Senior Software Engineer, de la specialist frontend la dezvoltator full-stack care construiește soluții enterprise."
+        "description": "Descoperă călătoria mea de 9+ ani ca Senior Software Engineer, de la specialist frontend la dezvoltator full-stack care construiește soluții enterprise."
       },
       "projects": {
         "title": "Proiecte de Alexei Bostan – Dezvoltare React, Next.js & Python",
@@ -122,13 +122,13 @@
       },
       "skills": {
         "title": "Competențe Tehnice – React, Next.js, Python & Mai Mult",
-        "description": "Prezentare completă a expertizei mele tehnice: React, Next.js, TypeScript, Python, FastAPI, tehnologii cloud și arhitectură enterprise."
+        "description": "Prezentare completă a expertizei mele tehnice: React, Next.js, TypeScript, Node.js, tRPC, tehnologii cloud și arhitectură enterprise."
       }
     }
   },
   "footer": {
     "copyright": "© 2025 Alexei Bostan. Toate drepturile rezervate.",
-    "footerDescription": "Senior Software Engineer cu peste 8 ani de experiență specializat în framework-uri JavaScript moderne. Lider tehnic cu expertiză în sisteme de design enterprise și consultanță software pentru soluții specializate ale industriei.",
+    "footerDescription": "Senior Software Engineer cu peste 9 ani de experiență specializat în framework-uri JavaScript moderne. Lider tehnic cu expertiză în sisteme de design enterprise și consultanță software pentru soluții specializate ale industriei.",
     "navigationTitle": "Navigare",
     "connectTitle": "Conectează-te",
     "github": "GitHub",

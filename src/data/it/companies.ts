@@ -2,8 +2,13 @@ import type { Company } from '@/types';
 
 export const companies: Company[] = [
   {
+    name: "Tenpu",
+    period: "Nov 2025 - Presente",
+    url: "https://tenpu.eu/"
+  },
+  {
     name: "Deliverect",
-    period: "Nov 2021 - Presente",
+    period: "Nov 2021 - Set 2025",
     url: "https://www.deliverect.com"
   },
   {

@@ -2,7 +2,13 @@ import type { JobEntry } from '@/types';
 
 export const professionalJourney: JobEntry[] = [
   {
-    period: "Nov 2021 - Presente",
+    period: "Nov 2025 - Presente",
+    company: "Tenpu",
+    role: "Senior Software Engineer",
+    description: "Costruisco una piattaforma di procurement enterprise che aiuta gli acquirenti pubblici a gestire i processi RFI e RFP in modo efficiente. Lavoro sull'intero stack con Next.js, TypeScript, tRPC, Zod, Tailwind UI, Remirror, Prisma e PostgreSQL su Azure. Influenzo le decisioni tecniche, assumo la responsabilità delle funzionalità e mi concentro sulla creazione di prodotti che soddisfano i clienti.",
+  },
+  {
+    period: "Nov 2021 - Set 2025",
     company: "Deliverect",
     role: "Senior Software Engineer",
     description: "Recentemente promosso a Senior Software Engineer. Inizialmente ho lavorato su prodotti di marketing in Next.js e ho costruito la prima iterazione del design system di Deliverect. Ora contribuisco sia allo sviluppo frontend che backend per la dashboard di analisi Pulse, utilizzando Python, FastAPI, Celery e vari database (PostgreSQL, MongoDB, BigQuery). Guido iniziative tecniche e mentoro i membri del team.",
