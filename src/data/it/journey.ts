@@ -2,7 +2,13 @@ import type { JobEntry } from '@/types';
 
 export const professionalJourney: JobEntry[] = [
   {
-    period: "Nov 2021 - Presente",
+    period: "Nov 2025 - Presente",
+    company: "Tenpu",
+    role: "Senior Fullstack Engineer",
+    description: "Creo esperienze di prodotto con Next.js, Tailwind CSS, Prisma e PostgreSQL, distribuite su Azure con Kubernetes e ArgoCD.",
+  },
+  {
+    period: "Nov 2021 - Set 2025",
     company: "Deliverect",
     role: "Senior Software Engineer",
     description: "Recentemente promosso a Senior Software Engineer. Inizialmente ho lavorato su prodotti di marketing in Next.js e ho costruito la prima iterazione del design system di Deliverect. Ora contribuisco sia allo sviluppo frontend che backend per la dashboard di analisi Pulse, utilizzando Python, FastAPI, Celery e vari database (PostgreSQL, MongoDB, BigQuery). Guido iniziative tecniche e mentoro i membri del team.",

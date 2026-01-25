@@ -108,7 +108,7 @@ export default async function About({ params }: Props) {
                 </li>
                 <li className="flex flex-col sm:flex-row">
                   <span className="font-semibold sm:w-32 mb-1 sm:mb-0">{t('about.currentRole')}:</span>
-                  <span>Senior Software Engineer at Deliverect</span>
+                  <span>Senior Fullstack Engineer at Tenpu</span>
                 </li>
                 <li className="flex flex-col sm:flex-row">
                   <span className="font-semibold sm:w-32 mb-1 sm:mb-0">{t('about.specialization')}:</span>

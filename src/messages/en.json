@@ -22,7 +22,7 @@
   },
   "home": {
     "title": "Senior Software Engineer",
-    "description": "Results-driven developer with 8+ years of experience mastering both frontend and backend technologies. Recently promoted to Senior Developer at Deliverect, where I build sophisticated analytics platforms using React/Next.js and Python/FastAPI while mentoring team members and architecting scalable solutions.",
+    "description": "Results-driven developer with 8+ years of experience mastering both frontend and backend technologies. Senior Fullstack Engineer at Tenpu, building cloud-native products with Next.js, Prisma, and PostgreSQL while mentoring team members and architecting scalable solutions.",
     "featuredProjects": "Featured Projects",
     "technicalSkills": "Technical Skills",
     "frontend": "Frontend",
@@ -38,7 +38,7 @@
     "subtitle": "Senior Software Engineer with expertise in full-stack development",
     "professionalProfile": "Professional Profile",
     "professionalDescription1": "Senior Software Engineer with 8+ years of experience specializing in modern JavaScript frameworks and full-stack development. My expertise spans frontend technologies like React, Next.js, and Angular, complemented by backend work with Python, FastAPI, and various database systems.",
-    "professionalDescription2": "Recently promoted at Deliverect, I contribute to both frontend and backend development of the analytics platform, implement technical best practices, and mentor junior developers. My approach combines technical excellence with pragmatic problem-solving to deliver scalable, maintainable solutions.",
+    "professionalDescription2": "At Tenpu, I contribute to both frontend and backend development, implement technical best practices, and mentor junior developers. My approach combines technical excellence with pragmatic problem-solving to deliver scalable, maintainable solutions.",
     "professionalDescription3": "In 2024, I started my own software consultancy, working on specialized solutions for university clients in the chemical engineering sector.",
     "atAGlance": "At a Glance",
     "location": "Location",

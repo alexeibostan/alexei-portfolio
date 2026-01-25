@@ -2,7 +2,13 @@ import type { JobEntry } from '@/types';
 
 export const professionalJourney: JobEntry[] = [
   {
-    period: "Noi 2021 - Prezent",
+    period: "Noi 2025 - Prezent",
+    company: "Tenpu",
+    role: "Senior Fullstack Engineer",
+    description: "Construiesc experiențe de produs cu Next.js, Tailwind CSS, Prisma și PostgreSQL, implementate pe Azure cu Kubernetes și ArgoCD.",
+  },
+  {
+    period: "Noi 2021 - Sept 2025",
     company: "Deliverect",
     role: "Senior Software Engineer",
     description: "Recent promovat la Senior Software Engineer. Inițial am lucrat la produse de marketing în Next.js și am construit prima iterație a sistemului de design Deliverect. Acum contribui atât la dezvoltarea frontend cât și backend pentru dashboard-ul de analiză Pulse, folosind Python, FastAPI, Celery și diverse baze de date (PostgreSQL, MongoDB, BigQuery). Conduc inițiative tehnice și mentorez membrii echipei.",
