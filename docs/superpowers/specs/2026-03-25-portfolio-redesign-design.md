@@ -17,6 +17,8 @@ Full redesign of alexeibostan.com from a multi-page template-style portfolio to 
 2. Technical leads / engineering managers
 3. Freelance / contract clients (secondary — Bostan Software Developments, DraughtsAI)
 
+**Company name:** "Bostan Software Developments" is the official entity name (as in `journey.ts`). Use "Bostan Software" as the short form in compact UI elements (timeline, cards). Use the full name only in detailed contexts.
+
 ## Aesthetic Direction: Cinematic Developer
 
 A hybrid of cinematic scroll storytelling and developer identity.
@@ -49,6 +51,7 @@ Single-page scroll with 5 sections. Nav is sticky with active section highlighte
 - **Mobile:** `alexei.bostan` (left) | hamburger (right) → expandable menu
 - **Active state:** Current section label turns gold (`#c4956a`) as user scrolls
 - **Language switcher:** Compact bordered pill showing current locale code. 4 locales: EN, NL, IT, RO.
+- **Anchor IDs:** Locale-independent (`#story`, `#work`, `#craft`, `#ai`, `#connect`). URLs like `/nl/#work` work naturally with the locale routing.
 
 ---
 
@@ -59,15 +62,21 @@ Single-page scroll with 5 sections. Nav is sticky with active section highlighte
 - Role label: `Senior Software Engineer @ Tenpu` in monospace green
 - Headline: "Software is a conversation between the people who *build* it and the people who *use* it." — Georgia serif, ~38px, "build" and "use" highlighted in gold italic
 - Payoff: "I make sure both sides are heard." — Georgia serif italic, ~22px, 50% opacity
-- Stat pills: `9+ years · full-stack · React · Node.js · Mobile · 4 languages` in monospace, color-coded
+- Stat pills: `9+ years · full-stack · React · Node.js · Mobile · 4 spoken languages` in monospace, color-coded
 - Scroll indicator: "Scroll to explore" + fading vertical line at bottom center
 
 ### Career Timeline
 
 - Horizontal layout with gradient line (gold → green, representing growth)
-- 5 nodes: Tequila\Sunrise (2015) → Bostan Software (2017) → Emendis (2019) → Blink (2022) → Tenpu (NOW)
-- Each node: colored dot, year, company name, role title, one-line italic insight ("what I learned about users here")
-- Current role (Tenpu) has a larger glowing green dot
+- 6 nodes representing actual career history:
+  1. **Mobilesoft** (2016) — Frontend Developer — "Where I learned to build for real users"
+  2. **Dedagroup** (2019) — Developer — *(brief role, stepping stone)*
+  3. **Kirey Group** (2020) — Frontend Developer — "Becoming the go-to for frontend"
+  4. **Deliverect** (2021) — Senior Software Engineer — "Full-stack impact at scale"
+  5. **Bostan Software** (2024) — Owner & Consultant — "Owning the full loop: build → ship → listen"
+  6. **Tenpu** (NOW) — Senior Software Engineer — "Bridging code & customer value"
+- Each node: colored dot, year, company name, role title, one-line italic insight ("what I learned about users here"). Insight text is placeholder — Alexei to provide personal versions.
+- Current role (Tenpu) has a larger glowing green dot. Bostan Software runs in parallel (since 2024), shown with a dashed connector or dual-track indicator.
 - **Mobile:** Flips to vertical timeline, nodes animate top-to-bottom
 
 ---
@@ -95,7 +104,15 @@ One project is always **featured** (expanded) with remaining projects as compact
 
 ### Projects to Include
 
-All current projects from `src/data/projects.ts`, grouped by company. Each needs rewritten descriptions in the Problem → Craft → Impact format.
+All 6 current projects from `src/data/projects.ts`:
+1. **Tenpu Procurement Platform** (Tenpu, 2025–Present)
+2. **Pulse by Deliverect** (Deliverect, 2023–2025)
+3. **Deliverect Design System** (Deliverect, 2022–2023)
+4. **P&ID Digitalization Solution** (Bostan Software Developments, 2024–Present)
+5. **Consumer Finance Application** (Kirey Group, 2020–2021)
+6. **Igea Banca Digital Platform** (Mobilesoft, 2017–2019)
+
+Each needs rewritten descriptions in the Problem → Craft → Impact format. **This is a content authoring task for Alexei** — placeholder descriptions can be derived from current data but the real problem/impact framing requires domain knowledge. Default featured project on load: Tenpu Procurement Platform (most recent).
 
 ### Mobile
 
@@ -109,9 +126,12 @@ No split layout — featured project stacks vertically (identity on top, case st
 
 Three concentric rings representing depth of thinking:
 
-- **Outer ring** — "WHAT I BUILD WITH" (green border): Technology skill pills positioned around the ring (React, Node.js, TypeScript, React Native, SQL, Vue.js, REST, etc.)
-- **Middle ring** — "HOW I BUILD" (gold border): Methodology pills (Agile, CI/CD, TDD, Code Review)
+- **Outer ring** — "WHAT I BUILD WITH" (green border): All skills from `src/data/skills.ts` categories Frontend, Backend, Libraries, Tools, and Testing. These are the technologies.
+  - Examples: React, Next.js, Angular, Vue.js, TypeScript, Python, FastAPI, Node.js, PostgreSQL, MongoDB, Docker, Jest, etc.
+- **Middle ring** — "HOW I BUILD" (gold border): Professional methodologies and practices (not currently in skills data — add to a new `methodologies` array or extend Skill type with a `ring` field). Pills: Agile/Scrum, CI/CD, TDD, Code Review, Mentoring, Design Systems.
 - **Inner core** — "WHY" (gold filled): "User empathy" in Georgia italic
+
+**Skill-to-ring mapping rule:** All existing skills from `skills.ts` go to the outer ring. The middle ring contains professional practices that are new data (not currently in skills.ts). The inner core is static text, not data-driven.
 
 ### Ring Animation
 
@@ -213,7 +233,7 @@ Stays on Next.js 15 with static export. Single-page scroll replaces multi-page r
 
 - **Pages consolidation:** All content moves to `src/app/[locale]/page.tsx` as sections. Remove `about/`, `projects/`, `skills/` page directories.
 - **Components:** New section components (`HeroSection`, `TimelineSection`, `WorkSection`, `CraftSection`, `AISection`, `ConnectSection`) replace current page-level components.
-- **Animation library:** Add Framer Motion (or CSS-only with IntersectionObserver) for scroll-triggered reveals, staggered animations, and parallax.
+- **Animation library:** Use Framer Motion for scroll-triggered reveals, staggered animations, parallax, and complex sequences (ring animations, card expand/collapse). CSS transitions for simple hover states. Adds ~30KB gzipped but the concentric ring and project card animations justify it.
 - **Scroll behavior:** Smooth scroll anchoring. IntersectionObserver tracks which section is in view for nav active state.
 - **Header:** Redesigned — sticky, dark/transparent, monospace nav labels, language switcher as compact pill.
 - **Footer:** Removed as separate component — Connect section serves as the footer.
@@ -246,9 +266,9 @@ Remains `output: 'export'` to `build/`. No server runtime needed. GitHub Pages d
 
 ### External Resources
 
-- AI tool icons: `https://unpkg.com/@lobehub/icons-static-avatar@1.3.0/avatars`
-- Simple Analytics badge: `https://simpleanalyticsbadge.com/alexeibostan.com`
-- Fonts: Georgia (system), SF Mono / Fira Code (system or Google Fonts fallback)
+- AI tool icons: Download from `https://unpkg.com/@lobehub/icons-static-avatar@1.3.0/avatars` and bundle locally in `public/icons/ai/` to avoid runtime CDN dependency on a static site.
+- Simple Analytics badge: `https://simpleanalyticsbadge.com/alexeibostan.com` (external, acceptable since it's an analytics service)
+- Fonts: Georgia (system serif), monospace stack: `'SF Mono', 'Fira Code', 'Cascadia Code', 'JetBrains Mono', ui-monospace, monospace`. SF Mono is macOS-only; Fira Code covers Linux; Cascadia Code covers Windows. All are system fonts — no webfont download needed. If cross-platform consistency is critical, bundle Fira Code as a webfont (~50KB).
 
 ### Performance
 
@@ -263,6 +283,6 @@ Remains `output: 'export'` to `build/`. No server runtime needed. GitHub Pages d
 - Semantic HTML: `<header>`, `<main>`, `<section>`, `<footer>` (Connect section)
 - Skip-to-content link retained
 - `prefers-reduced-motion`: Disable parallax, slow rotations, and staggered reveals. Keep instant state changes.
-- Sufficient color contrast on dark backgrounds (gold on dark passes WCAG AA for large text)
+- Color contrast: gold `#c4956a` on `#0a0a0a` = ~5.3:1 (passes AA for all text sizes). Muted text `#e8e4df` at 50% opacity (~`#747270`) on dark = ~4.7:1 (passes AA for normal text). Verify all combinations during implementation — any text below 4.5:1 at its rendered size needs adjustment.
 - Keyboard navigation: Tab through nav, project cards, skill pills, social links
 - ARIA labels on interactive elements (project card swap, skill detail panel)
