@@ -4,56 +4,21 @@
 
 @layer base {
   :root {
-    --background: 60 100% 97%;  /* light cream/beige */
-    --foreground: 36 16% 18%;   /* dark brown/gray */
-    --card: 0 0% 100%;
-    --card-foreground: 36 16% 18%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 36 16% 18%;
-    --primary: 36 16% 18%;      /* dark brown/gray */
-    --primary-foreground: 60 100% 97%;
-    --secondary: 110 55% 92%;   /* light green */
-    --secondary-foreground: 36 16% 18%;
-    --muted: 36 16% 87%;        /* muted brown */
-    --muted-foreground: 36 16% 45%;
-    --accent: 110 55% 92%;      /* light green */
-    --accent-foreground: 36 16% 18%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 36 16% 85%;
-    --input: 36 16% 85%;
-    --ring: 36 16% 18%;
+    /* Dark cinematic palette */
+    --background: 220 20% 4%;          /* #0a0a0a → #0d1117 */
+    --foreground: 30 12% 90%;          /* #e8e4df */
+    --card: 220 18% 7%;                /* slightly lighter dark */
+    --card-foreground: 30 12% 90%;
+    --primary: 28 30% 59%;             /* gold #c4956a */
+    --primary-foreground: 220 20% 4%;
+    --secondary: 130 60% 70%;          /* green #7ee787 */
+    --accent: 215 100% 67%;            /* blue #58a6ff */
+    --accent-purple: 265 80% 80%;      /* purple #d2a8ff */
+    --muted: 220 15% 15%;
+    --muted-foreground: 30 6% 50%;
+    --border: 220 15% 12%;
+    --ring: 28 30% 59%;
     --radius: 0.5rem;
-
-    /* Website colors */
-    --green-light: 110 55% 92%;  /* #f1f6e0 - light green background */
-    --green-dark: 81 24% 43%;    /* #81865a - darker green */
-    --dark-bg: 36 16% 18%;       /* #312e2b - dark background */
-    --brown-accent: 30 24% 40%;  /* #7d664e - brown accent */
-    --text-dark: 36 16% 18%;     /* #312e2b - text dark */
-    --text-light: 60 100% 97%;   /* #f1f6e0 - text light */
-  }
-
-  .dark {
-    --background: 36 16% 18%;       /* dark brown/gray */
-    --foreground: 60 100% 97%;      /* light cream/beige */
-    --card: 36 16% 18%;
-    --card-foreground: 60 100% 97%;
-    --popover: 36 16% 18%;
-    --popover-foreground: 60 100% 97%;
-    --primary: 60 100% 97%;
-    --primary-foreground: 36 16% 18%;
-    --secondary: 110 55% 92%;
-    --secondary-foreground: 36 16% 18%;
-    --muted: 36 16% 30%;
-    --muted-foreground: 36 16% 70%;
-    --accent: 110 55% 92%;
-    --accent-foreground: 36 16% 18%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 60 100% 97%;
-    --border: 36 16% 30%;
-    --input: 36 16% 30%;
-    --ring: 60 100% 97%;
   }
 }
 
@@ -66,17 +31,52 @@
   }
 }
 
-/* Custom components and styles */
-.shall-we {
-  @apply bg-[#f1f6e0] text-[#312e2b] py-16 px-8;
+/* Film grain overlay — z-index 40 to sit below sticky header (z-50) */
+.film-grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-.green {
-  @apply bg-[#f1f6e0];
+/* Dot grid background */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.5) 0.5px, transparent 0.5px);
+  background-size: 32px 32px;
+  opacity: 0.02;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.black {
-  @apply bg-[#312e2b] text-white;
+/* Typography */
+.font-display {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.font-mono-brand {
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .skip-to-content {
@@ -89,8 +89,4 @@
 
 .nav-menu {
   @apply flex gap-6;
-}
-
-.social-icon {
-  @apply text-white hover:text-[#f1f6e0] transition-colors;
 }
