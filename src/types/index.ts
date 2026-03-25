@@ -9,6 +9,9 @@ export type Project = {
   type: string;
   period: string;
   description: string;
+  problem: string;
+  craft: string;
+  impact: string;
   skills: string[];
   role: string;
 };
@@ -18,6 +21,7 @@ export type JobEntry = {
   company: string;
   role: string;
   description: string;
+  insight: string;
 };
 
 export type Company = {
@@ -30,4 +34,16 @@ export type Skill = {
   name: string;
   category: string;
   years: string;
+  contextLine?: string;
+};
+
+export type AITool = {
+  name: string;
+  description: string;
+  iconPath: string;
+};
+
+export type Methodology = {
+  name: string;
+  description?: string;
 };

@@ -1,14 +1,14 @@
 import type { Skill } from '@/types';
 
 export const skills: Skill[] = [
-  { name: "Next.js", category: "Frontend", years: "3+" },
-  { name: "React", category: "Frontend", years: "4+" },
+  { name: "Next.js", category: "Frontend", years: "3+", contextLine: "My go-to framework for production apps — Tenpu, Pulse, and this portfolio." },
+  { name: "React", category: "Frontend", years: "4+", contextLine: "Used across every role since Deliverect — from component libraries to the full DraughtsAI platform." },
   { name: "Angular", category: "Frontend", years: "5+" },
   { name: "Vue.js", category: "Frontend", years: "2+" },
-  { name: "TypeScript", category: "Frontend", years: "4+" },
-  { name: "Python", category: "Backend", years: "1+" },
+  { name: "TypeScript", category: "Frontend", years: "4+", contextLine: "Strict mode advocate. Every project since 2019." },
+  { name: "Python", category: "Backend", years: "1+", contextLine: "Backend work at Deliverect — FastAPI, Celery, data pipelines." },
   { name: "FastAPI", category: "Backend", years: "1+" },
-  { name: "Node.js", category: "Backend", years: "3+" },
+  { name: "Node.js", category: "Backend", years: "3+", contextLine: "Server-side foundation for DraughtsAI and multiple Bostan Software projects." },
   { name: "tRPC", category: "Backend", years: "1+" },
   { name: "Prisma", category: "Backend", years: "1+" },
   { name: "PostgreSQL", category: "Backend", years: "2+" },
