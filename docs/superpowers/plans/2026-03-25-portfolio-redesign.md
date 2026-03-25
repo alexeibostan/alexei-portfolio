@@ -976,7 +976,7 @@ In `src/lib/metadata.ts`, update `generatePersonSchema()` and `generateWebsiteSc
 
 Also check `src/app/[locale]/layout.tsx` where `StructuredData` is rendered — ensure it passes updated schema data.
 
-- [ ] **Step 5: Verify sitemap and metadata**
+- [ ] **Step 4: Verify sitemap and metadata**
 
 ```bash
 bun run build
@@ -984,7 +984,7 @@ bun run build
 
 Check `build/sitemap.xml` has only locale root URLs. Check `build/en/index.html` has correct meta tags and JSON-LD.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 5: Commit**
 
 ```bash
 git add src/app/sitemap.ts src/lib/metadata.ts
