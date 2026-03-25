@@ -3,7 +3,12 @@
     "home": "Home",
     "projects": "Projecten",
     "skills": "Vaardigheden",
-    "about": "Over Mij"
+    "about": "Over Mij",
+    "story": "Story",
+    "work": "Work",
+    "craft": "Craft",
+    "ai": "AI",
+    "connect": "Connect"
   },
   "languages": {
     "english": "Engels",
@@ -125,6 +130,34 @@
         "description": "Uitgebreid overzicht van mijn technische expertise: React, Next.js, TypeScript, Node.js, tRPC, cloud technologieën en enterprise architectuur."
       }
     }
+  },
+  "hero": {
+    "roleLabel": "Senior Software Engineer @ Tenpu",
+    "headline": "Software is a conversation between the people who {build} it and the people who {use} it.",
+    "payoff": "I make sure both sides are heard.",
+    "scrollToExplore": "Scroll to explore"
+  },
+  "sections": {
+    "myJourney": "My Journey",
+    "work": "Work",
+    "selectedProjects": "Selected Projects",
+    "craft": "Craft",
+    "ai": "AI",
+    "connect": "Connect"
+  },
+  "connect": {
+    "headline": "Let's build something that {matters}",
+    "subtitle": "I'm always open to connecting with product managers, designers, and fellow engineers who believe the best technology is built with the user at its heart.",
+    "downloadResume": "Download Resume (PDF)",
+    "copyright": "© {year} Alexei Bostan · Built with Next.js"
+  },
+  "ai": {
+    "sectionIntro": "I don't just use AI — I build with it, build for it, and think about what it means for the people on the other side of the screen.",
+    "buildingWith": "Building WITH AI",
+    "buildingWithIntro": "AI tools are part of my daily engineering workflow. Not as a crutch — as a multiplier.",
+    "buildingIn": "Building IN AI",
+    "buildingInIntro": "Actively building products where AI is the core experience, not a feature.",
+    "currentlyExploring": "Currently Exploring"
   },
   "footer": {
     "copyright": "© 2025 Alexei Bostan. Alle rechten voorbehouden.",
