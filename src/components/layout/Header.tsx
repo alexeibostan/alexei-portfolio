@@ -2,181 +2,173 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Instagram, Linkedin, Menu, X, Github } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { locales, defaultLocale } from '@/i18n';
-import LanguageSwitcher from './LanguageSwitcher';
+import { useActiveSection } from '@/hooks/useActiveSection';
+import { getPathWithoutLocale, constructLocalizedPath } from '@/lib/pathUtils';
+
+const NAV_ITEMS = [
+  { id: 'story', labelKey: 'story' },
+  { id: 'work',  labelKey: 'work' },
+  { id: 'craft', labelKey: 'craft' },
+  { id: 'ai',    labelKey: 'ai' },
+  { id: 'connect', labelKey: 'connect' },
+] as const;
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = useTranslations('navigation');
   const pathname = usePathname();
-  
+  const activeSection = useActiveSection();
+
   // Extract locale from pathname
   const localePattern = new RegExp(`^/(${locales.join('|')})`);
   const locale = pathname.match(localePattern)?.[1] || defaultLocale;
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+  const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
+
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    closeMobileMenu();
+  };
+
+  const switchLanguage = (newLocale: string) => {
+    const pathWithoutLocale = getPathWithoutLocale(pathname);
+    return constructLocalizedPath(newLocale, pathWithoutLocale);
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo/Brand */}
-          <div className="flex-shrink-0">
-            <Link href={`/${locale}`} className="text-2xl font-bold text-[#325080]">
-              Alexei Bostan
-            </Link>
-          </div>
+    <>
+      {/* Skip to content */}
+      <a
+        href="#story"
+        className="skip-to-content"
+      >
+        Skip to content
+      </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <Link
-              href={`/${locale}`}
-              className="text-gray-600 hover:text-[#325080] hover:underline px-3 py-2 text-sm font-medium"
-            >
-              {t('home')}
-            </Link>
-            <Link
-              href={`/${locale}/projects`}
-              className="text-gray-600 hover:text-[#325080] hover:underline px-3 py-2 text-sm font-medium"
-            >
-              {t('projects')}
-            </Link>
-            <Link
-              href={`/${locale}/skills`}
-              className="text-gray-600 hover:text-[#325080] hover:underline px-3 py-2 text-sm font-medium"
-            >
-              {t('skills')}
-            </Link>
-            <Link
-              href={`/${locale}/about`}
-              className="text-gray-600 hover:text-[#325080] hover:underline px-3 py-2 text-sm font-medium"
-            >
-              {t('about')}
-            </Link>
-          </nav>
+      <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-14">
 
-          {/* Language Switcher & Social Media Links - Desktop */}
-          <div className="hidden md:flex items-center space-x-4">
-            {/* Language Switcher */}
-            <LanguageSwitcher variant="desktop" />
-            
-            <a
-              href="https://www.instagram.com/alexandre.lord1/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-[#E1306C] transition-colors"
-              aria-label="Instagram"
+            {/* Brand */}
+            <span
+              className="font-mono-brand text-white/50 tracking-[2px]"
+              style={{ fontSize: '12px' }}
             >
-              <Instagram size={20} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/alexei-bostan-6706b6a7/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-[#0077B5] transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a
-              href="https://github.com/alexeibostan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-black transition-colors"
-              aria-label="GitHub"
-            >
-              <Github size={20} />
-            </a>
-          </div>
+              alexei.bostan
+            </span>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+            {/* Desktop Nav + Language Switcher */}
+            <div className="hidden md:flex items-center gap-8">
+              <nav className="flex items-center gap-6">
+                {NAV_ITEMS.map(({ id, labelKey }) => {
+                  const isActive = activeSection === id;
+                  return (
+                    <button
+                      key={id}
+                      type="button"
+                      onClick={() => scrollToSection(id)}
+                      className={`font-mono-brand uppercase tracking-[3px] transition-all duration-200 hover:opacity-100 ${
+                        isActive
+                          ? 'text-[#c4956a] opacity-100'
+                          : 'text-white opacity-35'
+                      }`}
+                      style={{ fontSize: '11px' }}
+                    >
+                      {t(labelKey)}
+                    </button>
+                  );
+                })}
+              </nav>
+
+              {/* Language Switcher — compact bordered pill */}
+              <div className="relative group">
+                <button
+                  className="font-mono-brand text-white/50 border border-white/20 rounded-full px-3 py-1 uppercase tracking-[2px] hover:border-white/40 hover:text-white/80 transition-all duration-200"
+                  style={{ fontSize: '10px' }}
+                >
+                  {locale}
+                </button>
+                <div className="absolute right-0 top-full mt-2 min-w-[100px] bg-black/90 border border-white/10 rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  {locales.map((loc) => (
+                    <Link
+                      key={loc}
+                      href={switchLanguage(loc)}
+                      className={`block px-3 py-2 font-mono-brand uppercase tracking-[2px] transition-colors hover:bg-white/10 ${
+                        locale === loc
+                          ? 'text-[#c4956a]'
+                          : 'text-white/50'
+                      }`}
+                      style={{ fontSize: '10px' }}
+                    >
+                      {loc}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile: hamburger */}
             <button
               type="button"
-              className="text-gray-500 hover:text-gray-700 focus:outline-none"
+              className="md:hidden text-white/60 hover:text-white/90 transition-colors focus:outline-none"
               onClick={toggleMobileMenu}
-              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-md">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link
-              href={`/${locale}`}
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#325080] hover:bg-gray-50"
-              onClick={toggleMobileMenu}
-            >
-              {t('home')}
-            </Link>
-            <Link
-              href={`/${locale}/projects`}
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#325080] hover:bg-gray-50"
-              onClick={toggleMobileMenu}
-            >
-              {t('projects')}
-            </Link>
-            <Link
-              href={`/${locale}/skills`}
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#325080] hover:bg-gray-50"
-              onClick={toggleMobileMenu}
-            >
-              {t('skills')}
-            </Link>
-            <Link
-              href={`/${locale}/about`}
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#325080] hover:bg-gray-50"
-              onClick={toggleMobileMenu}
-            >
-              {t('about')}
-            </Link>
-          </div>
-          
-          {/* Mobile Language Switcher */}
-          <div className="px-5 py-3 border-t border-gray-200">
-            <LanguageSwitcher variant="mobile" onLanguageChange={toggleMobileMenu} />
-            <div className="flex justify-center space-x-6">
-              <a
-                href="https://www.instagram.com/alexandre.lord1/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-[#E1306C]"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/alexei-bostan-6706b6a7/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-[#0077B5]"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="https://github.com/alexeibostan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-black"
-                aria-label="GitHub"
-              >
-                <Github size={20} />
-              </a>
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-black/95 border-t border-white/5">
+            <nav className="px-4 pt-4 pb-3 flex flex-col gap-1">
+              {NAV_ITEMS.map(({ id, labelKey }) => {
+                const isActive = activeSection === id;
+                return (
+                  <button
+                    key={id}
+                    type="button"
+                    onClick={() => scrollToSection(id)}
+                    className={`font-mono-brand uppercase tracking-[3px] text-left py-3 border-b border-white/5 last:border-0 transition-all duration-200 ${
+                      isActive
+                        ? 'text-[#c4956a] opacity-100'
+                        : 'text-white opacity-35'
+                    }`}
+                    style={{ fontSize: '11px' }}
+                  >
+                    {t(labelKey)}
+                  </button>
+                );
+              })}
+            </nav>
+
+            {/* Mobile Language Switcher */}
+            <div className="px-4 py-3 border-t border-white/5 flex flex-wrap gap-2">
+              {locales.map((loc) => (
+                <Link
+                  key={loc}
+                  href={switchLanguage(loc)}
+                  onClick={closeMobileMenu}
+                  className={`font-mono-brand uppercase tracking-[2px] px-3 py-1 rounded-full border transition-all duration-200 ${
+                    locale === loc
+                      ? 'border-[#c4956a] text-[#c4956a]'
+                      : 'border-white/20 text-white/40 hover:border-white/40 hover:text-white/70'
+                  }`}
+                  style={{ fontSize: '10px' }}
+                >
+                  {loc}
+                </Link>
+              ))}
             </div>
           </div>
-        </div>
-      )}
-    </header>
+        )}
+      </header>
+    </>
   );
 }
