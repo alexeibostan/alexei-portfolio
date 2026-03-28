@@ -107,29 +107,11 @@
   },
   "metadata": {
     "title": "Alexei Bostan – Senior Software Engineer",
-    "description": "Senior Software Engineer with 9+ years building scalable web applications with React, Next.js, Python & FastAPI. Enterprise solutions expert.",
-    "keywords": "Senior Software Engineer, React Developer, Next.js Expert, Python Developer, FastAPI, Full Stack Developer, JavaScript, TypeScript, Web Development",
+    "description": "Senior Software Engineer bridging code and customer value. 9+ years building full-stack software with user empathy at the core.",
+    "keywords": "Senior Software Engineer, Full-Stack Developer, React, Next.js, TypeScript, Node.js, Product-Minded Engineer, User Empathy, Software Engineering, JavaScript, Web Development",
     "siteName": "Alexei Bostan Portfolio",
     "authorName": "Alexei Bostan",
-    "authorJobTitle": "Senior Software Engineer",
-    "pages": {
-      "home": {
-        "title": "Alexei Bostan – Senior Software Engineer",
-        "description": "Senior Software Engineer with 9+ years building scalable web applications with React, Next.js, Python & FastAPI. Enterprise solutions expert."
-      },
-      "about": {
-        "title": "About Alexei Bostan – Senior Software Engineer",
-        "description": "Learn about my 9+ years journey as a Senior Software Engineer, from frontend specialist to full-stack developer building enterprise solutions."
-      },
-      "projects": {
-        "title": "Projects by Alexei Bostan – React, Next.js & Python Development",
-        "description": "Explore my portfolio of web applications built with React, Next.js, Python, and FastAPI. Enterprise solutions and innovative projects."
-      },
-      "skills": {
-        "title": "Technical Skills – React, Next.js, Python & More",
-        "description": "Comprehensive overview of my technical expertise: React, Next.js, TypeScript, Node.js, tRPC, cloud technologies, and enterprise architecture."
-      }
-    }
+    "authorJobTitle": "Senior Software Engineer"
   },
   "hero": {
     "roleLabel": "Senior Software Engineer @ Tenpu",
