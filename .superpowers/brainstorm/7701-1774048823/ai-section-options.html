@@ -1,0 +1,197 @@
+<h2>AI Section — Two Approaches</h2>
+<p class="subtitle">Option B: dedicated section vs Option C: integrated into Craft. Click the one that feels right.</p>
+
+<div class="cards">
+
+  <!-- Option B: Dedicated AI Section -->
+  <div class="card" data-choice="b-dedicated" onclick="toggleSelect(this)" style="grid-column: 1 / -1;">
+    <div class="card-image" style="background: #0a0a0a; padding: 0; overflow: hidden; height: 520px;">
+      <div style="position: relative; width: 100%; height: 100%; color: #e8e4df;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, #0a0c10 0%, #0d1117 50%, #0a0c10 100%);"></div>
+        <div style="position: absolute; inset: 0; opacity: 0.015; background-image: radial-gradient(circle, #fff 0.5px, transparent 0.5px); background-size: 32px 32px;"></div>
+
+        <div style="position: relative; z-index: 1; padding: 36px;">
+          <!-- Section header -->
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <span style="font-family: 'SF Mono', monospace; font-size: 11px; color: #c4956a; opacity: 0.6;">04</span>
+            <span style="font-family: Georgia, serif; font-size: 20px; font-weight: 300;">AI</span>
+            <div style="flex: 1; height: 1px; background: rgba(255,255,255,0.06);"></div>
+          </div>
+          <div style="font-family: Georgia, serif; font-size: 15px; font-style: italic; opacity: 0.4; margin-bottom: 36px; max-width: 480px;">I don't just use AI — I build with it, build for it, and think about what it means for the people on the other side of the screen.</div>
+
+          <!-- Two columns: Building WITH AI / Building IN AI -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+
+            <!-- Left: Building WITH AI -->
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 24px;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px;">
+                <div style="width: 8px; height: 8px; border-radius: 50%; background: #d2a8ff;"></div>
+                <span style="font-family: monospace; font-size: 10px; color: #d2a8ff; letter-spacing: 1px;">BUILDING WITH AI</span>
+              </div>
+              <div style="font-size: 13px; opacity: 0.5; line-height: 1.6; margin-bottom: 20px;">
+                AI tools are part of my daily engineering workflow. Not as a crutch — as a multiplier.
+              </div>
+
+              <!-- Tool cards -->
+              <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: rgba(210,168,255,0.04); border: 1px solid rgba(210,168,255,0.08); border-radius: 8px;">
+                  <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(210,168,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">⌘</div>
+                  <div>
+                    <div style="font-size: 13px; font-weight: 600;">Claude Code</div>
+                    <div style="font-size: 11px; opacity: 0.4; margin-top: 2px;">AI pair programming in the terminal</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: rgba(88,166,255,0.04); border: 1px solid rgba(88,166,255,0.08); border-radius: 8px;">
+                  <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(88,166,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">▶</div>
+                  <div>
+                    <div style="font-size: 13px; font-weight: 600;">Cursor</div>
+                    <div style="font-size: 11px; opacity: 0.4; margin-top: 2px;">AI-native code editor for rapid iteration</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: rgba(126,231,135,0.04); border: 1px solid rgba(126,231,135,0.08); border-radius: 8px;">
+                  <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(126,231,135,0.1); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">◇</div>
+                  <div>
+                    <div style="font-size: 13px; font-weight: 600;">Codex</div>
+                    <div style="font-size: 11px; opacity: 0.4; margin-top: 2px;">Autonomous coding agent for parallel tasks</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Building IN AI -->
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 24px;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px;">
+                <div style="width: 8px; height: 8px; border-radius: 50%; background: #7ee787;"></div>
+                <span style="font-family: monospace; font-size: 10px; color: #7ee787; letter-spacing: 1px;">BUILDING IN AI</span>
+              </div>
+              <div style="font-size: 13px; opacity: 0.5; line-height: 1.6; margin-bottom: 20px;">
+                Actively building products where AI is the core experience, not a feature.
+              </div>
+
+              <!-- DraughtsAI feature card -->
+              <div style="border: 1px solid rgba(126,231,135,0.12); border-radius: 10px; padding: 20px; background: rgba(126,231,135,0.03);">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 14px;">
+                  <div>
+                    <div style="font-size: 18px; font-weight: 600;">DraughtsAI</div>
+                    <div style="font-size: 11px; opacity: 0.4; margin-top: 2px;">draughtsai.com</div>
+                  </div>
+                  <span style="font-family: monospace; font-size: 9px; padding: 3px 10px; border-radius: 12px; background: rgba(126,231,135,0.1); color: #7ee787; border: 1px solid rgba(126,231,135,0.2);">ACTIVE</span>
+                </div>
+                <div style="font-size: 12px; opacity: 0.5; line-height: 1.6; margin-bottom: 16px;">
+                  AI-powered draughts analysis platform. Integrating game engines with machine learning to give players insights that previously required expert human analysis.
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                  <span style="font-family: monospace; font-size: 9px; padding: 2px 8px; border-radius: 12px; background: rgba(255,255,255,0.04); color: rgba(255,255,255,0.5);">AI/ML</span>
+                  <span style="font-family: monospace; font-size: 9px; padding: 2px 8px; border-radius: 12px; background: rgba(255,255,255,0.04); color: rgba(255,255,255,0.5);">Game Analysis</span>
+                  <span style="font-family: monospace; font-size: 9px; padding: 2px 8px; border-radius: 12px; background: rgba(255,255,255,0.04); color: rgba(255,255,255,0.5);">React</span>
+                  <span style="font-family: monospace; font-size: 9px; padding: 2px 8px; border-radius: 12px; background: rgba(255,255,255,0.04); color: rgba(255,255,255,0.5);">Node.js</span>
+                </div>
+              </div>
+
+              <!-- Exploring section -->
+              <div style="margin-top: 14px; padding: 14px; border: 1px dashed rgba(255,255,255,0.08); border-radius: 8px;">
+                <div style="font-family: monospace; font-size: 9px; opacity: 0.35; letter-spacing: 1px; margin-bottom: 8px;">CURRENTLY EXPLORING</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                  <span style="font-family: monospace; font-size: 10px; padding: 3px 10px; border-radius: 16px; border: 1px dashed rgba(210,168,255,0.2); color: #d2a8ff; opacity: 0.6;">LLM APIs</span>
+                  <span style="font-family: monospace; font-size: 10px; padding: 3px 10px; border-radius: 16px; border: 1px dashed rgba(210,168,255,0.2); color: #d2a8ff; opacity: 0.6;">Prompt Engineering</span>
+                  <span style="font-family: monospace; font-size: 10px; padding: 3px 10px; border-radius: 16px; border: 1px dashed rgba(210,168,255,0.2); color: #d2a8ff; opacity: 0.6;">AI Agents</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Updated nav reference -->
+          <div style="margin-top: 24px; display: flex; justify-content: center; gap: 28px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; opacity: 0.25; font-family: 'SF Mono', monospace;">
+            <span>01 Story</span><span>02 Work</span><span>03 Craft</span><span style="color: #c4956a; opacity: 1;">04 AI</span><span>05 Connect</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Option B — Dedicated AI Section (new Section 04)</h3>
+      <p>AI gets its own section with two distinct columns: <strong>"Building WITH AI"</strong> (tools you use daily) and <strong>"Building IN AI"</strong> (products you're creating). DraughtsAI gets a featured card with an ACTIVE badge. A dashed "Currently Exploring" area signals growth and experimentation. Nav becomes 5 items: Story → Work → Craft → AI → Connect.</p>
+    </div>
+  </div>
+
+  <!-- Option C: Integrated into Craft -->
+  <div class="card" data-choice="c-integrated" onclick="toggleSelect(this)" style="grid-column: 1 / -1;">
+    <div class="card-image" style="background: #0a0a0a; padding: 0; overflow: hidden; height: 440px;">
+      <div style="position: relative; width: 100%; height: 100%; color: #e8e4df;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, #0a0c10 0%, #0d1117 50%, #0a0c10 100%);"></div>
+        <div style="position: absolute; inset: 0; opacity: 0.015; background-image: radial-gradient(circle, #fff 0.5px, transparent 0.5px); background-size: 32px 32px;"></div>
+
+        <div style="position: relative; z-index: 1; padding: 36px;">
+          <!-- Section header showing it's part of Craft -->
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <span style="font-family: 'SF Mono', monospace; font-size: 11px; color: #c4956a; opacity: 0.6;">03</span>
+            <span style="font-family: Georgia, serif; font-size: 20px; font-weight: 300;">Craft</span>
+            <div style="flex: 1; height: 1px; background: rgba(255,255,255,0.06);"></div>
+          </div>
+          <div style="font-family: monospace; font-size: 10px; opacity: 0.3; margin-bottom: 32px;">↑ Concentric rings skill map above (as designed) ↑</div>
+
+          <!-- AI subsection divider -->
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06);">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #d2a8ff;"></div>
+            <span style="font-family: Georgia, serif; font-size: 16px; font-weight: 300; font-style: italic;">Currently Exploring: AI</span>
+          </div>
+
+          <!-- Compact two-column layout -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <!-- Left: Tools row -->
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 18px;">
+              <div style="font-family: monospace; font-size: 9px; color: #d2a8ff; letter-spacing: 1px; margin-bottom: 14px; opacity: 0.7;">AI IN MY WORKFLOW</div>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div style="width: 24px; height: 24px; border-radius: 6px; background: rgba(210,168,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0;">⌘</div>
+                  <div>
+                    <div style="font-size: 12px; font-weight: 600;">Claude Code</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div style="width: 24px; height: 24px; border-radius: 6px; background: rgba(88,166,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0;">▶</div>
+                  <div>
+                    <div style="font-size: 12px; font-weight: 600;">Cursor</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div style="width: 24px; height: 24px; border-radius: 6px; background: rgba(126,231,135,0.1); display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0;">◇</div>
+                  <div>
+                    <div style="font-size: 12px; font-weight: 600;">Codex</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: DraughtsAI + exploring -->
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 18px;">
+              <div style="font-family: monospace; font-size: 9px; color: #7ee787; letter-spacing: 1px; margin-bottom: 14px; opacity: 0.7;">AI PRODUCTS I'M BUILDING</div>
+              <div style="margin-bottom: 12px;">
+                <div style="font-size: 14px; font-weight: 600;">DraughtsAI</div>
+                <div style="font-size: 11px; opacity: 0.4; margin-top: 2px;">AI-powered game analysis · draughtsai.com</div>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+                <span style="font-family: monospace; font-size: 9px; padding: 2px 8px; border-radius: 12px; border: 1px dashed rgba(210,168,255,0.2); color: #d2a8ff; opacity: 0.6;">LLM APIs</span>
+                <span style="font-family: monospace; font-size: 9px; padding: 2px 8px; border-radius: 12px; border: 1px dashed rgba(210,168,255,0.2); color: #d2a8ff; opacity: 0.6;">Prompt Engineering</span>
+                <span style="font-family: monospace; font-size: 9px; padding: 2px 8px; border-radius: 12px; border: 1px dashed rgba(210,168,255,0.2); color: #d2a8ff; opacity: 0.6;">AI Agents</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nav reference -->
+          <div style="margin-top: 24px; display: flex; justify-content: center; gap: 28px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; opacity: 0.25; font-family: 'SF Mono', monospace;">
+            <span>01 Story</span><span>02 Work</span><span style="color: #c4956a; opacity: 1;">03 Craft</span><span>04 Connect</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Option C — Subsection at the Bottom of Craft</h3>
+      <p>AI lives below the concentric rings as a "Currently Exploring" subsection within Craft. More compact, keeps the nav at 4 items. The trade-off: AI gets less visual prominence — it's positioned as an interest within your broader toolkit rather than a defining pillar of your identity.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="section" style="margin-top: 20px; padding: 16px; background: rgba(255,255,255,0.03); border-radius: 8px;">
+  <p style="margin: 0; opacity: 0.7;"><strong>My recommendation:</strong> Option B. AI is a big enough part of your story — you're both a power user of AI tools AND building an AI product — that it deserves its own section. Tucking it into Craft undersells it. The "Building WITH / Building IN" split is a strong narrative device that few portfolios have.</p>
+</div>

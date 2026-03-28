@@ -1,0 +1,170 @@
+<h2>Three Design Directions</h2>
+<p class="subtitle">Each takes "the site as an experience" differently. Click the one that excites you most.</p>
+
+<div class="cards">
+
+  <!-- Direction A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #0a0a0a; padding: 0; overflow: hidden; height: 420px;">
+      <!-- Cinematic Scroll -->
+      <div style="position: relative; width: 100%; height: 100%; font-family: 'Georgia', serif; color: #e8e4df;">
+        <!-- Dark atmospheric background with grain -->
+        <div style="position: absolute; inset: 0; background: linear-gradient(165deg, #0a0a0a 0%, #1a1520 40%, #0d1117 100%);"></div>
+        <div style="position: absolute; inset: 0; opacity: 0.03; background-image: url('data:image/svg+xml,<svg viewBox=&quot;0 0 256 256&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><filter id=&quot;n&quot;><feTurbulence type=&quot;fractalNoise&quot; baseFrequency=&quot;0.9&quot;/></filter><rect width=&quot;100%25&quot; height=&quot;100%25&quot; filter=&quot;url(%23n)&quot;/></svg>');"></div>
+
+        <!-- Hero section mockup -->
+        <div style="position: relative; z-index: 1; padding: 40px 32px 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; opacity: 0.5; font-family: monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">
+            <span>Alexei Bostan</span>
+            <span style="display: flex; gap: 20px;"><span>Work</span><span>Craft</span><span>About</span></span>
+          </div>
+
+          <div style="font-size: 11px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.4; margin-bottom: 16px; font-family: monospace;">Senior Software Engineer</div>
+          <div style="font-size: 48px; font-weight: 300; line-height: 1.1; letter-spacing: -1px; max-width: 80%;">I build software<br>that <span style="font-style: italic; color: #c4956a;">matters</span></div>
+          <div style="margin-top: 24px; font-size: 14px; opacity: 0.5; max-width: 340px; line-height: 1.6;">9+ years crafting systems across frontend, backend, and mobile — from startups to enterprise.</div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div style="position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0.3;">
+          <span style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-family: monospace;">Scroll</span>
+          <div style="width: 1px; height: 30px; background: linear-gradient(to bottom, #e8e4df, transparent);"></div>
+        </div>
+
+        <!-- Floating accent elements -->
+        <div style="position: absolute; top: 80px; right: 30px; width: 120px; height: 120px; border: 1px solid rgba(196,149,106,0.15); border-radius: 50%;"></div>
+        <div style="position: absolute; bottom: 80px; right: 60px; width: 60px; height: 60px; border: 1px solid rgba(196,149,106,0.1); border-radius: 50%;"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Cinematic Scroll</h3>
+      <p><strong>Dark, atmospheric, scroll-driven storytelling.</strong> One continuous flow. Sections reveal with parallax and fade-in. Feels like a documentary — each scroll reveals the next chapter. Moody palette with warm gold accents. Serif typography for editorial weight.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Strengths</h4><ul><li>Maximally immersive and memorable</li><li>Scroll animations showcase frontend craft</li><li>Strong emotional impact</li></ul></div>
+        <div class="cons"><h4>Trade-offs</h4><ul><li>Heavier to build (scroll orchestration)</li><li>Recruiters who want to skim may need a "jump to" option</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Direction B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #faf9f7; padding: 0; overflow: hidden; height: 420px;">
+      <!-- Architectural Reveal -->
+      <div style="position: relative; width: 100%; height: 100%; font-family: 'Helvetica Neue', sans-serif; color: #1a1a1a;">
+        <div style="position: absolute; inset: 0; background: #faf9f7;"></div>
+        <!-- Grid lines -->
+        <div style="position: absolute; inset: 0; opacity: 0.06;">
+          <div style="position: absolute; left: 33.33%; top: 0; bottom: 0; width: 1px; background: #000;"></div>
+          <div style="position: absolute; left: 66.66%; top: 0; bottom: 0; width: 1px; background: #000;"></div>
+          <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: #000;"></div>
+        </div>
+
+        <div style="position: relative; z-index: 1; padding: 32px;">
+          <!-- Minimal nav -->
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 80px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 1px;">AB</span>
+            <span style="display: flex; gap: 24px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.5;"><span>01 Work</span><span>02 Craft</span><span>03 Story</span></span>
+          </div>
+
+          <!-- Split layout -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end;">
+            <div>
+              <div style="font-size: 10px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.4; margin-bottom: 12px;">01 / Introduction</div>
+              <div style="font-size: 42px; font-weight: 300; line-height: 1.15; letter-spacing: -0.5px;">Software<br>as craft.</div>
+            </div>
+            <div style="font-size: 13px; line-height: 1.8; opacity: 0.6; border-left: 1px solid rgba(0,0,0,0.1); padding-left: 24px;">
+              Senior Engineer with 9+ years building across the full stack. I approach software the way an architect approaches space — with intention, structure, and care for the people who inhabit it.
+            </div>
+          </div>
+
+          <!-- Bottom section hint -->
+          <div style="margin-top: 60px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div style="padding: 16px 0; border-top: 2px solid #1a1a1a;">
+              <div style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.4;">Featured</div>
+              <div style="font-size: 14px; font-weight: 500; margin-top: 8px;">DraughtsAI</div>
+            </div>
+            <div style="padding: 16px 0; border-top: 2px solid rgba(0,0,0,0.1);">
+              <div style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.4;">Latest Role</div>
+              <div style="font-size: 14px; font-weight: 500; margin-top: 8px;">Tenpu — Sr. Engineer</div>
+            </div>
+            <div style="padding: 16px 0; border-top: 2px solid rgba(0,0,0,0.1);">
+              <div style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.4;">Venture</div>
+              <div style="font-size: 14px; font-weight: 500; margin-top: 8px;">Bostan Software</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Architectural Precision</h3>
+      <p><strong>Light, grid-driven, Swiss-inspired with revealing transitions.</strong> Hybrid structure: a scrollable homepage with detail pages. Sections slide and assemble like architectural blueprints. Numbered navigation (01, 02, 03). Restraint is the statement — every element earns its place.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Strengths</h4><ul><li>Extremely clean and scannable for recruiters</li><li>Grid animations still showcase craft</li><li>Timeless — won't feel dated</li></ul></div>
+        <div class="cons"><h4>Trade-offs</h4><ul><li>Less emotionally dramatic than dark themes</li><li>Restraint requires more design discipline</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Direction C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #0d1117; padding: 0; overflow: hidden; height: 420px;">
+      <!-- Terminal Craft -->
+      <div style="position: relative; width: 100%; height: 100%; color: #e6edf3;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);"></div>
+        <!-- Subtle dot grid -->
+        <div style="position: absolute; inset: 0; opacity: 0.04; background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+        <div style="position: relative; z-index: 1; padding: 28px 32px;">
+          <!-- Nav -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 12px;">
+            <span style="color: #58a6ff;">alexei<span style="opacity: 0.4;">.bostan</span></span>
+            <span style="display: flex; gap: 20px; opacity: 0.4;"><span style="color: #7ee787;">~/work</span><span>~/craft</span><span>~/about</span></span>
+          </div>
+
+          <!-- Hero -->
+          <div style="font-family: 'SF Mono', 'Fira Code', monospace;">
+            <div style="font-size: 12px; color: #7ee787; margin-bottom: 16px;">$ whoami</div>
+            <div style="font-size: 36px; font-weight: 700; line-height: 1.2; font-family: system-ui, sans-serif; letter-spacing: -0.5px;">
+              Senior Software<br>Engineer
+            </div>
+            <div style="margin-top: 16px; font-size: 13px; color: #8b949e; line-height: 1.7; max-width: 400px;">
+              Building at the intersection of craft and impact.<br>
+              <span style="color: #58a6ff;">9 years</span> · <span style="color: #7ee787;">full-stack</span> · <span style="color: #d2a8ff;">4 languages</span>
+            </div>
+          </div>
+
+          <!-- Interactive cards hint -->
+          <div style="margin-top: 40px; display: flex; gap: 12px;">
+            <div style="flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 16px;">
+              <div style="font-size: 10px; color: #7ee787; font-family: monospace; margin-bottom: 6px;">LATEST</div>
+              <div style="font-size: 14px; font-weight: 600;">DraughtsAI</div>
+              <div style="font-size: 11px; color: #8b949e; margin-top: 4px;">AI-powered draughts platform</div>
+            </div>
+            <div style="flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 16px;">
+              <div style="font-size: 10px; color: #58a6ff; font-family: monospace; margin-bottom: 6px;">ROLE</div>
+              <div style="font-size: 14px; font-weight: 600;">Tenpu</div>
+              <div style="font-size: 11px; color: #8b949e; margin-top: 4px;">Senior Software Engineer</div>
+            </div>
+            <div style="flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 16px;">
+              <div style="font-size: 10px; color: #d2a8ff; font-family: monospace; margin-bottom: 6px;">VENTURE</div>
+              <div style="font-size: 14px; font-weight: 600;">Bostan Software</div>
+              <div style="font-size: 11px; color: #8b949e; margin-top: 4px;">Independent consultancy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Developer Narrative</h3>
+      <p><strong>Dark dev-aesthetic with rich interactivity.</strong> GitHub-inspired palette meets portfolio storytelling. Terminal hints without being gimmicky. Interactive project cards with live-feeling hover states and smooth page transitions. Monospace accents signal engineering identity. The site feels like exploring a well-crafted codebase.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Strengths</h4><ul><li>Immediately signals "engineer" to technical leads</li><li>Dark theme naturally feels modern</li><li>Familiar to developer audience</li></ul></div>
+        <div class="cons"><h4>Trade-offs</h4><ul><li>Risk of feeling too "developer portfolio" if not elevated</li><li>May not stand out to non-technical recruiters</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section" style="margin-top: 24px; padding: 16px; background: rgba(255,255,255,0.03); border-radius: 8px;">
+  <p style="margin: 0; opacity: 0.7;"><strong>My recommendation:</strong> Direction A (Cinematic Scroll) — it's the most distinctive and best demonstrates frontend craft through the experience itself. But B and C are strong choices too. You can also combine elements (e.g., A's scroll storytelling with C's dark developer palette).</p>
+</div>

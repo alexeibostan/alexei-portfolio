@@ -1,4 +1,6 @@
-# CLAUDE.md — Alexei Bostan Portfolio
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
@@ -69,6 +71,8 @@ src/
 - **Data pattern**: Portfolio content lives in `src/data/` as TypeScript modules. Locale-specific versions are in `src/data/{locale}/`. Pages import data server-side based on the locale param.
 - **No API routes**: Purely static — no backend, no database.
 - **No testing framework**: Only a basic `pathUtils.test.ts` exists. No Jest/Vitest configured.
+- **Server Components by default**: Only components requiring interactivity (Header, Footer, LanguageSwitcher) use `"use client"`. Pages and layouts are server components that call `setRequestLocale()` for static rendering.
+- **Trailing slashes enabled**: `next.config.mjs` has `trailingSlash: true` — all generated paths end with `/`.
 
 ## Conventions
 
@@ -96,4 +100,4 @@ GitHub Actions workflow (`.github/workflows/deploy.yml`) triggers on push to `ma
 - **New project**: Add to `src/data/projects.ts` and locale variants in `src/data/{locale}/projects.ts`
 - **New skill**: Add to `src/data/skills.ts` and locale variants
 - **New locale**: Add locale to `src/i18n.ts`, create `src/messages/{locale}.json`, create `src/data/{locale}/` directory with all data files
-- **New page**: Create `src/app/[locale]/pagename/page.tsx`, add `generateStaticParams`, update sitemap in `src/app/sitemap.ts`
+- **New page**: Create `src/app/[locale]/pagename/page.tsx`, add `generateStaticParams`, call `setRequestLocale(locale)`, update sitemap in `src/app/sitemap.ts`
