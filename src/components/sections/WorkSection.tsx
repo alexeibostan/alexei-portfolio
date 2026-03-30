@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { TechPill } from "@/components/ui/TechPill";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Project } from "@/types";
@@ -10,18 +11,9 @@ interface WorkSectionProps {
   projects: Project[];
 }
 
-const roleLabels: Record<string, string> = {
-  SE: "Software Engineer",
-  FE: "Frontend Developer",
-  WD: "Web Developer",
-  MD: "Mobile Developer",
-};
-
-function getRoleLabel(role: string): string {
-  return roleLabels[role] ?? role;
-}
-
 export function WorkSection({ projects }: WorkSectionProps) {
+  const tSections = useTranslations("sections");
+  const tWork = useTranslations("work");
   const [featuredIndex, setFeaturedIndex] = useState(0);
 
   if (!projects || projects.length === 0) return null;
@@ -39,14 +31,14 @@ export function WorkSection({ projects }: WorkSectionProps) {
               02
             </span>
             <h2 className="font-display text-2xl text-[#e8e4df] font-light">
-              Work
+              {tSections("work")}
             </h2>
             <div className="flex-1 h-px bg-white/[0.06]" />
             <span
               className="font-mono-brand text-right opacity-30"
               style={{ fontSize: "10px" }}
             >
-              SELECTED PROJECTS
+              {tSections("selectedProjects")}
             </span>
           </div>
 
@@ -70,7 +62,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                       style={{ backgroundColor: "#7ee787" }}
                     />
                     <span className="font-mono-brand text-[10px] text-[#7ee787] tracking-[1px] uppercase">
-                      Featured
+                      {tWork("featured")}
                     </span>
                   </div>
 
@@ -94,7 +86,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                   {/* Role context */}
                   <div className="mt-auto pt-4 border-t border-white/[0.06]">
                     <p className="text-[12px] italic opacity-40 text-[#e8e4df]">
-                      {getRoleLabel(featured.role)}
+                      {tWork(`role${featured.role}`)}
                     </p>
                   </div>
                 </div>
@@ -116,7 +108,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                         className="font-mono-brand text-[10px] tracking-[1px] uppercase"
                         style={{ color: "#c4956a" }}
                       >
-                        Problem
+                        {tWork("problem")}
                       </span>
                     </div>
                     <p className="text-[13px] opacity-60 leading-relaxed text-[#e8e4df]">
@@ -139,7 +131,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                         className="font-mono-brand text-[10px] tracking-[1px] uppercase"
                         style={{ color: "#7ee787" }}
                       >
-                        Craft
+                        {tWork("craft")}
                       </span>
                     </div>
                     <p className="text-[13px] opacity-60 leading-relaxed text-[#e8e4df]">
@@ -162,7 +154,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                         className="font-mono-brand text-[10px] tracking-[1px] uppercase"
                         style={{ color: "#58a6ff" }}
                       >
-                        Impact
+                        {tWork("impact")}
                       </span>
                     </div>
                     <p className="text-[13px] opacity-60 leading-relaxed text-[#e8e4df]">

@@ -1,26 +1,16 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslations } from "next-intl";
 
-interface HeroSectionProps {
-  roleLabel?: string;
-  headline?: string;
-  payoff?: string;
-  scrollText?: string;
-}
-
-export function HeroSection({
-  roleLabel = "Senior Software Engineer @ Tenpu",
-  headline = 'Software is a conversation between the people who *build* it and the people who *use* it.',
-  payoff = "I make sure both sides are heard.",
-  scrollText = "Scroll to explore",
-}: HeroSectionProps) {
+export function HeroSection() {
+  const t = useTranslations("hero");
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
-  // Parse headline to split on *word* markers
+  // Parse headline to split on {word} markers
   const parseHeadline = (text: string) => {
-    const parts = text.split(/\*([^*]+)\*/g);
+    const parts = text.split(/\{([^}]+)\}/g);
     return parts.map((part, i) =>
       i % 2 === 1 ? (
         <em key={i} className="text-[#c4956a] italic not-italic">
@@ -33,12 +23,12 @@ export function HeroSection({
   };
 
   const stats = [
-    { label: "9+ years", color: "#c4956a" },
-    { label: "full-stack", color: "#8b9fbe" },
-    { label: "React", color: "#58a6ff" },
-    { label: "Node.js", color: "#7ee787" },
-    { label: "Mobile", color: "#d2a8ff" },
-    { label: "4 spoken languages", color: "#c4956a" },
+    { label: t("stat1"), color: "#c4956a" },
+    { label: t("stat2"), color: "#8b9fbe" },
+    { label: t("stat3"), color: "#58a6ff" },
+    { label: t("stat4"), color: "#7ee787" },
+    { label: t("stat5"), color: "#d2a8ff" },
+    { label: t("stat6"), color: "#c4956a" },
   ];
 
   return (
@@ -57,7 +47,7 @@ export function HeroSection({
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="font-mono-brand text-[11px] text-[#7ee787] opacity-70 tracking-[1px] uppercase"
         >
-          {roleLabel}
+          {t("roleLabel")}
         </motion.p>
 
         {/* Headline */}
@@ -67,7 +57,7 @@ export function HeroSection({
           transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
           className="font-display text-4xl md:text-[38px] font-light leading-[1.2] text-[#e8e4df]"
         >
-          {parseHeadline(headline)}
+          {parseHeadline(t("headline"))}
         </motion.h1>
 
         {/* Payoff */}
@@ -77,7 +67,7 @@ export function HeroSection({
           transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
           className="font-display text-xl md:text-[22px] font-light italic opacity-50 text-[#e8e4df]"
         >
-          {payoff}
+          {t("payoff")}
         </motion.p>
 
         {/* Stat pills */}
@@ -113,7 +103,7 @@ export function HeroSection({
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10"
       >
         <span className="font-mono-brand text-[10px] text-white/30 tracking-[1px] uppercase">
-          {scrollText}
+          {t("scrollToExplore")}
         </span>
         <div className="w-px h-12 bg-gradient-to-b from-white/20 to-transparent" />
       </motion.div>

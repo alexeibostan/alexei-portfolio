@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { TechPill } from "@/components/ui/TechPill";
 import type { AITool } from "@/types";
@@ -30,6 +33,8 @@ const toolIconBg: Record<string, string> = {
 };
 
 export function AISection({ aiTools, aiExploring }: AISectionProps) {
+  const tSections = useTranslations("sections");
+  const tAi = useTranslations("ai");
   return (
     <ScrollReveal>
       <section id="ai" className="py-20 px-8">
@@ -40,15 +45,14 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
               04
             </span>
             <h2 className="font-display text-2xl text-[#e8e4df] font-light">
-              AI
+              {tSections("ai")}
             </h2>
             <div className="flex-1 h-px bg-white/[0.06]" />
           </div>
 
           {/* Intro line */}
           <p className="font-display text-[15px] italic opacity-40 max-w-[480px] mb-9">
-            I don&apos;t just use AI — I build with it, build for it, and think
-            about what it means for the people on the other side of the screen.
+            {tAi("sectionIntro")}
           </p>
 
           {/* Two-column grid */}
@@ -62,14 +66,13 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                   style={{ backgroundColor: "#d2a8ff" }}
                 />
                 <span className="font-mono-brand text-[10px] text-[#d2a8ff] tracking-[1px]">
-                  BUILDING WITH AI
+                  {tAi("buildingWith")}
                 </span>
               </div>
 
               {/* Intro text */}
               <p className="text-[13px] opacity-50 leading-relaxed mb-5">
-                AI tools are part of my daily engineering workflow. Not as a
-                crutch — as a multiplier.
+                {tAi("buildingWithIntro")}
               </p>
 
               {/* Tool cards */}
@@ -122,14 +125,13 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                   style={{ backgroundColor: "#7ee787" }}
                 />
                 <span className="font-mono-brand text-[10px] text-[#7ee787] tracking-[1px]">
-                  BUILDING IN AI
+                  {tAi("buildingIn")}
                 </span>
               </div>
 
               {/* Intro text */}
               <p className="text-[13px] opacity-50 leading-relaxed mb-5">
-                Actively building products where AI is the core experience, not
-                a feature.
+                {tAi("buildingInIntro")}
               </p>
 
               {/* DraughtsAI featured card */}
@@ -146,7 +148,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                       border: "1px solid rgba(126,231,135,0.2)",
                     }}
                   >
-                    ACTIVE
+                    {tAi("active")}
                   </span>
                 </div>
 
@@ -157,9 +159,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
 
                 {/* Description */}
                 <p className="text-xs opacity-50 leading-relaxed text-[#e8e4df] mb-4">
-                  AI-powered draughts analysis platform. Integrating game
-                  engines with machine learning to give players insights that
-                  previously required expert human analysis.
+                  {tAi("draughtsAiDescription")}
                 </p>
 
                 {/* Tech pills */}
@@ -178,7 +178,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                   className="font-mono-brand block mb-2.5"
                   style={{ fontSize: "9px", opacity: 0.35 }}
                 >
-                  CURRENTLY EXPLORING
+                  {tAi("currentlyExploring")}
                 </span>
                 <div className="flex flex-wrap gap-1.5">
                   {aiExploring.map((item) => (

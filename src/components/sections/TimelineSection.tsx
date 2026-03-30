@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import type { JobEntry } from "@/types";
 
 interface TimelineSectionProps {
   journey: JobEntry[];
-  sectionTitle?: string;
 }
 
 // Color palette cycling through nodes, last always green
@@ -38,8 +38,8 @@ function isParallelRole(company: string): boolean {
 
 export function TimelineSection({
   journey,
-  sectionTitle = "My Journey",
 }: TimelineSectionProps) {
+  const t = useTranslations("sections");
   const total = journey.length;
 
   return (
@@ -57,7 +57,7 @@ export function TimelineSection({
             01
           </span>
           <h2 className="font-display text-2xl font-light text-[#e8e4df]">
-            {sectionTitle}
+            {t("myJourney")}
           </h2>
           <div className="flex-1 h-px bg-white/[0.06]" />
         </motion.div>

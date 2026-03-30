@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Mail, Linkedin, Github, Instagram } from "lucide-react";
 
 const socialLinks = [
@@ -26,15 +27,23 @@ const socialLinks = [
   },
 ];
 
-const headlineWords = [
-  { text: "Let's", gold: false },
-  { text: "build", gold: false },
-  { text: "something", gold: false },
-  { text: "that", gold: false },
-  { text: "matters", gold: true },
-];
+function parseHeadlineWords(text: string): { text: string; gold: boolean }[] {
+  const parts = text.split(/\{([^}]+)\}/g);
+  const words: { text: string; gold: boolean }[] = [];
+  parts.forEach((part, i) => {
+    if (i % 2 === 1) {
+      words.push({ text: part, gold: true });
+    } else {
+      part.split(/\s+/).filter(Boolean).forEach((word) => {
+        words.push({ text: word, gold: false });
+      });
+    }
+  });
+  return words;
+}
 
 export function ConnectSection() {
+  const t = useTranslations("connect");
   return (
     <footer>
       <section
@@ -56,7 +65,7 @@ export function ConnectSection() {
 
         {/* Headline */}
         <h2 className="font-display text-3xl md:text-[32px] font-light max-w-[500px] leading-snug mb-5 flex flex-wrap justify-center gap-x-2">
-          {headlineWords.map((word, index) => (
+          {parseHeadlineWords(t("headline")).map((word, index) => (
             <motion.span
               key={index}
               initial={{ opacity: 0, y: 10 }}
@@ -74,9 +83,7 @@ export function ConnectSection() {
 
         {/* Subtitle */}
         <p className="text-sm opacity-45 max-w-[440px] leading-relaxed mb-10">
-          I&apos;m always open to connecting with product managers, designers,
-          and fellow engineers who believe the best technology is built with the
-          user at its heart.
+          {t("subtitle")}
         </p>
 
         {/* Social links */}
@@ -102,7 +109,7 @@ export function ConnectSection() {
             download
             className="font-mono-brand text-[11px] text-[#c4956a] opacity-60 border-b border-dashed border-[#c4956a]/30 pb-0.5 tracking-[1px]"
           >
-            ↓ Download Resume (PDF)
+            {"↓ " + t("downloadResume")}
           </a>
         </div>
 
@@ -117,7 +124,7 @@ export function ConnectSection() {
 
         {/* Copyright */}
         <p className="mt-12 text-[11px] opacity-20 font-mono-brand">
-          © {new Date().getFullYear()} Alexei Bostan · Built with Next.js
+          {t("copyright", { year: new Date().getFullYear() })}
         </p>
       </section>
     </footer>

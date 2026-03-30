@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Skill, Methodology } from "@/types";
 
@@ -68,6 +69,10 @@ interface ConcentricRingsProps {
   middleMethodologies: Methodology[];
   selectedSkill: Skill;
   onSelectSkill: (skill: Skill) => void;
+  whatIBuildWithLabel: string;
+  howIBuildLabel: string;
+  whyLabel: string;
+  userEmpathyLabel: string;
 }
 
 function ConcentricRings({
@@ -75,6 +80,10 @@ function ConcentricRings({
   middleMethodologies,
   selectedSkill,
   onSelectSkill,
+  whatIBuildWithLabel,
+  howIBuildLabel,
+  whyLabel,
+  userEmpathyLabel,
 }: ConcentricRingsProps) {
   // Container is 360px × 360px; rings are centered inside
   const containerSize = 360;
@@ -143,15 +152,13 @@ function ConcentricRings({
           className="font-mono-brand text-[#c4956a] opacity-50 tracking-wider"
           style={{ fontSize: "8px" }}
         >
-          WHY
+          {whyLabel}
         </span>
         <span
           className="font-display italic text-[#e8e4df] text-center leading-tight opacity-60"
           style={{ fontSize: "10px" }}
         >
-          User
-          <br />
-          empathy
+          {userEmpathyLabel}
         </span>
       </motion.div>
 
@@ -171,7 +178,7 @@ function ConcentricRings({
           opacity: 0.4,
         }}
       >
-        WHAT I BUILD WITH
+        {whatIBuildWithLabel}
       </motion.span>
 
       {/* Middle ring label */}
@@ -189,7 +196,7 @@ function ConcentricRings({
           opacity: 0.4,
         }}
       >
-        HOW I BUILD
+        {howIBuildLabel}
       </motion.span>
 
       {/* Outer ring skill pills — positioned around the ring */}
@@ -265,15 +272,17 @@ function ConcentricRings({
   );
 }
 
-const languages = [
-  { flag: "🇬🇧", name: "English", proficiency: "Fluent" },
-  { flag: "🇮🇹", name: "Italian", proficiency: "Fluent" },
-  { flag: "🇷🇴", name: "Romanian", proficiency: "Native" },
-  { flag: "🇳🇱", name: "Dutch", proficiency: "Conversational" },
-];
-
 export function CraftSection({ skills, methodologies }: CraftSectionProps) {
+  const tSections = useTranslations("sections");
+  const tCraft = useTranslations("craft");
   const [selectedSkill, setSelectedSkill] = useState<Skill>(skills[0]);
+
+  const languages = [
+    { flag: "🇬🇧", name: tCraft("english"), proficiency: tCraft("fluent") },
+    { flag: "🇮🇹", name: tCraft("italian"), proficiency: tCraft("fluent") },
+    { flag: "🇷🇴", name: tCraft("romanian"), proficiency: tCraft("native") },
+    { flag: "🇳🇱", name: tCraft("dutch"), proficiency: tCraft("conversational") },
+  ];
 
   // Filter outer ring skills in display order
   const outerSkills = OUTER_RING_NAMES.map((name) =>
@@ -300,14 +309,14 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
               03
             </span>
             <h2 className="font-display text-2xl text-[#e8e4df] font-light">
-              Craft
+              {tSections("craft")}
             </h2>
             <div className="flex-1 h-px bg-white/[0.06]" />
             <span
               className="font-mono-brand text-right opacity-30"
               style={{ fontSize: "10px" }}
             >
-              SKILLS &amp; METHODOLOGIES
+              {tCraft("skillsAndMethodologies")}
             </span>
           </div>
 
@@ -322,6 +331,10 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
                   middleMethodologies={methodologies}
                   selectedSkill={selectedSkill}
                   onSelectSkill={setSelectedSkill}
+                  whatIBuildWithLabel={tCraft("whatIBuildWith")}
+                  howIBuildLabel={tCraft("howIBuild")}
+                  whyLabel={tCraft("why")}
+                  userEmpathyLabel={tCraft("userEmpathy")}
                 />
               </div>
 
@@ -333,7 +346,7 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
                     className="font-mono-brand text-[#7ee787] tracking-widest opacity-40"
                     style={{ fontSize: "9px" }}
                   >
-                    WHAT I BUILD WITH
+                    {tCraft("whatIBuildWith")}
                   </span>
                   {Object.entries(skillsByCategory).map(
                     ([category, catSkills]) => (
@@ -386,7 +399,7 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
                     className="font-mono-brand text-[#c4956a] tracking-widest opacity-40"
                     style={{ fontSize: "9px" }}
                   >
-                    HOW I BUILD
+                    {tCraft("howIBuild")}
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {methodologies.map((method) => (
@@ -413,10 +426,10 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
                     className="font-mono-brand text-[#c4956a] tracking-widest opacity-40"
                     style={{ fontSize: "9px" }}
                   >
-                    WHY I BUILD
+                    {tCraft("whyIBuild")}
                   </span>
                   <span className="font-display italic text-[#e8e4df] opacity-50 text-sm">
-                    User empathy
+                    {tCraft("userEmpathy")}
                   </span>
                 </div>
               </div>
@@ -454,7 +467,7 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
                     className="font-mono-brand opacity-30"
                     style={{ fontSize: "9px" }}
                   >
-                    — WHAT I BUILD WITH
+                    {"— " + tCraft("whatIBuildWith")}
                   </span>
                 </div>
 
@@ -464,7 +477,7 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
                     className="text-xl font-light"
                     style={{ color: "#7ee787" }}
                   >
-                    {selectedSkill.years} years
+                    {selectedSkill.years} {tCraft("years")}
                   </span>
                   <span
                     className="font-mono-brand opacity-30"
@@ -499,7 +512,7 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
                       className="font-display italic leading-relaxed opacity-25"
                       style={{ fontSize: "13px", color: "#e8e4df" }}
                     >
-                      No additional context available.
+                      {tCraft("noContext")}
                     </p>
                   </div>
                 )}
@@ -510,7 +523,7 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
                 className="font-display italic opacity-25 text-[#e8e4df]"
                 style={{ fontSize: "12px" }}
               >
-                ← Hover or click a skill to explore
+                {tCraft("hoverHint")}
               </p>
 
               {/* Languages card */}
@@ -525,7 +538,7 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
                   className="font-mono-brand opacity-40"
                   style={{ fontSize: "10px" }}
                 >
-                  LANGUAGES I SPEAK
+                  {tCraft("languagesISpeak")}
                 </span>
                 <div className="flex flex-row flex-wrap gap-4">
                   {languages.map((lang) => (
