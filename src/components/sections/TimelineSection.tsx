@@ -89,7 +89,7 @@ export function TimelineSection({
               const isLast = i === total - 1;
               const isParallel = isParallelRole(entry.company);
               const yearLabel = isLast
-                ? "NOW"
+                ? t("now").toUpperCase()
                 : extractStartYear(entry.period);
 
               return (

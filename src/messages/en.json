@@ -131,7 +131,8 @@
     "selectedProjects": "Selected Projects",
     "craft": "Craft",
     "ai": "AI",
-    "connect": "Connect"
+    "connect": "Connect",
+    "now": "Now"
   },
   "work": {
     "featured": "Featured",
@@ -169,7 +170,6 @@
     "copyright": "© {year} Alexei Bostan · Built with Next.js"
   },
   "ai": {
-    "sectionTitle": "AI",
     "sectionIntro": "I don't just use AI — I build with it, build for it, and think about what it means for the people on the other side of the screen.",
     "buildingWith": "Building WITH AI",
     "buildingWithIntro": "AI tools are part of my daily engineering workflow. Not as a crutch — as a multiplier.",

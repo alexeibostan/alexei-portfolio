@@ -149,7 +149,8 @@
     "selectedProjects": "Proiecte Selectate",
     "craft": "Meșteșug",
     "ai": "AI",
-    "connect": "Contact"
+    "connect": "Contact",
+    "now": "Acum"
   },
   "work": {
     "featured": "Recomandat",
@@ -187,7 +188,6 @@
     "copyright": "© {year} Alexei Bostan · Construit cu Next.js"
   },
   "ai": {
-    "sectionTitle": "AI",
     "sectionIntro": "Nu doar folosesc AI — construiesc cu el, construiesc pentru el și mă gândesc la ce înseamnă pentru oamenii de cealaltă parte a ecranului.",
     "buildingWith": "Construind CU AI",
     "buildingWithIntro": "Instrumentele AI fac parte din fluxul meu zilnic de lucru. Nu ca o cârjă — ca un multiplicator.",

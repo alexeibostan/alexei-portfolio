@@ -149,7 +149,8 @@
     "selectedProjects": "Geselecteerde Projecten",
     "craft": "Vakmanschap",
     "ai": "AI",
-    "connect": "Contact"
+    "connect": "Contact",
+    "now": "Nu"
   },
   "work": {
     "featured": "Uitgelicht",
@@ -187,7 +188,6 @@
     "copyright": "© {year} Alexei Bostan · Gebouwd met Next.js"
   },
   "ai": {
-    "sectionTitle": "AI",
     "sectionIntro": "Ik gebruik niet alleen AI — ik bouw ermee, bouw ervoor, en denk na over wat het betekent voor de mensen aan de andere kant van het scherm.",
     "buildingWith": "Bouwen MET AI",
     "buildingWithIntro": "AI-tools maken deel uit van mijn dagelijkse workflow. Niet als een kruk — als een versterker.",
