@@ -4,11 +4,11 @@
     "projects": "Progetti",
     "skills": "Competenze",
     "about": "Chi Sono",
-    "story": "Story",
-    "work": "Work",
-    "craft": "Craft",
+    "story": "Storia",
+    "work": "Lavoro",
+    "craft": "Mestiere",
     "ai": "AI",
-    "connect": "Connect"
+    "connect": "Contatti"
   },
   "languages": {
     "english": "Inglese",
@@ -133,31 +133,69 @@
   },
   "hero": {
     "roleLabel": "Senior Software Engineer @ Tenpu",
-    "headline": "Software is a conversation between the people who {build} it and the people who {use} it.",
-    "payoff": "I make sure both sides are heard.",
-    "scrollToExplore": "Scroll to explore"
+    "headline": "Il software è una conversazione tra le persone che lo {costruiscono} e le persone che lo {usano}.",
+    "payoff": "Io mi assicuro che entrambe le parti siano ascoltate.",
+    "scrollToExplore": "Scorri per esplorare",
+    "stat1": "9+ anni",
+    "stat2": "full-stack",
+    "stat3": "React",
+    "stat4": "Node.js",
+    "stat5": "Mobile",
+    "stat6": "4 lingue parlate"
   },
   "sections": {
-    "myJourney": "My Journey",
-    "work": "Work",
-    "selectedProjects": "Selected Projects",
-    "craft": "Craft",
+    "myJourney": "Il Mio Percorso",
+    "work": "Lavoro",
+    "selectedProjects": "Progetti Selezionati",
+    "craft": "Mestiere",
     "ai": "AI",
-    "connect": "Connect"
+    "connect": "Contatti"
+  },
+  "work": {
+    "featured": "In Evidenza",
+    "problem": "Problema",
+    "craft": "Approccio",
+    "impact": "Impatto",
+    "roleSE": "Software Engineer",
+    "roleFE": "Frontend Developer",
+    "roleWD": "Web Developer",
+    "roleMD": "Mobile Developer"
+  },
+  "craft": {
+    "skillsAndMethodologies": "Competenze & Metodologie",
+    "whatIBuildWith": "Con Cosa Costruisco",
+    "howIBuild": "Come Costruisco",
+    "whyIBuild": "Perché Costruisco",
+    "why": "Perché",
+    "userEmpathy": "Empatia con l'utente",
+    "years": "anni",
+    "noContext": "Nessun contesto aggiuntivo disponibile.",
+    "hoverHint": "← Clicca su una competenza per esplorare",
+    "languagesISpeak": "Lingue Che Parlo",
+    "english": "Inglese",
+    "italian": "Italiano",
+    "romanian": "Rumeno",
+    "dutch": "Olandese",
+    "fluent": "Fluente",
+    "native": "Madrelingua",
+    "conversational": "Conversazionale"
   },
   "connect": {
-    "headline": "Let's build something that {matters}",
-    "subtitle": "I'm always open to connecting with product managers, designers, and fellow engineers who believe the best technology is built with the user at its heart.",
-    "downloadResume": "Download Resume (PDF)",
-    "copyright": "© {year} Alexei Bostan · Built with Next.js"
+    "headline": "Costruiamo qualcosa che {conta}",
+    "subtitle": "Sono sempre aperto a connettermi con product manager, designer e colleghi ingegneri che credono che la migliore tecnologia sia costruita con l'utente al centro.",
+    "downloadResume": "Scarica Curriculum (PDF)",
+    "copyright": "© {year} Alexei Bostan · Costruito con Next.js"
   },
   "ai": {
-    "sectionIntro": "I don't just use AI — I build with it, build for it, and think about what it means for the people on the other side of the screen.",
-    "buildingWith": "Building WITH AI",
-    "buildingWithIntro": "AI tools are part of my daily engineering workflow. Not as a crutch — as a multiplier.",
-    "buildingIn": "Building IN AI",
-    "buildingInIntro": "Actively building products where AI is the core experience, not a feature.",
-    "currentlyExploring": "Currently Exploring"
+    "sectionTitle": "AI",
+    "sectionIntro": "Non uso solo l'AI — ci costruisco, costruisco per essa, e penso a cosa significa per le persone dall'altra parte dello schermo.",
+    "buildingWith": "Costruire CON l'AI",
+    "buildingWithIntro": "Gli strumenti AI fanno parte del mio flusso di lavoro quotidiano. Non come una stampella — come un moltiplicatore.",
+    "buildingIn": "Costruire NELL'AI",
+    "buildingInIntro": "Costruisco attivamente prodotti dove l'AI è l'esperienza principale, non una funzionalità.",
+    "currentlyExploring": "Attualmente Esplorando",
+    "active": "Attivo",
+    "draughtsAiDescription": "Piattaforma di analisi della dama basata sull'AI. Integrazione di motori di gioco con machine learning per dare ai giocatori intuizioni che prima richiedevano un'analisi umana esperta."
   },
   "footer": {
     "copyright": "© 2025 Alexei Bostan. Tutti i diritti riservati.",

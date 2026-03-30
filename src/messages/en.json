@@ -117,7 +117,13 @@
     "roleLabel": "Senior Software Engineer @ Tenpu",
     "headline": "Software is a conversation between the people who {build} it and the people who {use} it.",
     "payoff": "I make sure both sides are heard.",
-    "scrollToExplore": "Scroll to explore"
+    "scrollToExplore": "Scroll to explore",
+    "stat1": "9+ years",
+    "stat2": "full-stack",
+    "stat3": "React",
+    "stat4": "Node.js",
+    "stat5": "Mobile",
+    "stat6": "4 spoken languages"
   },
   "sections": {
     "myJourney": "My Journey",
@@ -127,6 +133,35 @@
     "ai": "AI",
     "connect": "Connect"
   },
+  "work": {
+    "featured": "Featured",
+    "problem": "Problem",
+    "craft": "Craft",
+    "impact": "Impact",
+    "roleSE": "Software Engineer",
+    "roleFE": "Frontend Developer",
+    "roleWD": "Web Developer",
+    "roleMD": "Mobile Developer"
+  },
+  "craft": {
+    "skillsAndMethodologies": "Skills & Methodologies",
+    "whatIBuildWith": "What I Build With",
+    "howIBuild": "How I Build",
+    "whyIBuild": "Why I Build",
+    "why": "Why",
+    "userEmpathy": "User empathy",
+    "years": "years",
+    "noContext": "No additional context available.",
+    "hoverHint": "← Hover or click a skill to explore",
+    "languagesISpeak": "Languages I Speak",
+    "english": "English",
+    "italian": "Italian",
+    "romanian": "Romanian",
+    "dutch": "Dutch",
+    "fluent": "Fluent",
+    "native": "Native",
+    "conversational": "Conversational"
+  },
   "connect": {
     "headline": "Let's build something that {matters}",
     "subtitle": "I'm always open to connecting with product managers, designers, and fellow engineers who believe the best technology is built with the user at its heart.",
@@ -134,12 +169,15 @@
     "copyright": "© {year} Alexei Bostan · Built with Next.js"
   },
   "ai": {
+    "sectionTitle": "AI",
     "sectionIntro": "I don't just use AI — I build with it, build for it, and think about what it means for the people on the other side of the screen.",
     "buildingWith": "Building WITH AI",
     "buildingWithIntro": "AI tools are part of my daily engineering workflow. Not as a crutch — as a multiplier.",
     "buildingIn": "Building IN AI",
     "buildingInIntro": "Actively building products where AI is the core experience, not a feature.",
-    "currentlyExploring": "Currently Exploring"
+    "currentlyExploring": "Currently Exploring",
+    "active": "Active",
+    "draughtsAiDescription": "AI-powered draughts analysis platform. Integrating game engines with machine learning to give players insights that previously required expert human analysis."
   },
   "footer": {
     "copyright": "© 2025 Alexei Bostan. All rights reserved.",

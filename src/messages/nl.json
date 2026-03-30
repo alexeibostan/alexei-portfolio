@@ -4,11 +4,11 @@
     "projects": "Projecten",
     "skills": "Vaardigheden",
     "about": "Over Mij",
-    "story": "Story",
-    "work": "Work",
-    "craft": "Craft",
+    "story": "Verhaal",
+    "work": "Werk",
+    "craft": "Vakmanschap",
     "ai": "AI",
-    "connect": "Connect"
+    "connect": "Contact"
   },
   "languages": {
     "english": "Engels",
@@ -133,31 +133,69 @@
   },
   "hero": {
     "roleLabel": "Senior Software Engineer @ Tenpu",
-    "headline": "Software is a conversation between the people who {build} it and the people who {use} it.",
-    "payoff": "I make sure both sides are heard.",
-    "scrollToExplore": "Scroll to explore"
+    "headline": "Software is een gesprek tussen de mensen die het {bouwen} en de mensen die het {gebruiken}.",
+    "payoff": "Ik zorg dat beide kanten gehoord worden.",
+    "scrollToExplore": "Scroll om te verkennen",
+    "stat1": "9+ jaar",
+    "stat2": "full-stack",
+    "stat3": "React",
+    "stat4": "Node.js",
+    "stat5": "Mobile",
+    "stat6": "4 gesproken talen"
   },
   "sections": {
-    "myJourney": "My Journey",
-    "work": "Work",
-    "selectedProjects": "Selected Projects",
-    "craft": "Craft",
+    "myJourney": "Mijn Reis",
+    "work": "Werk",
+    "selectedProjects": "Geselecteerde Projecten",
+    "craft": "Vakmanschap",
     "ai": "AI",
-    "connect": "Connect"
+    "connect": "Contact"
+  },
+  "work": {
+    "featured": "Uitgelicht",
+    "problem": "Probleem",
+    "craft": "Aanpak",
+    "impact": "Impact",
+    "roleSE": "Software Engineer",
+    "roleFE": "Frontend Developer",
+    "roleWD": "Web Developer",
+    "roleMD": "Mobile Developer"
+  },
+  "craft": {
+    "skillsAndMethodologies": "Vaardigheden & Methodologieën",
+    "whatIBuildWith": "Waarmee Ik Bouw",
+    "howIBuild": "Hoe Ik Bouw",
+    "whyIBuild": "Waarom Ik Bouw",
+    "why": "Waarom",
+    "userEmpathy": "Gebruikersempathie",
+    "years": "jaar",
+    "noContext": "Geen aanvullende context beschikbaar.",
+    "hoverHint": "← Klik op een vaardigheid om te verkennen",
+    "languagesISpeak": "Talen Die Ik Spreek",
+    "english": "Engels",
+    "italian": "Italiaans",
+    "romanian": "Roemeens",
+    "dutch": "Nederlands",
+    "fluent": "Vloeiend",
+    "native": "Moedertaal",
+    "conversational": "Conversationeel"
   },
   "connect": {
-    "headline": "Let's build something that {matters}",
-    "subtitle": "I'm always open to connecting with product managers, designers, and fellow engineers who believe the best technology is built with the user at its heart.",
-    "downloadResume": "Download Resume (PDF)",
-    "copyright": "© {year} Alexei Bostan · Built with Next.js"
+    "headline": "Laten we iets bouwen dat {ertoe doet}",
+    "subtitle": "Ik sta altijd open om in contact te komen met productmanagers, designers en mede-engineers die geloven dat de beste technologie gebouwd wordt met de gebruiker centraal.",
+    "downloadResume": "Download CV (PDF)",
+    "copyright": "© {year} Alexei Bostan · Gebouwd met Next.js"
   },
   "ai": {
-    "sectionIntro": "I don't just use AI — I build with it, build for it, and think about what it means for the people on the other side of the screen.",
-    "buildingWith": "Building WITH AI",
-    "buildingWithIntro": "AI tools are part of my daily engineering workflow. Not as a crutch — as a multiplier.",
-    "buildingIn": "Building IN AI",
-    "buildingInIntro": "Actively building products where AI is the core experience, not a feature.",
-    "currentlyExploring": "Currently Exploring"
+    "sectionTitle": "AI",
+    "sectionIntro": "Ik gebruik niet alleen AI — ik bouw ermee, bouw ervoor, en denk na over wat het betekent voor de mensen aan de andere kant van het scherm.",
+    "buildingWith": "Bouwen MET AI",
+    "buildingWithIntro": "AI-tools maken deel uit van mijn dagelijkse workflow. Niet als een kruk — als een versterker.",
+    "buildingIn": "Bouwen IN AI",
+    "buildingInIntro": "Actief producten bouwen waar AI de kernervaring is, niet een functie.",
+    "currentlyExploring": "Momenteel Aan Het Verkennen",
+    "active": "Actief",
+    "draughtsAiDescription": "AI-aangedreven damanalyseplatform. Integratie van game-engines met machine learning om spelers inzichten te geven die voorheen deskundige menselijke analyse vereisten."
   },
   "footer": {
     "copyright": "© 2025 Alexei Bostan. Alle rechten voorbehouden.",

@@ -4,11 +4,11 @@
     "projects": "Proiecte",
     "skills": "Competențe",
     "about": "Despre Mine",
-    "story": "Story",
-    "work": "Work",
-    "craft": "Craft",
+    "story": "Poveste",
+    "work": "Muncă",
+    "craft": "Meșteșug",
     "ai": "AI",
-    "connect": "Connect"
+    "connect": "Contact"
   },
   "languages": {
     "english": "Engleză",
@@ -133,31 +133,69 @@
   },
   "hero": {
     "roleLabel": "Senior Software Engineer @ Tenpu",
-    "headline": "Software is a conversation between the people who {build} it and the people who {use} it.",
-    "payoff": "I make sure both sides are heard.",
-    "scrollToExplore": "Scroll to explore"
+    "headline": "Software-ul este o conversație între oamenii care îl {construiesc} și oamenii care îl {folosesc}.",
+    "payoff": "Eu mă asigur că ambele părți sunt auzite.",
+    "scrollToExplore": "Derulează pentru a explora",
+    "stat1": "9+ ani",
+    "stat2": "full-stack",
+    "stat3": "React",
+    "stat4": "Node.js",
+    "stat5": "Mobile",
+    "stat6": "4 limbi vorbite"
   },
   "sections": {
-    "myJourney": "My Journey",
-    "work": "Work",
-    "selectedProjects": "Selected Projects",
-    "craft": "Craft",
+    "myJourney": "Parcursul Meu",
+    "work": "Muncă",
+    "selectedProjects": "Proiecte Selectate",
+    "craft": "Meșteșug",
     "ai": "AI",
-    "connect": "Connect"
+    "connect": "Contact"
+  },
+  "work": {
+    "featured": "Recomandat",
+    "problem": "Problemă",
+    "craft": "Abordare",
+    "impact": "Impact",
+    "roleSE": "Software Engineer",
+    "roleFE": "Frontend Developer",
+    "roleWD": "Web Developer",
+    "roleMD": "Mobile Developer"
+  },
+  "craft": {
+    "skillsAndMethodologies": "Competențe & Metodologii",
+    "whatIBuildWith": "Cu Ce Construiesc",
+    "howIBuild": "Cum Construiesc",
+    "whyIBuild": "De Ce Construiesc",
+    "why": "De Ce",
+    "userEmpathy": "Empatie cu utilizatorul",
+    "years": "ani",
+    "noContext": "Niciun context suplimentar disponibil.",
+    "hoverHint": "← Apasă pe o competență pentru a explora",
+    "languagesISpeak": "Limbile Pe Care Le Vorbesc",
+    "english": "Engleză",
+    "italian": "Italiană",
+    "romanian": "Română",
+    "dutch": "Olandeză",
+    "fluent": "Fluent",
+    "native": "Nativ",
+    "conversational": "Conversațional"
   },
   "connect": {
-    "headline": "Let's build something that {matters}",
-    "subtitle": "I'm always open to connecting with product managers, designers, and fellow engineers who believe the best technology is built with the user at its heart.",
-    "downloadResume": "Download Resume (PDF)",
-    "copyright": "© {year} Alexei Bostan · Built with Next.js"
+    "headline": "Să construim ceva care {contează}",
+    "subtitle": "Sunt mereu deschis să mă conectez cu manageri de produs, designeri și ingineri care cred că cea mai bună tehnologie este construită cu utilizatorul în centru.",
+    "downloadResume": "Descarcă CV (PDF)",
+    "copyright": "© {year} Alexei Bostan · Construit cu Next.js"
   },
   "ai": {
-    "sectionIntro": "I don't just use AI — I build with it, build for it, and think about what it means for the people on the other side of the screen.",
-    "buildingWith": "Building WITH AI",
-    "buildingWithIntro": "AI tools are part of my daily engineering workflow. Not as a crutch — as a multiplier.",
-    "buildingIn": "Building IN AI",
-    "buildingInIntro": "Actively building products where AI is the core experience, not a feature.",
-    "currentlyExploring": "Currently Exploring"
+    "sectionTitle": "AI",
+    "sectionIntro": "Nu doar folosesc AI — construiesc cu el, construiesc pentru el și mă gândesc la ce înseamnă pentru oamenii de cealaltă parte a ecranului.",
+    "buildingWith": "Construind CU AI",
+    "buildingWithIntro": "Instrumentele AI fac parte din fluxul meu zilnic de lucru. Nu ca o cârjă — ca un multiplicator.",
+    "buildingIn": "Construind ÎN AI",
+    "buildingInIntro": "Construiesc activ produse unde AI-ul este experiența principală, nu o funcționalitate.",
+    "currentlyExploring": "Explorând În Prezent",
+    "active": "Activ",
+    "draughtsAiDescription": "Platformă de analiză a jocului de dame bazată pe AI. Integrarea motoarelor de joc cu învățarea automată pentru a oferi jucătorilor perspective care anterior necesitau analiză expertă umană."
   },
   "footer": {
     "copyright": "© 2025 Alexei Bostan. Toate drepturile rezervate.",
