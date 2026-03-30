@@ -57,7 +57,7 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
           className="font-display text-4xl md:text-[38px] font-light leading-[1.2] text-[#e8e4df]"
         >
-          {parseHeadline(t("headline"))}
+          {parseHeadline(t.raw("headline"))}
         </motion.h1>
 
         {/* Payoff */}

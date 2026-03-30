@@ -65,7 +65,7 @@ export function ConnectSection() {
 
         {/* Headline */}
         <h2 className="font-display text-3xl md:text-[32px] font-light max-w-[500px] leading-snug mb-5 flex flex-wrap justify-center gap-x-2">
-          {parseHeadlineWords(t("headline")).map((word, index) => (
+          {parseHeadlineWords(t.raw("headline")).map((word, index) => (
             <motion.span
               key={index}
               initial={{ opacity: 0, y: 10 }}
