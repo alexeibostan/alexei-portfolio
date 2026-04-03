@@ -86,13 +86,18 @@
     "copyright": "© {year} Alexei Bostan · Gebouwd met Next.js"
   },
   "ai": {
-    "sectionIntro": "Ik gebruik niet alleen AI — ik bouw ermee, bouw ervoor, en denk na over wat het betekent voor de mensen aan de andere kant van het scherm.",
     "buildingWith": "Bouwen MET AI",
     "buildingWithIntro": "AI-tools maken deel uit van mijn dagelijkse workflow. Niet als een kruk — als een versterker.",
     "buildingIn": "Bouwen IN AI",
     "buildingInIntro": "Actief producten bouwen waar AI de kernervaring is, niet een functie.",
     "currentlyExploring": "Momenteel Aan Het Verkennen",
     "active": "Actief",
-    "draughtsAiDescription": "AI-aangedreven damanalyseplatform. Integratie van game-engines met machine learning om spelers inzichten te geven die voorheen deskundige menselijke analyse vereisten."
+    "draughtsAiDescription": "Twee AI-modellen nemen het tegen elkaar op in realtime dampartijen — met WebSocket-streaming, live meekijken en modelranglijsten op basis van ELO-ratings.",
+    "featureStreaming": "Realtime Streaming",
+    "featureStreamingDesc": "WebSocket-gestuurde live spelweergave",
+    "featureLeaderboard": "ELO-ranglijst",
+    "featureLeaderboardDesc": "Modelrankings bijgehouden per wedstrijd",
+    "featureArena": "Multi-model Arena",
+    "featureArenaDesc": "Elk LLM via OpenRouter API-integratie"
   }
 }

@@ -86,13 +86,18 @@
     "copyright": "© {year} Alexei Bostan · Construit cu Next.js"
   },
   "ai": {
-    "sectionIntro": "Nu doar folosesc AI — construiesc cu el, construiesc pentru el și mă gândesc la ce înseamnă pentru oamenii de cealaltă parte a ecranului.",
     "buildingWith": "Construind CU AI",
     "buildingWithIntro": "Instrumentele AI fac parte din fluxul meu zilnic de lucru. Nu ca o cârjă — ca un multiplicator.",
     "buildingIn": "Construind ÎN AI",
     "buildingInIntro": "Construiesc activ produse unde AI-ul este experiența principală, nu o funcționalitate.",
     "currentlyExploring": "Explorând În Prezent",
     "active": "Activ",
-    "draughtsAiDescription": "Platformă de analiză a jocului de dame bazată pe AI. Integrarea motoarelor de joc cu învățarea automată pentru a oferi jucătorilor perspective care anterior necesitau analiză expertă umană."
+    "draughtsAiDescription": "Două modele AI se înfruntă în partide de dame în timp real — cu streaming WebSocket, spectatori live și clasamente ale modelelor bazate pe ratinguri ELO.",
+    "featureStreaming": "Streaming în Timp Real",
+    "featureStreamingDesc": "Spectacol de joc live prin WebSocket",
+    "featureLeaderboard": "Clasament ELO",
+    "featureLeaderboardDesc": "Rankingul modelelor urmărit de la meci la meci",
+    "featureArena": "Arenă Multi-model",
+    "featureArenaDesc": "Orice LLM prin integrare API OpenRouter"
   }
 }

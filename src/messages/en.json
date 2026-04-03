@@ -86,13 +86,18 @@
     "copyright": "© {year} Alexei Bostan · Built with Next.js"
   },
   "ai": {
-    "sectionIntro": "I don't just use AI — I build with it, build for it, and think about what it means for the people on the other side of the screen.",
     "buildingWith": "Building WITH AI",
     "buildingWithIntro": "AI tools are part of my daily engineering workflow. Not as a crutch — as a multiplier.",
     "buildingIn": "Building IN AI",
     "buildingInIntro": "Actively building products where AI is the core experience, not a feature.",
     "currentlyExploring": "Currently Exploring",
     "active": "Active",
-    "draughtsAiDescription": "AI-powered draughts analysis platform. Integrating game engines with machine learning to give players insights that previously required expert human analysis."
+    "draughtsAiDescription": "Two AI models face off in real-time draughts matches — with WebSocket streaming, live spectating, and model leaderboards powered by ELO ratings.",
+    "featureStreaming": "Real-time Streaming",
+    "featureStreamingDesc": "WebSocket-powered live game spectating",
+    "featureLeaderboard": "ELO Leaderboard",
+    "featureLeaderboardDesc": "Model rankings tracked across matches",
+    "featureArena": "Multi-model Arena",
+    "featureArenaDesc": "Any LLM via OpenRouter API integration"
   }
 }

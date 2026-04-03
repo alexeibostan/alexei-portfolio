@@ -20,6 +20,6 @@ export const aiTools: AITool[] = [
 
 export const aiExploring: string[] = [
   "LLM APIs",
+  "Structured Output",
   "Prompt Engineering",
-  "AI Agents",
 ];

@@ -86,13 +86,18 @@
     "copyright": "© {year} Alexei Bostan · Costruito con Next.js"
   },
   "ai": {
-    "sectionIntro": "Non uso solo l'AI — ci costruisco, costruisco per essa, e penso a cosa significa per le persone dall'altra parte dello schermo.",
     "buildingWith": "Costruire CON l'AI",
     "buildingWithIntro": "Gli strumenti AI fanno parte del mio flusso di lavoro quotidiano. Non come una stampella — come un moltiplicatore.",
     "buildingIn": "Costruire NELL'AI",
     "buildingInIntro": "Costruisco attivamente prodotti dove l'AI è l'esperienza principale, non una funzionalità.",
     "currentlyExploring": "Attualmente Esplorando",
     "active": "Attivo",
-    "draughtsAiDescription": "Piattaforma di analisi della dama basata sull'AI. Integrazione di motori di gioco con machine learning per dare ai giocatori intuizioni che prima richiedevano un'analisi umana esperta."
+    "draughtsAiDescription": "Due modelli AI si sfidano in partite di dama in tempo reale — con streaming WebSocket, spettatori dal vivo e classifiche dei modelli basate su punteggi ELO.",
+    "featureStreaming": "Streaming in Tempo Reale",
+    "featureStreamingDesc": "Spettacolo di gioco dal vivo via WebSocket",
+    "featureLeaderboard": "Classifica ELO",
+    "featureLeaderboardDesc": "Ranking dei modelli aggiornato partita dopo partita",
+    "featureArena": "Arena Multi-modello",
+    "featureArenaDesc": "Qualsiasi LLM tramite integrazione API OpenRouter"
   }
 }
