@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { TechPill } from "@/components/ui/TechPill";
 import type { AITool } from "@/types";
+import { Radio, Trophy, Layers, ExternalLink } from "lucide-react";
 
 interface AISectionProps {
   aiTools: AITool[];
@@ -49,11 +50,6 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
             </h2>
             <div className="flex-1 h-px bg-white/[0.06]" />
           </div>
-
-          {/* Intro line */}
-          <p className="font-display text-[15px] italic opacity-40 max-w-[480px] mb-9">
-            {tAi("sectionIntro")}
-          </p>
 
           {/* Two-column grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -152,19 +148,54 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                   </span>
                 </div>
 
-                {/* Subtitle */}
-                <p className="text-xs opacity-40 text-[#e8e4df] mb-3">
+                {/* Subtitle — clickable link (GREEN, visible) */}
+                <a
+                  href="https://draughtsai.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-xs text-[#7ee787] opacity-70 mb-3 hover:opacity-100 transition-opacity"
+                >
                   draughtsai.com
-                </p>
+                  <ExternalLink className="w-[11px] h-[11px]" />
+                </a>
 
                 {/* Description */}
                 <p className="text-xs opacity-50 leading-relaxed text-[#e8e4df] mb-4">
                   {tAi("draughtsAiDescription")}
                 </p>
 
+                {/* Feature highlights — flat list, NO card nesting */}
+                <div className="flex flex-col gap-2.5 mb-4">
+                  {[
+                    { icon: Radio, label: tAi("featureStreaming"), desc: tAi("featureStreamingDesc") },
+                    { icon: Trophy, label: tAi("featureLeaderboard"), desc: tAi("featureLeaderboardDesc") },
+                    { icon: Layers, label: tAi("featureArena"), desc: tAi("featureArenaDesc") },
+                  ].map((feature) => (
+                    <div
+                      key={feature.label}
+                      className="flex items-center gap-2.5"
+                    >
+                      <div
+                        className="w-6 h-6 rounded-md flex-shrink-0 flex items-center justify-center"
+                        style={{ background: "rgba(126,231,135,0.1)" }}
+                      >
+                        <feature.icon className="w-3 h-3 text-[#7ee787]" />
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="text-[12px] font-semibold text-[#e8e4df]">
+                          {feature.label}
+                        </span>
+                        <span className="text-[11px] opacity-40 text-[#e8e4df]">
+                          {feature.desc}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
                 {/* Tech pills */}
                 <div className="flex flex-wrap gap-1.5">
-                  {["AI/ML", "Game Analysis", "React", "Node.js"].map(
+                  {["Bun", "Hono", "React 19", "TanStack Start", "Drizzle", "OpenRouter"].map(
                     (tech) => (
                       <TechPill key={tech} name={tech} />
                     )
