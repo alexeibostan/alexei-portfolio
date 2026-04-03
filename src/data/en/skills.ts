@@ -34,4 +34,5 @@ export const skills: Skill[] = [
   { name: "Testing Library", category: "Testing", years: "3+", contextLine: "Component testing for Deliverect's design system and product suite." },
   { name: "Storybook", category: "Tools", years: "2+", contextLine: "Component documentation and visual testing for Deliverect's design system." },
   { name: "Celery", category: "Backend", years: "1+", contextLine: "Async task queues for data pipeline processing at Deliverect." },
+  { name: "Bun", category: "Tools", years: "1+", contextLine: "Runtime and package manager for DraughtsAI and this portfolio's build toolchain." },
 ];
