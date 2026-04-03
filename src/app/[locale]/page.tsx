@@ -43,8 +43,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
-      <div className="film-grain" />
-      <div className="dot-grid" />
+      <div className="film-grain" aria-hidden="true" />
+      <div className="dot-grid" aria-hidden="true" />
       <HeroSection />
       <TimelineSection journey={professionalJourney} />
       <WorkSection projects={projects} />

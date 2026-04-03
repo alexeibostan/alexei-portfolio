@@ -97,7 +97,7 @@ function NarrativeHeader({
         </div>
         <div
           className="font-mono-brand mt-1.5"
-          style={{ fontSize: "9px", color: "rgba(255,255,255,0.2)" }}
+          style={{ fontSize: "9px", color: "rgba(255,255,255,0.35)" }}
         >
           {tCraft("whySub")}
         </div>
@@ -131,7 +131,7 @@ function NarrativeHeader({
         </div>
         <div
           className="font-mono-brand mt-1.5"
-          style={{ fontSize: "9px", color: "rgba(255,255,255,0.2)" }}
+          style={{ fontSize: "9px", color: "rgba(255,255,255,0.35)" }}
         >
           {tCraft("howSub")}
         </div>
@@ -165,7 +165,7 @@ function NarrativeHeader({
         </div>
         <div
           className="font-mono-brand mt-1.5"
-          style={{ fontSize: "9px", color: "rgba(255,255,255,0.2)" }}
+          style={{ fontSize: "9px", color: "rgba(255,255,255,0.35)" }}
         >
           {tCraft("whatSub")}
         </div>
