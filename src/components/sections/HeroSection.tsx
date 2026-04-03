@@ -13,7 +13,7 @@ export function HeroSection() {
     const parts = text.split(/\{([^}]+)\}/g);
     return parts.map((part, i) =>
       i % 2 === 1 ? (
-        <em key={i} className="text-[#c4956a] italic not-italic">
+        <em key={i} className="text-[hsl(var(--primary))] italic not-italic">
           {part}
         </em>
       ) : (
@@ -45,7 +45,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="font-mono-brand text-[11px] text-[#7ee787] opacity-70 tracking-[1px] uppercase"
+          className="font-mono-brand text-[11px] text-[hsl(var(--secondary))] opacity-70 tracking-[1px] uppercase"
         >
           {t("roleLabel")}
         </motion.p>

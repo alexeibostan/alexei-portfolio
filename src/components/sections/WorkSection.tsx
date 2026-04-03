@@ -27,7 +27,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="flex items-center gap-4 mb-12">
-            <span className="font-mono-brand text-[11px] text-[#c4956a] opacity-60 tracking-[1px]">
+            <span className="font-mono-brand text-[11px] text-[hsl(var(--primary))] opacity-60 tracking-[1px]">
               02
             </span>
             <h2 className="font-display text-2xl text-[#e8e4df] font-light">
@@ -61,7 +61,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                       className="w-2 h-2 rounded-full"
                       style={{ backgroundColor: "#7ee787" }}
                     />
-                    <span className="font-mono-brand text-[11px] text-[#7ee787] tracking-[1px] uppercase">
+                    <span className="font-mono-brand text-[11px] text-[hsl(var(--secondary))] tracking-[1px] uppercase">
                       {tWork("featured")}
                     </span>
                   </div>

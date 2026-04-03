@@ -73,7 +73,7 @@ export function ConnectSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.08, duration: 0.4 }}
               className={
-                word.gold ? "text-[#c4956a] italic" : ""
+                word.gold ? "text-[hsl(var(--primary))] italic" : ""
               }
             >
               {word.text}
@@ -107,7 +107,7 @@ export function ConnectSection() {
           <a
             href="/alexei-bostan-resume.pdf"
             download
-            className="font-mono-brand text-[11px] text-[#c4956a] opacity-60 border-b border-dashed border-[#c4956a]/30 pb-0.5 tracking-[1px]"
+            className="font-mono-brand text-[11px] text-[hsl(var(--primary))] opacity-60 border-b border-dashed border-[hsl(var(--primary))]/30 pb-0.5 tracking-[1px]"
           >
             {"↓ " + t("downloadResume")}
           </a>

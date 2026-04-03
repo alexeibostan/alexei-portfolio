@@ -14,16 +14,16 @@ interface AISectionProps {
 
 const toolCardStyles: Record<string, { bg: string; border: string }> = {
   "Claude Code": {
-    bg: "bg-[#d2a8ff]/[0.04]",
-    border: "border border-[#d2a8ff]/[0.08]",
+    bg: "bg-[hsl(var(--accent-purple))]/[0.04]",
+    border: "border border-[hsl(var(--accent-purple))]/[0.08]",
   },
   Cursor: {
-    bg: "bg-[#58a6ff]/[0.04]",
-    border: "border border-[#58a6ff]/[0.08]",
+    bg: "bg-[hsl(var(--accent))]/[0.04]",
+    border: "border border-[hsl(var(--accent))]/[0.08]",
   },
   Codex: {
-    bg: "bg-[#7ee787]/[0.04]",
-    border: "border border-[#7ee787]/[0.08]",
+    bg: "bg-[hsl(var(--secondary))]/[0.04]",
+    border: "border border-[hsl(var(--secondary))]/[0.08]",
   },
 };
 
@@ -42,7 +42,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="flex items-center gap-4 mb-4">
-            <span className="font-mono-brand text-[11px] text-[#c4956a] opacity-60 tracking-[1px]">
+            <span className="font-mono-brand text-[11px] text-[hsl(var(--primary))] opacity-60 tracking-[1px]">
               04
             </span>
             <h2 className="font-display text-2xl text-[#e8e4df] font-light">
@@ -61,7 +61,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                   className="w-2 h-2 rounded-full flex-shrink-0"
                   style={{ backgroundColor: "#d2a8ff" }}
                 />
-                <span className="font-mono-brand text-[11px] text-[#d2a8ff] tracking-[1px]">
+                <span className="font-mono-brand text-[11px] text-[hsl(var(--accent-purple))] tracking-[1px]">
                   {tAi("buildingWith")}
                 </span>
               </div>
@@ -120,7 +120,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                   className="w-2 h-2 rounded-full flex-shrink-0"
                   style={{ backgroundColor: "#7ee787" }}
                 />
-                <span className="font-mono-brand text-[11px] text-[#7ee787] tracking-[1px]">
+                <span className="font-mono-brand text-[11px] text-[hsl(var(--secondary))] tracking-[1px]">
                   {tAi("buildingIn")}
                 </span>
               </div>
@@ -131,14 +131,14 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
               </p>
 
               {/* DraughtsAI featured card */}
-              <div className="border border-[#7ee787]/[0.12] rounded-lg p-5 bg-[#7ee787]/[0.03]">
+              <div className="border border-[hsl(var(--secondary))]/[0.12] rounded-lg p-5 bg-[hsl(var(--secondary))]/[0.03]">
                 {/* Top row */}
                 <div className="flex items-center justify-between gap-2 mb-1">
                   <span className="text-lg font-semibold text-[#e8e4df]">
                     DraughtsAI
                   </span>
                   <span
-                    className="font-mono-brand text-[9px] text-[#7ee787] rounded-full px-2 py-0.5"
+                    className="font-mono-brand text-[9px] text-[hsl(var(--secondary))] rounded-full px-2 py-0.5"
                     style={{
                       background: "rgba(126,231,135,0.1)",
                       border: "1px solid rgba(126,231,135,0.2)",
@@ -153,7 +153,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                   href="https://draughtsai.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs text-[#7ee787] opacity-70 mb-3 hover:opacity-100 transition-opacity"
+                  className="inline-flex items-center gap-1 text-xs text-[hsl(var(--secondary))] opacity-70 mb-3 hover:opacity-100 transition-opacity"
                 >
                   draughtsai.com
                   <ExternalLink className="w-[11px] h-[11px]" />
@@ -179,7 +179,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                         className="w-6 h-6 rounded-md flex-shrink-0 flex items-center justify-center"
                         style={{ background: "rgba(126,231,135,0.1)" }}
                       >
-                        <feature.icon className="w-3 h-3 text-[#7ee787]" />
+                        <feature.icon className="w-3 h-3 text-[hsl(var(--secondary))]" />
                       </div>
                       <div className="flex flex-col">
                         <span className="text-[12px] font-semibold text-[#e8e4df]">
@@ -215,7 +215,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                   {aiExploring.map((item) => (
                     <span
                       key={item}
-                      className="font-mono-brand rounded-full opacity-60 text-[#d2a8ff]"
+                      className="font-mono-brand rounded-full opacity-60 text-[hsl(var(--accent-purple))]"
                       style={{
                         fontSize: "9px",
                         padding: "3px 8px",
