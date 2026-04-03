@@ -38,7 +38,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
   const tAi = useTranslations("ai");
   return (
     <ScrollReveal>
-      <section id="ai" className="py-20 px-8">
+      <section id="ai" className="py-16 px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="flex items-center gap-4 mb-4">

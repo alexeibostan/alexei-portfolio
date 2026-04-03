@@ -375,7 +375,7 @@ export function CraftSection({ skills }: CraftSectionProps) {
 
   return (
     <ScrollReveal>
-      <section id="craft" className="py-20 px-8">
+      <section id="craft" className="py-16 px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="flex items-center gap-4 mb-12">

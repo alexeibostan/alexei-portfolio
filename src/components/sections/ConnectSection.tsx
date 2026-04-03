@@ -48,7 +48,7 @@ export function ConnectSection() {
     <footer>
       <section
         id="connect"
-        className="min-h-screen flex flex-col items-center justify-center py-20 px-8 text-center"
+        className="min-h-[70vh] flex flex-col items-center justify-center py-20 px-8 text-center"
         style={{
           background:
             "linear-gradient(to bottom, #0a0a0a 0%, #0d0d0d 50%, #080808 100%)",
@@ -111,15 +111,6 @@ export function ConnectSection() {
           >
             {"↓ " + t("downloadResume")}
           </a>
-        </div>
-
-        {/* Simple Analytics badge */}
-        <div className="mt-5">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://simpleanalyticsbadge.com/alexeibostan.com"
-            alt="Simple Analytics"
-          />
         </div>
 
         {/* Copyright */}
