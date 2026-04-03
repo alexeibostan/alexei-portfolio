@@ -56,7 +56,7 @@ export default function Header() {
 
             {/* Brand */}
             <span
-              className="font-mono-brand text-white/50 tracking-[2px]"
+              className="font-mono-brand text-white/60 tracking-[2px]"
               style={{ fontSize: '12px' }}
             >
               alexei.bostan
@@ -75,7 +75,7 @@ export default function Header() {
                       className={`font-mono-brand uppercase tracking-[3px] transition-all duration-200 hover:opacity-100 ${
                         isActive
                           ? 'text-[#c4956a] opacity-100'
-                          : 'text-white opacity-35'
+                          : 'text-white opacity-50'
                       }`}
                       style={{ fontSize: '11px' }}
                     >
@@ -88,8 +88,8 @@ export default function Header() {
               {/* Language Switcher — compact bordered pill */}
               <div className="relative group">
                 <button
-                  className="font-mono-brand text-white/50 border border-white/20 rounded-full px-3 py-1 uppercase tracking-[2px] hover:border-white/40 hover:text-white/80 transition-all duration-200"
-                  style={{ fontSize: '10px' }}
+                  className="font-mono-brand text-white/60 border border-white/20 rounded-full px-3 py-1 uppercase tracking-[2px] hover:border-white/40 hover:text-white/80 transition-all duration-200"
+                  style={{ fontSize: '11px' }}
                 >
                   {locale}
                 </button>
@@ -101,9 +101,9 @@ export default function Header() {
                       className={`block px-3 py-2 font-mono-brand uppercase tracking-[2px] transition-colors hover:bg-white/10 ${
                         locale === loc
                           ? 'text-[#c4956a]'
-                          : 'text-white/50'
+                          : 'text-white/60'
                       }`}
-                      style={{ fontSize: '10px' }}
+                      style={{ fontSize: '11px' }}
                     >
                       {loc}
                     </Link>
@@ -138,7 +138,7 @@ export default function Header() {
                     className={`font-mono-brand uppercase tracking-[3px] text-left py-3 border-b border-white/5 last:border-0 transition-all duration-200 ${
                       isActive
                         ? 'text-[#c4956a] opacity-100'
-                        : 'text-white opacity-35'
+                        : 'text-white opacity-50'
                     }`}
                     style={{ fontSize: '11px' }}
                   >
@@ -158,9 +158,9 @@ export default function Header() {
                   className={`font-mono-brand uppercase tracking-[2px] px-3 py-1 rounded-full border transition-all duration-200 ${
                     locale === loc
                       ? 'border-[#c4956a] text-[#c4956a]'
-                      : 'border-white/20 text-white/40 hover:border-white/40 hover:text-white/70'
+                      : 'border-white/20 text-white/50 hover:border-white/40 hover:text-white/70'
                   }`}
-                  style={{ fontSize: '10px' }}
+                  style={{ fontSize: '11px' }}
                 >
                   {loc}
                 </Link>
