@@ -137,18 +137,18 @@ export function TimelineSection({
                     </span>
 
                     {/* Company */}
-                    <span className="text-xs font-semibold text-[#e8e4df] leading-tight">
+                    <span className="text-[13px] font-semibold text-[#e8e4df] leading-tight">
                       {entry.company}
                     </span>
 
                     {/* Role */}
-                    <span className="text-xs text-[#e8e4df] opacity-40 leading-tight">
+                    <span className="text-[13px] text-[#e8e4df] opacity-60 leading-tight">
                       {entry.role}
                     </span>
 
                     {/* Insight */}
                     {entry.insight && (
-                      <span className="text-xs text-[#e8e4df] opacity-30 italic max-w-[140px] leading-tight mt-0.5">
+                      <span className="text-[13px] text-[#e8e4df] opacity-50 italic max-w-[140px] leading-tight mt-0.5">
                         {entry.insight}
                       </span>
                     )}
