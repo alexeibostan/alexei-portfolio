@@ -35,7 +35,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
             </h2>
             <div className="flex-1 h-px bg-white/[0.08]" />
             <span
-              className="font-mono-brand text-right opacity-30"
+              className="font-mono-brand text-right opacity-50"
               style={{ fontSize: "11px" }}
             >
               {tSections("selectedProjects")}
@@ -72,7 +72,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                   </h3>
 
                   {/* Company + period */}
-                  <p className="text-xs opacity-40 text-[#e8e4df]">
+                  <p className="text-[13px] opacity-60 text-[#e8e4df]">
                     {featured.company} · {featured.period}
                   </p>
 
@@ -85,7 +85,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
 
                   {/* Role context */}
                   <div className="mt-auto pt-4 border-t border-white/[0.08]">
-                    <p className="text-[12px] italic opacity-40 text-[#e8e4df]">
+                    <p className="text-[13px] italic opacity-60 text-[#e8e4df]">
                       {tWork(`role${featured.role}`)}
                     </p>
                   </div>
@@ -192,7 +192,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                   {/* Company + period */}
                   <p
                     className="text-[#e8e4df] mb-3"
-                    style={{ fontSize: "12px", opacity: 0.35 }}
+                    style={{ fontSize: "13px", opacity: 0.5 }}
                   >
                     {project.company} · {project.period}
                   </p>
@@ -203,7 +203,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                       <TechPill key={skill} name={skill} size="sm" />
                     ))}
                     {project.skills.length > 3 && (
-                      <span className="font-mono-brand text-[9px] text-white/30 self-center">
+                      <span className="font-mono-brand text-[11px] text-white/50 self-center">
                         +{project.skills.length - 3}
                       </span>
                     )}
