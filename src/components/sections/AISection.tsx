@@ -67,7 +67,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
               </div>
 
               {/* Intro text */}
-              <p className="text-[13px] opacity-50 leading-relaxed mb-5">
+              <p className="text-[13px] opacity-60 leading-relaxed mb-5">
                 {tAi("buildingWithIntro")}
               </p>
 
@@ -102,7 +102,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                         <span className="text-[13px] font-semibold text-[#e8e4df]">
                           {tool.name}
                         </span>
-                        <span className="text-xs opacity-40 mt-0.5 text-[#e8e4df]">
+                        <span className="text-[13px] opacity-60 mt-0.5 text-[#e8e4df]">
                           {tool.description}
                         </span>
                       </div>
@@ -126,7 +126,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
               </div>
 
               {/* Intro text */}
-              <p className="text-[13px] opacity-50 leading-relaxed mb-5">
+              <p className="text-[13px] opacity-60 leading-relaxed mb-5">
                 {tAi("buildingInIntro")}
               </p>
 
@@ -138,7 +138,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                     DraughtsAI
                   </span>
                   <span
-                    className="font-mono-brand text-[9px] text-[hsl(var(--secondary))] rounded-full px-2 py-0.5"
+                    className="font-mono-brand text-[11px] text-[hsl(var(--secondary))] rounded-full px-2 py-0.5"
                     style={{
                       background: "rgba(126,231,135,0.1)",
                       border: "1px solid rgba(126,231,135,0.2)",
@@ -160,7 +160,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                 </a>
 
                 {/* Description */}
-                <p className="text-xs opacity-50 leading-relaxed text-[#e8e4df] mb-4">
+                <p className="text-[13px] opacity-60 leading-relaxed text-[#e8e4df] mb-4">
                   {tAi("draughtsAiDescription")}
                 </p>
 
@@ -182,10 +182,10 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                         <feature.icon className="w-3 h-3 text-[hsl(var(--secondary))]" />
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-[12px] font-semibold text-[#e8e4df]">
+                        <span className="text-[13px] font-semibold text-[#e8e4df]">
                           {feature.label}
                         </span>
-                        <span className="text-[11px] opacity-40 text-[#e8e4df]">
+                        <span className="text-[11px] opacity-50 text-[#e8e4df]">
                           {feature.desc}
                         </span>
                       </div>
@@ -207,7 +207,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
               <div className="border border-dashed border-white/[0.08] rounded-lg p-3.5 mt-3.5">
                 <span
                   className="font-mono-brand block mb-2.5"
-                  style={{ fontSize: "9px", opacity: 0.35 }}
+                  style={{ fontSize: "11px", opacity: 0.50 }}
                 >
                   {tAi("currentlyExploring")}
                 </span>
@@ -217,7 +217,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                       key={item}
                       className="font-mono-brand rounded-full opacity-60 text-[hsl(var(--accent-purple))]"
                       style={{
-                        fontSize: "9px",
+                        fontSize: "11px",
                         padding: "3px 8px",
                         border: "1px dashed rgba(210,168,255,0.2)",
                       }}
