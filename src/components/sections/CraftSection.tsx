@@ -88,7 +88,7 @@ function NarrativeHeader({
       <div className="flex-1 text-center relative z-10">
         <div
           className="font-mono-brand uppercase tracking-[3px] mb-2"
-          style={{ fontSize: "9px", color: "rgba(196,149,106,0.5)" }}
+          style={{ fontSize: "11px", color: "rgba(196,149,106,0.7)" }}
         >
           {tCraft("whyIBuild")}
         </div>
@@ -97,7 +97,7 @@ function NarrativeHeader({
         </div>
         <div
           className="font-mono-brand mt-1.5"
-          style={{ fontSize: "9px", color: "rgba(255,255,255,0.35)" }}
+          style={{ fontSize: "11px", color: "rgba(255,255,255,0.50)" }}
         >
           {tCraft("whySub")}
         </div>
@@ -122,7 +122,7 @@ function NarrativeHeader({
       <div className="flex-1 text-center relative z-10">
         <div
           className="font-mono-brand uppercase tracking-[3px] mb-2"
-          style={{ fontSize: "9px", color: "rgba(225,102,66,0.5)" }}
+          style={{ fontSize: "11px", color: "rgba(225,102,66,0.7)" }}
         >
           {tCraft("howIBuild")}
         </div>
@@ -131,7 +131,7 @@ function NarrativeHeader({
         </div>
         <div
           className="font-mono-brand mt-1.5"
-          style={{ fontSize: "9px", color: "rgba(255,255,255,0.35)" }}
+          style={{ fontSize: "11px", color: "rgba(255,255,255,0.50)" }}
         >
           {tCraft("howSub")}
         </div>
@@ -156,7 +156,7 @@ function NarrativeHeader({
       <div className="flex-1 text-center relative z-10">
         <div
           className="font-mono-brand uppercase tracking-[3px] mb-2"
-          style={{ fontSize: "9px", color: "rgba(126,231,135,0.5)" }}
+          style={{ fontSize: "11px", color: "rgba(126,231,135,0.7)" }}
         >
           {tCraft("whatIBuildWith")}
         </div>
@@ -165,7 +165,7 @@ function NarrativeHeader({
         </div>
         <div
           className="font-mono-brand mt-1.5"
-          style={{ fontSize: "9px", color: "rgba(255,255,255,0.35)" }}
+          style={{ fontSize: "11px", color: "rgba(255,255,255,0.50)" }}
         >
           {tCraft("whatSub")}
         </div>
@@ -204,7 +204,7 @@ function SkillTile({
         className="font-mono-brand transition-colors duration-200"
         style={{
           fontSize: "11px",
-          color: isActive ? "#e8e4df" : "rgba(255,255,255,0.45)",
+          color: isActive ? "#e8e4df" : "rgba(255,255,255,0.50)",
         }}
       >
         {skill.name}
@@ -212,8 +212,8 @@ function SkillTile({
       <div
         className="font-mono-brand mt-0.5"
         style={{
-          fontSize: "9px",
-          color: isActive ? `${color}66` : "rgba(255,255,255,0.13)",
+          fontSize: "11px",
+          color: isActive ? `${color}66` : "rgba(255,255,255,0.50)",
         }}
       >
         {skill.years}
@@ -249,7 +249,7 @@ function DetailStrip({
         </span>
         <span
           className="font-mono-brand"
-          style={{ fontSize: "11px", color: "rgba(126,231,135,0.3)" }}
+          style={{ fontSize: "11px", color: "rgba(126,231,135,0.50)" }}
         >
           {tCraft("clickToExplore")}
         </span>
@@ -314,7 +314,7 @@ function DetailStrip({
           </div>
           <div
             className="font-mono-brand uppercase tracking-[1px] mt-0.5"
-            style={{ fontSize: "9px", color: "rgba(126,231,135,0.4)" }}
+            style={{ fontSize: "11px", color: "rgba(126,231,135,0.55)" }}
           >
             {categoryLabel}
           </div>
@@ -337,7 +337,7 @@ function DetailStrip({
             fontSize: "13px",
             color: skill.contextLine
               ? "rgba(232,228,223,0.5)"
-              : "rgba(232,228,223,0.3)",
+              : "rgba(232,228,223,0.50)",
           }}
         >
           {contextLine}
@@ -387,7 +387,7 @@ export function CraftSection({ skills }: CraftSectionProps) {
             </h2>
             <div className="flex-1 h-px bg-white/[0.08]" />
             <span
-              className="font-mono-brand text-right opacity-30"
+              className="font-mono-brand text-right opacity-50"
               style={{ fontSize: "11px" }}
             >
               {tCraft("skillsAndMethodologies")}
@@ -415,10 +415,10 @@ export function CraftSection({ skills }: CraftSectionProps) {
                   <span
                     className="font-mono-brand"
                     style={{
-                      fontSize: "9px",
+                      fontSize: "11px",
                       letterSpacing: "2px",
                       color: config.color,
-                      opacity: 0.55,
+                      opacity: 0.60,
                     }}
                   >
                     {tCraft(config.empathyKey)}
@@ -426,9 +426,9 @@ export function CraftSection({ skills }: CraftSectionProps) {
                   <span
                     className="font-mono-brand uppercase"
                     style={{
-                      fontSize: "9px",
+                      fontSize: "11px",
                       letterSpacing: "2px",
-                      color: "rgba(255,255,255,0.2)",
+                      color: "rgba(255,255,255,0.50)",
                     }}
                   >
                     {tCraft(config.traditionalKey)}
@@ -476,9 +476,9 @@ export function CraftSection({ skills }: CraftSectionProps) {
             <span
               className="font-mono-brand uppercase"
               style={{
-                fontSize: "9px",
+                fontSize: "11px",
                 letterSpacing: "2px",
-                color: "rgba(255,255,255,0.2)",
+                color: "rgba(255,255,255,0.50)",
               }}
             >
               {tCraft("languagesISpeak")}
@@ -488,13 +488,13 @@ export function CraftSection({ skills }: CraftSectionProps) {
                 <span style={{ fontSize: "13px" }}>{lang.flag}</span>
                 <span
                   className="font-mono-brand"
-                  style={{ fontSize: "9px", color: "rgba(255,255,255,0.4)" }}
+                  style={{ fontSize: "11px", color: "rgba(255,255,255,0.50)" }}
                 >
                   {lang.name}
                 </span>
                 <span
                   className="font-mono-brand"
-                  style={{ fontSize: "9px", color: "rgba(255,255,255,0.15)" }}
+                  style={{ fontSize: "11px", color: "rgba(255,255,255,0.50)" }}
                 >
                   {lang.proficiency}
                 </span>
