@@ -57,7 +57,7 @@ export function ConnectSection() {
         {/* Section number */}
         <div className="flex items-center gap-3 mb-10">
           <div className="w-10 h-px bg-white/10" />
-          <span className="font-mono-brand text-[11px] tracking-[2px] opacity-40">
+          <span className="font-mono-brand text-[11px] tracking-[2px] opacity-60">
             05
           </span>
           <div className="w-10 h-px bg-white/10" />
