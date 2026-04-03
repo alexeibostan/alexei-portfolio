@@ -14,6 +14,9 @@
     --secondary: 130 60% 70%;          /* green #7ee787 */
     --accent: 215 100% 67%;            /* blue #58a6ff */
     --accent-purple: 265 80% 80%;      /* purple #d2a8ff */
+    --border-subtle: 0 0% 100% / 0.05;
+    --border-default: 0 0% 100% / 0.08;
+    --border-emphasis: 0 0% 100% / 0.15;
     --muted: 220 15% 15%;
     --muted-foreground: 30 6% 50%;
     --border: 220 15% 12%;
