@@ -174,7 +174,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                 <button
                   key={`${project.company}-${project.name}-${i}`}
                   onClick={() => setFeaturedIndex(i)}
-                  className="relative flex-1 bg-white/[0.02] border border-white/[0.08] rounded-lg p-4 cursor-pointer text-left hover:border-white/[0.15] hover:-translate-y-0.5 transition-all"
+                  className="relative flex-1 bg-white/[0.02] border border-white/[0.08] rounded-lg p-4 cursor-pointer text-left hover:border-white/[0.15] hover:-translate-y-0.5 transition-all flex flex-col"
                 >
                   {/* Arrow icon */}
                   <span
@@ -198,13 +198,13 @@ export function WorkSection({ projects }: WorkSectionProps) {
                   </p>
 
                   {/* Tech pills row */}
-                  <div className="flex flex-wrap gap-1">
-                    {project.skills.slice(0, 4).map((skill) => (
+                  <div className="flex flex-wrap gap-1 mt-auto">
+                    {project.skills.slice(0, 3).map((skill) => (
                       <TechPill key={skill} name={skill} size="sm" />
                     ))}
-                    {project.skills.length > 4 && (
+                    {project.skills.length > 3 && (
                       <span className="font-mono-brand text-[9px] text-white/30 self-center">
-                        +{project.skills.length - 4}
+                        +{project.skills.length - 3}
                       </span>
                     )}
                   </div>
