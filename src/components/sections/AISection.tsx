@@ -54,7 +54,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
           {/* Two-column grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {/* Left Column — Building WITH AI */}
-            <div className="bg-white/[0.02] border border-white/[0.08] rounded-xl p-6">
+            <div>
               {/* Column header */}
               <div className="flex items-center gap-2 mb-3">
                 <span
@@ -113,7 +113,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
             </div>
 
             {/* Right Column — Building IN AI */}
-            <div className="bg-white/[0.02] border border-white/[0.08] rounded-xl p-6">
+            <div>
               {/* Column header */}
               <div className="flex items-center gap-2 mb-3">
                 <span
