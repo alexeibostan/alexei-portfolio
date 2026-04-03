@@ -88,7 +88,7 @@ function NarrativeHeader({
       <div className="flex-1 text-center relative z-10">
         <div
           className="font-mono-brand uppercase tracking-[3px] mb-2"
-          style={{ fontSize: "7px", color: "rgba(196,149,106,0.5)" }}
+          style={{ fontSize: "9px", color: "rgba(196,149,106,0.5)" }}
         >
           {tCraft("whyIBuild")}
         </div>
@@ -97,7 +97,7 @@ function NarrativeHeader({
         </div>
         <div
           className="font-mono-brand mt-1.5"
-          style={{ fontSize: "8px", color: "rgba(255,255,255,0.2)" }}
+          style={{ fontSize: "9px", color: "rgba(255,255,255,0.2)" }}
         >
           {tCraft("whySub")}
         </div>
@@ -122,16 +122,16 @@ function NarrativeHeader({
       <div className="flex-1 text-center relative z-10">
         <div
           className="font-mono-brand uppercase tracking-[3px] mb-2"
-          style={{ fontSize: "7px", color: "rgba(225,102,66,0.5)" }}
+          style={{ fontSize: "9px", color: "rgba(225,102,66,0.5)" }}
         >
           {tCraft("howIBuild")}
         </div>
-        <div className="font-display italic text-[12px] text-[#e8e4df] font-light leading-relaxed">
+        <div className="font-display italic text-[13px] text-[#e8e4df] font-light leading-relaxed">
           {tCraft("howValue")}
         </div>
         <div
           className="font-mono-brand mt-1.5"
-          style={{ fontSize: "8px", color: "rgba(255,255,255,0.2)" }}
+          style={{ fontSize: "9px", color: "rgba(255,255,255,0.2)" }}
         >
           {tCraft("howSub")}
         </div>
@@ -156,7 +156,7 @@ function NarrativeHeader({
       <div className="flex-1 text-center relative z-10">
         <div
           className="font-mono-brand uppercase tracking-[3px] mb-2"
-          style={{ fontSize: "7px", color: "rgba(126,231,135,0.5)" }}
+          style={{ fontSize: "9px", color: "rgba(126,231,135,0.5)" }}
         >
           {tCraft("whatIBuildWith")}
         </div>
@@ -165,7 +165,7 @@ function NarrativeHeader({
         </div>
         <div
           className="font-mono-brand mt-1.5"
-          style={{ fontSize: "8px", color: "rgba(255,255,255,0.2)" }}
+          style={{ fontSize: "9px", color: "rgba(255,255,255,0.2)" }}
         >
           {tCraft("whatSub")}
         </div>
@@ -203,7 +203,7 @@ function SkillTile({
       <div
         className="font-mono-brand transition-colors duration-200"
         style={{
-          fontSize: "10px",
+          fontSize: "11px",
           color: isActive ? "#e8e4df" : "rgba(255,255,255,0.45)",
         }}
       >
@@ -212,7 +212,7 @@ function SkillTile({
       <div
         className="font-mono-brand mt-0.5"
         style={{
-          fontSize: "8px",
+          fontSize: "9px",
           color: isActive ? `${color}66` : "rgba(255,255,255,0.13)",
         }}
       >
@@ -314,7 +314,7 @@ function DetailStrip({
           </div>
           <div
             className="font-mono-brand uppercase tracking-[1px] mt-0.5"
-            style={{ fontSize: "8px", color: "rgba(126,231,135,0.4)" }}
+            style={{ fontSize: "9px", color: "rgba(126,231,135,0.4)" }}
           >
             {categoryLabel}
           </div>
@@ -415,7 +415,7 @@ export function CraftSection({ skills }: CraftSectionProps) {
                   <span
                     className="font-mono-brand"
                     style={{
-                      fontSize: "8px",
+                      fontSize: "9px",
                       letterSpacing: "2px",
                       color: config.color,
                       opacity: 0.55,
@@ -426,7 +426,7 @@ export function CraftSection({ skills }: CraftSectionProps) {
                   <span
                     className="font-mono-brand uppercase"
                     style={{
-                      fontSize: "7px",
+                      fontSize: "9px",
                       letterSpacing: "2px",
                       color: "rgba(255,255,255,0.2)",
                     }}
@@ -476,7 +476,7 @@ export function CraftSection({ skills }: CraftSectionProps) {
             <span
               className="font-mono-brand uppercase"
               style={{
-                fontSize: "7px",
+                fontSize: "9px",
                 letterSpacing: "2px",
                 color: "rgba(255,255,255,0.2)",
               }}
@@ -494,7 +494,7 @@ export function CraftSection({ skills }: CraftSectionProps) {
                 </span>
                 <span
                   className="font-mono-brand"
-                  style={{ fontSize: "7px", color: "rgba(255,255,255,0.15)" }}
+                  style={{ fontSize: "9px", color: "rgba(255,255,255,0.15)" }}
                 >
                   {lang.proficiency}
                 </span>
