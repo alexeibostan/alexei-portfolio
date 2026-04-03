@@ -148,7 +148,7 @@ export function TimelineSection({
 
                     {/* Insight */}
                     {entry.insight && (
-                      <span className="text-[13px] text-[#e8e4df] opacity-50 italic max-w-[140px] leading-tight mt-0.5">
+                      <span className="text-[13px] text-[#e8e4df] opacity-60 italic max-w-[140px] leading-tight mt-0.5">
                         {entry.insight}
                       </span>
                     )}

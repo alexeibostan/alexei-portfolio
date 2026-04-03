@@ -336,8 +336,8 @@ function DetailStrip({
           style={{
             fontSize: "13px",
             color: skill.contextLine
-              ? "rgba(232,228,223,0.5)"
-              : "rgba(232,228,223,0.50)",
+              ? "rgba(232,228,223,0.6)"
+              : "rgba(232,228,223,0.6)",
           }}
         >
           {contextLine}

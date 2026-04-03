@@ -192,7 +192,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                   {/* Company + period */}
                   <p
                     className="text-[#e8e4df] mb-3"
-                    style={{ fontSize: "13px", opacity: 0.5 }}
+                    style={{ fontSize: "13px", opacity: 0.6 }}
                   >
                     {project.company} · {project.period}
                   </p>

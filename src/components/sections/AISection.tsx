@@ -185,7 +185,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                         <span className="text-[13px] font-semibold text-[#e8e4df]">
                           {feature.label}
                         </span>
-                        <span className="text-[11px] opacity-50 text-[#e8e4df]">
+                        <span className="text-[11px] opacity-60 text-[#e8e4df]">
                           {feature.desc}
                         </span>
                       </div>
