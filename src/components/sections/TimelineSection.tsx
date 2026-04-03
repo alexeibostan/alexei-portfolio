@@ -53,7 +53,7 @@ export function TimelineSection({
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="flex items-center gap-6 mb-16"
         >
-          <span className="font-mono-brand text-[11px] text-[#c4956a] opacity-60 tracking-[1px]">
+          <span className="font-mono-brand text-[11px] text-[hsl(var(--primary))] opacity-60 tracking-[1px]">
             01
           </span>
           <h2 className="font-display text-2xl font-light text-[#e8e4df]">
