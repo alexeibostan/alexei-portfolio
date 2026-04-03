@@ -65,7 +65,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-          className="font-display text-xl md:text-[22px] font-light italic opacity-50 text-[#e8e4df]"
+          className="font-display text-xl md:text-[22px] font-light italic opacity-60 text-[#e8e4df]"
         >
           {t("payoff")}
         </motion.p>
@@ -86,7 +86,7 @@ export function HeroSection() {
                 {stat.label}
               </span>
               {i < stats.length - 1 && (
-                <span className="font-mono-brand text-[11px] text-white/20">
+                <span className="font-mono-brand text-[11px] text-white/50">
                   ·
                 </span>
               )}
@@ -102,7 +102,7 @@ export function HeroSection() {
         transition={{ duration: 0.6, delay: 1.4, ease: "easeOut" }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10"
       >
-        <span className="font-mono-brand text-[11px] text-white/40 tracking-[1px] uppercase">
+        <span className="font-mono-brand text-[11px] text-white/50 tracking-[1px] uppercase">
           {t("scrollToExplore")}
         </span>
         <div className="w-px h-12 bg-gradient-to-b from-white/20 to-transparent" />
