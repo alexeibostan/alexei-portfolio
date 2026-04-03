@@ -82,7 +82,7 @@ export function ConnectSection() {
         </h2>
 
         {/* Subtitle */}
-        <p className="text-sm opacity-45 max-w-[440px] leading-relaxed mb-10">
+        <p className="text-sm opacity-60 max-w-[440px] leading-relaxed mb-10">
           {t("subtitle")}
         </p>
 
@@ -114,7 +114,7 @@ export function ConnectSection() {
         </div>
 
         {/* Copyright */}
-        <p className="mt-12 text-[11px] opacity-20 font-mono-brand">
+        <p className="mt-12 text-[11px] opacity-50 font-mono-brand">
           {t("copyright", { year: new Date().getFullYear() })}
         </p>
       </section>
