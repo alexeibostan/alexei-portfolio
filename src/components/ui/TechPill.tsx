@@ -16,7 +16,7 @@ const categoryColors: Record<string, { bg: string; text: string; border: string 
 
 export function TechPill({ name, category, size = 'sm' }: TechPillProps) {
   const colors = categoryColors[category ?? 'default'] ?? categoryColors.default;
-  const sizeClasses = size === 'sm' ? 'text-[9px] px-2 py-0.5' : 'text-[10px] px-2.5 py-1';
+  const sizeClasses = size === 'sm' ? 'text-[10px] px-2 py-0.5' : 'text-[11px] px-2.5 py-1';
 
   return (
     <span
