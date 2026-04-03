@@ -72,7 +72,7 @@ function NarrativeHeader({
       style={{
         background:
           "linear-gradient(135deg, rgba(196,149,106,0.04) 0%, rgba(126,231,135,0.02) 50%, rgba(88,166,255,0.02) 100%)",
-        border: "1px solid rgba(255,255,255,0.04)",
+        border: "1px solid rgba(255,255,255,0.08)",
       }}
     >
       {/* Ambient glow */}
@@ -194,7 +194,7 @@ function SkillTile({
         background: isActive
           ? `${color}0A`
           : "rgba(255,255,255,0.015)",
-        border: `1px solid ${isActive ? `${color}40` : "rgba(255,255,255,0.05)"}`,
+        border: `1px solid ${isActive ? `${color}40` : "rgba(255,255,255,0.08)"}`,
         boxShadow: isActive
           ? `0 0 20px ${color}08`
           : "none",
@@ -385,7 +385,7 @@ export function CraftSection({ skills }: CraftSectionProps) {
             <h2 className="font-display text-2xl text-[#e8e4df] font-light">
               {tSections("craft")}
             </h2>
-            <div className="flex-1 h-px bg-white/[0.06]" />
+            <div className="flex-1 h-px bg-white/[0.08]" />
             <span
               className="font-mono-brand text-right opacity-30"
               style={{ fontSize: "11px" }}
@@ -470,7 +470,7 @@ export function CraftSection({ skills }: CraftSectionProps) {
             style={{
               padding: "14px 16px",
               background: "rgba(255,255,255,0.015)",
-              border: "1px solid rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.08)",
             }}
           >
             <span

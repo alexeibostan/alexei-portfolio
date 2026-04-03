@@ -94,7 +94,7 @@ export function ConnectSection() {
               href={href}
               target={href.startsWith("mailto") ? undefined : "_blank"}
               rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-              className="flex items-center gap-2 px-5 py-2.5 border border-white/[0.12] rounded-lg text-[13px] hover:bg-white/5 hover:border-white/20 hover:-translate-y-0.5 transition-all"
+              className="flex items-center gap-2 px-5 py-2.5 border border-white/[0.15] rounded-lg text-[13px] hover:bg-white/5 hover:border-white/25 hover:-translate-y-0.5 transition-all"
             >
               <Icon size={16} />
               {label}

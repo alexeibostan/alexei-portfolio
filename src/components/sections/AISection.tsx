@@ -48,13 +48,13 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
             <h2 className="font-display text-2xl text-[#e8e4df] font-light">
               {tSections("ai")}
             </h2>
-            <div className="flex-1 h-px bg-white/[0.06]" />
+            <div className="flex-1 h-px bg-white/[0.08]" />
           </div>
 
           {/* Two-column grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {/* Left Column — Building WITH AI */}
-            <div className="bg-white/[0.02] border border-white/[0.06] rounded-xl p-6">
+            <div className="bg-white/[0.02] border border-white/[0.08] rounded-xl p-6">
               {/* Column header */}
               <div className="flex items-center gap-2 mb-3">
                 <span
@@ -113,7 +113,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
             </div>
 
             {/* Right Column — Building IN AI */}
-            <div className="bg-white/[0.02] border border-white/[0.06] rounded-xl p-6">
+            <div className="bg-white/[0.02] border border-white/[0.08] rounded-xl p-6">
               {/* Column header */}
               <div className="flex items-center gap-2 mb-3">
                 <span

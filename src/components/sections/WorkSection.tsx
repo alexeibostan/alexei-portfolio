@@ -33,7 +33,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
             <h2 className="font-display text-2xl text-[#e8e4df] font-light">
               {tSections("work")}
             </h2>
-            <div className="flex-1 h-px bg-white/[0.06]" />
+            <div className="flex-1 h-px bg-white/[0.08]" />
             <span
               className="font-mono-brand text-right opacity-30"
               style={{ fontSize: "11px" }}
@@ -50,11 +50,11 @@ export function WorkSection({ projects }: WorkSectionProps) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="border border-white/[0.06] rounded-xl bg-white/[0.02] mb-6 overflow-hidden"
+              className="border border-white/[0.08] rounded-xl bg-white/[0.02] mb-6 overflow-hidden"
             >
               <div className="grid grid-cols-1 md:grid-cols-2">
                 {/* Left column */}
-                <div className="p-6 flex flex-col gap-4 md:border-r md:border-white/[0.06]">
+                <div className="p-6 flex flex-col gap-4 md:border-r md:border-white/[0.08]">
                   {/* Featured label */}
                   <div className="flex items-center gap-2">
                     <span
@@ -84,7 +84,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                   </div>
 
                   {/* Role context */}
-                  <div className="mt-auto pt-4 border-t border-white/[0.06]">
+                  <div className="mt-auto pt-4 border-t border-white/[0.08]">
                     <p className="text-[12px] italic opacity-40 text-[#e8e4df]">
                       {tWork(`role${featured.role}`)}
                     </p>
@@ -174,7 +174,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                 <button
                   key={`${project.company}-${project.name}-${i}`}
                   onClick={() => setFeaturedIndex(i)}
-                  className="relative flex-1 bg-white/[0.02] border border-white/[0.06] rounded-lg p-4 cursor-pointer text-left hover:border-white/[0.12] hover:-translate-y-0.5 transition-all"
+                  className="relative flex-1 bg-white/[0.02] border border-white/[0.08] rounded-lg p-4 cursor-pointer text-left hover:border-white/[0.15] hover:-translate-y-0.5 transition-all"
                 >
                   {/* Arrow icon */}
                   <span
