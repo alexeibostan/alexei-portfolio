@@ -65,7 +65,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                   className="w-2 h-2 rounded-full flex-shrink-0"
                   style={{ backgroundColor: "#d2a8ff" }}
                 />
-                <span className="font-mono-brand text-[10px] text-[#d2a8ff] tracking-[1px]">
+                <span className="font-mono-brand text-[11px] text-[#d2a8ff] tracking-[1px]">
                   {tAi("buildingWith")}
                 </span>
               </div>
@@ -106,7 +106,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                         <span className="text-[13px] font-semibold text-[#e8e4df]">
                           {tool.name}
                         </span>
-                        <span className="text-[11px] opacity-40 mt-0.5 text-[#e8e4df]">
+                        <span className="text-xs opacity-40 mt-0.5 text-[#e8e4df]">
                           {tool.description}
                         </span>
                       </div>
@@ -124,7 +124,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                   className="w-2 h-2 rounded-full flex-shrink-0"
                   style={{ backgroundColor: "#7ee787" }}
                 />
-                <span className="font-mono-brand text-[10px] text-[#7ee787] tracking-[1px]">
+                <span className="font-mono-brand text-[11px] text-[#7ee787] tracking-[1px]">
                   {tAi("buildingIn")}
                 </span>
               </div>
@@ -153,7 +153,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                 </div>
 
                 {/* Subtitle */}
-                <p className="text-[11px] opacity-40 text-[#e8e4df] mb-3">
+                <p className="text-xs opacity-40 text-[#e8e4df] mb-3">
                   draughtsai.com
                 </p>
 

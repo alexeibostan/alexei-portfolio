@@ -36,7 +36,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
             <div className="flex-1 h-px bg-white/[0.06]" />
             <span
               className="font-mono-brand text-right opacity-30"
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "11px" }}
             >
               {tSections("selectedProjects")}
             </span>
@@ -61,7 +61,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                       className="w-2 h-2 rounded-full"
                       style={{ backgroundColor: "#7ee787" }}
                     />
-                    <span className="font-mono-brand text-[10px] text-[#7ee787] tracking-[1px] uppercase">
+                    <span className="font-mono-brand text-[11px] text-[#7ee787] tracking-[1px] uppercase">
                       {tWork("featured")}
                     </span>
                   </div>
@@ -105,7 +105,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                         }}
                       />
                       <span
-                        className="font-mono-brand text-[10px] tracking-[1px] uppercase"
+                        className="font-mono-brand text-[11px] tracking-[1px] uppercase"
                         style={{ color: "#c4956a" }}
                       >
                         {tWork("problem")}
@@ -128,7 +128,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                         }}
                       />
                       <span
-                        className="font-mono-brand text-[10px] tracking-[1px] uppercase"
+                        className="font-mono-brand text-[11px] tracking-[1px] uppercase"
                         style={{ color: "#7ee787" }}
                       >
                         {tWork("craft")}
@@ -151,7 +151,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                         }}
                       />
                       <span
-                        className="font-mono-brand text-[10px] tracking-[1px] uppercase"
+                        className="font-mono-brand text-[11px] tracking-[1px] uppercase"
                         style={{ color: "#58a6ff" }}
                       >
                         {tWork("impact")}
@@ -192,7 +192,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                   {/* Company + period */}
                   <p
                     className="text-[#e8e4df] mb-3"
-                    style={{ fontSize: "11px", opacity: 0.35 }}
+                    style={{ fontSize: "12px", opacity: 0.35 }}
                   >
                     {project.company} · {project.period}
                   </p>

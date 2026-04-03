@@ -130,7 +130,7 @@ export function TimelineSection({
                   <div className="md:mt-4 flex flex-col gap-0.5 md:items-center md:text-center">
                     {/* Year label */}
                     <span
-                      className="font-mono-brand text-[10px] font-semibold tracking-[1px]"
+                      className="font-mono-brand text-[11px] font-semibold tracking-[1px]"
                       style={{ color }}
                     >
                       {yearLabel}
@@ -142,13 +142,13 @@ export function TimelineSection({
                     </span>
 
                     {/* Role */}
-                    <span className="text-[10px] text-[#e8e4df] opacity-40 leading-tight">
+                    <span className="text-xs text-[#e8e4df] opacity-40 leading-tight">
                       {entry.role}
                     </span>
 
                     {/* Insight */}
                     {entry.insight && (
-                      <span className="text-[10px] text-[#e8e4df] opacity-30 italic max-w-[120px] leading-tight mt-0.5">
+                      <span className="text-xs text-[#e8e4df] opacity-30 italic max-w-[140px] leading-tight mt-0.5">
                         {entry.insight}
                       </span>
                     )}

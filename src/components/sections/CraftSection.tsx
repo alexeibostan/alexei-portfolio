@@ -314,7 +314,7 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
             <div className="flex-1 h-px bg-white/[0.06]" />
             <span
               className="font-mono-brand text-right opacity-30"
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "11px" }}
             >
               {tCraft("skillsAndMethodologies")}
             </span>
@@ -454,7 +454,7 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
                   <span
                     className="font-mono-brand rounded-full"
                     style={{
-                      fontSize: "10px",
+                      fontSize: "11px",
                       padding: "3px 10px",
                       background: `${getCategoryColor(selectedSkill.category)}15`,
                       color: getCategoryColor(selectedSkill.category),
@@ -536,7 +536,7 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
               >
                 <span
                   className="font-mono-brand opacity-40"
-                  style={{ fontSize: "10px" }}
+                  style={{ fontSize: "11px" }}
                 >
                   {tCraft("languagesISpeak")}
                 </span>
@@ -549,7 +549,7 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
                       <span style={{ fontSize: "18px" }}>{lang.flag}</span>
                       <span
                         className="font-mono-brand text-[#e8e4df]"
-                        style={{ fontSize: "11px" }}
+                        style={{ fontSize: "12px" }}
                       >
                         {lang.name}
                       </span>

@@ -102,7 +102,7 @@ export function HeroSection() {
         transition={{ duration: 0.6, delay: 1.4, ease: "easeOut" }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10"
       >
-        <span className="font-mono-brand text-[10px] text-white/30 tracking-[1px] uppercase">
+        <span className="font-mono-brand text-[11px] text-white/30 tracking-[1px] uppercase">
           {t("scrollToExplore")}
         </span>
         <div className="w-px h-12 bg-gradient-to-b from-white/20 to-transparent" />
