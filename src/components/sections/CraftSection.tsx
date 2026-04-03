@@ -1,303 +1,377 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import type { Skill, Methodology } from "@/types";
+import type { Skill } from "@/types";
 
 interface CraftSectionProps {
   skills: Skill[];
-  methodologies: Methodology[];
 }
 
-// Prominent outer ring skills — pick top ~9 by years (descending)
-const OUTER_RING_NAMES = [
-  "Git",
-  "Angular",
-  "RxJS",
-  "Redux",
-  "React",
-  "TypeScript",
-  "styled-components",
-  "Node.js",
-  "Tailwind CSS",
-];
-
-const categoryColors: Record<string, string> = {
-  Frontend: "#7ee787",
-  Backend: "#58a6ff",
-  Libraries: "#c4956a",
-  Tools: "#d2a8ff",
-  Testing: "#58a6ff",
-  default: "rgba(255,255,255,0.4)",
+// Map old 5 categories → 3 empathy-framed groups
+const CATEGORY_MAP: Record<string, string> = {
+  Frontend: "frontendUI",
+  Backend: "backendData",
+  Libraries: "frontendUI",
+  Tools: "devopsTesting",
+  Testing: "devopsTesting",
 };
 
-function getCategoryColor(category: string): string {
-  return categoryColors[category] ?? categoryColors.default;
+const CATEGORY_ORDER = ["frontendUI", "backendData", "devopsTesting"] as const;
+
+type MergedCategory = (typeof CATEGORY_ORDER)[number];
+
+const CATEGORY_CONFIG: Record<
+  MergedCategory,
+  { color: string; empathyKey: string; traditionalKey: string }
+> = {
+  frontendUI: {
+    color: "#7ee787",
+    empathyKey: "whatUsersSee",
+    traditionalKey: "frontendAndUI",
+  },
+  backendData: {
+    color: "#58a6ff",
+    empathyKey: "whatMakesItWork",
+    traditionalKey: "backendAndData",
+  },
+  devopsTesting: {
+    color: "#d2a8ff",
+    empathyKey: "whatKeepsItSolid",
+    traditionalKey: "devopsAndTesting",
+  },
+};
+
+function groupSkills(skills: Skill[]): Record<MergedCategory, Skill[]> {
+  const groups: Record<MergedCategory, Skill[]> = {
+    frontendUI: [],
+    backendData: [],
+    devopsTesting: [],
+  };
+  for (const skill of skills) {
+    const mapped = CATEGORY_MAP[skill.category] as MergedCategory | undefined;
+    if (mapped) groups[mapped].push(skill);
+  }
+  return groups;
 }
 
-interface RingPillProps {
-  label: string;
+function NarrativeHeader({
+  tCraft,
+}: {
+  tCraft: ReturnType<typeof useTranslations>;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.6 }}
+      className="relative mb-10 flex flex-col md:flex-row items-center gap-6 md:gap-0 rounded-[14px] px-8 py-7 overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, rgba(196,149,106,0.04) 0%, rgba(126,231,135,0.02) 50%, rgba(88,166,255,0.02) 100%)",
+        border: "1px solid rgba(255,255,255,0.04)",
+      }}
+    >
+      {/* Ambient glow */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at 10% 50%, rgba(196,149,106,0.06) 0%, transparent 50%), radial-gradient(ellipse at 90% 50%, rgba(88,166,255,0.04) 0%, transparent 50%)",
+        }}
+      />
+
+      {/* Why */}
+      <div className="flex-1 text-center relative z-10">
+        <div
+          className="font-mono-brand uppercase tracking-[3px] mb-2"
+          style={{ fontSize: "7px", color: "rgba(196,149,106,0.5)" }}
+        >
+          {tCraft("whyIBuild")}
+        </div>
+        <div className="font-display italic text-[15px] text-[#e8e4df] font-light">
+          {tCraft("whyValue")}
+        </div>
+        <div
+          className="font-mono-brand mt-1.5"
+          style={{ fontSize: "8px", color: "rgba(255,255,255,0.2)" }}
+        >
+          {tCraft("whySub")}
+        </div>
+      </div>
+
+      {/* Arrow */}
+      <div className="w-[60px] flex items-center justify-center flex-shrink-0 relative z-10 rotate-90 md:rotate-0">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#e8e4df"
+          strokeWidth="1.5"
+          style={{ opacity: 0.15 }}
+        >
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </div>
+
+      {/* How */}
+      <div className="flex-1 text-center relative z-10">
+        <div
+          className="font-mono-brand uppercase tracking-[3px] mb-2"
+          style={{ fontSize: "7px", color: "rgba(225,102,66,0.5)" }}
+        >
+          {tCraft("howIBuild")}
+        </div>
+        <div className="font-display italic text-[12px] text-[#e8e4df] font-light leading-relaxed">
+          {tCraft("howValue")}
+        </div>
+        <div
+          className="font-mono-brand mt-1.5"
+          style={{ fontSize: "8px", color: "rgba(255,255,255,0.2)" }}
+        >
+          {tCraft("howSub")}
+        </div>
+      </div>
+
+      {/* Arrow */}
+      <div className="w-[60px] flex items-center justify-center flex-shrink-0 relative z-10 rotate-90 md:rotate-0">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#e8e4df"
+          strokeWidth="1.5"
+          style={{ opacity: 0.15 }}
+        >
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </div>
+
+      {/* What */}
+      <div className="flex-1 text-center relative z-10">
+        <div
+          className="font-mono-brand uppercase tracking-[3px] mb-2"
+          style={{ fontSize: "7px", color: "rgba(126,231,135,0.5)" }}
+        >
+          {tCraft("whatIBuildWith")}
+        </div>
+        <div className="font-display italic text-[15px] text-[#e8e4df] font-light">
+          {tCraft("whatValue")}
+        </div>
+        <div
+          className="font-mono-brand mt-1.5"
+          style={{ fontSize: "8px", color: "rgba(255,255,255,0.2)" }}
+        >
+          {tCraft("whatSub")}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+function SkillTile({
+  skill,
+  color,
+  isActive,
+  onClick,
+}: {
+  skill: Skill;
   color: string;
-  isSelected: boolean;
+  isActive: boolean;
   onClick: () => void;
-}
-
-function RingPill({ label, color, isSelected, onClick }: RingPillProps) {
+}) {
   return (
     <button
       onClick={onClick}
-      className="font-mono-brand rounded-full cursor-pointer transition-all whitespace-nowrap"
+      className="rounded-lg cursor-pointer text-center transition-all duration-200 hover:-translate-y-0.5"
       style={{
-        fontSize: "9px",
-        padding: "3px 8px",
-        background: isSelected
-          ? `${color}22`
-          : "rgba(255,255,255,0.03)",
-        color: isSelected ? color : "rgba(255,255,255,0.45)",
-        border: `1px solid ${isSelected ? color + "55" : "rgba(255,255,255,0.08)"}`,
+        padding: "10px 6px",
+        background: isActive
+          ? `${color}0A`
+          : "rgba(255,255,255,0.015)",
+        border: `1px solid ${isActive ? `${color}40` : "rgba(255,255,255,0.05)"}`,
+        boxShadow: isActive
+          ? `0 0 20px ${color}08`
+          : "none",
       }}
     >
-      {label}
+      <div
+        className="font-mono-brand transition-colors duration-200"
+        style={{
+          fontSize: "10px",
+          color: isActive ? "#e8e4df" : "rgba(255,255,255,0.45)",
+        }}
+      >
+        {skill.name}
+      </div>
+      <div
+        className="font-mono-brand mt-0.5"
+        style={{
+          fontSize: "8px",
+          color: isActive ? `${color}66` : "rgba(255,255,255,0.13)",
+        }}
+      >
+        {skill.years}
+      </div>
     </button>
   );
 }
 
-interface ConcentricRingsProps {
-  outerSkills: Skill[];
-  middleMethodologies: Methodology[];
-  selectedSkill: Skill;
-  onSelectSkill: (skill: Skill) => void;
-  whatIBuildWithLabel: string;
-  howIBuildLabel: string;
-  whyLabel: string;
-  userEmpathyLabel: string;
-}
+function DetailStrip({
+  skill,
+  tCraft,
+  categoryLabel,
+}: {
+  skill: Skill | null;
+  tCraft: ReturnType<typeof useTranslations>;
+  categoryLabel: string;
+}) {
+  if (!skill) {
+    return (
+      <div
+        className="mt-6 rounded-xl flex items-center justify-center gap-2.5"
+        style={{
+          padding: "20px 28px",
+          border: "1px dashed rgba(126,231,135,0.1)",
+          background: "rgba(126,231,135,0.01)",
+        }}
+      >
+        <span
+          className="text-sm animate-bounce"
+          style={{ color: "rgba(126,231,135,0.2)" }}
+        >
+          ↑
+        </span>
+        <span
+          className="font-mono-brand"
+          style={{ fontSize: "11px", color: "rgba(126,231,135,0.3)" }}
+        >
+          {tCraft("clickToExplore")}
+        </span>
+      </div>
+    );
+  }
 
-function ConcentricRings({
-  outerSkills,
-  middleMethodologies,
-  selectedSkill,
-  onSelectSkill,
-  whatIBuildWithLabel,
-  howIBuildLabel,
-  whyLabel,
-  userEmpathyLabel,
-}: ConcentricRingsProps) {
-  // Container is 360px × 360px; rings are centered inside
-  const containerSize = 360;
-  const center = containerSize / 2;
-
-  // Outer ring: 320px diameter → radius 160px
-  const outerRadius = 150;
-  // Middle ring: 200px diameter → radius 100px
-  const middleRadius = 90;
+  const contextLine =
+    skill.contextLine ||
+    tCraft("partOfToolkit", { category: categoryLabel });
 
   return (
-    <div
-      className="relative mx-auto"
-      style={{ width: containerSize, height: containerSize }}
-    >
-      {/* Outer ring */}
+    <AnimatePresence mode="wait">
       <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
-        className="absolute rounded-full"
+        key={skill.name}
+        initial={{ opacity: 0, y: 4 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -4 }}
+        transition={{ duration: 0.2 }}
+        className="mt-6 rounded-xl flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 relative overflow-hidden"
         style={{
-          width: 320,
-          height: 320,
-          top: center - 160,
-          left: center - 160,
-          border: "1px solid rgba(126,231,135,0.15)",
-        }}
-      />
-
-      {/* Middle ring */}
-      <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-        className="absolute rounded-full"
-        style={{
-          width: 200,
-          height: 200,
-          top: center - 100,
-          left: center - 100,
-          border: "1px solid rgba(196,149,106,0.2)",
-        }}
-      />
-
-      {/* Inner core */}
-      <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.7, delay: 0, ease: "easeOut" }}
-        className="absolute rounded-full flex flex-col items-center justify-center gap-0.5"
-        style={{
-          width: 90,
-          height: 90,
-          top: center - 45,
-          left: center - 45,
+          padding: "20px 28px",
+          border: "1px solid rgba(126,231,135,0.1)",
           background:
-            "linear-gradient(135deg, rgba(196,149,106,0.15), rgba(196,149,106,0.05))",
-          border: "1px solid rgba(196,149,106,0.25)",
+            "linear-gradient(135deg, rgba(126,231,135,0.03) 0%, rgba(255,255,255,0.01) 100%)",
         }}
       >
+        {/* Glow accent */}
+        <div
+          className="pointer-events-none absolute"
+          style={{
+            top: -30,
+            left: -30,
+            width: 100,
+            height: 100,
+            background:
+              "radial-gradient(circle, rgba(126,231,135,0.05) 0%, transparent 70%)",
+          }}
+        />
+
+        {/* Pill */}
         <span
-          className="font-mono-brand text-[#c4956a] opacity-50 tracking-wider"
-          style={{ fontSize: "8px" }}
+          className="font-mono-brand rounded-full flex-shrink-0 relative z-10"
+          style={{
+            fontSize: "11px",
+            padding: "5px 14px",
+            background: "rgba(126,231,135,0.08)",
+            color: "#7ee787",
+            border: "1px solid rgba(126,231,135,0.15)",
+          }}
         >
-          {whyLabel}
+          {skill.name}
         </span>
-        <span
-          className="font-display italic text-[#e8e4df] text-center leading-tight opacity-60"
-          style={{ fontSize: "10px" }}
+
+        {/* Years + category */}
+        <div className="flex-shrink-0 relative z-10" style={{ minWidth: 90 }}>
+          <div
+            className="font-light"
+            style={{ fontSize: "22px", color: "#7ee787" }}
+          >
+            {skill.years} {tCraft("years")}
+          </div>
+          <div
+            className="font-mono-brand uppercase tracking-[1px] mt-0.5"
+            style={{ fontSize: "8px", color: "rgba(126,231,135,0.4)" }}
+          >
+            {categoryLabel}
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div
+          className="hidden sm:block flex-shrink-0"
+          style={{
+            width: 1,
+            height: 36,
+            background: "rgba(255,255,255,0.06)",
+          }}
+        />
+
+        {/* Context line */}
+        <p
+          className="font-display italic leading-relaxed flex-1 relative z-10"
+          style={{
+            fontSize: "13px",
+            color: skill.contextLine
+              ? "rgba(232,228,223,0.5)"
+              : "rgba(232,228,223,0.3)",
+          }}
         >
-          {userEmpathyLabel}
-        </span>
+          {contextLine}
+        </p>
       </motion.div>
-
-      {/* Ring labels */}
-      {/* Outer ring label — top center */}
-      <motion.span
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 1.0 }}
-        className="absolute font-mono-brand text-[#7ee787] tracking-widest"
-        style={{
-          fontSize: "7px",
-          top: center - 160 - 14,
-          left: "50%",
-          transform: "translateX(-50%)",
-          opacity: 0.4,
-        }}
-      >
-        {whatIBuildWithLabel}
-      </motion.span>
-
-      {/* Middle ring label */}
-      <motion.span
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.8 }}
-        className="absolute font-mono-brand text-[#c4956a] tracking-widest"
-        style={{
-          fontSize: "7px",
-          top: center - 100 - 12,
-          left: "50%",
-          transform: "translateX(-50%)",
-          opacity: 0.4,
-        }}
-      >
-        {howIBuildLabel}
-      </motion.span>
-
-      {/* Outer ring skill pills — positioned around the ring */}
-      {outerSkills.map((skill, i) => {
-        const angleDeg = (i / outerSkills.length) * 360 - 90; // start from top
-        const angleRad = (angleDeg * Math.PI) / 180;
-        const x = center + outerRadius * Math.cos(angleRad);
-        const y = center + outerRadius * Math.sin(angleRad);
-        const color = getCategoryColor(skill.category);
-
-        return (
-          <motion.div
-            key={skill.name}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.8 + i * 0.06 }}
-            className="absolute"
-            style={{
-              left: x,
-              top: y,
-              transform: "translate(-50%, -50%)",
-            }}
-          >
-            <RingPill
-              label={skill.name}
-              color={color}
-              isSelected={selectedSkill.name === skill.name}
-              onClick={() => onSelectSkill(skill)}
-            />
-          </motion.div>
-        );
-      })}
-
-      {/* Middle ring methodology pills */}
-      {middleMethodologies.map((method, i) => {
-        const angleDeg = (i / middleMethodologies.length) * 360 - 90;
-        const angleRad = (angleDeg * Math.PI) / 180;
-        const x = center + middleRadius * Math.cos(angleRad);
-        const y = center + middleRadius * Math.sin(angleRad);
-
-        return (
-          <motion.div
-            key={method.name}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 + i * 0.07 }}
-            className="absolute"
-            style={{
-              left: x,
-              top: y,
-              transform: "translate(-50%, -50%)",
-            }}
-          >
-            <span
-              className="font-mono-brand rounded-full whitespace-nowrap"
-              style={{
-                fontSize: "8px",
-                padding: "2px 7px",
-                background: "rgba(196,149,106,0.08)",
-                color: "rgba(196,149,106,0.6)",
-                border: "1px solid rgba(196,149,106,0.15)",
-                display: "inline-block",
-              }}
-            >
-              {method.name}
-            </span>
-          </motion.div>
-        );
-      })}
-    </div>
+    </AnimatePresence>
   );
 }
 
-export function CraftSection({ skills, methodologies }: CraftSectionProps) {
+export function CraftSection({ skills }: CraftSectionProps) {
   const tSections = useTranslations("sections");
   const tCraft = useTranslations("craft");
-  const [selectedSkill, setSelectedSkill] = useState<Skill>(skills[0]);
+  const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
+
+  const groupedSkills = groupSkills(skills);
 
   const languages = [
     { flag: "🇬🇧", name: tCraft("english"), proficiency: tCraft("fluent") },
     { flag: "🇮🇹", name: tCraft("italian"), proficiency: tCraft("fluent") },
     { flag: "🇷🇴", name: tCraft("romanian"), proficiency: tCraft("native") },
-    { flag: "🇳🇱", name: tCraft("dutch"), proficiency: tCraft("conversational") },
+    {
+      flag: "🇳🇱",
+      name: tCraft("dutch"),
+      proficiency: tCraft("conversational"),
+    },
   ];
 
-  // Filter outer ring skills in display order
-  const outerSkills = OUTER_RING_NAMES.map((name) =>
-    skills.find((s) => s.name === name)
-  ).filter((s): s is Skill => Boolean(s));
-
-  // Group skills by category for mobile list
-  const skillsByCategory = skills.reduce<Record<string, Skill[]>>(
-    (acc, skill) => {
-      if (!acc[skill.category]) acc[skill.category] = [];
-      acc[skill.category].push(skill);
-      return acc;
-    },
-    {}
-  );
+  // Find which merged category the selected skill belongs to
+  const selectedCategory = selectedSkill
+    ? (CATEGORY_MAP[selectedSkill.category] as MergedCategory)
+    : null;
+  const selectedCategoryLabel = selectedCategory
+    ? tCraft(CATEGORY_CONFIG[selectedCategory].traditionalKey)
+    : "";
 
   return (
     <ScrollReveal>
@@ -320,250 +394,112 @@ export function CraftSection({ skills, methodologies }: CraftSectionProps) {
             </span>
           </div>
 
-          {/* Main grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Left column */}
-            <div>
-              {/* Desktop: concentric rings */}
-              <div className="hidden md:flex items-center justify-center">
-                <ConcentricRings
-                  outerSkills={outerSkills}
-                  middleMethodologies={methodologies}
-                  selectedSkill={selectedSkill}
-                  onSelectSkill={setSelectedSkill}
-                  whatIBuildWithLabel={tCraft("whatIBuildWith")}
-                  howIBuildLabel={tCraft("howIBuild")}
-                  whyLabel={tCraft("why")}
-                  userEmpathyLabel={tCraft("userEmpathy")}
-                />
-              </div>
+          {/* Narrative header */}
+          <NarrativeHeader tCraft={tCraft} />
 
-              {/* Mobile: categorized list */}
-              <div className="flex md:hidden flex-col gap-6">
-                {/* What I build with */}
-                <div className="flex flex-col gap-3">
-                  <span
-                    className="font-mono-brand text-[#7ee787] tracking-widest opacity-40"
-                    style={{ fontSize: "9px" }}
-                  >
-                    {tCraft("whatIBuildWith")}
-                  </span>
-                  {Object.entries(skillsByCategory).map(
-                    ([category, catSkills]) => (
-                      <div key={category} className="flex flex-col gap-1.5">
-                        <span
-                          className="font-mono-brand opacity-25"
-                          style={{
-                            fontSize: "8px",
-                            color: getCategoryColor(category),
-                          }}
-                        >
-                          {category.toUpperCase()}
-                        </span>
-                        <div className="flex flex-wrap gap-1.5">
-                          {catSkills.map((skill) => (
-                            <button
-                              key={skill.name}
-                              onClick={() => setSelectedSkill(skill)}
-                              className="font-mono-brand rounded-full cursor-pointer transition-all"
-                              style={{
-                                fontSize: "9px",
-                                padding: "3px 8px",
-                                background:
-                                  selectedSkill.name === skill.name
-                                    ? `${getCategoryColor(skill.category)}22`
-                                    : "rgba(255,255,255,0.03)",
-                                color:
-                                  selectedSkill.name === skill.name
-                                    ? getCategoryColor(skill.category)
-                                    : "rgba(255,255,255,0.45)",
-                                border: `1px solid ${
-                                  selectedSkill.name === skill.name
-                                    ? getCategoryColor(skill.category) + "55"
-                                    : "rgba(255,255,255,0.08)"
-                                }`,
-                              }}
-                            >
-                              {skill.name}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    )
-                  )}
-                </div>
-
-                {/* How I build */}
-                <div className="flex flex-col gap-2">
-                  <span
-                    className="font-mono-brand text-[#c4956a] tracking-widest opacity-40"
-                    style={{ fontSize: "9px" }}
-                  >
-                    {tCraft("howIBuild")}
-                  </span>
-                  <div className="flex flex-wrap gap-1.5">
-                    {methodologies.map((method) => (
-                      <span
-                        key={method.name}
-                        className="font-mono-brand rounded-full"
-                        style={{
-                          fontSize: "9px",
-                          padding: "3px 8px",
-                          background: "rgba(196,149,106,0.08)",
-                          color: "rgba(196,149,106,0.6)",
-                          border: "1px solid rgba(196,149,106,0.15)",
-                        }}
-                      >
-                        {method.name}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Why I build */}
-                <div className="flex flex-col gap-2">
-                  <span
-                    className="font-mono-brand text-[#c4956a] tracking-widest opacity-40"
-                    style={{ fontSize: "9px" }}
-                  >
-                    {tCraft("whyIBuild")}
-                  </span>
-                  <span className="font-display italic text-[#e8e4df] opacity-50 text-sm">
-                    {tCraft("userEmpathy")}
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Right column: detail panel + languages */}
-            <div className="flex flex-col gap-4">
-              {/* Skill detail panel */}
+          {/* Skill tile grids */}
+          {CATEGORY_ORDER.map((catKey, groupIndex) => {
+            const config = CATEGORY_CONFIG[catKey];
+            const catSkills = groupedSkills[catKey];
+            return (
               <motion.div
-                key={selectedSkill.name}
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.25 }}
-                className="rounded-xl p-6 flex flex-col gap-4"
-                style={{
-                  background: "rgba(255,255,255,0.02)",
-                  border: "1px solid rgba(126,231,135,0.15)",
-                }}
+                key={catKey}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
+                className="mb-5"
               >
-                {/* Skill name + ring label */}
-                <div className="flex items-center gap-3 flex-wrap">
+                {/* Category header */}
+                <div className="flex items-baseline gap-2 mb-2.5">
                   <span
-                    className="font-mono-brand rounded-full"
+                    className="font-mono-brand"
                     style={{
-                      fontSize: "11px",
-                      padding: "3px 10px",
-                      background: `${getCategoryColor(selectedSkill.category)}15`,
-                      color: getCategoryColor(selectedSkill.category),
-                      border: `1px solid ${getCategoryColor(selectedSkill.category)}30`,
+                      fontSize: "8px",
+                      letterSpacing: "2px",
+                      color: config.color,
+                      opacity: 0.55,
                     }}
                   >
-                    {selectedSkill.name}
+                    {tCraft(config.empathyKey)}
                   </span>
                   <span
-                    className="font-mono-brand opacity-30"
-                    style={{ fontSize: "9px" }}
+                    className="font-mono-brand uppercase"
+                    style={{
+                      fontSize: "7px",
+                      letterSpacing: "2px",
+                      color: "rgba(255,255,255,0.2)",
+                    }}
                   >
-                    {"— " + tCraft("whatIBuildWith")}
+                    {tCraft(config.traditionalKey)}
                   </span>
                 </div>
 
-                {/* Years */}
-                <div className="flex flex-col gap-0.5">
-                  <span
-                    className="text-xl font-light"
-                    style={{ color: "#7ee787" }}
-                  >
-                    {selectedSkill.years} {tCraft("years")}
-                  </span>
-                  <span
-                    className="font-mono-brand opacity-30"
-                    style={{
-                      fontSize: "9px",
-                      color: getCategoryColor(selectedSkill.category),
-                    }}
-                  >
-                    {selectedSkill.category.toUpperCase()}
-                  </span>
-                </div>
-
-                {/* Context line */}
-                {selectedSkill.contextLine ? (
-                  <div
-                    className="pt-4"
-                    style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
-                  >
-                    <p
-                      className="font-display italic leading-relaxed opacity-50"
-                      style={{ fontSize: "13px", color: "#e8e4df" }}
-                    >
-                      {selectedSkill.contextLine}
-                    </p>
-                  </div>
-                ) : (
-                  <div
-                    className="pt-4"
-                    style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
-                  >
-                    <p
-                      className="font-display italic leading-relaxed opacity-25"
-                      style={{ fontSize: "13px", color: "#e8e4df" }}
-                    >
-                      {tCraft("noContext")}
-                    </p>
-                  </div>
-                )}
-              </motion.div>
-
-              {/* Hint text */}
-              <p
-                className="font-display italic opacity-25 text-[#e8e4df]"
-                style={{ fontSize: "12px" }}
-              >
-                {tCraft("hoverHint")}
-              </p>
-
-              {/* Languages card */}
-              <div
-                className="rounded-xl p-5 flex flex-col gap-3"
-                style={{
-                  background: "rgba(255,255,255,0.02)",
-                  border: "1px solid rgba(255,255,255,0.06)",
-                }}
-              >
-                <span
-                  className="font-mono-brand opacity-40"
-                  style={{ fontSize: "11px" }}
+                {/* Tile grid */}
+                <div
+                  className="grid gap-[5px]"
+                  style={{
+                    gridTemplateColumns:
+                      "repeat(auto-fill, minmax(90px, 1fr))",
+                  }}
                 >
-                  {tCraft("languagesISpeak")}
-                </span>
-                <div className="flex flex-row flex-wrap gap-4">
-                  {languages.map((lang) => (
-                    <div
-                      key={lang.name}
-                      className="flex flex-col items-center gap-1"
-                    >
-                      <span style={{ fontSize: "18px" }}>{lang.flag}</span>
-                      <span
-                        className="font-mono-brand text-[#e8e4df]"
-                        style={{ fontSize: "12px" }}
-                      >
-                        {lang.name}
-                      </span>
-                      <span
-                        className="font-mono-brand opacity-30 text-[#e8e4df]"
-                        style={{ fontSize: "9px" }}
-                      >
-                        {lang.proficiency}
-                      </span>
-                    </div>
+                  {catSkills.map((skill) => (
+                    <SkillTile
+                      key={skill.name}
+                      skill={skill}
+                      color={config.color}
+                      isActive={selectedSkill?.name === skill.name}
+                      onClick={() => setSelectedSkill(skill)}
+                    />
                   ))}
                 </div>
+              </motion.div>
+            );
+          })}
+
+          {/* Detail strip */}
+          <DetailStrip
+            skill={selectedSkill}
+            tCraft={tCraft}
+            categoryLabel={selectedCategoryLabel}
+          />
+
+          {/* Languages strip */}
+          <div
+            className="mt-4 flex items-center gap-4 flex-wrap rounded-[10px]"
+            style={{
+              padding: "14px 16px",
+              background: "rgba(255,255,255,0.015)",
+              border: "1px solid rgba(255,255,255,0.04)",
+            }}
+          >
+            <span
+              className="font-mono-brand uppercase"
+              style={{
+                fontSize: "7px",
+                letterSpacing: "2px",
+                color: "rgba(255,255,255,0.2)",
+              }}
+            >
+              {tCraft("languagesISpeak")}
+            </span>
+            {languages.map((lang) => (
+              <div key={lang.name} className="flex items-center gap-1.5">
+                <span style={{ fontSize: "13px" }}>{lang.flag}</span>
+                <span
+                  className="font-mono-brand"
+                  style={{ fontSize: "9px", color: "rgba(255,255,255,0.4)" }}
+                >
+                  {lang.name}
+                </span>
+                <span
+                  className="font-mono-brand"
+                  style={{ fontSize: "7px", color: "rgba(255,255,255,0.15)" }}
+                >
+                  {lang.proficiency}
+                </span>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
