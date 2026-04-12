@@ -75,6 +75,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <StructuredData data={[personSchema, websiteSchema]} />
       </head>
       <body className="antialiased bg-background text-foreground font-sans" suppressHydrationWarning>
