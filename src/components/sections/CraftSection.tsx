@@ -68,11 +68,10 @@ function NarrativeHeader({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6 }}
-      className="relative mb-10 flex flex-col md:flex-row items-center gap-6 md:gap-0 rounded-[14px] px-8 py-7 overflow-hidden"
+      className="relative mb-10 flex flex-col md:flex-row items-center gap-6 md:gap-0 rounded-[14px] px-8 py-7 overflow-hidden border border-white/[0.08]"
       style={{
         background:
           "linear-gradient(135deg, rgba(196,149,106,0.04) 0%, rgba(126,231,135,0.02) 50%, rgba(88,166,255,0.02) 100%)",
-        border: "1px solid rgba(255,255,255,0.08)",
       }}
     >
       {/* Ambient glow */}
@@ -87,8 +86,7 @@ function NarrativeHeader({
       {/* Why */}
       <div className="flex-1 text-center relative z-10">
         <div
-          className="font-mono-brand uppercase tracking-[3px] mb-2"
-          style={{ fontSize: "11px", color: "rgba(196,149,106,0.7)" }}
+          className="font-mono-brand text-[11px] text-primary/70 uppercase tracking-[3px] mb-2"
         >
           {tCraft("whyIBuild")}
         </div>
@@ -96,8 +94,7 @@ function NarrativeHeader({
           {tCraft("whyValue")}
         </div>
         <div
-          className="font-mono-brand mt-1.5"
-          style={{ fontSize: "11px", color: "rgba(255,255,255,0.50)" }}
+          className="font-mono-brand text-[11px] text-white/50 mt-1.5"
         >
           {tCraft("whySub")}
         </div>
@@ -112,7 +109,7 @@ function NarrativeHeader({
           fill="none"
           stroke="#e8e4df"
           strokeWidth="1.5"
-          style={{ opacity: 0.15 }}
+          className="opacity-[0.15]"
         >
           <path d="M5 12h14M13 6l6 6-6 6" />
         </svg>
@@ -121,8 +118,7 @@ function NarrativeHeader({
       {/* How */}
       <div className="flex-1 text-center relative z-10">
         <div
-          className="font-mono-brand uppercase tracking-[3px] mb-2"
-          style={{ fontSize: "11px", color: "rgba(225,102,66,0.7)" }}
+          className="font-mono-brand text-[11px] text-[rgb(225,102,66)]/70 uppercase tracking-[3px] mb-2"
         >
           {tCraft("howIBuild")}
         </div>
@@ -130,8 +126,7 @@ function NarrativeHeader({
           {tCraft("howValue")}
         </div>
         <div
-          className="font-mono-brand mt-1.5"
-          style={{ fontSize: "11px", color: "rgba(255,255,255,0.50)" }}
+          className="font-mono-brand text-[11px] text-white/50 mt-1.5"
         >
           {tCraft("howSub")}
         </div>
@@ -146,7 +141,7 @@ function NarrativeHeader({
           fill="none"
           stroke="#e8e4df"
           strokeWidth="1.5"
-          style={{ opacity: 0.15 }}
+          className="opacity-[0.15]"
         >
           <path d="M5 12h14M13 6l6 6-6 6" />
         </svg>
@@ -155,8 +150,7 @@ function NarrativeHeader({
       {/* What */}
       <div className="flex-1 text-center relative z-10">
         <div
-          className="font-mono-brand uppercase tracking-[3px] mb-2"
-          style={{ fontSize: "11px", color: "rgba(126,231,135,0.7)" }}
+          className="font-mono-brand text-[11px] text-secondary/70 uppercase tracking-[3px] mb-2"
         >
           {tCraft("whatIBuildWith")}
         </div>
@@ -164,8 +158,7 @@ function NarrativeHeader({
           {tCraft("whatValue")}
         </div>
         <div
-          className="font-mono-brand mt-1.5"
-          style={{ fontSize: "11px", color: "rgba(255,255,255,0.50)" }}
+          className="font-mono-brand text-[11px] text-white/50 mt-1.5"
         >
           {tCraft("whatSub")}
         </div>
@@ -201,20 +194,13 @@ function SkillTile({
       }}
     >
       <div
-        className="font-mono-brand transition-colors duration-200"
-        style={{
-          fontSize: "11px",
-          color: isActive ? "#e8e4df" : "rgba(255,255,255,0.50)",
-        }}
+        className={`font-mono-brand text-[11px] transition-colors duration-200 ${isActive ? 'text-foreground' : 'text-white/50'}`}
       >
         {skill.name}
       </div>
       <div
-        className="font-mono-brand mt-0.5"
-        style={{
-          fontSize: "11px",
-          color: isActive ? `${color}66` : "rgba(255,255,255,0.50)",
-        }}
+        className={`font-mono-brand text-[11px] mt-0.5 ${!isActive ? 'text-white/50' : ''}`}
+        style={isActive ? { color: `${color}66` } : undefined}
       >
         {skill.years}
       </div>
@@ -234,22 +220,15 @@ function DetailStrip({
   if (!skill) {
     return (
       <div
-        className="mt-6 rounded-xl flex items-center justify-center gap-2.5"
-        style={{
-          padding: "20px 28px",
-          border: "1px dashed rgba(126,231,135,0.1)",
-          background: "rgba(126,231,135,0.01)",
-        }}
+        className="mt-6 rounded-xl flex items-center justify-center gap-2.5 px-7 py-5 border border-dashed border-secondary/10 bg-secondary/[0.01]"
       >
         <span
-          className="text-sm animate-bounce"
-          style={{ color: "rgba(126,231,135,0.2)" }}
+          className="text-sm animate-bounce text-secondary/20"
         >
           ↑
         </span>
         <span
-          className="font-mono-brand"
-          style={{ fontSize: "11px", color: "rgba(126,231,135,0.50)" }}
+          className="font-mono-brand text-[11px] text-secondary/50"
         >
           {tCraft("clickToExplore")}
         </span>
@@ -269,22 +248,16 @@ function DetailStrip({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -4 }}
         transition={{ duration: 0.2 }}
-        className="mt-6 rounded-xl flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 relative overflow-hidden"
+        className="mt-6 rounded-xl flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 relative overflow-hidden px-7 py-5 border border-secondary/10"
         style={{
-          padding: "20px 28px",
-          border: "1px solid rgba(126,231,135,0.1)",
           background:
             "linear-gradient(135deg, rgba(126,231,135,0.03) 0%, rgba(255,255,255,0.01) 100%)",
         }}
       >
         {/* Glow accent */}
         <div
-          className="pointer-events-none absolute"
+          className="pointer-events-none absolute -top-[30px] -left-[30px] w-[100px] h-[100px]"
           style={{
-            top: -30,
-            left: -30,
-            width: 100,
-            height: 100,
             background:
               "radial-gradient(circle, rgba(126,231,135,0.05) 0%, transparent 70%)",
           }}
@@ -292,29 +265,20 @@ function DetailStrip({
 
         {/* Pill */}
         <span
-          className="font-mono-brand rounded-full flex-shrink-0 relative z-10"
-          style={{
-            fontSize: "11px",
-            padding: "5px 14px",
-            background: "rgba(126,231,135,0.08)",
-            color: "#7ee787",
-            border: "1px solid rgba(126,231,135,0.15)",
-          }}
+          className="font-mono-brand text-[11px] px-3.5 py-[5px] bg-secondary/[0.08] text-secondary border border-secondary/15 rounded-full flex-shrink-0 relative z-10"
         >
           {skill.name}
         </span>
 
         {/* Years + category */}
-        <div className="flex-shrink-0 relative z-10" style={{ minWidth: 90 }}>
+        <div className="flex-shrink-0 relative z-10 min-w-[90px]">
           <div
-            className="font-light"
-            style={{ fontSize: "22px", color: "#7ee787" }}
+            className="font-light text-[22px] text-secondary"
           >
             {skill.years} {tCraft("years")}
           </div>
           <div
-            className="font-mono-brand uppercase tracking-[1px] mt-0.5"
-            style={{ fontSize: "11px", color: "rgba(126,231,135,0.55)" }}
+            className="font-mono-brand text-[11px] text-secondary/[0.55] uppercase tracking-[1px] mt-0.5"
           >
             {categoryLabel}
           </div>
@@ -322,23 +286,12 @@ function DetailStrip({
 
         {/* Divider */}
         <div
-          className="hidden sm:block flex-shrink-0"
-          style={{
-            width: 1,
-            height: 36,
-            background: "rgba(255,255,255,0.06)",
-          }}
+          className="hidden sm:block flex-shrink-0 w-px h-9 bg-white/[0.06]"
         />
 
         {/* Context line */}
         <p
-          className="font-display italic leading-relaxed flex-1 relative z-10"
-          style={{
-            fontSize: "13px",
-            color: skill.contextLine
-              ? "rgba(232,228,223,0.6)"
-              : "rgba(232,228,223,0.6)",
-          }}
+          className="font-display italic text-[13px] text-foreground/60 leading-relaxed flex-1 relative z-10"
         >
           {contextLine}
         </p>
@@ -387,8 +340,7 @@ export function CraftSection({ skills }: CraftSectionProps) {
             </h2>
             <div className="flex-1 h-px bg-white/[0.08]" />
             <span
-              className="font-mono-brand text-right opacity-50"
-              style={{ fontSize: "11px" }}
+              className="font-mono-brand text-[11px] text-right opacity-50"
             >
               {tCraft("skillsAndMethodologies")}
             </span>
@@ -413,23 +365,13 @@ export function CraftSection({ skills }: CraftSectionProps) {
                 {/* Category header */}
                 <div className="flex items-baseline gap-2 mb-2.5">
                   <span
-                    className="font-mono-brand"
-                    style={{
-                      fontSize: "11px",
-                      letterSpacing: "2px",
-                      color: config.color,
-                      opacity: 0.60,
-                    }}
+                    className="font-mono-brand text-[11px] tracking-[2px] opacity-60"
+                    style={{ color: config.color }}
                   >
                     {tCraft(config.empathyKey)}
                   </span>
                   <span
-                    className="font-mono-brand uppercase"
-                    style={{
-                      fontSize: "11px",
-                      letterSpacing: "2px",
-                      color: "rgba(255,255,255,0.50)",
-                    }}
+                    className="font-mono-brand text-[11px] tracking-[2px] text-white/50 uppercase"
                   >
                     {tCraft(config.traditionalKey)}
                   </span>
@@ -437,11 +379,7 @@ export function CraftSection({ skills }: CraftSectionProps) {
 
                 {/* Tile grid */}
                 <div
-                  className="grid gap-[5px]"
-                  style={{
-                    gridTemplateColumns:
-                      "repeat(auto-fill, minmax(90px, 1fr))",
-                  }}
+                  className="grid gap-[5px] grid-cols-[repeat(auto-fill,minmax(90px,1fr))]"
                 >
                   {catSkills.map((skill) => (
                     <SkillTile
@@ -466,35 +404,23 @@ export function CraftSection({ skills }: CraftSectionProps) {
 
           {/* Languages strip */}
           <div
-            className="mt-4 flex items-center gap-4 flex-wrap rounded-[10px]"
-            style={{
-              padding: "14px 16px",
-              background: "rgba(255,255,255,0.015)",
-              border: "1px solid rgba(255,255,255,0.08)",
-            }}
+            className="mt-4 flex items-center gap-4 flex-wrap rounded-[10px] px-4 py-3.5 bg-white/[0.015] border border-white/[0.08]"
           >
             <span
-              className="font-mono-brand uppercase"
-              style={{
-                fontSize: "11px",
-                letterSpacing: "2px",
-                color: "rgba(255,255,255,0.50)",
-              }}
+              className="font-mono-brand text-[11px] tracking-[2px] text-white/50 uppercase"
             >
               {tCraft("languagesISpeak")}
             </span>
             {languages.map((lang) => (
               <div key={lang.name} className="flex items-center gap-1.5">
-                <span style={{ fontSize: "13px" }}>{lang.flag}</span>
+                <span className="text-[13px]">{lang.flag}</span>
                 <span
-                  className="font-mono-brand"
-                  style={{ fontSize: "11px", color: "rgba(255,255,255,0.50)" }}
+                  className="font-mono-brand text-[11px] text-white/50"
                 >
                   {lang.name}
                 </span>
                 <span
-                  className="font-mono-brand"
-                  style={{ fontSize: "11px", color: "rgba(255,255,255,0.50)" }}
+                  className="font-mono-brand text-[11px] text-white/50"
                 >
                   {lang.proficiency}
                 </span>

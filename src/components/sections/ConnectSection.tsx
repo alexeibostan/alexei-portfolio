@@ -48,11 +48,7 @@ export function ConnectSection() {
     <footer>
       <section
         id="connect"
-        className="min-h-[70vh] flex flex-col items-center justify-center py-20 px-8 text-center"
-        style={{
-          background:
-            "linear-gradient(to bottom, #0a0a0a 0%, #0d0d0d 50%, #080808 100%)",
-        }}
+        className="min-h-[70vh] flex flex-col items-center justify-center py-20 px-8 text-center bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#080808]"
       >
         {/* Section number */}
         <div className="flex items-center gap-3 mb-10">

@@ -5,13 +5,13 @@ interface TechPillProps {
 }
 
 const categoryColors: Record<string, { bg: string; text: string; border: string }> = {
-  Frontend: { bg: 'rgba(126,231,135,0.1)', text: '#7ee787', border: 'rgba(126,231,135,0.15)' },
-  Backend: { bg: 'rgba(88,166,255,0.1)', text: '#58a6ff', border: 'rgba(88,166,255,0.15)' },
-  Libraries: { bg: 'rgba(196,149,106,0.1)', text: '#c4956a', border: 'rgba(196,149,106,0.15)' },
-  Tools: { bg: 'rgba(210,168,255,0.1)', text: '#d2a8ff', border: 'rgba(210,168,255,0.15)' },
-  Testing: { bg: 'rgba(88,166,255,0.1)', text: '#58a6ff', border: 'rgba(88,166,255,0.15)' },
-  Mobile: { bg: 'rgba(210,168,255,0.1)', text: '#d2a8ff', border: 'rgba(210,168,255,0.15)' },
-  default: { bg: 'rgba(255,255,255,0.04)', text: 'rgba(255,255,255,0.5)', border: 'rgba(255,255,255,0.08)' },
+  Frontend:  { bg: 'bg-secondary/10',     text: 'text-secondary',     border: 'border-secondary/15' },
+  Backend:   { bg: 'bg-accent/10',        text: 'text-accent',        border: 'border-accent/15' },
+  Libraries: { bg: 'bg-primary/10',       text: 'text-primary',       border: 'border-primary/15' },
+  Tools:     { bg: 'bg-accent-purple/10', text: 'text-accent-purple', border: 'border-accent-purple/15' },
+  Testing:   { bg: 'bg-accent/10',        text: 'text-accent',        border: 'border-accent/15' },
+  Mobile:    { bg: 'bg-accent-purple/10', text: 'text-accent-purple', border: 'border-accent-purple/15' },
+  default:   { bg: 'bg-white/[0.04]',     text: 'text-white/50',      border: 'border-white/[0.08]' },
 };
 
 export function TechPill({ name, category, size = 'sm' }: TechPillProps) {
@@ -20,8 +20,7 @@ export function TechPill({ name, category, size = 'sm' }: TechPillProps) {
 
   return (
     <span
-      className={`font-mono-brand ${sizeClasses} rounded-full inline-block`}
-      style={{ background: colors.bg, color: colors.text, border: `1px solid ${colors.border}` }}
+      className={`font-mono-brand ${sizeClasses} rounded-full inline-block border ${colors.bg} ${colors.text} ${colors.border}`}
     >
       {name}
     </span>

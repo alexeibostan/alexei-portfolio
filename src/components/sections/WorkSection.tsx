@@ -35,8 +35,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
             </h2>
             <div className="flex-1 h-px bg-white/[0.08]" />
             <span
-              className="font-mono-brand text-right opacity-50"
-              style={{ fontSize: "11px" }}
+              className="font-mono-brand text-[11px] text-right opacity-50"
             >
               {tSections("selectedProjects")}
             </span>
@@ -58,8 +57,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                   {/* Featured label */}
                   <div className="flex items-center gap-2">
                     <span
-                      className="w-2 h-2 rounded-full"
-                      style={{ backgroundColor: "#7ee787" }}
+                      className="w-2 h-2 rounded-full bg-secondary"
                     />
                     <span className="font-mono-brand text-[11px] text-[hsl(var(--secondary))] tracking-[1px] uppercase">
                       {tWork("featured")}
@@ -97,16 +95,10 @@ export function WorkSection({ projects }: WorkSectionProps) {
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-3">
                       <span
-                        className="block rounded-full"
-                        style={{
-                          width: "16px",
-                          height: "2px",
-                          backgroundColor: "#c4956a",
-                        }}
+                        className="block rounded-full w-4 h-0.5 bg-primary"
                       />
                       <span
-                        className="font-mono-brand text-[11px] tracking-[1px] uppercase"
-                        style={{ color: "#c4956a" }}
+                        className="font-mono-brand text-[11px] tracking-[1px] uppercase text-primary"
                       >
                         {tWork("problem")}
                       </span>
@@ -120,16 +112,10 @@ export function WorkSection({ projects }: WorkSectionProps) {
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-3">
                       <span
-                        className="block rounded-full"
-                        style={{
-                          width: "16px",
-                          height: "2px",
-                          backgroundColor: "#7ee787",
-                        }}
+                        className="block rounded-full w-4 h-0.5 bg-secondary"
                       />
                       <span
-                        className="font-mono-brand text-[11px] tracking-[1px] uppercase"
-                        style={{ color: "#7ee787" }}
+                        className="font-mono-brand text-[11px] tracking-[1px] uppercase text-secondary"
                       >
                         {tWork("craft")}
                       </span>
@@ -143,16 +129,10 @@ export function WorkSection({ projects }: WorkSectionProps) {
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-3">
                       <span
-                        className="block rounded-full"
-                        style={{
-                          width: "16px",
-                          height: "2px",
-                          backgroundColor: "#58a6ff",
-                        }}
+                        className="block rounded-full w-4 h-0.5 bg-accent"
                       />
                       <span
-                        className="font-mono-brand text-[11px] tracking-[1px] uppercase"
-                        style={{ color: "#58a6ff" }}
+                        className="font-mono-brand text-[11px] tracking-[1px] uppercase text-accent"
                       >
                         {tWork("impact")}
                       </span>
@@ -178,8 +158,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
                 >
                   {/* Arrow icon */}
                   <span
-                    className="absolute top-3 right-3 text-white/20 text-sm inline-block"
-                    style={{ transform: "rotate(-45deg)" }}
+                    className="absolute top-3 right-3 text-white/20 text-sm inline-block -rotate-45"
                   >
                     →
                   </span>
@@ -191,8 +170,7 @@ export function WorkSection({ projects }: WorkSectionProps) {
 
                   {/* Company + period */}
                   <p
-                    className="text-[#e8e4df] mb-3"
-                    style={{ fontSize: "13px", opacity: 0.6 }}
+                    className="text-[13px] text-[#e8e4df] mb-3 opacity-60"
                   >
                     {project.company} · {project.period}
                   </p>

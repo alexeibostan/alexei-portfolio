@@ -57,8 +57,7 @@ export function AISection({ aiTools }: AISectionProps) {
               {/* Column header */}
               <div className="flex items-center gap-2 mb-3">
                 <span
-                  className="w-2 h-2 rounded-full flex-shrink-0"
-                  style={{ backgroundColor: "#d2a8ff" }}
+                  className="w-2 h-2 rounded-full flex-shrink-0 bg-accent-purple"
                 />
                 <span className="font-mono-brand text-[11px] text-[hsl(var(--accent-purple))] tracking-[1px]">
                   {tAi("buildingWith")}
@@ -117,8 +116,7 @@ export function AISection({ aiTools }: AISectionProps) {
               {/* Column header */}
               <div className="flex items-center gap-2 mb-3">
                 <span
-                  className="w-2 h-2 rounded-full flex-shrink-0"
-                  style={{ backgroundColor: "#7ee787" }}
+                  className="w-2 h-2 rounded-full flex-shrink-0 bg-secondary"
                 />
                 <span className="font-mono-brand text-[11px] text-[hsl(var(--secondary))] tracking-[1px]">
                   {tAi("buildingIn")}
@@ -138,11 +136,7 @@ export function AISection({ aiTools }: AISectionProps) {
                     DraughtsAI
                   </span>
                   <span
-                    className="font-mono-brand text-[11px] text-[hsl(var(--secondary))] rounded-full px-2 py-0.5"
-                    style={{
-                      background: "rgba(126,231,135,0.1)",
-                      border: "1px solid rgba(126,231,135,0.2)",
-                    }}
+                    className="font-mono-brand text-[11px] text-[hsl(var(--secondary))] rounded-full px-2 py-0.5 bg-secondary/10 border border-secondary/20"
                   >
                     {tAi("active")}
                   </span>
@@ -176,8 +170,7 @@ export function AISection({ aiTools }: AISectionProps) {
                       className="flex items-center gap-2.5"
                     >
                       <div
-                        className="w-6 h-6 rounded-md flex-shrink-0 flex items-center justify-center"
-                        style={{ background: "rgba(126,231,135,0.1)" }}
+                        className="w-6 h-6 rounded-md flex-shrink-0 flex items-center justify-center bg-secondary/10"
                       >
                         <feature.icon className="w-3 h-3 text-[hsl(var(--secondary))]" />
                       </div>
