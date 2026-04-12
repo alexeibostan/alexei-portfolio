@@ -87,7 +87,7 @@
   },
   "ai": {
     "buildingWith": "Building WITH AI",
-    "buildingWithIntro": "AI tools are part of my daily engineering workflow. Not as a crutch, as a multiplier.",
+    "buildingWithIntro": "AI tools are part of my daily engineering workflow. Not as a shortcut, as a multiplier.",
     "buildingIn": "Building IN AI",
     "buildingInIntro": "Actively building products where AI is the core experience, not a feature.",
     "active": "Active",
