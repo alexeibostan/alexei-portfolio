@@ -1,12 +1,12 @@
 import type { Skill } from '@/types';
 
 export const skills: Skill[] = [
-  { name: "Next.js", category: "Frontend", years: "3+", contextLine: "Il mio framework preferito per app in produzione — Tenpu, Pulse e questo portfolio." },
-  { name: "React", category: "Frontend", years: "4+", contextLine: "Utilizzato in ogni ruolo da Deliverect — dalle librerie di componenti all'intera piattaforma DraughtsAI." },
-  { name: "Angular", category: "Frontend", years: "9+", contextLine: "Le fondamenta della mia carriera iniziale — finanza al consumo in Kirey Group e banca digitale in Mobilesoft." },
+  { name: "Next.js", category: "Frontend", years: "3+", contextLine: "Il mio framework preferito per app in produzione: Tenpu, Pulse e questo portfolio." },
+  { name: "React", category: "Frontend", years: "4+", contextLine: "Utilizzato in ogni ruolo da Deliverect, dalle librerie di componenti all'intera piattaforma DraughtsAI." },
+  { name: "Angular", category: "Frontend", years: "9+", contextLine: "Le fondamenta della mia carriera iniziale. Finanza al consumo in Kirey Group e banca digitale in Mobilesoft." },
   { name: "Vue.js", category: "Frontend", years: "2+", contextLine: "Sviluppo di uno strumento di digitalizzazione P&ID per ingegneria chimica presso Bostan Software." },
   { name: "TypeScript", category: "Frontend", years: "9+", contextLine: "Da quando Angular 2 lo ha reso standard. Sostenitore dello strict mode in ogni progetto dall'inizio della mia carriera." },
-  { name: "Python", category: "Backend", years: "1+", contextLine: "Lavoro backend presso Deliverect — FastAPI, Celery, pipeline dati." },
+  { name: "Python", category: "Backend", years: "1+", contextLine: "Lavoro backend presso Deliverect: FastAPI, Celery, pipeline dati." },
   { name: "FastAPI", category: "Backend", years: "1+", contextLine: "Servizi API dietro la piattaforma analitica Pulse presso Deliverect." },
   { name: "Node.js", category: "Backend", years: "3+", contextLine: "Base server-side per DraughtsAI e molteplici progetti Bostan Software." },
   { name: "tRPC", category: "Backend", years: "1+", contextLine: "Livello API type-safe per la piattaforma di procurement Tenpu." },

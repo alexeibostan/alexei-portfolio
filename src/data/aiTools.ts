@@ -17,9 +17,3 @@ export const aiTools: AITool[] = [
     iconPath: "/icons/ai/codex.webp",
   },
 ];
-
-export const aiExploring: string[] = [
-  "LLM APIs",
-  "Structured Output",
-  "Prompt Engineering",
-];

@@ -1,12 +1,12 @@
 import type { Skill } from '@/types';
 
 export const skills: Skill[] = [
-  { name: "Next.js", category: "Frontend", years: "3+", contextLine: "Mijn favoriete framework voor productie-apps — Tenpu, Pulse en dit portfolio." },
-  { name: "React", category: "Frontend", years: "4+", contextLine: "Gebruikt in elke rol sinds Deliverect — van componentbibliotheken tot het volledige DraughtsAI-platform." },
-  { name: "Angular", category: "Frontend", years: "9+", contextLine: "De basis van mijn vroege carrière — consumentenfinanciering bij Kirey Group en digitaal bankieren bij Mobilesoft." },
+  { name: "Next.js", category: "Frontend", years: "3+", contextLine: "Mijn favoriete framework voor productie-apps: Tenpu, Pulse en dit portfolio." },
+  { name: "React", category: "Frontend", years: "4+", contextLine: "Gebruikt in elke rol sinds Deliverect, van componentbibliotheken tot het volledige DraughtsAI-platform." },
+  { name: "Angular", category: "Frontend", years: "9+", contextLine: "De basis van mijn vroege carrière. Consumentenfinanciering bij Kirey Group en digitaal bankieren bij Mobilesoft." },
   { name: "Vue.js", category: "Frontend", years: "2+", contextLine: "Een P&ID-digitaliseringstool bouwen voor chemische techniek bij Bostan Software." },
   { name: "TypeScript", category: "Frontend", years: "9+", contextLine: "Sinds Angular 2 het standaard maakte. Strict mode voorstander in elk project sinds het begin van mijn carrière." },
-  { name: "Python", category: "Backend", years: "1+", contextLine: "Backend werk bij Deliverect — FastAPI, Celery, datapipelines." },
+  { name: "Python", category: "Backend", years: "1+", contextLine: "Backend werk bij Deliverect: FastAPI, Celery, datapipelines." },
   { name: "FastAPI", category: "Backend", years: "1+", contextLine: "API-services achter het Pulse-analyseplatform bij Deliverect." },
   { name: "Node.js", category: "Backend", years: "3+", contextLine: "Server-side basis voor DraughtsAI en meerdere Bostan Software-projecten." },
   { name: "tRPC", category: "Backend", years: "1+", contextLine: "Type-safe API-laag voor het Tenpu-inkoopplatform." },

@@ -1,12 +1,12 @@
 import type { Skill } from '@/types';
 
 export const skills: Skill[] = [
-  { name: "Next.js", category: "Frontend", years: "3+", contextLine: "My go-to framework for production apps — Tenpu, Pulse, and this portfolio." },
-  { name: "React", category: "Frontend", years: "4+", contextLine: "Used across every role since Deliverect — from component libraries to the full DraughtsAI platform." },
-  { name: "Angular", category: "Frontend", years: "9+", contextLine: "Foundation of my early career — consumer finance at Kirey Group and digital banking at Mobilesoft." },
+  { name: "Next.js", category: "Frontend", years: "3+", contextLine: "My go-to framework for production apps: Tenpu, Pulse, and this portfolio." },
+  { name: "React", category: "Frontend", years: "4+", contextLine: "Used across every role since Deliverect, from component libraries to the full DraughtsAI platform." },
+  { name: "Angular", category: "Frontend", years: "9+", contextLine: "Foundation of my early career. Consumer finance at Kirey Group and digital banking at Mobilesoft." },
   { name: "Vue.js", category: "Frontend", years: "2+", contextLine: "Building a P&ID digitalization tool for chemical engineering at Bostan Software." },
   { name: "TypeScript", category: "Frontend", years: "9+", contextLine: "Since Angular 2 made it standard. Strict mode advocate across every project since the start of my career." },
-  { name: "Python", category: "Backend", years: "1+", contextLine: "Backend work at Deliverect — FastAPI, Celery, data pipelines." },
+  { name: "Python", category: "Backend", years: "1+", contextLine: "Backend work at Deliverect: FastAPI, Celery, data pipelines." },
   { name: "FastAPI", category: "Backend", years: "1+", contextLine: "API services behind the Pulse analytics platform at Deliverect." },
   { name: "Node.js", category: "Backend", years: "3+", contextLine: "Server-side foundation for DraughtsAI and multiple Bostan Software projects." },
   { name: "tRPC", category: "Backend", years: "1+", contextLine: "Type-safe API layer for the Tenpu procurement platform." },

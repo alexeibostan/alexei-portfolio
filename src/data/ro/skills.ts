@@ -1,12 +1,12 @@
 import type { Skill } from '@/types';
 
 export const skills: Skill[] = [
-  { name: "Next.js", category: "Frontend", years: "3+", contextLine: "Framework-ul meu preferat pentru aplicații în producție — Tenpu, Pulse și acest portfolio." },
-  { name: "React", category: "Frontend", years: "4+", contextLine: "Folosit în fiecare rol de la Deliverect — de la biblioteci de componente la platforma completă DraughtsAI." },
-  { name: "Angular", category: "Frontend", years: "9+", contextLine: "Baza carierei mele timpurii — finanțe de consum la Kirey Group și banking digital la Mobilesoft." },
+  { name: "Next.js", category: "Frontend", years: "3+", contextLine: "Framework-ul meu preferat pentru aplicații în producție: Tenpu, Pulse și acest portfolio." },
+  { name: "React", category: "Frontend", years: "4+", contextLine: "Folosit în fiecare rol de la Deliverect, de la biblioteci de componente la platforma completă DraughtsAI." },
+  { name: "Angular", category: "Frontend", years: "9+", contextLine: "Baza carierei mele timpurii. Finanțe de consum la Kirey Group și banking digital la Mobilesoft." },
   { name: "Vue.js", category: "Frontend", years: "2+", contextLine: "Construirea unui instrument de digitalizare P&ID pentru inginerie chimică la Bostan Software." },
   { name: "TypeScript", category: "Frontend", years: "9+", contextLine: "De când Angular 2 l-a făcut standard. Susținător al strict mode în fiecare proiect de la începutul carierei." },
-  { name: "Python", category: "Backend", years: "1+", contextLine: "Lucru backend la Deliverect — FastAPI, Celery, pipeline-uri de date." },
+  { name: "Python", category: "Backend", years: "1+", contextLine: "Lucru backend la Deliverect: FastAPI, Celery, pipeline-uri de date." },
   { name: "FastAPI", category: "Backend", years: "1+", contextLine: "Servicii API în spatele platformei analitice Pulse la Deliverect." },
   { name: "Node.js", category: "Backend", years: "3+", contextLine: "Fundația server-side pentru DraughtsAI și multiple proiecte Bostan Software." },
   { name: "tRPC", category: "Backend", years: "1+", contextLine: "Nivel API type-safe pentru platforma de achiziții Tenpu." },

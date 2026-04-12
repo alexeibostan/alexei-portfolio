@@ -5,7 +5,7 @@ import { WorkSection } from '@/components/sections/WorkSection';
 import { CraftSection } from '@/components/sections/CraftSection';
 import { AISection } from '@/components/sections/AISection';
 import { ConnectSection } from '@/components/sections/ConnectSection';
-import { aiTools, aiExploring } from '@/data/aiTools';
+import { aiTools } from '@/data/aiTools';
 import { locales } from '@/i18n';
 
 export function generateStaticParams() {
@@ -49,7 +49,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <TimelineSection journey={professionalJourney} />
       <WorkSection projects={projects} />
       <CraftSection skills={skills} />
-      <AISection aiTools={aiTools} aiExploring={aiExploring} />
+      <AISection aiTools={aiTools} />
       <ConnectSection />
     </>
   );

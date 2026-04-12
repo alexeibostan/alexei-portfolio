@@ -9,7 +9,6 @@ import { Radio, Trophy, Layers, ExternalLink } from "lucide-react";
 
 interface AISectionProps {
   aiTools: AITool[];
-  aiExploring: string[];
 }
 
 const toolCardStyles: Record<string, { bg: string; border: string }> = {
@@ -33,7 +32,7 @@ const toolIconBg: Record<string, string> = {
   Codex: "rgba(126,231,135,0.1)",
 };
 
-export function AISection({ aiTools, aiExploring }: AISectionProps) {
+export function AISection({ aiTools }: AISectionProps) {
   const tSections = useTranslations("sections");
   const tAi = useTranslations("ai");
   return (
@@ -110,6 +109,7 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                   );
                 })}
               </div>
+
             </div>
 
             {/* Right Column — Building IN AI */}
@@ -203,32 +203,9 @@ export function AISection({ aiTools, aiExploring }: AISectionProps) {
                 </div>
               </div>
 
-              {/* Currently Exploring subsection */}
-              <div className="border border-dashed border-white/[0.08] rounded-lg p-3.5 mt-3.5">
-                <span
-                  className="font-mono-brand block mb-2.5"
-                  style={{ fontSize: "11px", opacity: 0.50 }}
-                >
-                  {tAi("currentlyExploring")}
-                </span>
-                <div className="flex flex-wrap gap-1.5">
-                  {aiExploring.map((item) => (
-                    <span
-                      key={item}
-                      className="font-mono-brand rounded-full opacity-60 text-[hsl(var(--accent-purple))]"
-                      style={{
-                        fontSize: "11px",
-                        padding: "3px 8px",
-                        border: "1px dashed rgba(210,168,255,0.2)",
-                      }}
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
+
         </div>
       </section>
     </ScrollReveal>
