@@ -124,7 +124,7 @@ export function generatePersonSchema(config: SEOConfig) {
       },
     }),
     image: `${baseUrl}/profile.webp`,
-    description: config.description,
+    description: 'Senior Software Engineer who bridges code and customer value. 9+ years building full-stack software with user empathy at the core.',
   }
 }
 

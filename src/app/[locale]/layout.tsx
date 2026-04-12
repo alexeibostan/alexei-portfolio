@@ -1,18 +1,11 @@
 import { getTranslations, getMessages } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
-import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import { locales } from '@/i18n';
 import { generateSEOMetadata, generatePersonSchema, generateWebsiteSchema } from '@/lib/metadata';
 import StructuredData from '@/components/StructuredData';
 import Body from './Body';
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-montserrat",
-});
 
 type Props = {
   children: React.ReactNode;
@@ -80,7 +73,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const websiteSchema = generateWebsiteSchema(seoConfig);
 
   return (
-    <html lang={locale} className={`${montserrat.variable}`}>
+    <html lang={locale}>
       <head>
         <StructuredData data={[personSchema, websiteSchema]} />
       </head>
