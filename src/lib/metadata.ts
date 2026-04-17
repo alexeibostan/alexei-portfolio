@@ -57,10 +57,10 @@ export function generateSEOMetadata(config: SEOConfig): Metadata {
     alternates: {
       canonical: url,
       languages: {
-        en: `${baseUrl}/en`,
-        nl: `${baseUrl}/nl`,
-        it: `${baseUrl}/it`,
-        ro: `${baseUrl}/ro`,
+        en: `${baseUrl}/en/`,
+        nl: `${baseUrl}/nl/`,
+        it: `${baseUrl}/it/`,
+        ro: `${baseUrl}/ro/`,
       },
     },
     openGraph: {

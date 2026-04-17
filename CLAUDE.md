@@ -41,10 +41,7 @@ src/
 │   └── [locale]/               # Locale-based dynamic routing
 │       ├── layout.tsx          # i18n-aware layout
 │       ├── Body.tsx            # Body wrapper with language detection
-│       ├── page.tsx            # Home page
-│       ├── about/page.tsx      # About page
-│       ├── projects/page.tsx   # Projects page
-│       └── skills/page.tsx     # Skills page (hexagonal grid)
+│       └── page.tsx            # Single-page portfolio (hero, work, craft, AI, connect sections)
 ├── components/
 │   ├── layout/                 # Layout components (Header, Footer, Layout, LanguageSwitcher)
 │   ├── StructuredData.tsx      # JSON-LD schema renderer
