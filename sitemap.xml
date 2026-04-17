@@ -1,26 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
-<loc>https://alexeibostan.com/en</loc>
-<lastmod>2026-04-12T12:57:28.083Z</lastmod>
+<loc>https://alexeibostan.com/en/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://alexeibostan.com/en/" />
+<xhtml:link rel="alternate" hreflang="nl" href="https://alexeibostan.com/nl/" />
+<xhtml:link rel="alternate" hreflang="it" href="https://alexeibostan.com/it/" />
+<xhtml:link rel="alternate" hreflang="ro" href="https://alexeibostan.com/ro/" />
+<lastmod>2026-04-17T12:35:08+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://alexeibostan.com/nl</loc>
-<lastmod>2026-04-12T12:57:28.083Z</lastmod>
+<loc>https://alexeibostan.com/nl/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://alexeibostan.com/en/" />
+<xhtml:link rel="alternate" hreflang="nl" href="https://alexeibostan.com/nl/" />
+<xhtml:link rel="alternate" hreflang="it" href="https://alexeibostan.com/it/" />
+<xhtml:link rel="alternate" hreflang="ro" href="https://alexeibostan.com/ro/" />
+<lastmod>2026-04-17T12:35:08+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://alexeibostan.com/it</loc>
-<lastmod>2026-04-12T12:57:28.083Z</lastmod>
+<loc>https://alexeibostan.com/it/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://alexeibostan.com/en/" />
+<xhtml:link rel="alternate" hreflang="nl" href="https://alexeibostan.com/nl/" />
+<xhtml:link rel="alternate" hreflang="it" href="https://alexeibostan.com/it/" />
+<xhtml:link rel="alternate" hreflang="ro" href="https://alexeibostan.com/ro/" />
+<lastmod>2026-04-17T12:35:08+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://alexeibostan.com/ro</loc>
-<lastmod>2026-04-12T12:57:28.083Z</lastmod>
+<loc>https://alexeibostan.com/ro/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://alexeibostan.com/en/" />
+<xhtml:link rel="alternate" hreflang="nl" href="https://alexeibostan.com/nl/" />
+<xhtml:link rel="alternate" hreflang="it" href="https://alexeibostan.com/it/" />
+<xhtml:link rel="alternate" hreflang="ro" href="https://alexeibostan.com/ro/" />
+<lastmod>2026-04-17T12:35:08+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
