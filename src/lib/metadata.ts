@@ -33,7 +33,7 @@ export function generateSEOMetadata(config: SEOConfig): Metadata {
 
   // Construct full URLs for images
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://alexeibostan.com'
-  const fullOgImage = ogImage ? `${baseUrl}${ogImage}` : `${baseUrl}/profile.webp`
+  const fullOgImage = ogImage ? `${baseUrl}${ogImage}` : `${baseUrl}/og-image.png`
   const fullTwitterImage = twitterImage ? `${baseUrl}${twitterImage}` : fullOgImage
 
   return {
@@ -104,8 +104,6 @@ export function generateSEOMetadata(config: SEOConfig): Metadata {
 }
 
 export function generatePersonSchema(config: SEOConfig) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://alexeibostan.com'
-  
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -114,7 +112,7 @@ export function generatePersonSchema(config: SEOConfig) {
     sameAs: [
       'https://github.com/alexeibostan',
       'https://www.linkedin.com/in/alexei-bostan',
-      'https://www.instagram.com/alexei.bostan',
+      'https://www.instagram.com/alexandre.lord1',
     ],
     jobTitle: config.authorJobTitle,
     ...(config.authorCompany && {
@@ -123,7 +121,6 @@ export function generatePersonSchema(config: SEOConfig) {
         name: config.authorCompany,
       },
     }),
-    image: `${baseUrl}/profile.webp`,
     description: 'Senior Software Engineer who bridges code and customer value. 9+ years building full-stack software with user empathy at the core.',
   }
 }
