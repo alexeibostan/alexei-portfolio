@@ -36,8 +36,8 @@ export async function generateMetadata({
     authorJobTitle: t('authorJobTitle'),
     twitterHandle: '@alexeibostan12',
     keywords: t('keywords').split(', '),
-    ogImage: '/profile.webp',
-    twitterImage: '/profile.webp',
+    ogImage: '/og-image.webp',
+    twitterImage: '/og-image.webp',
   });
 }
 
@@ -65,8 +65,8 @@ export default async function LocaleLayout({ children, params }: Props) {
     authorJobTitle: t('authorJobTitle'),
     twitterHandle: '@alexeibostan12',
     keywords: t('keywords').split(', '),
-    ogImage: '/profile.webp',
-    twitterImage: '/profile.webp',
+    ogImage: '/og-image.webp',
+    twitterImage: '/og-image.webp',
   };
 
   const personSchema = generatePersonSchema(seoConfig);

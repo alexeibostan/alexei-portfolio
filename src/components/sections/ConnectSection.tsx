@@ -8,12 +8,12 @@ const socialLinks = [
   {
     label: "Email",
     icon: Mail,
-    href: "mailto:alexeibostan@gmail.com",
+    href: "mailto:alexei.bostan7@gmail.com",
   },
   {
     label: "LinkedIn",
     icon: Linkedin,
-    href: "https://www.linkedin.com/in/alexeibostan/",
+    href: "https://www.linkedin.com/in/alexei-bostan/",
   },
   {
     label: "GitHub",
@@ -23,7 +23,7 @@ const socialLinks = [
   {
     label: "Instagram",
     icon: Instagram,
-    href: "https://www.instagram.com/alexei.bostan/",
+    href: "https://www.instagram.com/alexandre.lord1/",
   },
 ];
 
