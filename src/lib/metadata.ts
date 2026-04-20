@@ -33,7 +33,7 @@ export function generateSEOMetadata(config: SEOConfig): Metadata {
 
   // Construct full URLs for images
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://alexeibostan.com'
-  const fullOgImage = ogImage ? `${baseUrl}${ogImage}` : `${baseUrl}/og-image.webp`
+  const fullOgImage = ogImage ? `${baseUrl}${ogImage}` : `${baseUrl}/og-image.png`
   const fullTwitterImage = twitterImage ? `${baseUrl}${twitterImage}` : fullOgImage
 
   return {
