@@ -110,8 +110,9 @@ export function ConnectSection() {
         </div>
 
         {/* Copyright */}
-        <p className="mt-12 text-[11px] opacity-50 font-mono-brand">
+        <p className="mt-12 text-[11px] opacity-50 font-mono-brand max-w-[640px] leading-relaxed px-4">
           {t("copyright", { year: new Date().getFullYear() })}
+          {" · Bostan Software Developments · Trekvogelweg 229, 3815 LH Amersfoort, NL · KvK 94926697 · VAT NL005118619B33"}
         </p>
       </section>
     </footer>
