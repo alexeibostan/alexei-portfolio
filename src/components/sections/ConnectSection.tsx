@@ -3,27 +3,37 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Mail, Linkedin, Github, Instagram } from "lucide-react";
+import { analytics, type SocialNetwork } from "@/lib/analytics";
 
-const socialLinks = [
+const socialLinks: {
+  label: string;
+  icon: typeof Mail;
+  href: string;
+  network: SocialNetwork;
+}[] = [
   {
     label: "Email",
     icon: Mail,
     href: "mailto:alexei.bostan7@gmail.com",
+    network: "email",
   },
   {
     label: "LinkedIn",
     icon: Linkedin,
     href: "https://www.linkedin.com/in/alexei-bostan/",
+    network: "linkedin",
   },
   {
     label: "GitHub",
     icon: Github,
     href: "https://github.com/alexeibostan",
+    network: "github",
   },
   {
     label: "Instagram",
     icon: Instagram,
     href: "https://www.instagram.com/alexandre.lord1/",
+    network: "instagram",
   },
 ];
 
@@ -84,12 +94,13 @@ export function ConnectSection() {
 
         {/* Social links */}
         <div className="flex flex-wrap justify-center gap-4">
-          {socialLinks.map(({ label, icon: Icon, href }) => (
+          {socialLinks.map(({ label, icon: Icon, href, network }) => (
             <a
               key={label}
               href={href}
               target={href.startsWith("mailto") ? undefined : "_blank"}
               rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+              onClick={() => analytics.socialClick(network)}
               className="flex items-center gap-2 px-5 py-2.5 border border-white/[0.15] rounded-lg text-[13px] hover:bg-white/5 hover:border-white/25 hover:-translate-y-0.5 transition-all"
             >
               <Icon size={16} />
@@ -103,6 +114,7 @@ export function ConnectSection() {
           <a
             href="/Alexei-Bostan-Professional-Resume.pdf"
             download
+            onClick={() => analytics.resumeDownload()}
             className="inline-flex items-center gap-2 font-mono-brand text-[11px] text-[hsl(var(--primary))] opacity-70 hover:opacity-100 transition-opacity border-b border-[hsl(var(--primary))]/30 hover:border-[hsl(var(--primary))]/60 pb-0.5 tracking-[1px]"
           >
             {"↓ " + t("downloadResume")}

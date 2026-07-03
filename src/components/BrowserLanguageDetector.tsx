@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { locales, defaultLocale } from '@/i18n';
+import { analytics } from '@/lib/analytics';
 
 const LANGUAGE_DETECTED_KEY = 'language-detected';
 
@@ -44,6 +45,7 @@ export default function BrowserLanguageDetector() {
       localStorage.setItem(LANGUAGE_DETECTED_KEY, 'true');
       
       // Redirect to the browser's preferred language
+      analytics.languageAutoRedirect(supportedLanguage, pathnameLocale);
       router.replace(newPath);
     } else {
       // Mark that we've detected the language even if no redirect was needed

@@ -6,6 +6,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { TechPill } from "@/components/ui/TechPill";
 import type { AITool } from "@/types";
 import { Radio, Trophy, Layers, ExternalLink } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 
 interface AISectionProps {
   aiTools: AITool[];
@@ -147,6 +148,7 @@ export function AISection({ aiTools }: AISectionProps) {
                   href="https://draughtsai.com/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => analytics.outboundClick("draughtsai", "https://draughtsai.com/")}
                   className="inline-flex items-center gap-1 text-xs text-[hsl(var(--secondary))] opacity-70 mb-3 hover:opacity-100 transition-opacity"
                 >
                   draughtsai.com

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Skill } from "@/types";
+import { analytics } from "@/lib/analytics";
 
 interface CraftSectionProps {
   skills: Skill[];
@@ -387,7 +388,10 @@ export function CraftSection({ skills }: CraftSectionProps) {
                       skill={skill}
                       color={config.color}
                       isActive={selectedSkill?.name === skill.name}
-                      onClick={() => setSelectedSkill(skill)}
+                      onClick={() => {
+                        analytics.skillView(skill.name);
+                        setSelectedSkill(skill);
+                      }}
                     />
                   ))}
                 </div>

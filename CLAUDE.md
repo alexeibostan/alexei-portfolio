@@ -43,7 +43,7 @@ src/
 │       ├── Body.tsx            # Body wrapper with language detection
 │       └── page.tsx            # Single-page portfolio (hero, work, craft, AI, connect sections)
 ├── components/
-│   ├── layout/                 # Layout components (Header, Footer, Layout, LanguageSwitcher)
+│   ├── sections/               # Page sections (Hero, Timeline, Work, Craft, AI, Connect)
 │   ├── StructuredData.tsx      # JSON-LD schema renderer
 │   ├── BrowserLanguageDetector.tsx
 │   └── Providers.tsx
@@ -55,6 +55,7 @@ src/
 ├── lib/
 │   ├── utils.ts                # cn() — clsx + tailwind-merge
 │   ├── metadata.ts             # SEO metadata generation
+│   ├── analytics.ts            # Simple Analytics event tracking (sa_event wrapper)
 │   └── pathUtils.ts            # i18n path utilities
 ├── types/
 │   └── index.ts                # Shared types: Project, JobEntry, Company, Skill
@@ -68,7 +69,7 @@ src/
 - **Data pattern**: Portfolio content lives in `src/data/` as TypeScript modules. Locale-specific versions are in `src/data/{locale}/`. Pages import data server-side based on the locale param.
 - **No API routes**: Purely static — no backend, no database.
 - **No testing framework**: Only a basic `pathUtils.test.ts` exists. No Jest/Vitest configured.
-- **Server Components by default**: Only components requiring interactivity (Header, Footer, LanguageSwitcher) use `"use client"`. Pages and layouts are server components that call `setRequestLocale()` for static rendering.
+- **Server Components by default**: Only components requiring interactivity (the section components, BrowserLanguageDetector) use `"use client"`. Pages and layouts are server components that call `setRequestLocale()` for static rendering. There is no site header — the page is a single scroll; language selection happens via BrowserLanguageDetector auto-redirect.
 - **Trailing slashes enabled**: `next.config.mjs` has `trailingSlash: true` — all generated paths end with `/`.
 
 ## Conventions
