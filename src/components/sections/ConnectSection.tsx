@@ -101,7 +101,7 @@ export function ConnectSection() {
         {/* Resume download */}
         <div className="mt-5">
           <a
-            href="/alexei-bostan-resume.pdf"
+            href="/Alexei-Bostan-Professional-Resume.pdf"
             download
             className="inline-flex items-center gap-2 font-mono-brand text-[11px] text-[hsl(var(--primary))] opacity-70 hover:opacity-100 transition-opacity border-b border-[hsl(var(--primary))]/30 hover:border-[hsl(var(--primary))]/60 pb-0.5 tracking-[1px]"
           >
