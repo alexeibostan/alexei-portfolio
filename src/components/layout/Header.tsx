@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import { locales, defaultLocale } from '@/i18n';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import { getPathWithoutLocale, constructLocalizedPath } from '@/lib/pathUtils';
+import { analytics, type NavSection, type Device } from '@/lib/analytics';
 
 const NAV_ITEMS = [
   { id: 'story', labelKey: 'story' },
@@ -28,9 +29,13 @@ export default function Header() {
   const locale = pathname.match(localePattern)?.[1] || defaultLocale;
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
-  const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
+  const toggleMobileMenu = () => {
+    analytics.menuToggle(mobileMenuOpen ? 'close' : 'open');
+    setMobileMenuOpen((prev) => !prev);
+  };
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId: NavSection, device: Device) => {
+    analytics.navClick(sectionId, device);
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     closeMobileMenu();
   };
@@ -70,7 +75,7 @@ export default function Header() {
                     <button
                       key={id}
                       type="button"
-                      onClick={() => scrollToSection(id)}
+                      onClick={() => scrollToSection(id, 'desktop')}
                       className={`font-mono-brand text-[11px] uppercase tracking-[3px] transition-all duration-200 hover:opacity-100 ${
                         isActive
                           ? 'text-[#c4956a] opacity-100'
@@ -95,6 +100,9 @@ export default function Header() {
                     <Link
                       key={loc}
                       href={switchLanguage(loc)}
+                      onClick={() => {
+                        if (loc !== locale) analytics.languageSwitch(loc, locale, 'desktop');
+                      }}
                       className={`block px-3 py-2 font-mono-brand text-[11px] uppercase tracking-[2px] transition-colors hover:bg-white/10 ${
                         locale === loc
                           ? 'text-[#c4956a]'
@@ -130,7 +138,7 @@ export default function Header() {
                   <button
                     key={id}
                     type="button"
-                    onClick={() => scrollToSection(id)}
+                    onClick={() => scrollToSection(id, 'mobile')}
                     className={`font-mono-brand text-[11px] uppercase tracking-[3px] text-left py-3 border-b border-white/5 last:border-0 transition-all duration-200 ${
                       isActive
                         ? 'text-[#c4956a] opacity-100'
@@ -149,7 +157,10 @@ export default function Header() {
                 <Link
                   key={loc}
                   href={switchLanguage(loc)}
-                  onClick={closeMobileMenu}
+                  onClick={() => {
+                    if (loc !== locale) analytics.languageSwitch(loc, locale, 'mobile');
+                    closeMobileMenu();
+                  }}
                   className={`font-mono-brand text-[11px] uppercase tracking-[2px] px-3 py-1 rounded-full border transition-all duration-200 ${
                     locale === loc
                       ? 'border-[#c4956a] text-[#c4956a]'
