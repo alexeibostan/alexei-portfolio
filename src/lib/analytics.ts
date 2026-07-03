@@ -31,20 +31,13 @@ function saEvent(name: string, metadata?: SaMetadata): void {
   }
 }
 
-export type NavSection = "story" | "work" | "craft" | "ai" | "connect";
 export type SocialNetwork = "email" | "linkedin" | "github" | "instagram";
-export type Device = "desktop" | "mobile";
 
 export const analytics = {
   socialClick: (network: SocialNetwork) => saEvent(`social_click_${network}`),
   resumeDownload: () => saEvent("resume_download"),
   outboundClick: (site: string, url: string) =>
     saEvent(`outbound_click_${slugify(site)}`, { url }),
-  navClick: (section: NavSection, device: Device) =>
-    saEvent(`nav_click_${section}`, { device }),
-  menuToggle: (state: "open" | "close") => saEvent("menu_toggle", { state }),
-  languageSwitch: (to: string, from: string, method: Device) =>
-    saEvent(`language_switch_${to}`, { from, method }),
   languageAutoRedirect: (to: string, from: string) =>
     saEvent(`language_auto_redirect_${to}`, { from }),
   projectView: (projectName: string) =>
