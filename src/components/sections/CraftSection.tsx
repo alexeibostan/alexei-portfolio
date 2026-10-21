@@ -406,6 +406,19 @@ export function CraftSection({ skills }: CraftSectionProps) {
             categoryLabel={selectedCategoryLabel}
           />
 
+          {/* How each skill was used: visually hidden, kept in the HTML for screen readers and crawlers */}
+          <dl className="sr-only">
+            {CATEGORY_ORDER.flatMap((catKey) => {
+              const categoryLabel = tCraft(CATEGORY_CONFIG[catKey].traditionalKey);
+              return groupedSkills[catKey].map((skill) => (
+                <div key={skill.name}>
+                  <dt>{skill.name} ({skill.years} {tCraft("years")}, {categoryLabel})</dt>
+                  <dd>{skill.contextLine || tCraft("partOfToolkit", { category: categoryLabel })}</dd>
+                </div>
+              ));
+            })}
+          </dl>
+
           {/* Languages strip */}
           <div
             className="mt-4 flex items-center gap-4 flex-wrap rounded-[10px] px-4 py-3.5 bg-white/[0.015] border border-white/[0.08]"
