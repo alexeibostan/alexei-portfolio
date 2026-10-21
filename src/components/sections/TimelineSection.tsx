@@ -88,7 +88,8 @@ export function TimelineSection({
               const color = getNodeColor(i, total);
               const isLast = i === total - 1;
               const isParallel = isParallelRole(entry.company);
-              const isOngoing = isLast || (isParallel && entry.period.toLowerCase().includes("present"));
+              // Ongoing periods don't end in a year ("2024-Present", "2024-Heden", ...), whatever the locale
+              const isOngoing = isLast || (isParallel && !/\d{4}\s*$/.test(entry.period));
               const yearLabel = isOngoing
                 ? t("now").toUpperCase()
                 : extractStartYear(entry.period);
