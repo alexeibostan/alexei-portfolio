@@ -194,6 +194,21 @@ export function WorkSection({ projects }: WorkSectionProps) {
               );
             })}
           </div>
+
+          {/* Full details of the non-featured projects: visually hidden, kept in the HTML for screen readers and crawlers */}
+          <div className="sr-only">
+            {compactProjects.map((project) => (
+              <article key={`${project.company}-${project.name}`}>
+                <h3>{project.name}</h3>
+                <p>{project.company} · {project.period} · {tWork(`role${project.role}`)}</p>
+                <p>{project.description}</p>
+                <p>{tWork("problem")}: {project.problem}</p>
+                <p>{tWork("craft")}: {project.craft}</p>
+                <p>{tWork("impact")}: {project.impact}</p>
+                <p>{project.skills.join(", ")}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </ScrollReveal>

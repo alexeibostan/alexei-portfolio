@@ -152,6 +152,11 @@ export function TimelineSection({
                         {entry.insight}
                       </span>
                     )}
+
+                    {/* Full period + description: visually hidden, kept in the HTML for screen readers and crawlers */}
+                    <span className="sr-only">
+                      {entry.period}. {entry.description}
+                    </span>
                   </div>
                 </motion.div>
               );
