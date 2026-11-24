@@ -4,7 +4,14 @@
     "work": "Lavoro",
     "craft": "Mestiere",
     "ai": "AI",
-    "connect": "Contatti"
+    "connect": "Contatti",
+    "experience": "Esperienza",
+    "skipToContent": "Vai al contenuto",
+    "primary": "Principale",
+    "home": "Alexei Bostan, torna su",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "language": "Lingua"
   },
   "languages": {
     "english": "Inglese",
@@ -14,7 +21,7 @@
   },
   "metadata": {
     "title": "Alexei Bostan – Senior Software Engineer",
-    "description": "Senior Software Engineer con 9+ anni di esperienza nello sviluppo di applicazioni web scalabili con React, Next.js, Python e FastAPI. Specializzato in soluzioni enterprise e sviluppo web moderno.",
+    "description": "Senior Software Engineer con {years}+ anni di esperienza nello sviluppo di applicazioni web scalabili con React, Next.js, Python e FastAPI. Specializzato in soluzioni enterprise e sviluppo web moderno.",
     "keywords": "Senior Software Engineer, Sviluppatore React, Esperto Next.js, Sviluppatore Python, FastAPI, Full Stack Developer, JavaScript, TypeScript, Sviluppo Web",
     "siteName": "Portfolio Alexei Bostan",
     "authorName": "Alexei Bostan",
@@ -24,13 +31,14 @@
     "roleLabel": "Senior Software Engineer @ Tenpu",
     "headline": "Il software è una conversazione tra le persone che lo {costruiscono} e le persone che lo {usano}.",
     "payoff": "Io mi assicuro che entrambe le parti siano ascoltate.",
-    "scrollToExplore": "Scorri per esplorare",
-    "stat1": "9+ anni",
+    "stat1": "{years}+ anni",
     "stat2": "full-stack",
     "stat3": "React",
     "stat4": "Next.js",
     "stat5": "TypeScript",
-    "stat6": "Node.js"
+    "stat6": "Node.js",
+    "ctaEmail": "Scrivimi",
+    "ctaResume": "Curriculum (PDF)"
   },
   "sections": {
     "myJourney": "Il Mio Percorso",
@@ -48,7 +56,8 @@
     "roleSE": "Software Engineer",
     "roleFE": "Frontend Developer",
     "roleWD": "Web Developer",
-    "roleMD": "Mobile Developer"
+    "roleMD": "Mobile Developer",
+    "showDetails": "Mostra {name} nel pannello in evidenza"
   },
   "craft": {
     "skillsAndMethodologies": "Competenze & Metodologie",

@@ -4,7 +4,14 @@
     "work": "Muncă",
     "craft": "Meșteșug",
     "ai": "AI",
-    "connect": "Contact"
+    "connect": "Contact",
+    "experience": "Experiență",
+    "skipToContent": "Sari la conținut",
+    "primary": "Principal",
+    "home": "Alexei Bostan, înapoi sus",
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul",
+    "language": "Limbă"
   },
   "languages": {
     "english": "Engleză",
@@ -14,7 +21,7 @@
   },
   "metadata": {
     "title": "Alexei Bostan – Senior Software Engineer",
-    "description": "Senior Software Engineer cu peste 9 ani de experiență în construirea aplicațiilor web scalabile cu React, Next.js, Python & FastAPI. Specializat în soluții enterprise și dezvoltare web modernă.",
+    "description": "Senior Software Engineer cu peste {years} ani de experiență în construirea aplicațiilor web scalabile cu React, Next.js, Python & FastAPI. Specializat în soluții enterprise și dezvoltare web modernă.",
     "keywords": "Senior Software Engineer, Dezvoltator React, Expert Next.js, Dezvoltator Python, FastAPI, Full Stack Developer, JavaScript, TypeScript, Dezvoltare Web",
     "siteName": "Portofoliul Alexei Bostan",
     "authorName": "Alexei Bostan",
@@ -24,13 +31,14 @@
     "roleLabel": "Senior Software Engineer @ Tenpu",
     "headline": "Software-ul este o conversație între oamenii care îl {construiesc} și oamenii care îl {folosesc}.",
     "payoff": "Eu mă asigur că ambele părți sunt auzite.",
-    "scrollToExplore": "Derulează pentru a explora",
-    "stat1": "9+ ani",
+    "stat1": "{years}+ ani",
     "stat2": "full-stack",
     "stat3": "React",
     "stat4": "Next.js",
     "stat5": "TypeScript",
-    "stat6": "Node.js"
+    "stat6": "Node.js",
+    "ctaEmail": "Scrie-mi",
+    "ctaResume": "CV (PDF)"
   },
   "sections": {
     "myJourney": "Parcursul Meu",
@@ -48,7 +56,8 @@
     "roleSE": "Software Engineer",
     "roleFE": "Frontend Developer",
     "roleWD": "Web Developer",
-    "roleMD": "Mobile Developer"
+    "roleMD": "Mobile Developer",
+    "showDetails": "Afișează {name} în panoul principal"
   },
   "craft": {
     "skillsAndMethodologies": "Competențe & Metodologii",

@@ -28,7 +28,7 @@ export const skills: Skill[] = [
   { name: "Kubernetes", category: "Tools", years: "1+", contextLine: "Orchestrazione per i servizi enterprise-scale di Deliverect." },
   { name: "ArgoCD", category: "Tools", years: "1+", contextLine: "Deployment GitOps presso Deliverect." },
   { name: "Azure", category: "Tools", years: "1+", contextLine: "Infrastruttura cloud per la piattaforma di procurement Tenpu." },
-  { name: "Git", category: "Tools", years: "9+", contextLine: "Controllo versione in ogni ruolo dal 2017." },
+  { name: "Git", category: "Tools", years: "9+", contextLine: "Controllo versione in ogni ruolo dal 2016." },
   { name: "Jest", category: "Testing", years: "3+", contextLine: "Unit testing nei progetti React e Next.js da Deliverect." },
   { name: "Vitest", category: "Testing", years: "1+", contextLine: "Test runner moderno per i recenti progetti Next.js presso Tenpu." },
   { name: "Testing Library", category: "Testing", years: "3+", contextLine: "Testing dei componenti per il design system e la suite prodotti di Deliverect." },

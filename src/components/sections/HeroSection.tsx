@@ -2,8 +2,11 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { Download, Mail } from "lucide-react";
+import { analytics } from "@/lib/analytics";
+import { CONTACT_EMAIL, RESUME_PATH } from "@/lib/contact";
 
-export function HeroSection() {
+export function HeroSection({ yearsOfExperience }: { yearsOfExperience: number }) {
   const t = useTranslations("hero");
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
@@ -23,7 +26,7 @@ export function HeroSection() {
   };
 
   const stats = [
-    { label: t("stat1"), color: "#c4956a" },
+    { label: t("stat1", { years: yearsOfExperience }), color: "#c4956a" },
     { label: t("stat2"), color: "#8b9fbe" },
     { label: t("stat3"), color: "#58a6ff" },
     { label: t("stat4"), color: "#7ee787" },
@@ -34,7 +37,7 @@ export function HeroSection() {
   return (
     <section
       id="story"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0a0a0a] via-[#12101a] to-[#0d1117]"
+      className="relative min-h-[calc(100svh-3.5rem)] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0a0a0a] via-[#12101a] to-[#0d1117]"
     >
       <motion.div
         style={{ y }}
@@ -45,7 +48,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="font-mono-brand text-[11px] text-[hsl(var(--secondary))] opacity-70 tracking-[1px] uppercase"
+          className="font-mono-brand text-xs text-[hsl(var(--secondary))] opacity-70 tracking-[1px] uppercase"
         >
           {t("roleLabel")}
         </motion.p>
@@ -80,13 +83,13 @@ export function HeroSection() {
           {stats.map((stat, i) => (
             <span key={stat.label} className="flex items-center gap-x-2">
               <span
-                className="font-mono-brand text-[11px]"
+                className="font-mono-brand text-xs"
                 style={{ color: stat.color }}
               >
                 {stat.label}
               </span>
               {i < stats.length - 1 && (
-                <span className="font-mono-brand text-[11px] text-white/50">
+                <span className="font-mono-brand text-xs text-white/50">
                   ·
                 </span>
               )}
@@ -94,17 +97,30 @@ export function HeroSection() {
           ))}
         </motion.div>
 
-        {/* Scroll indicator */}
+        {/* Calls to action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.4, ease: "easeOut" }}
-          className="flex flex-col items-center gap-3 mt-8"
+          className="flex flex-wrap items-center gap-3 mt-4"
         >
-          <span className="font-mono-brand text-[11px] text-white/50 tracking-[1px] uppercase">
-            {t("scrollToExplore")}
-          </span>
-          <div className="w-px h-12 bg-gradient-to-b from-white/20 to-transparent" />
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            onClick={() => analytics.socialClick("email")}
+            className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-[#e8e4df] px-5 text-sm font-semibold text-[#0a0a0a] transition-colors hover:bg-white"
+          >
+            <Mail size={16} aria-hidden="true" />
+            {t("ctaEmail")}
+          </a>
+          <a
+            href={RESUME_PATH}
+            download
+            onClick={() => analytics.resumeDownload()}
+            className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-white/20 px-5 text-sm text-[#e8e4df] transition-colors hover:border-white/40 hover:bg-white/5"
+          >
+            <Download size={16} aria-hidden="true" />
+            {t("ctaResume")}
+          </a>
         </motion.div>
       </motion.div>
     </section>

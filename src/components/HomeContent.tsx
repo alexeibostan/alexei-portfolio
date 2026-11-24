@@ -5,6 +5,9 @@ import { CraftSection } from '@/components/sections/CraftSection';
 import { AISection } from '@/components/sections/AISection';
 import { ConnectSection } from '@/components/sections/ConnectSection';
 import { aiTools } from '@/data/aiTools';
+import { SiteHeader } from '@/components/SiteHeader';
+import { SiteFooter } from '@/components/SiteFooter';
+import { yearsOfExperience } from '@/lib/career';
 
 export default async function HomeContent({ locale }: { locale: string }) {
   // Load locale-specific data (server-side only)
@@ -36,12 +39,16 @@ export default async function HomeContent({ locale }: { locale: string }) {
     <>
       <div className="film-grain" aria-hidden="true" />
       <div className="dot-grid" aria-hidden="true" />
-      <HeroSection />
-      <TimelineSection journey={professionalJourney} />
-      <WorkSection projects={projects} />
-      <CraftSection skills={skills} />
-      <AISection aiTools={aiTools} />
-      <ConnectSection />
+      <SiteHeader />
+      <main id="main" tabIndex={-1} className="focus:outline-none">
+        <HeroSection yearsOfExperience={yearsOfExperience()} />
+        <TimelineSection journey={professionalJourney} />
+        <WorkSection projects={projects} />
+        <CraftSection skills={skills} />
+        <AISection aiTools={aiTools} />
+        <ConnectSection />
+      </main>
+      <SiteFooter />
     </>
   );
 }

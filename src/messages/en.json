@@ -4,7 +4,14 @@
     "work": "Work",
     "craft": "Craft",
     "ai": "AI",
-    "connect": "Connect"
+    "connect": "Connect",
+    "experience": "Experience",
+    "skipToContent": "Skip to content",
+    "primary": "Main",
+    "home": "Alexei Bostan, back to top",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
   },
   "languages": {
     "english": "English",
@@ -14,7 +21,7 @@
   },
   "metadata": {
     "title": "Alexei Bostan – Senior Software Engineer",
-    "description": "Senior Software Engineer bridging code and customer value. 9+ years building full-stack software with user empathy at the core.",
+    "description": "Senior Software Engineer bridging code and customer value. {years}+ years building full-stack software with user empathy at the core.",
     "keywords": "Senior Software Engineer, Full-Stack Developer, React, Next.js, TypeScript, Node.js, Product-Minded Engineer, User Empathy, Software Engineering, JavaScript, Web Development",
     "siteName": "Alexei Bostan Portfolio",
     "authorName": "Alexei Bostan",
@@ -24,13 +31,14 @@
     "roleLabel": "Senior Software Engineer @ Tenpu",
     "headline": "Software is a conversation between the people who {build} it and the people who {use} it.",
     "payoff": "I make sure both sides are heard.",
-    "scrollToExplore": "Scroll to explore",
-    "stat1": "9+ years",
+    "stat1": "{years}+ years",
     "stat2": "full-stack",
     "stat3": "React",
     "stat4": "Next.js",
     "stat5": "TypeScript",
-    "stat6": "Node.js"
+    "stat6": "Node.js",
+    "ctaEmail": "Email me",
+    "ctaResume": "Résumé (PDF)"
   },
   "sections": {
     "myJourney": "My Journey",
@@ -48,7 +56,8 @@
     "roleSE": "Software Engineer",
     "roleFE": "Frontend Developer",
     "roleWD": "Web Developer",
-    "roleMD": "Mobile Developer"
+    "roleMD": "Mobile Developer",
+    "showDetails": "Show {name} in the featured panel"
   },
   "craft": {
     "skillsAndMethodologies": "Skills & Methodologies",

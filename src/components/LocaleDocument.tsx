@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import Script from "next/script";
 import { generateSEOMetadata, generatePersonSchema, generateWebsiteSchema, type SEOConfig } from '@/lib/metadata';
 import StructuredData from '@/components/StructuredData';
+import { yearsOfExperience } from '@/lib/career';
 import Body from '@/app/[locale]/Body';
 
 async function getSEOConfig(locale: string): Promise<SEOConfig> {
@@ -13,7 +14,7 @@ async function getSEOConfig(locale: string): Promise<SEOConfig> {
 
   return {
     title: t('title'),
-    description: t('description'),
+    description: t('description', { years: yearsOfExperience() }),
     url: currentUrl,
     locale: locale === 'en' ? 'en_US' : locale === 'nl' ? 'nl_NL' : locale === 'it' ? 'it_IT' : 'ro_RO',
     siteName: t('siteName'),

@@ -68,6 +68,8 @@
 /* Scroll behavior */
 html {
   scroll-behavior: smooth;
+  /* Keep anchor targets clear of the sticky header (h-14) */
+  scroll-padding-top: 4rem;
 }
 
 /* Reduced motion */

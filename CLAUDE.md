@@ -44,18 +44,21 @@ src/
 │       └── page.tsx            # Single-page portfolio (hero, work, craft, AI, connect sections)
 ├── components/
 │   ├── sections/               # Page sections (Hero, Timeline, Work, Craft, AI, Connect)
+│   ├── SiteHeader.tsx          # Sticky header: skip link, section nav, language switcher
+│   ├── SiteFooter.tsx          # Copyright / business details
 │   ├── StructuredData.tsx      # JSON-LD schema renderer
 │   ├── BrowserLanguageDetector.tsx
 │   └── Providers.tsx
 ├── data/                       # Static portfolio content
-│   ├── en/, nl/, it/, ro/      # Locale-specific data modules
-│   ├── projects.ts, skills.ts, companies.ts, journey.ts  # Master data
-│   └── projectsByCompany.ts    # Grouping utility
+│   ├── en/, nl/, it/, ro/      # Locale-specific data: projects, journey, skills
+│   └── aiTools.ts, methodologies.ts  # Locale-independent data
 ├── messages/                   # i18n translation JSON files (en, nl, it, ro)
 ├── lib/
 │   ├── utils.ts                # cn() — clsx + tailwind-merge
 │   ├── metadata.ts             # SEO metadata generation
 │   ├── analytics.ts            # Simple Analytics event tracking (sa_event wrapper)
+│   ├── career.ts               # Career start date + yearsOfExperience() (never hard-code "N+ years")
+│   ├── contact.ts              # Contact email + resume path
 │   └── pathUtils.ts            # i18n path utilities
 ├── types/
 │   └── index.ts                # Shared types: Project, JobEntry, Company, Skill
@@ -69,7 +72,7 @@ src/
 - **Data pattern**: Portfolio content lives in `src/data/` as TypeScript modules. Locale-specific versions are in `src/data/{locale}/`. Pages import data server-side based on the locale param.
 - **No API routes**: Purely static — no backend, no database.
 - **No testing framework**: Only a basic `pathUtils.test.ts` exists. No Jest/Vitest configured.
-- **Server Components by default**: Only components requiring interactivity (the section components, BrowserLanguageDetector) use `"use client"`. Pages and layouts are server components that call `setRequestLocale()` for static rendering. There is no site header — the page is a single scroll; language selection happens via BrowserLanguageDetector auto-redirect.
+- **Server Components by default**: Only components requiring interactivity (the section components, BrowserLanguageDetector) use `"use client"`. Pages and layouts are server components that call `setRequestLocale()` for static rendering. The page is a single scroll under a sticky `SiteHeader` (anchor nav + language switcher); `HomeContent` wraps the sections in `<main id="main">`. BrowserLanguageDetector auto-redirects first-time visitors; picking a language in the switcher stops that.
 - **Trailing slashes enabled**: `next.config.mjs` has `trailingSlash: true` — all generated paths end with `/`.
 
 ## Conventions
@@ -95,7 +98,8 @@ GitHub Actions workflow (`.github/workflows/deploy.yml`) triggers on push to `ma
 
 ## Adding Content
 
-- **New project**: Add to `src/data/projects.ts` and locale variants in `src/data/{locale}/projects.ts`
-- **New skill**: Add to `src/data/skills.ts` and locale variants
+- **New project**: Add to each `src/data/{locale}/projects.ts`; keep its period consistent with the matching entry in `src/data/{locale}/journey.ts`
+- **New skill**: Add to each `src/data/{locale}/skills.ts`
+- **Years of experience**: Use `{years}` in messages and pass `yearsOfExperience()` from `@/lib/career`
 - **New locale**: Add locale to `src/i18n.ts`, create `src/messages/{locale}.json`, create `src/data/{locale}/` directory with all data files
 - **New page**: Create `src/app/[locale]/pagename/page.tsx`, add `generateStaticParams`, call `setRequestLocale(locale)`, update sitemap in `src/app/sitemap.ts`

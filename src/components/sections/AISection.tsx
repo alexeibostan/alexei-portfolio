@@ -42,7 +42,7 @@ export function AISection({ aiTools }: AISectionProps) {
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="flex items-center gap-4 mb-4">
-            <span className="font-mono-brand text-[11px] text-[hsl(var(--primary))] opacity-60 tracking-[1px]">
+            <span className="font-mono-brand text-xs text-[hsl(var(--primary))] opacity-60 tracking-[1px]">
               04
             </span>
             <h2 className="font-display text-2xl text-[#e8e4df] font-light">
@@ -60,7 +60,7 @@ export function AISection({ aiTools }: AISectionProps) {
                 <span
                   className="w-2 h-2 rounded-full flex-shrink-0 bg-accent-purple"
                 />
-                <span className="font-mono-brand text-[11px] text-[hsl(var(--accent-purple))] tracking-[1px]">
+                <span className="font-mono-brand text-xs text-[hsl(var(--accent-purple))] tracking-[1px]">
                   {tAi("buildingWith")}
                 </span>
               </div>
@@ -119,7 +119,7 @@ export function AISection({ aiTools }: AISectionProps) {
                 <span
                   className="w-2 h-2 rounded-full flex-shrink-0 bg-secondary"
                 />
-                <span className="font-mono-brand text-[11px] text-[hsl(var(--secondary))] tracking-[1px]">
+                <span className="font-mono-brand text-xs text-[hsl(var(--secondary))] tracking-[1px]">
                   {tAi("buildingIn")}
                 </span>
               </div>
@@ -137,7 +137,7 @@ export function AISection({ aiTools }: AISectionProps) {
                     DraughtsAI
                   </span>
                   <span
-                    className="font-mono-brand text-[11px] text-[hsl(var(--secondary))] rounded-full px-2 py-0.5 bg-secondary/10 border border-secondary/20"
+                    className="font-mono-brand text-xs text-[hsl(var(--secondary))] rounded-full px-2 py-0.5 bg-secondary/10 border border-secondary/20"
                   >
                     {tAi("active")}
                   </span>
@@ -149,10 +149,10 @@ export function AISection({ aiTools }: AISectionProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => analytics.outboundClick("draughtsai", "https://draughtsai.com/")}
-                  className="inline-flex items-center gap-1 text-xs text-[hsl(var(--secondary))] opacity-70 mb-3 hover:opacity-100 transition-opacity"
+                  className="inline-flex min-h-11 items-center gap-1.5 text-[13px] text-[hsl(var(--secondary))] opacity-80 mb-1 hover:opacity-100 transition-opacity underline-offset-4 hover:underline"
                 >
                   draughtsai.com
-                  <ExternalLink className="w-[11px] h-[11px]" />
+                  <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
                 </a>
 
                 {/* Description */}
@@ -180,7 +180,7 @@ export function AISection({ aiTools }: AISectionProps) {
                         <span className="text-[13px] font-semibold text-[#e8e4df]">
                           {feature.label}
                         </span>
-                        <span className="text-[11px] opacity-60 text-[#e8e4df]">
+                        <span className="text-xs opacity-60 text-[#e8e4df]">
                           {feature.desc}
                         </span>
                       </div>

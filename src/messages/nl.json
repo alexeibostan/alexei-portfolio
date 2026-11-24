@@ -4,7 +4,14 @@
     "work": "Werk",
     "craft": "Vakmanschap",
     "ai": "AI",
-    "connect": "Contact"
+    "connect": "Contact",
+    "experience": "Ervaring",
+    "skipToContent": "Naar de inhoud",
+    "primary": "Hoofdmenu",
+    "home": "Alexei Bostan, terug naar boven",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "language": "Taal"
   },
   "languages": {
     "english": "Engels",
@@ -14,7 +21,7 @@
   },
   "metadata": {
     "title": "Alexei Bostan – Senior Software Engineer",
-    "description": "Senior Software Engineer met 9+ jaar ervaring in het bouwen van schaalbare webapplicaties met React, Next.js, Python & FastAPI. Gespecialiseerd in enterprise oplossingen en moderne webontwikkeling.",
+    "description": "Senior Software Engineer met {years}+ jaar ervaring in het bouwen van schaalbare webapplicaties met React, Next.js, Python & FastAPI. Gespecialiseerd in enterprise oplossingen en moderne webontwikkeling.",
     "keywords": "Senior Software Engineer, React Developer, Next.js Expert, Python Developer, FastAPI, Full Stack Developer, JavaScript, TypeScript, Webontwikkeling",
     "siteName": "Alexei Bostan Portfolio",
     "authorName": "Alexei Bostan",
@@ -24,13 +31,14 @@
     "roleLabel": "Senior Software Engineer @ Tenpu",
     "headline": "Software is een gesprek tussen de mensen die het {bouwen} en de mensen die het {gebruiken}.",
     "payoff": "Ik zorg dat beide kanten gehoord worden.",
-    "scrollToExplore": "Scroll om te verkennen",
-    "stat1": "9+ jaar",
+    "stat1": "{years}+ jaar",
     "stat2": "full-stack",
     "stat3": "React",
     "stat4": "Next.js",
     "stat5": "TypeScript",
-    "stat6": "Node.js"
+    "stat6": "Node.js",
+    "ctaEmail": "Mail mij",
+    "ctaResume": "CV (PDF)"
   },
   "sections": {
     "myJourney": "Mijn Reis",
@@ -48,7 +56,8 @@
     "roleSE": "Software Engineer",
     "roleFE": "Frontend Developer",
     "roleWD": "Web Developer",
-    "roleMD": "Mobile Developer"
+    "roleMD": "Mobile Developer",
+    "showDetails": "Toon {name} in het uitgelichte paneel"
   },
   "craft": {
     "skillsAndMethodologies": "Vaardigheden & Methodologieën",

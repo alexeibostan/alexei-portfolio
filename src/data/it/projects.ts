@@ -66,7 +66,7 @@ export const projects: Project[] = [
     company: "Mobilesoft",
     name: "Igea Banca Digital Platform",
     type: "App Web",
-    period: "2017-2019",
+    period: "Lug 2016 - Nov 2019",
     description: "Ho iniziato un'applicazione con Angular 2-7 e l'ho fatta crescere fino a diventare la principale piattaforma digitale di Igea Banca. Ho utilizzato tecniche come il code splitting per ridurre la dimensione del bundle.",
     problem: "Igea Banca aveva bisogno di una piattaforma digitale moderna per servire i clienti online, costruita da zero e cresciuta fino a gestire traffico bancario su scala produttiva.",
     craft: "Fatto crescere un'applicazione Angular 2–7 fino a diventare la principale piattaforma digitale della banca, applicando tecniche di performance come il code splitting per mantenere bassi i tempi di caricamento.",
