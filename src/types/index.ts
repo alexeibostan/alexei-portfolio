@@ -30,10 +30,12 @@ export type Company = {
   url?: string;
 };
 
+/** daily = current stack; production = shipped with it before; earlier = earlier in my career */
+export type SkillDepth = 'daily' | 'production' | 'earlier';
+
 export type Skill = {
   name: string;
-  category: string;
-  years: string;
+  depth: SkillDepth;
   contextLine?: string;
 };
 

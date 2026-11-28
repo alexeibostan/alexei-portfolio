@@ -38,7 +38,9 @@
     "stat5": "TypeScript",
     "stat6": "Node.js",
     "ctaEmail": "Mail mij",
-    "ctaResume": "CV (PDF)"
+    "ctaResume": "CV (PDF)",
+    "name": "Alexei Bostan",
+    "status": "Niet op zoek naar een nieuwe baan, maar altijd in voor een goed gesprek over het vak."
   },
   "sections": {
     "myJourney": "Mijn Reis",
@@ -57,7 +59,9 @@
     "roleFE": "Frontend Developer",
     "roleWD": "Web Developer",
     "roleMD": "Mobile Developer",
-    "showDetails": "Toon {name} in het uitgelichte paneel"
+    "showDetails": "Toon {name} in het uitgelichte paneel",
+    "liveProject": "Live zijproject",
+    "tryIt": "Probeer het live"
   },
   "craft": {
     "skillsAndMethodologies": "Vaardigheden & Methodologieën",
@@ -69,14 +73,7 @@
     "howSub": "Agile · CI/CD · Design Systems · Code Review · Mentoring",
     "whatIBuildWith": "Waarmee ik bouw",
     "whatValue": "React · Next.js · TypeScript",
-    "whatSub": "en nog 30 meer",
-    "whatUsersSee": "Wat gebruikers zien",
-    "whatMakesItWork": "Wat het laat werken",
-    "whatKeepsItSolid": "Wat het solide houdt",
-    "frontendAndUI": "Frontend & UI",
-    "backendAndData": "Backend & Data",
-    "devopsAndTesting": "DevOps & Testing",
-    "years": "jaar",
+    "whatSub": "+ Node.js · tRPC · PostgreSQL",
     "clickToExplore": "Klik op een vaardigheid om te zien hoe ik het heb gebruikt",
     "partOfToolkit": "Onderdeel van mijn {category} toolkit",
     "languagesISpeak": "Talen die ik spreek",
@@ -86,13 +83,21 @@
     "dutch": "Nederlands",
     "fluent": "Vloeiend",
     "native": "Moedertaal",
-    "conversational": "Conversationeel"
+    "conversational": "Conversationeel",
+    "depthDaily": "Dagelijks",
+    "depthDailySub": "mijn huidige stack",
+    "depthProduction": "In productie gebruikt",
+    "depthProductionSub": "in eerdere rollen",
+    "depthEarlier": "Eerder",
+    "depthEarlierSub": "waar ik begon"
   },
   "connect": {
-    "headline": "Laten we iets bouwen dat {ertoe doet}",
-    "subtitle": "Ik sta altijd open om in contact te komen met productmanagers, designers en mede-engineers die geloven dat de beste technologie gebouwd wordt met de gebruiker centraal.",
+    "headline": "Laten we praten over dingen bouwen die {ertoe doen}",
+    "subtitle": "Ik ben nu niet op zoek naar een nieuwe rol, maar ik praat altijd graag met productmanagers, designers en mede-engineers die bouwen met de gebruiker centraal.",
     "downloadResume": "Download CV (PDF)",
-    "copyright": "© {year} Alexei Bostan · Gebouwd met Next.js"
+    "copyright": "© {year} Alexei Bostan · Gebouwd met Next.js",
+    "copyEmail": "E-mailadres kopiëren",
+    "copied": "Gekopieerd"
   },
   "ai": {
     "buildingWith": "Bouwen MET AI",
@@ -106,6 +111,7 @@
     "featureLeaderboard": "ELO-ranglijst",
     "featureLeaderboardDesc": "Modelrankings bijgehouden per wedstrijd",
     "featureArena": "Multi-model Arena",
-    "featureArenaDesc": "Elk LLM via OpenRouter API-integratie"
+    "featureArenaDesc": "Elk LLM via OpenRouter API-integratie",
+    "seeInWork": "Bekijk DraughtsAI bij Werk"
   }
 }

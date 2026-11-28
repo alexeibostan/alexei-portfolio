@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Mail, Linkedin, Github, Instagram } from "lucide-react";
+import { Mail, Linkedin, Github, Copy, Check } from "lucide-react";
 import { analytics, type SocialNetwork } from "@/lib/analytics";
 import { CONTACT_EMAIL, RESUME_PATH } from "@/lib/contact";
 
@@ -30,12 +31,6 @@ const socialLinks: {
     href: "https://github.com/alexeibostan",
     network: "github",
   },
-  {
-    label: "Instagram",
-    icon: Instagram,
-    href: "https://www.instagram.com/alexandre.lord1/",
-    network: "instagram",
-  },
 ];
 
 function parseHeadlineWords(text: string): { text: string; gold: boolean }[] {
@@ -51,6 +46,39 @@ function parseHeadlineWords(text: string): { text: string; gold: boolean }[] {
     }
   });
   return words;
+}
+
+// Plain-text address with a copy button: a mailto link alone does nothing
+// for visitors without a mail client set up.
+function EmailCopy() {
+  const t = useTranslations("connect");
+  const [copied, setCopied] = useState(false);
+
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      analytics.emailCopy();
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Clipboard can be blocked; the address is still selectable text.
+    }
+  };
+
+  return (
+    <div className="mb-6 flex max-w-full items-center gap-1 rounded-lg border border-white/[0.15] bg-white/[0.02] pl-4">
+      <span className="select-all truncate font-mono-brand text-[14px] text-[#e8e4df]">{CONTACT_EMAIL}</span>
+      <button
+        type="button"
+        onClick={copy}
+        aria-label={t("copyEmail")}
+        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-r-lg text-white/60 transition-colors hover:bg-white/5 hover:text-[#e8e4df]"
+      >
+        {copied ? <Check size={16} aria-hidden="true" /> : <Copy size={16} aria-hidden="true" />}
+      </button>
+      <span role="status" className="sr-only">{copied ? t("copied") : ""}</span>
+    </div>
+  );
 }
 
 export function ConnectSection() {
@@ -92,6 +120,8 @@ export function ConnectSection() {
       <p className="text-sm opacity-60 max-w-[440px] leading-relaxed mb-10">
         {t("subtitle")}
       </p>
+
+      <EmailCopy />
 
       {/* Social links */}
       <div className="flex flex-wrap justify-center gap-4">

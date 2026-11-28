@@ -31,11 +31,12 @@ function saEvent(name: string, metadata?: SaMetadata): void {
   }
 }
 
-export type SocialNetwork = "email" | "linkedin" | "github" | "instagram";
+export type SocialNetwork = "email" | "linkedin" | "github";
 
 export const analytics = {
   socialClick: (network: SocialNetwork) => saEvent(`social_click_${network}`),
   resumeDownload: () => saEvent("resume_download"),
+  emailCopy: () => saEvent("email_copy"),
   outboundClick: (site: string, url: string) =>
     saEvent(`outbound_click_${slugify(site)}`, { url }),
   languageAutoRedirect: (to: string, from: string) =>

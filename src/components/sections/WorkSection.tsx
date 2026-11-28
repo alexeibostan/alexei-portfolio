@@ -8,6 +8,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Project } from "@/types";
 import { analytics } from "@/lib/analytics";
 import { Plus } from "lucide-react";
+import { DraughtsAICard } from "@/components/DraughtsAICard";
 
 interface WorkSectionProps {
   projects: Project[];
@@ -59,6 +60,9 @@ export function WorkSection({ projects }: WorkSectionProps) {
               {tSections("selectedProjects")}
             </span>
           </div>
+
+          {/* The one project visitors can try themselves */}
+          <DraughtsAICard />
 
           {/* Featured project */}
           <div

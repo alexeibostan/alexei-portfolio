@@ -4,57 +4,24 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import type { Skill } from "@/types";
+import type { Skill, SkillDepth } from "@/types";
 import { analytics } from "@/lib/analytics";
 
 interface CraftSectionProps {
   skills: Skill[];
 }
 
-// Map old 5 categories → 3 empathy-framed groups
-const CATEGORY_MAP: Record<string, string> = {
-  Frontend: "frontendUI",
-  Backend: "backendData",
-  Libraries: "frontendUI",
-  Tools: "devopsTesting",
-  Testing: "devopsTesting",
+const DEPTH_ORDER = ["daily", "production", "earlier"] as const satisfies readonly SkillDepth[];
+
+const DEPTH_CONFIG: Record<SkillDepth, { color: string; labelKey: string; subKey: string }> = {
+  daily: { color: "#7ee787", labelKey: "depthDaily", subKey: "depthDailySub" },
+  production: { color: "#58a6ff", labelKey: "depthProduction", subKey: "depthProductionSub" },
+  earlier: { color: "#d2a8ff", labelKey: "depthEarlier", subKey: "depthEarlierSub" },
 };
 
-const CATEGORY_ORDER = ["frontendUI", "backendData", "devopsTesting"] as const;
-
-type MergedCategory = (typeof CATEGORY_ORDER)[number];
-
-const CATEGORY_CONFIG: Record<
-  MergedCategory,
-  { color: string; empathyKey: string; traditionalKey: string }
-> = {
-  frontendUI: {
-    color: "#7ee787",
-    empathyKey: "whatUsersSee",
-    traditionalKey: "frontendAndUI",
-  },
-  backendData: {
-    color: "#58a6ff",
-    empathyKey: "whatMakesItWork",
-    traditionalKey: "backendAndData",
-  },
-  devopsTesting: {
-    color: "#d2a8ff",
-    empathyKey: "whatKeepsItSolid",
-    traditionalKey: "devopsAndTesting",
-  },
-};
-
-function groupSkills(skills: Skill[]): Record<MergedCategory, Skill[]> {
-  const groups: Record<MergedCategory, Skill[]> = {
-    frontendUI: [],
-    backendData: [],
-    devopsTesting: [],
-  };
-  for (const skill of skills) {
-    const mapped = CATEGORY_MAP[skill.category] as MergedCategory | undefined;
-    if (mapped) groups[mapped].push(skill);
-  }
+function groupSkills(skills: Skill[]): Record<SkillDepth, Skill[]> {
+  const groups: Record<SkillDepth, Skill[]> = { daily: [], production: [], earlier: [] };
+  for (const skill of skills) groups[skill.depth].push(skill);
   return groups;
 }
 
@@ -182,9 +149,11 @@ function SkillTile({
   return (
     <button
       onClick={onClick}
-      className="rounded-lg cursor-pointer text-center transition-all duration-200 hover:-translate-y-0.5"
+      type="button"
+      aria-pressed={isActive}
+      className="min-h-11 rounded-lg cursor-pointer text-center transition-all duration-200 hover:-translate-y-0.5"
       style={{
-        padding: "10px 6px",
+        padding: "10px 12px",
         background: isActive
           ? `${color}0A`
           : "rgba(255,255,255,0.015)",
@@ -195,15 +164,9 @@ function SkillTile({
       }}
     >
       <div
-        className={`font-mono-brand text-xs transition-colors duration-200 ${isActive ? 'text-foreground' : 'text-white/50'}`}
+        className={`font-mono-brand text-[13px] transition-colors duration-200 ${isActive ? 'text-foreground' : 'text-white/50'}`}
       >
         {skill.name}
-      </div>
-      <div
-        className={`font-mono-brand text-xs mt-0.5 ${!isActive ? 'text-white/50' : ''}`}
-        style={isActive ? { color: `${color}66` } : undefined}
-      >
-        {skill.years}
       </div>
     </button>
   );
@@ -271,18 +234,11 @@ function DetailStrip({
           {skill.name}
         </span>
 
-        {/* Years + category */}
-        <div className="flex-shrink-0 relative z-10 min-w-[90px]">
-          <div
-            className="font-light text-[22px] text-secondary"
-          >
-            {skill.years} {tCraft("years")}
-          </div>
-          <div
-            className="font-mono-brand text-xs text-secondary/[0.55] uppercase tracking-[1px] mt-0.5"
-          >
-            {categoryLabel}
-          </div>
+        {/* Depth */}
+        <div
+          className="font-mono-brand text-xs text-secondary/[0.55] uppercase tracking-[1px] flex-shrink-0 relative z-10"
+        >
+          {categoryLabel}
         </div>
 
         {/* Divider */}
@@ -315,12 +271,8 @@ export function CraftSection({ skills }: CraftSectionProps) {
     { code: "nl", name: tCraft("dutch"), proficiency: tCraft("conversational") },
   ];
 
-  // Find which merged category the selected skill belongs to
-  const selectedCategory = selectedSkill
-    ? (CATEGORY_MAP[selectedSkill.category] as MergedCategory)
-    : null;
-  const selectedCategoryLabel = selectedCategory
-    ? tCraft(CATEGORY_CONFIG[selectedCategory].traditionalKey)
+  const selectedCategoryLabel = selectedSkill
+    ? tCraft(DEPTH_CONFIG[selectedSkill.depth].labelKey)
     : "";
 
   return (
@@ -347,8 +299,8 @@ export function CraftSection({ skills }: CraftSectionProps) {
           <NarrativeHeader tCraft={tCraft} />
 
           {/* Skill tile grids */}
-          {CATEGORY_ORDER.map((catKey, groupIndex) => {
-            const config = CATEGORY_CONFIG[catKey];
+          {DEPTH_ORDER.map((catKey, groupIndex) => {
+            const config = DEPTH_CONFIG[catKey];
             const catSkills = groupedSkills[catKey];
             return (
               <motion.div
@@ -362,21 +314,19 @@ export function CraftSection({ skills }: CraftSectionProps) {
                 {/* Category header */}
                 <div className="flex items-baseline gap-2 mb-2.5">
                   <span
-                    className="font-mono-brand text-xs tracking-[2px] opacity-60"
+                    className="font-mono-brand text-xs tracking-[2px] uppercase opacity-80"
                     style={{ color: config.color }}
                   >
-                    {tCraft(config.empathyKey)}
+                    {tCraft(config.labelKey)}
                   </span>
-                  <span
-                    className="font-mono-brand text-xs tracking-[2px] text-white/50 uppercase"
-                  >
-                    {tCraft(config.traditionalKey)}
+                  <span className="font-mono-brand text-xs text-white/50">
+                    {tCraft(config.subKey)}
                   </span>
                 </div>
 
                 {/* Tile grid */}
                 <div
-                  className="grid gap-[5px] grid-cols-[repeat(auto-fill,minmax(90px,1fr))]"
+                  className="grid gap-[5px] grid-cols-[repeat(auto-fill,minmax(110px,1fr))]"
                 >
                   {catSkills.map((skill) => (
                     <SkillTile
@@ -404,12 +354,12 @@ export function CraftSection({ skills }: CraftSectionProps) {
 
           {/* How each skill was used: visually hidden, kept in the HTML for screen readers and crawlers */}
           <dl className="sr-only">
-            {CATEGORY_ORDER.flatMap((catKey) => {
-              const categoryLabel = tCraft(CATEGORY_CONFIG[catKey].traditionalKey);
-              return groupedSkills[catKey].map((skill) => (
+            {DEPTH_ORDER.flatMap((depth) => {
+              const label = tCraft(DEPTH_CONFIG[depth].labelKey);
+              return groupedSkills[depth].map((skill) => (
                 <div key={skill.name}>
-                  <dt>{skill.name} ({skill.years} {tCraft("years")}, {categoryLabel})</dt>
-                  <dd>{skill.contextLine || tCraft("partOfToolkit", { category: categoryLabel })}</dd>
+                  <dt>{skill.name} ({label})</dt>
+                  <dd>{skill.contextLine}</dd>
                 </div>
               ));
             })}

@@ -38,7 +38,9 @@
     "stat5": "TypeScript",
     "stat6": "Node.js",
     "ctaEmail": "Scrivimi",
-    "ctaResume": "Curriculum (PDF)"
+    "ctaResume": "Curriculum (PDF)",
+    "name": "Alexei Bostan",
+    "status": "Non cerco un nuovo ruolo, ma parlo sempre volentieri del mestiere."
   },
   "sections": {
     "myJourney": "Il Mio Percorso",
@@ -57,7 +59,9 @@
     "roleFE": "Frontend Developer",
     "roleWD": "Web Developer",
     "roleMD": "Mobile Developer",
-    "showDetails": "Mostra {name} nel pannello in evidenza"
+    "showDetails": "Mostra {name} nel pannello in evidenza",
+    "liveProject": "Progetto personale live",
+    "tryIt": "Provalo live"
   },
   "craft": {
     "skillsAndMethodologies": "Competenze & Metodologie",
@@ -69,14 +73,7 @@
     "howSub": "Agile · CI/CD · Design Systems · Code Review · Mentoring",
     "whatIBuildWith": "Con cosa costruisco",
     "whatValue": "React · Next.js · TypeScript",
-    "whatSub": "e altri 30",
-    "whatUsersSee": "Ciò che gli utenti vedono",
-    "whatMakesItWork": "Ciò che lo fa funzionare",
-    "whatKeepsItSolid": "Ciò che lo mantiene solido",
-    "frontendAndUI": "Frontend & UI",
-    "backendAndData": "Backend & Data",
-    "devopsAndTesting": "DevOps & Testing",
-    "years": "anni",
+    "whatSub": "+ Node.js · tRPC · PostgreSQL",
     "clickToExplore": "Clicca su una competenza per vedere come l'ho usata",
     "partOfToolkit": "Parte del mio toolkit {category}",
     "languagesISpeak": "Lingue che parlo",
@@ -86,13 +83,21 @@
     "dutch": "Olandese",
     "fluent": "Fluente",
     "native": "Madrelingua",
-    "conversational": "Conversazionale"
+    "conversational": "Conversazionale",
+    "depthDaily": "Ogni giorno",
+    "depthDailySub": "il mio stack attuale",
+    "depthProduction": "Usati in produzione",
+    "depthProductionSub": "in ruoli precedenti",
+    "depthEarlier": "In passato",
+    "depthEarlierSub": "dove ho iniziato"
   },
   "connect": {
-    "headline": "Costruiamo qualcosa che {conta}",
-    "subtitle": "Sono sempre aperto a connettermi con product manager, designer e colleghi ingegneri che credono che la migliore tecnologia sia costruita con l'utente al centro.",
+    "headline": "Parliamo di costruire cose che {contano}",
+    "subtitle": "Al momento non cerco un nuovo ruolo, ma parlo sempre volentieri con product manager, designer e colleghi ingegneri che costruiscono mettendo l'utente al centro.",
     "downloadResume": "Scarica Curriculum (PDF)",
-    "copyright": "© {year} Alexei Bostan · Costruito con Next.js"
+    "copyright": "© {year} Alexei Bostan · Costruito con Next.js",
+    "copyEmail": "Copia indirizzo email",
+    "copied": "Copiato"
   },
   "ai": {
     "buildingWith": "Costruire CON l'AI",
@@ -106,6 +111,7 @@
     "featureLeaderboard": "Classifica ELO",
     "featureLeaderboardDesc": "Ranking dei modelli aggiornato partita dopo partita",
     "featureArena": "Arena Multi-modello",
-    "featureArenaDesc": "Qualsiasi LLM tramite integrazione API OpenRouter"
+    "featureArenaDesc": "Qualsiasi LLM tramite integrazione API OpenRouter",
+    "seeInWork": "Vedi DraughtsAI in Lavoro"
   }
 }

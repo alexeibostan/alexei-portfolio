@@ -3,10 +3,8 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { TechPill } from "@/components/ui/TechPill";
 import type { AITool } from "@/types";
-import { Radio, Trophy, Layers, ExternalLink } from "lucide-react";
-import { analytics } from "@/lib/analytics";
+import { ArrowUp } from "lucide-react";
 
 interface AISectionProps {
   aiTools: AITool[];
@@ -129,75 +127,13 @@ export function AISection({ aiTools }: AISectionProps) {
                 {tAi("buildingInIntro")}
               </p>
 
-              {/* DraughtsAI featured card */}
-              <div className="border border-[hsl(var(--secondary))]/[0.12] rounded-lg p-5 bg-[hsl(var(--secondary))]/[0.03]">
-                {/* Top row */}
-                <div className="flex items-center justify-between gap-2 mb-1">
-                  <span className="text-lg font-semibold text-[#e8e4df]">
-                    DraughtsAI
-                  </span>
-                  <span
-                    className="font-mono-brand text-xs text-[hsl(var(--secondary))] rounded-full px-2 py-0.5 bg-secondary/10 border border-secondary/20"
-                  >
-                    {tAi("active")}
-                  </span>
-                </div>
-
-                {/* Subtitle — clickable link (GREEN, visible) */}
-                <a
-                  href="https://draughtsai.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => analytics.outboundClick("draughtsai", "https://draughtsai.com/")}
-                  className="inline-flex min-h-11 items-center gap-1.5 text-[13px] text-[hsl(var(--secondary))] opacity-80 mb-1 hover:opacity-100 transition-opacity underline-offset-4 hover:underline"
-                >
-                  draughtsai.com
-                  <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
-                </a>
-
-                {/* Description */}
-                <p className="text-[13px] opacity-60 leading-relaxed text-[#e8e4df] mb-4">
-                  {tAi("draughtsAiDescription")}
-                </p>
-
-                {/* Feature highlights — flat list, NO card nesting */}
-                <div className="flex flex-col gap-2.5 mb-4">
-                  {[
-                    { icon: Radio, label: tAi("featureStreaming"), desc: tAi("featureStreamingDesc") },
-                    { icon: Trophy, label: tAi("featureLeaderboard"), desc: tAi("featureLeaderboardDesc") },
-                    { icon: Layers, label: tAi("featureArena"), desc: tAi("featureArenaDesc") },
-                  ].map((feature) => (
-                    <div
-                      key={feature.label}
-                      className="flex items-center gap-2.5"
-                    >
-                      <div
-                        className="w-6 h-6 rounded-md flex-shrink-0 flex items-center justify-center bg-secondary/10"
-                      >
-                        <feature.icon className="w-3 h-3 text-[hsl(var(--secondary))]" />
-                      </div>
-                      <div className="flex flex-col">
-                        <span className="text-[13px] font-semibold text-[#e8e4df]">
-                          {feature.label}
-                        </span>
-                        <span className="text-xs opacity-60 text-[#e8e4df]">
-                          {feature.desc}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Tech pills */}
-                <div className="flex flex-wrap gap-1.5">
-                  {["Bun", "Hono", "React 19", "TanStack Start", "Drizzle", "OpenRouter"].map(
-                    (tech) => (
-                      <TechPill key={tech} name={tech} />
-                    )
-                  )}
-                </div>
-              </div>
-
+              <a
+                href="#draughtsai"
+                className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-[hsl(var(--secondary))]/25 px-4 text-[13px] text-[hsl(var(--secondary))] transition-colors hover:bg-[hsl(var(--secondary))]/[0.06]"
+              >
+                <ArrowUp size={16} aria-hidden="true" />
+                {tAi("seeInWork")}
+              </a>
             </div>
           </div>
 

@@ -41,34 +41,44 @@ export function HeroSection({ yearsOfExperience }: { yearsOfExperience: number }
     >
       <motion.div
         style={{ y }}
-        className="relative z-10 w-full max-w-4xl mx-auto px-8 py-24 flex flex-col gap-8"
+        className="relative z-10 w-full max-w-4xl mx-auto px-6 md:px-8 py-20 md:py-24 flex flex-col gap-7"
       >
-        {/* Role label */}
+        {/* Name + role */}
+        <div className="flex flex-col gap-3">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+            className="font-display text-5xl md:text-7xl font-light tracking-tight text-[#e8e4df]"
+          >
+            {t("name")}
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
+            className="font-mono-brand text-[13px] text-[hsl(var(--secondary))] opacity-80 tracking-[1px] uppercase"
+          >
+            {t("roleLabel")}
+          </motion.p>
+        </div>
+
+        {/* Philosophy */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="font-mono-brand text-xs text-[hsl(var(--secondary))] opacity-70 tracking-[1px] uppercase"
-        >
-          {t("roleLabel")}
-        </motion.p>
-
-        {/* Headline */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-          className="font-display text-4xl md:text-[38px] font-light leading-[1.2] text-[#e8e4df]"
+          className="font-display text-2xl md:text-[30px] font-light leading-[1.3] text-[#e8e4df]/90 max-w-3xl"
         >
           {parseHeadline(t.raw("headline"))}
-        </motion.h1>
+        </motion.p>
 
         {/* Payoff */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-          className="font-display text-xl md:text-[22px] font-light italic opacity-60 text-[#e8e4df]"
+          className="font-display text-xl md:text-[22px] font-light italic opacity-60 text-[#e8e4df] -mt-3"
         >
           {t("payoff")}
         </motion.p>
@@ -122,6 +132,17 @@ export function HeroSection({ yearsOfExperience }: { yearsOfExperience: number }
             {t("ctaResume")}
           </a>
         </motion.div>
+
+        {/* What I'm open to */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.7, ease: "easeOut" }}
+          className="-mt-2 flex items-center gap-2 text-[13px] text-[#e8e4df]/70"
+        >
+          <span className="h-2 w-2 shrink-0 rounded-full bg-[#7ee787]" aria-hidden="true" />
+          {t("status")}
+        </motion.p>
       </motion.div>
     </section>
   );

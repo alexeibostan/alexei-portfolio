@@ -112,7 +112,6 @@ export function generatePersonSchema(config: SEOConfig) {
     sameAs: [
       'https://github.com/alexeibostan',
       'https://www.linkedin.com/in/alexei-bostan',
-      'https://www.instagram.com/alexandre.lord1',
     ],
     jobTitle: config.authorJobTitle,
     ...(config.authorCompany && {

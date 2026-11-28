@@ -45,7 +45,8 @@ src/
 ├── components/
 │   ├── sections/               # Page sections (Hero, Timeline, Work, Craft, AI, Connect)
 │   ├── SiteHeader.tsx          # Sticky header: skip link, section nav, language switcher
-│   ├── SiteFooter.tsx          # Copyright / business details
+│   ├── SiteFooter.tsx          # Copyright / business details (no street address)
+│   ├── DraughtsAICard.tsx      # Live side project card, shown at the top of Work
 │   ├── StructuredData.tsx      # JSON-LD schema renderer
 │   ├── BrowserLanguageDetector.tsx
 │   └── Providers.tsx
@@ -99,7 +100,7 @@ GitHub Actions workflow (`.github/workflows/deploy.yml`) triggers on push to `ma
 ## Adding Content
 
 - **New project**: Add to each `src/data/{locale}/projects.ts`; keep its period consistent with the matching entry in `src/data/{locale}/journey.ts`
-- **New skill**: Add to each `src/data/{locale}/skills.ts`
+- **New skill**: Add to each `src/data/{locale}/skills.ts` with a `depth` (`daily` | `production` | `earlier`). Keep the list short (~12); no year counters
 - **Years of experience**: Use `{years}` in messages and pass `yearsOfExperience()` from `@/lib/career`
 - **New locale**: Add locale to `src/i18n.ts`, create `src/messages/{locale}.json`, create `src/data/{locale}/` directory with all data files
 - **New page**: Create `src/app/[locale]/pagename/page.tsx`, add `generateStaticParams`, call `setRequestLocale(locale)`, update sitemap in `src/app/sitemap.ts`

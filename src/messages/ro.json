@@ -38,7 +38,9 @@
     "stat5": "TypeScript",
     "stat6": "Node.js",
     "ctaEmail": "Scrie-mi",
-    "ctaResume": "CV (PDF)"
+    "ctaResume": "CV (PDF)",
+    "name": "Alexei Bostan",
+    "status": "Nu caut un rol nou, dar discut oricând cu plăcere despre meserie."
   },
   "sections": {
     "myJourney": "Parcursul Meu",
@@ -57,7 +59,9 @@
     "roleFE": "Frontend Developer",
     "roleWD": "Web Developer",
     "roleMD": "Mobile Developer",
-    "showDetails": "Afișează {name} în panoul principal"
+    "showDetails": "Afișează {name} în panoul principal",
+    "liveProject": "Proiect personal live",
+    "tryIt": "Încearcă live"
   },
   "craft": {
     "skillsAndMethodologies": "Competențe & Metodologii",
@@ -69,14 +73,7 @@
     "howSub": "Agile · CI/CD · Design Systems · Code Review · Mentoring",
     "whatIBuildWith": "Cu ce construiesc",
     "whatValue": "React · Next.js · TypeScript",
-    "whatSub": "și încă 30",
-    "whatUsersSee": "Ce văd utilizatorii",
-    "whatMakesItWork": "Ce îl face să funcționeze",
-    "whatKeepsItSolid": "Ce îl menține solid",
-    "frontendAndUI": "Frontend & UI",
-    "backendAndData": "Backend & Data",
-    "devopsAndTesting": "DevOps & Testing",
-    "years": "ani",
+    "whatSub": "+ Node.js · tRPC · PostgreSQL",
     "clickToExplore": "Apasă pe o competență pentru a vedea cum am folosit-o",
     "partOfToolkit": "Parte din toolkit-ul meu {category}",
     "languagesISpeak": "Limbi vorbite",
@@ -86,13 +83,21 @@
     "dutch": "Olandeză",
     "fluent": "Fluent",
     "native": "Nativă",
-    "conversational": "Conversațional"
+    "conversational": "Conversațional",
+    "depthDaily": "Zilnic",
+    "depthDailySub": "stack-ul meu actual",
+    "depthProduction": "Folosite în producție",
+    "depthProductionSub": "în roluri anterioare",
+    "depthEarlier": "Anterior",
+    "depthEarlierSub": "de unde am pornit"
   },
   "connect": {
-    "headline": "Să construim ceva care {contează}",
-    "subtitle": "Sunt mereu deschis să mă conectez cu manageri de produs, designeri și ingineri care cred că cea mai bună tehnologie este construită cu utilizatorul în centru.",
+    "headline": "Hai să vorbim despre lucruri care {contează}",
+    "subtitle": "Nu caut un rol nou acum, dar vorbesc mereu cu plăcere cu manageri de produs, designeri și ingineri care construiesc cu utilizatorul în centru.",
     "downloadResume": "Descarcă CV (PDF)",
-    "copyright": "© {year} Alexei Bostan · Construit cu Next.js"
+    "copyright": "© {year} Alexei Bostan · Construit cu Next.js",
+    "copyEmail": "Copiază adresa de email",
+    "copied": "Copiat"
   },
   "ai": {
     "buildingWith": "Construind CU AI",
@@ -106,6 +111,7 @@
     "featureLeaderboard": "Clasament ELO",
     "featureLeaderboardDesc": "Rankingul modelelor urmărit de la meci la meci",
     "featureArena": "Arenă Multi-model",
-    "featureArenaDesc": "Orice LLM prin integrare API OpenRouter"
+    "featureArenaDesc": "Orice LLM prin integrare API OpenRouter",
+    "seeInWork": "Vezi DraughtsAI la Muncă"
   }
 }

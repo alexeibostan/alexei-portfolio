@@ -38,7 +38,9 @@
     "stat5": "TypeScript",
     "stat6": "Node.js",
     "ctaEmail": "Email me",
-    "ctaResume": "Résumé (PDF)"
+    "ctaResume": "Résumé (PDF)",
+    "name": "Alexei Bostan",
+    "status": "Not looking for a new role, but always happy to talk shop."
   },
   "sections": {
     "myJourney": "My Journey",
@@ -57,7 +59,9 @@
     "roleFE": "Frontend Developer",
     "roleWD": "Web Developer",
     "roleMD": "Mobile Developer",
-    "showDetails": "Show {name} in the featured panel"
+    "showDetails": "Show {name} in the featured panel",
+    "liveProject": "Live side project",
+    "tryIt": "Try it live"
   },
   "craft": {
     "skillsAndMethodologies": "Skills & Methodologies",
@@ -69,14 +73,7 @@
     "howSub": "Agile · CI/CD · Design Systems · Code Review · Mentoring",
     "whatIBuildWith": "What I build with",
     "whatValue": "React · Next.js · TypeScript",
-    "whatSub": "and 30 more",
-    "whatUsersSee": "What users see",
-    "whatMakesItWork": "What makes it work",
-    "whatKeepsItSolid": "What keeps it solid",
-    "frontendAndUI": "Frontend & UI",
-    "backendAndData": "Backend & Data",
-    "devopsAndTesting": "DevOps & Testing",
-    "years": "years",
+    "whatSub": "+ Node.js · tRPC · PostgreSQL",
     "clickToExplore": "Click a skill to see how I've used it",
     "partOfToolkit": "Part of my {category} toolkit",
     "languagesISpeak": "Languages I Speak",
@@ -86,13 +83,21 @@
     "dutch": "Dutch",
     "fluent": "Fluent",
     "native": "Native",
-    "conversational": "Conversational"
+    "conversational": "Conversational",
+    "depthDaily": "Daily",
+    "depthDailySub": "my current stack",
+    "depthProduction": "Shipped with",
+    "depthProductionSub": "in production, in earlier roles",
+    "depthEarlier": "Earlier",
+    "depthEarlierSub": "where I started"
   },
   "connect": {
-    "headline": "Let's build something that {matters}",
-    "subtitle": "I'm always open to connecting with product managers, designers, and fellow engineers who believe the best technology is built with the user at its heart.",
+    "headline": "Let's talk about building things that {matter}",
+    "subtitle": "I'm not looking for a new role right now, but I'm always happy to talk with product managers, designers and fellow engineers who build with the user at heart.",
     "downloadResume": "Download Resume (PDF)",
-    "copyright": "© {year} Alexei Bostan · Built with Next.js"
+    "copyright": "© {year} Alexei Bostan · Built with Next.js",
+    "copyEmail": "Copy email address",
+    "copied": "Copied"
   },
   "ai": {
     "buildingWith": "Building WITH AI",
@@ -106,6 +111,7 @@
     "featureLeaderboard": "ELO Leaderboard",
     "featureLeaderboardDesc": "Model rankings tracked across matches",
     "featureArena": "Multi-model Arena",
-    "featureArenaDesc": "Any LLM via OpenRouter API integration"
+    "featureArenaDesc": "Any LLM via OpenRouter API integration",
+    "seeInWork": "See DraughtsAI in Work"
   }
 }
