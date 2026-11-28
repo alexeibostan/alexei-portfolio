@@ -14,12 +14,6 @@ const socialLinks: {
   network: SocialNetwork;
 }[] = [
   {
-    label: "Email",
-    icon: Mail,
-    href: `mailto:${CONTACT_EMAIL}`,
-    network: "email",
-  },
-  {
     label: "LinkedIn",
     icon: Linkedin,
     href: "https://www.linkedin.com/in/alexei-bostan/",
@@ -48,8 +42,8 @@ function parseHeadlineWords(text: string): { text: string; gold: boolean }[] {
   return words;
 }
 
-// Plain-text address with a copy button: a mailto link alone does nothing
-// for visitors without a mail client set up.
+// The address is the mailto link itself, shown as text so it can also be copied
+// by visitors without a mail client set up.
 function EmailCopy() {
   const t = useTranslations("connect");
   const [copied, setCopied] = useState(false);
@@ -67,7 +61,14 @@ function EmailCopy() {
 
   return (
     <div className="mb-6 flex max-w-full items-center gap-1 rounded-lg border border-white/[0.15] bg-white/[0.02] pl-4">
-      <span className="select-all truncate font-mono-brand text-[14px] text-[#e8e4df]">{CONTACT_EMAIL}</span>
+      <a
+        href={`mailto:${CONTACT_EMAIL}`}
+        onClick={() => analytics.socialClick("email")}
+        className="flex min-h-11 items-center truncate font-mono-brand text-[14px] text-[#e8e4df] underline-offset-4 hover:underline"
+      >
+        <Mail size={16} aria-hidden="true" className="mr-2 shrink-0 text-white/60" />
+        {CONTACT_EMAIL}
+      </a>
       <button
         type="button"
         onClick={copy}
@@ -129,8 +130,8 @@ export function ConnectSection() {
           <a
             key={label}
             href={href}
-            target={href.startsWith("mailto") ? undefined : "_blank"}
-            rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => analytics.socialClick(network)}
             className="flex min-h-11 items-center gap-2 px-5 py-2.5 border border-white/[0.15] rounded-lg text-[13px] hover:bg-white/5 hover:border-white/25 hover:-translate-y-0.5 transition-all"
           >

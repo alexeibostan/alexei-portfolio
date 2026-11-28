@@ -39,8 +39,7 @@
     "stat6": "Node.js",
     "ctaEmail": "Mail mij",
     "ctaResume": "CV (PDF)",
-    "name": "Alexei Bostan",
-    "status": "Niet op zoek naar een nieuwe baan, maar altijd in voor een goed gesprek over het vak."
+    "name": "Alexei Bostan"
   },
   "sections": {
     "myJourney": "Mijn Reis",
@@ -93,7 +92,7 @@
   },
   "connect": {
     "headline": "Laten we praten over dingen bouwen die {ertoe doen}",
-    "subtitle": "Ik ben nu niet op zoek naar een nieuwe rol, maar ik praat altijd graag met productmanagers, designers en mede-engineers die bouwen met de gebruiker centraal.",
+    "subtitle": "Ik sta altijd open om in contact te komen met productmanagers, designers en mede-engineers die geloven dat de beste technologie gebouwd wordt met de gebruiker centraal.",
     "downloadResume": "Download CV (PDF)",
     "copyright": "© {year} Alexei Bostan · Gebouwd met Next.js",
     "copyEmail": "E-mailadres kopiëren",

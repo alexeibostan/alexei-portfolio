@@ -39,8 +39,7 @@
     "stat6": "Node.js",
     "ctaEmail": "Scrivimi",
     "ctaResume": "Curriculum (PDF)",
-    "name": "Alexei Bostan",
-    "status": "Non cerco un nuovo ruolo, ma parlo sempre volentieri del mestiere."
+    "name": "Alexei Bostan"
   },
   "sections": {
     "myJourney": "Il Mio Percorso",
@@ -93,7 +92,7 @@
   },
   "connect": {
     "headline": "Parliamo di costruire cose che {contano}",
-    "subtitle": "Al momento non cerco un nuovo ruolo, ma parlo sempre volentieri con product manager, designer e colleghi ingegneri che costruiscono mettendo l'utente al centro.",
+    "subtitle": "Sono sempre aperto a connettermi con product manager, designer e colleghi ingegneri che credono che la migliore tecnologia sia costruita con l'utente al centro.",
     "downloadResume": "Scarica Curriculum (PDF)",
     "copyright": "© {year} Alexei Bostan · Costruito con Next.js",
     "copyEmail": "Copia indirizzo email",

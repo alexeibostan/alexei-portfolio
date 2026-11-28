@@ -132,17 +132,6 @@ export function HeroSection({ yearsOfExperience }: { yearsOfExperience: number }
             {t("ctaResume")}
           </a>
         </motion.div>
-
-        {/* What I'm open to */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.7, ease: "easeOut" }}
-          className="-mt-2 flex items-center gap-2 text-[13px] text-[#e8e4df]/70"
-        >
-          <span className="h-2 w-2 shrink-0 rounded-full bg-[#7ee787]" aria-hidden="true" />
-          {t("status")}
-        </motion.p>
       </motion.div>
     </section>
   );

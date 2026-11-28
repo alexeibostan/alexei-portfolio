@@ -39,8 +39,7 @@
     "stat6": "Node.js",
     "ctaEmail": "Email me",
     "ctaResume": "Résumé (PDF)",
-    "name": "Alexei Bostan",
-    "status": "Not looking for a new role, but always happy to talk shop."
+    "name": "Alexei Bostan"
   },
   "sections": {
     "myJourney": "My Journey",
@@ -93,7 +92,7 @@
   },
   "connect": {
     "headline": "Let's talk about building things that {matter}",
-    "subtitle": "I'm not looking for a new role right now, but I'm always happy to talk with product managers, designers and fellow engineers who build with the user at heart.",
+    "subtitle": "I'm always open to connecting with product managers, designers, and fellow engineers who believe the best technology is built with the user at its heart.",
     "downloadResume": "Download Resume (PDF)",
     "copyright": "© {year} Alexei Bostan · Built with Next.js",
     "copyEmail": "Copy email address",

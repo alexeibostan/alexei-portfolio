@@ -39,8 +39,7 @@
     "stat6": "Node.js",
     "ctaEmail": "Scrie-mi",
     "ctaResume": "CV (PDF)",
-    "name": "Alexei Bostan",
-    "status": "Nu caut un rol nou, dar discut oricând cu plăcere despre meserie."
+    "name": "Alexei Bostan"
   },
   "sections": {
     "myJourney": "Parcursul Meu",
@@ -93,7 +92,7 @@
   },
   "connect": {
     "headline": "Hai să vorbim despre lucruri care {contează}",
-    "subtitle": "Nu caut un rol nou acum, dar vorbesc mereu cu plăcere cu manageri de produs, designeri și ingineri care construiesc cu utilizatorul în centru.",
+    "subtitle": "Sunt mereu deschis să mă conectez cu manageri de produs, designeri și ingineri care cred că cea mai bună tehnologie este construită cu utilizatorul în centru.",
     "downloadResume": "Descarcă CV (PDF)",
     "copyright": "© {year} Alexei Bostan · Construit cu Next.js",
     "copyEmail": "Copiază adresa de email",
