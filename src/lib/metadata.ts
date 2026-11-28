@@ -121,7 +121,7 @@ export function generatePersonSchema(config: SEOConfig) {
         name: config.authorCompany,
       },
     }),
-    description: 'Senior Software Engineer who bridges code and customer value. 9+ years building full-stack software with user empathy at the core.',
+    description: config.description,
   }
 }
 

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Mail, Linkedin, Github, Instagram } from "lucide-react";
 import { analytics, type SocialNetwork } from "@/lib/analytics";
+import { CONTACT_EMAIL, RESUME_PATH } from "@/lib/contact";
 
 const socialLinks: {
   label: string;
@@ -14,7 +15,7 @@ const socialLinks: {
   {
     label: "Email",
     icon: Mail,
-    href: "mailto:alexei.bostan7@gmail.com",
+    href: `mailto:${CONTACT_EMAIL}`,
     network: "email",
   },
   {
@@ -55,78 +56,71 @@ function parseHeadlineWords(text: string): { text: string; gold: boolean }[] {
 export function ConnectSection() {
   const t = useTranslations("connect");
   return (
-    <footer>
-      <section
-        id="connect"
-        className="min-h-[70vh] flex flex-col items-center justify-center py-20 px-8 text-center bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#080808]"
-      >
-        {/* Section number */}
-        <div className="flex items-center gap-3 mb-10">
-          <div className="w-10 h-px bg-white/10" />
-          <span className="font-mono-brand text-[11px] tracking-[2px] opacity-60">
-            05
-          </span>
-          <div className="w-10 h-px bg-white/10" />
-        </div>
+    <section
+      id="connect"
+      aria-labelledby="connect-heading"
+      className="min-h-[70vh] flex flex-col items-center justify-center py-20 px-8 text-center bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#080808]"
+    >
+      {/* Section number */}
+      <div className="flex items-center gap-3 mb-10">
+        <div className="w-10 h-px bg-white/10" />
+        <span className="font-mono-brand text-xs tracking-[2px] opacity-60">
+          05
+        </span>
+        <div className="w-10 h-px bg-white/10" />
+      </div>
 
-        {/* Headline */}
-        <h2 className="font-display text-3xl md:text-[32px] font-light max-w-[500px] leading-snug mb-5 flex flex-wrap justify-center gap-x-2">
-          {parseHeadlineWords(t.raw("headline")).map((word, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.08, duration: 0.4 }}
-              className={
-                word.gold ? "text-[hsl(var(--primary))] italic" : ""
-              }
-            >
-              {word.text}
-            </motion.span>
-          ))}
-        </h2>
-
-        {/* Subtitle */}
-        <p className="text-sm opacity-60 max-w-[440px] leading-relaxed mb-10">
-          {t("subtitle")}
-        </p>
-
-        {/* Social links */}
-        <div className="flex flex-wrap justify-center gap-4">
-          {socialLinks.map(({ label, icon: Icon, href, network }) => (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith("mailto") ? undefined : "_blank"}
-              rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-              onClick={() => analytics.socialClick(network)}
-              className="flex items-center gap-2 px-5 py-2.5 border border-white/[0.15] rounded-lg text-[13px] hover:bg-white/5 hover:border-white/25 hover:-translate-y-0.5 transition-all"
-            >
-              <Icon size={16} />
-              {label}
-            </a>
-          ))}
-        </div>
-
-        {/* Resume download */}
-        <div className="mt-5">
-          <a
-            href="/Alexei-Bostan-Professional-Resume.pdf"
-            download
-            onClick={() => analytics.resumeDownload()}
-            className="inline-flex items-center gap-2 font-mono-brand text-[11px] text-[hsl(var(--primary))] opacity-70 hover:opacity-100 transition-opacity border-b border-[hsl(var(--primary))]/30 hover:border-[hsl(var(--primary))]/60 pb-0.5 tracking-[1px]"
+      {/* Headline */}
+      <h2 id="connect-heading" className="font-display text-3xl md:text-[32px] font-light max-w-[500px] leading-snug mb-5 flex flex-wrap justify-center gap-x-2">
+        {parseHeadlineWords(t.raw("headline")).map((word, index) => (
+          <motion.span
+            key={index}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.08, duration: 0.4 }}
+            className={
+              word.gold ? "text-[hsl(var(--primary))] italic" : ""
+            }
           >
-            {"↓ " + t("downloadResume")}
-          </a>
-        </div>
+            {word.text}
+          </motion.span>
+        ))}
+      </h2>
 
-        {/* Copyright */}
-        <p className="mt-12 text-[11px] opacity-50 font-mono-brand max-w-[640px] leading-relaxed px-4">
-          {t("copyright", { year: new Date().getFullYear() })}
-          {" · Bostan Software Developments · Trekvogelweg 229, 3815 LH Amersfoort, NL · KvK 94926697 · VAT NL005118619B33"}
-        </p>
-      </section>
-    </footer>
+      {/* Subtitle */}
+      <p className="text-sm opacity-60 max-w-[440px] leading-relaxed mb-10">
+        {t("subtitle")}
+      </p>
+
+      {/* Social links */}
+      <div className="flex flex-wrap justify-center gap-4">
+        {socialLinks.map(({ label, icon: Icon, href, network }) => (
+          <a
+            key={label}
+            href={href}
+            target={href.startsWith("mailto") ? undefined : "_blank"}
+            rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+            onClick={() => analytics.socialClick(network)}
+            className="flex min-h-11 items-center gap-2 px-5 py-2.5 border border-white/[0.15] rounded-lg text-[13px] hover:bg-white/5 hover:border-white/25 hover:-translate-y-0.5 transition-all"
+          >
+            <Icon size={16} aria-hidden="true" />
+            {label}
+          </a>
+        ))}
+      </div>
+
+      {/* Resume download */}
+      <div className="mt-5">
+        <a
+          href={RESUME_PATH}
+          download
+          onClick={() => analytics.resumeDownload()}
+          className="inline-flex min-h-11 items-center gap-2 font-mono-brand text-[13px] text-[hsl(var(--primary))] opacity-80 hover:opacity-100 transition-opacity underline decoration-[hsl(var(--primary))]/40 hover:decoration-[hsl(var(--primary))] underline-offset-4 tracking-[1px]"
+        >
+          {"↓ " + t("downloadResume")}
+        </a>
+      </div>
+    </section>
   );
 }

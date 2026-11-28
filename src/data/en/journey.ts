@@ -12,8 +12,8 @@ export const professionalJourney: JobEntry[] = [
     period: "2019 - 2020",
     company: "Dedagroup",
     role: "Developer",
-    description: "Brief stepping-stone role in enterprise software.",
-    insight: "Stepping stone to enterprise scale",
+    description: "Developer on enterprise software projects.",
+    insight: "Building enterprise software",
   },
   {
     period: "May 2020 - Oct 2021",
@@ -26,7 +26,7 @@ export const professionalJourney: JobEntry[] = [
     period: "Nov 2021 - Sep 2025",
     company: "Deliverect",
     role: "Senior Software Engineer",
-    description: "Recently promoted to Senior Software Engineer. Initially worked on marketing products in Next.js and built the first iteration of Deliverect's design system. Now contributing to both frontend and backend development for Pulse analytics dashboard, using Python, FastAPI, Celery, and various databases (PostgreSQL, MongoDB, BigQuery). Leading technical initiatives and mentoring team members.",
+    description: "Promoted to Senior Software Engineer during my time there. Started on marketing products in Next.js and built the first iteration of Deliverect's design system (2022–2023). From 2023 to 2025 worked across frontend and backend on the Pulse analytics dashboard, using Python, FastAPI, Celery, and PostgreSQL, MongoDB and BigQuery. Led technical initiatives and mentored team members.",
     insight: "Full-stack impact at scale",
   },
   {

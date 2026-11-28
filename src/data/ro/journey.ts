@@ -12,8 +12,8 @@ export const professionalJourney: JobEntry[] = [
     period: "2019 - 2020",
     company: "Dedagroup",
     role: "Developer",
-    description: "Rol scurt de tranziție în software enterprise.",
-    insight: "Trambulină spre scara enterprise",
+    description: "Developer pe proiecte de software enterprise.",
+    insight: "Construind software enterprise",
   },
   {
     period: "Mai 2020 - Oct 2021",
@@ -26,7 +26,7 @@ export const professionalJourney: JobEntry[] = [
     period: "Noi 2021 - Sept 2025",
     company: "Deliverect",
     role: "Senior Software Engineer",
-    description: "Recent promovat la Senior Software Engineer. Inițial am lucrat la produse de marketing în Next.js și am construit prima iterație a sistemului de design Deliverect. Acum contribui atât la dezvoltarea frontend cât și backend pentru dashboard-ul de analiză Pulse, folosind Python, FastAPI, Celery și diverse baze de date (PostgreSQL, MongoDB, BigQuery). Conduc inițiative tehnice și mentorez membrii echipei.",
+    description: "Promovat la Senior Software Engineer pe parcursul colaborării. Am lucrat întâi la produse de marketing în Next.js și am construit prima iterație a sistemului de design Deliverect (2022–2023). Între 2023 și 2025 am lucrat pe frontend și backend la dashboard-ul de analiză Pulse, cu Python, FastAPI, Celery și PostgreSQL, MongoDB și BigQuery. Am condus inițiative tehnice și am fost mentor pentru membrii echipei.",
     insight: "Impact full-stack la scară",
   },
   {

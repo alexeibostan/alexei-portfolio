@@ -43,7 +43,7 @@ export function TimelineSection({
   const total = journey.length;
 
   return (
-    <section className="py-20 px-8">
+    <section id="experience" aria-labelledby="experience-heading" className="py-20 px-8 scroll-mt-16">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <motion.div
@@ -53,10 +53,10 @@ export function TimelineSection({
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="flex items-center gap-6 mb-16"
         >
-          <span className="font-mono-brand text-[11px] text-[hsl(var(--primary))] opacity-60 tracking-[1px]">
+          <span className="font-mono-brand text-xs text-[hsl(var(--primary))] opacity-60 tracking-[1px]">
             01
           </span>
-          <h2 className="font-display text-2xl font-light text-[#e8e4df]">
+          <h2 id="experience-heading" className="font-display text-2xl font-light text-[#e8e4df]">
             {t("myJourney")}
           </h2>
           <div className="flex-1 h-px bg-white/[0.06]" />
@@ -88,9 +88,9 @@ export function TimelineSection({
               const color = getNodeColor(i, total);
               const isLast = i === total - 1;
               const isParallel = isParallelRole(entry.company);
-              // Ongoing periods don't end in a year ("2024-Present", "2024-Heden", ...), whatever the locale
-              const isOngoing = isLast || (isParallel && !/\d{4}\s*$/.test(entry.period));
-              const yearLabel = isOngoing
+              // Only the current main role is "Now"; a parallel role shows its start year
+              // (its dashed dot already marks it as running alongside).
+              const yearLabel = isLast
                 ? t("now").toUpperCase()
                 : extractStartYear(entry.period);
 
@@ -131,7 +131,7 @@ export function TimelineSection({
                   <div className="md:mt-4 flex flex-col gap-0.5 md:items-center md:text-center">
                     {/* Year label */}
                     <span
-                      className="font-mono-brand text-[11px] font-semibold tracking-[1px]"
+                      className="font-mono-brand text-xs font-semibold tracking-[1px]"
                       style={{ color }}
                     >
                       {yearLabel}

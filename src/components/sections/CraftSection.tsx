@@ -87,7 +87,7 @@ function NarrativeHeader({
       {/* Why */}
       <div className="flex-1 text-center relative z-10">
         <div
-          className="font-mono-brand text-[11px] text-primary/70 uppercase tracking-[3px] mb-2"
+          className="font-mono-brand text-xs text-primary/70 uppercase tracking-[3px] mb-2"
         >
           {tCraft("whyIBuild")}
         </div>
@@ -95,7 +95,7 @@ function NarrativeHeader({
           {tCraft("whyValue")}
         </div>
         <div
-          className="font-mono-brand text-[11px] text-white/50 mt-1.5"
+          className="font-mono-brand text-xs text-white/50 mt-1.5"
         >
           {tCraft("whySub")}
         </div>
@@ -119,7 +119,7 @@ function NarrativeHeader({
       {/* How */}
       <div className="flex-1 text-center relative z-10">
         <div
-          className="font-mono-brand text-[11px] text-[rgb(225,102,66)]/70 uppercase tracking-[3px] mb-2"
+          className="font-mono-brand text-xs text-[rgb(225,102,66)]/70 uppercase tracking-[3px] mb-2"
         >
           {tCraft("howIBuild")}
         </div>
@@ -127,7 +127,7 @@ function NarrativeHeader({
           {tCraft("howValue")}
         </div>
         <div
-          className="font-mono-brand text-[11px] text-white/50 mt-1.5"
+          className="font-mono-brand text-xs text-white/50 mt-1.5"
         >
           {tCraft("howSub")}
         </div>
@@ -151,7 +151,7 @@ function NarrativeHeader({
       {/* What */}
       <div className="flex-1 text-center relative z-10">
         <div
-          className="font-mono-brand text-[11px] text-secondary/70 uppercase tracking-[3px] mb-2"
+          className="font-mono-brand text-xs text-secondary/70 uppercase tracking-[3px] mb-2"
         >
           {tCraft("whatIBuildWith")}
         </div>
@@ -159,7 +159,7 @@ function NarrativeHeader({
           {tCraft("whatValue")}
         </div>
         <div
-          className="font-mono-brand text-[11px] text-white/50 mt-1.5"
+          className="font-mono-brand text-xs text-white/50 mt-1.5"
         >
           {tCraft("whatSub")}
         </div>
@@ -195,12 +195,12 @@ function SkillTile({
       }}
     >
       <div
-        className={`font-mono-brand text-[11px] transition-colors duration-200 ${isActive ? 'text-foreground' : 'text-white/50'}`}
+        className={`font-mono-brand text-xs transition-colors duration-200 ${isActive ? 'text-foreground' : 'text-white/50'}`}
       >
         {skill.name}
       </div>
       <div
-        className={`font-mono-brand text-[11px] mt-0.5 ${!isActive ? 'text-white/50' : ''}`}
+        className={`font-mono-brand text-xs mt-0.5 ${!isActive ? 'text-white/50' : ''}`}
         style={isActive ? { color: `${color}66` } : undefined}
       >
         {skill.years}
@@ -229,7 +229,7 @@ function DetailStrip({
           ↑
         </span>
         <span
-          className="font-mono-brand text-[11px] text-secondary/50"
+          className="font-mono-brand text-xs text-secondary/50"
         >
           {tCraft("clickToExplore")}
         </span>
@@ -266,7 +266,7 @@ function DetailStrip({
 
         {/* Pill */}
         <span
-          className="font-mono-brand text-[11px] px-3.5 py-[5px] bg-secondary/[0.08] text-secondary border border-secondary/15 rounded-full flex-shrink-0 relative z-10"
+          className="font-mono-brand text-xs px-3.5 py-[5px] bg-secondary/[0.08] text-secondary border border-secondary/15 rounded-full flex-shrink-0 relative z-10"
         >
           {skill.name}
         </span>
@@ -279,7 +279,7 @@ function DetailStrip({
             {skill.years} {tCraft("years")}
           </div>
           <div
-            className="font-mono-brand text-[11px] text-secondary/[0.55] uppercase tracking-[1px] mt-0.5"
+            className="font-mono-brand text-xs text-secondary/[0.55] uppercase tracking-[1px] mt-0.5"
           >
             {categoryLabel}
           </div>
@@ -309,14 +309,10 @@ export function CraftSection({ skills }: CraftSectionProps) {
   const groupedSkills = groupSkills(skills);
 
   const languages = [
-    { flag: "🇬🇧", name: tCraft("english"), proficiency: tCraft("fluent") },
-    { flag: "🇮🇹", name: tCraft("italian"), proficiency: tCraft("fluent") },
-    { flag: "🇷🇴", name: tCraft("romanian"), proficiency: tCraft("native") },
-    {
-      flag: "🇳🇱",
-      name: tCraft("dutch"),
-      proficiency: tCraft("conversational"),
-    },
+    { code: "en", name: tCraft("english"), proficiency: tCraft("fluent") },
+    { code: "it", name: tCraft("italian"), proficiency: tCraft("fluent") },
+    { code: "ro", name: tCraft("romanian"), proficiency: tCraft("native") },
+    { code: "nl", name: tCraft("dutch"), proficiency: tCraft("conversational") },
   ];
 
   // Find which merged category the selected skill belongs to
@@ -333,7 +329,7 @@ export function CraftSection({ skills }: CraftSectionProps) {
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="flex items-center gap-4 mb-12">
-            <span className="font-mono-brand text-[11px] text-[hsl(var(--primary))] opacity-60 tracking-[1px]">
+            <span className="font-mono-brand text-xs text-[hsl(var(--primary))] opacity-60 tracking-[1px]">
               03
             </span>
             <h2 className="font-display text-2xl text-[#e8e4df] font-light">
@@ -341,7 +337,7 @@ export function CraftSection({ skills }: CraftSectionProps) {
             </h2>
             <div className="flex-1 h-px bg-white/[0.08]" />
             <span
-              className="font-mono-brand text-[11px] text-right opacity-50"
+              className="font-mono-brand text-xs text-right opacity-50"
             >
               {tCraft("skillsAndMethodologies")}
             </span>
@@ -366,13 +362,13 @@ export function CraftSection({ skills }: CraftSectionProps) {
                 {/* Category header */}
                 <div className="flex items-baseline gap-2 mb-2.5">
                   <span
-                    className="font-mono-brand text-[11px] tracking-[2px] opacity-60"
+                    className="font-mono-brand text-xs tracking-[2px] opacity-60"
                     style={{ color: config.color }}
                   >
                     {tCraft(config.empathyKey)}
                   </span>
                   <span
-                    className="font-mono-brand text-[11px] tracking-[2px] text-white/50 uppercase"
+                    className="font-mono-brand text-xs tracking-[2px] text-white/50 uppercase"
                   >
                     {tCraft(config.traditionalKey)}
                   </span>
@@ -424,20 +420,20 @@ export function CraftSection({ skills }: CraftSectionProps) {
             className="mt-4 flex items-center gap-4 flex-wrap rounded-[10px] px-4 py-3.5 bg-white/[0.015] border border-white/[0.08]"
           >
             <span
-              className="font-mono-brand text-[11px] tracking-[2px] text-white/50 uppercase"
+              className="font-mono-brand text-xs tracking-[2px] text-white/50 uppercase"
             >
               {tCraft("languagesISpeak")}
             </span>
             {languages.map((lang) => (
               <div key={lang.name} className="flex items-center gap-1.5">
-                <span className="text-[13px]">{lang.flag}</span>
+                <span aria-hidden="true" className="font-mono-brand text-xs uppercase rounded border border-white/15 px-1.5 py-px text-white/70">{lang.code}</span>
                 <span
-                  className="font-mono-brand text-[11px] text-white/50"
+                  className="font-mono-brand text-xs text-white/50"
                 >
                   {lang.name}
                 </span>
                 <span
-                  className="font-mono-brand text-[11px] text-white/50"
+                  className="font-mono-brand text-xs text-white/50"
                 >
                   {lang.proficiency}
                 </span>
